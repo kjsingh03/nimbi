@@ -73,7 +73,7 @@ function App() {
       <Navbar />
       <div className="z-0 capitalize" ref={main}>
 
-        <div className="w-[90%] lg:w-[80%] mx-auto">
+        <div className="w-[90%] lg:w-[80%] mx-auto h-[calc(100vh-8.5rem)] ">
           <Swiper
             style={{
               "--swiper-navigation-color": "#000",
@@ -91,7 +91,7 @@ function App() {
             pagination={{
               dynamicBullets: false,
             }}
-            className="mySwiper relative"
+            className="mySwiper relative h-full"
           >
             <SwiperSlide>
               <img src={hero} className="w-full h-full object-bottom" />
