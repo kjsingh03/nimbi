@@ -56,11 +56,9 @@ function App() {
       }
     });
 
-    gsap.to('.mask', {
-      width: "7.5%"
-    });
-
-    gsap.to('.mask', {
+    gsap.fromTo('.mask', {
+      width:"7.5%"
+    },{
       width: "100%",
       scrollTrigger: {
         trigger: ".wrapper",
