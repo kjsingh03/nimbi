@@ -60,6 +60,7 @@ function App() {
       width:"7.5%"
     },{
       width: "100%",
+      ease: "slow(0.7,0.7,false)",
       scrollTrigger: {
         trigger: ".wrapper",
         start: "top left",
@@ -68,8 +69,8 @@ function App() {
     });
 
     if (width > 1280) {
-      gsap.to('.collectionLeft', { x: -800, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 95%", end: "top -50%", scrub: true, } })
-      gsap.to('.collectionRight', { x: 875, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: "bottom 95%", end: "top -50%", scrub: true } })
+      gsap.to('.collectionLeft', { x: -800, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 85%", end: "top -50%", scrub: true, } })
+      gsap.to('.collectionRight', { x: 875, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: "bottom 85%", end: "top -50%", scrub: true } })
     }
 
   }, { dependencies: [width], scope: main });
@@ -78,7 +79,7 @@ function App() {
     <div className=''>
 
       <Navbar />
-      <div className="z-0 capitalize py-12" ref={main}>
+      <div className="z-0 capitalize pt-12" ref={main}>
 
         <div className="w-[90%] lg:w-[80%] mx-auto h-[45vw] lg:h-[35rem]">
           <Swiper
@@ -200,9 +201,9 @@ function App() {
                     </ul>
                     <div className="w-[250rem] relative">
                       {/* <img src={mask} className='absolute -top-12 w-[105rem] left-[110rem]  z-50' alt="" /> */}
-                      <svg className='absolute -top-12 w-[105rem] left-[110rem] z-50' viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg className='absolute -top-12 w-[102rem] md:w-[100rem] left-[112rem] lg:left-[113rem] lg:w-[106vw] xl:w-[103vw] xl:left-[110.5rem] z-50' viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="141.001" cy="57.1469" r="40.5" transform="rotate(97.4043 141.001 57.1469)" stroke="#8AD9F4" style={{strokeDasharray:"2 13"}} />
-                        <g>
+                        <g filter='url(#filter1_d_1261_1133)'>
                           {/* <path d="M-400 58.23H1900" stroke="#33BDEB" style={{strokeWidth:3}} /> */}
                           <rect class="mask" y="55" height="5" fill="#33BDEB" />
                         </g>
@@ -378,16 +379,16 @@ function App() {
 
         <div className="bg-[#1c2327] flex lg:flex-row gap-4 flex-col items-center justify-center lg:gap-12 pt-16 pb-8 ">
           <div className="w-[20rem] lg:w-[27rem] relative">
-            <img src={goldWolf} className='w-full h-full object-fill' alt="" />
-            <img src={bigEllipse} className='absolute top-0 lg:-right-[15rem] w-[30rem]' alt="" />
+            <img src={goldWolf} className='w-full h-full object-fill z-20' alt="" />
+            <img src={bigEllipse} className='absolute top-0 lg:-right-[15rem] w-[30rem] z-20' alt="" />
           </div>
           <div className="flex flex-col w-[80%] lg:text-start lg:w-[40%] gap-6 justify-center pb-10  text-[#a1a7aa]">
             <p className='text-xl sm:text-5xl lg:text-[3.4rem] leading-tight font-extrabold uppercase'>KAZI token </p>
             <p className='text-sm sm:text-lg font-medium text-white'>Your Bridge to Streamlined Crypto Conversion! 🌉💱</p>
             <p className='text-[0.6rem] sm:text-xs '>KAZI Token stands as a beacon of efficiency in the world of cryptocurrency. As an ERC-20 token, it serves as the perfect conduit for users looking to convert their wallet crypto dust into tangible value. Whether you're a seasoned investor or just dipping your toes into the crypto waters, KAZI Token offers a seamless and accessible pathway to transform those fractions of cryptocurrency left lingering in your wallet into meaningful assets.
               With KAZI Token, say goodbye to the frustration of unused cryptocurrency fragments and hello to a practical solution for maximizing your digital assets. Join the movement towards streamlined crypto conversion today with KAZI Token – where every fragment counts towards your financial success. 💼🚀</p>
-            <div className="w-full lg:text-left">
-              <p className="btn w-max lg:text-left px-8">Buy KAZI</p>
+            <div className="w-full lg:text-left z-30">
+              <p className="btn lg:text-left  cursor-pointer">Buy KAZI</p>
             </div>
           </div>
         </div>
@@ -446,7 +447,7 @@ function App() {
           <div className="flex flex-col gap-6 w-[90%] lg:md:w-[70%] xl:w-[50%] px-16 md:px-0 md:items-center text-center">
             <p className='text-xl sm:text-4xl leading-tight font-semibold uppercase'>Whitepaper </p>
             <p className='text-xs'>Explore the Nimbi whitepaper and get an in-depth breakdown of the unique benefits, innovative features, and overall vision of the NIMBI ecosystem and its native token. This clear, concise, and expertly crafted informational report will help you understand exactly what sets NIMBI apart from other crypto projects.<br /><br />Dive into our educational white paper and find out why taking this journey with us is an absolute no-brainer!</p>
-            <div className="btn txt-[#00ace6] border border-[#00ace6] bg-transparent text-[#00ace6] ">Access the whitepaper</div>
+            <div className="btn txt-[#00ace6] border border-[#00ace6] bg-transparent text-[#00ace6] hover:text-[#c4c0c8]">Access the whitepaper</div>
             <div className="w-full flex justify-end">
               <img src={icon} className=' absolute right-24 w-8 bg-[#43545e] px-3 -rotate-90 py-2.5 cursor-pointer' alt="" />
             </div>
@@ -464,20 +465,20 @@ function App() {
               <p className='text-[#a1a7aa]'>your email addresses will only be used forairdrop notifications and won't be shared with third parties</p>
             </div>
             <ul className="list-none flex sm:gap-8 items-center sm:flex-row gap-4 flex-col">
-              <li>Terms and conditions</li>
-              <li>privacy policy</li>
-              <li>contact us</li>
-              <li>see our whitepaper</li>
+              <li className='hover:underline hover:text-[#00ACE6] cursor-pointer'>Terms and conditions</li>
+              <li className='hover:underline hover:text-[#00ACE6] cursor-pointer'>privacy policy</li>
+              <li className='hover:underline hover:text-[#00ACE6] cursor-pointer'>contact us</li>
+              <li className='hover:underline hover:text-[#00ACE6] cursor-pointer'>see our whitepaper</li>
             </ul>
           </div>
           <div className="flex items-center sm:flex-row gap-4 flex-col pt-4 justify-between border-t border-[#767f84]">
             <div className="flex items-center gap-4">
               <p className='text-[#a1a7aa]'>our community</p>
               <ul className="list-none flex gap-2 items-center">
-                <li><img src={telegramIcon} className='w-5 rounded-sm' alt="" /></li>
-                <li><img src={discordIcon} className='w-5 rounded-sm' alt="" /></li>
-                <li><img src={twitterIcon} className='w-5 rounded-sm' alt="" /></li>
-                <li><img src={xIcon} className='w-5 rounded-sm' alt="" /></li>
+                <li><img src={telegramIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></li>
+                <li><img src={discordIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></li>
+                <li><img src={twitterIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></li>
+                <li><img src={xIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></li>
               </ul>
             </div>
             <p className='normal-case'>Copyright &copy; 2024 NIMBI.COM | All rights reserved</p>

@@ -23,6 +23,28 @@ nav li.active {
   border-radius: 0.1rem;
   font-size: 12px;
   cursor: pointer;
+  border:1px solid transparent;
+  width: max-content;
+}
+
+.btn1{
+  width: max-content;
+  background-color: transparent;
+  border-radius:0.25rem;
+  border:1px solid #c4c0c8;
+  padding: 0.5rem 2rem;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn1:hover{
+  background-color: #00ACE6;
+  border:1px solid transparent;
+}
+
+.btn:hover{
+  background-color: #242d32;
+  border:1px solid #c4c0c8;
 }
 
 .navbar.active {
@@ -114,18 +136,14 @@ svg {
   }
 
   .phase {
-    width: 24rem
+    width: 23.5vw
+  }
+  .container {
+    padding-left: 3rem;
   }
 }
 
-@media screen and (max-width:1280px) {
-  /* .phases{
-    padding:2rem 1rem;
-    gap:1rem
-  } */
-}
-
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1023px) {
   .navbar {
     transform: translateX(-100%);
   }
@@ -139,11 +157,16 @@ svg {
   }
 
   .phase {
-    width: 24rem
+    width: 48vw;
+    gap:3rem
   }
   .bg-roadmap{
     background-position: 6rem 29vh, right, 0px -146px;
   }
+    .container {
+      padding-left: 2.5rem;
+    }
+    
 }
 
 @media screen and (max-width:768px) {
@@ -161,6 +184,9 @@ svg {
   }
   .bg-roadmap{
     background-position: 4rem 29vh, right, 0px -146px;
+  }
+  .container {
+    padding-left: 2rem;
   }
 }
 
@@ -180,7 +206,8 @@ svg {
 
 @media screen and (max-width:475px) {
   .phase {
-    gap: 1rem
+    gap: 2rem;
+    width:100vw
   }
 
   .bg-roadmap {
@@ -199,17 +226,5 @@ svg {
 
   .container {
     padding-left: 0;
-  }
-}
-
-
-
-@media screen and (min-width:1200px) {
-  .container {
-    padding-left: 3rem;
-  }
-
-  .phase {
-    width: 24rem
   }
 }

@@ -42,9 +42,6 @@ function Navbar() {
                         <img src={logo} className="w-full h-full object-fill" alt="" />
                     </div>
                 </div>
-
-
-
                 <ul className="hidden lg:flex items-center justify-end gap-2 text-xs list-none">
                     <li className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] active'>Home</li>
                     <li className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>About</li>
@@ -53,8 +50,8 @@ function Navbar() {
                     <li className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>FAQ</li>
                 </ul>
                 <div className="hidden lg:flex items-center gap-2 ">
-                    <div className='btn bg-transparent rounded-sm border border-[#c4c0c8] px-8'>Collections</div>
-                    <div className='btn bg-transparent rounded-sm border border-[#c4c0c8] px-8'>Presale</div>
+                    <div className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8'>Collections</div>
+                    <div className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8'>Presale</div>
                 </div>
             </div>
 
