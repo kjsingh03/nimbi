@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import './App.css'
 import { Navbar, IntroCard, AuthorCard } from './components'
-import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, telegramIcon, discordIcon, twitterIcon, xIcon, vector, tick, mask } from './assets'
+import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, telegramIcon, discordIcon, twitterIcon, xIcon, vector, tick, mask, mountain } from './assets'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -46,7 +46,7 @@ function App() {
         trigger: ".roadmap-container",
         pin: true,
         scrub: 1,
-        end: "+=300",
+        end: "+=600",
       }
     });
 
@@ -117,7 +117,7 @@ function App() {
           <IntroCard img={svg3} title="Daily Profits" desc="The other half of the tokens obtained through the buyback process will be automatically transferred to the Nimbi Staking Pool. This staking pool then distributes rewards daily to $NIMBI holders based on the number of tokens they hold, generating daily profits for them." />
         </div>
 
-        <div className="bg-[url(./assets/whaleLeft.png)] bg-right-top bg-no-repeat bg-contain">
+        <div className="bg-[url(./assets/whaleLeft.png)] whale bg-no-repeat bg-contain">
 
           <div className="overflow-hidden">
             <div className="flex xl:flex-row flex-col justify-between w-[80%] xl:w-[90%] 2xl:w-[80%] mx-auto pt-16 md:pt-[8rem] h-[128rem] xs:h-[73rem] sm:h-[78rem] md:h-[66rem] lg:h-[auto]">
@@ -143,7 +143,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="roadmap-container bg-[url(./assets/Roadmap.png),url(./assets/bigEllipse.png),url(./assets/mountain.png)] bg-bottom-bottom-center bg-no-repeat-no-repeat-repeat bg-[contain,contain,cover] xl:bg-[contain,contain,contain] flex flex-col gap-6 sm:gap-12 pt-16 sm:pt-8 xl:pt-[6rem]">
+          <div className="roadmap-container bg-[url(./assets/Roadmap.png),url(./assets/bigEllipse.png)] bg-bottom-bottom-center bg-no-repeat-no-repeat-repeat bg-[contain,contain,cover] xl:bg-[contain,contain,contain] flex flex-col gap-6 sm:gap-12 pt-16 sm:pt-8 xl:pt-[5rem]">
 
             <div className="flex flex-col gap-4 sm:gap-12 w-[80%] mx-auto">
 
@@ -157,7 +157,7 @@ function App() {
             </div>
 
             <div className="wrapper">
-              <div className="container scrollx">
+              <div className="container scrollx ">
                 {/* <svg viewBox="0 0 900 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M9.89998 6C9.43671 8.28224 7.41896 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.41896 0 9.43671 1.71776 9.89998 4H445.1C445.563 1.71776 447.581 0 450 0C452.419 0 454.437 1.71776 454.9 4H890.1C890.563 1.71776 892.581 0 895 0C897.761 0 900 2.23858 900 5C900 7.76142 897.761 10 895 10C892.581 10 890.563 8.28224 890.1 6H454.9C454.437 8.28224 452.419 10 450 10C447.581 10 445.563 8.28224 445.1 6H9.89998Z"
@@ -171,13 +171,13 @@ function App() {
                   <g mask="url(#mask0_0_1)">
                     <rect className="mask" y="-49" height="99" fill="#33bdeb" />
                   </g>
-                </svg> */}
-                {/* <img src={mask} alt="" /> */}
-                {/* <section className='absolute -top-10'>
+                </svg> 
+                <img src={mask} alt="" /> 
+                <section className='absolute -top-10'>
                   <div className="w-[120rem] relative">
                     <img src={mask} className='absolute top-[13rem] w-[10rem]' alt="" />
                   </div>
-                </section> */}
+                </section>*/}
                 <section>
                   <div className="phase">
                     <ul className='list-none text-xs flex flex-col gap-1 lg:w-[90%] xl:w-[70%] px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
@@ -191,8 +191,9 @@ function App() {
                       <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />smart contract development</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />secure initial funding</li>
                     </ul>
-                    <div className="w-[105rem] relative">
-                      <img src={mask} className='absolute -top-12 left-[37rem] w-full' alt="" />
+                    <div className="w-[250rem] relative">
+                      <img src={mask} className='absolute -top-12 w-[105rem] left-[110rem]  z-50' alt="" />
+                      <img src={mountain} className='absolute -top-[24rem] w-full left-[35rem] h-[24rem] z-40' alt="" />
                     </div>
                     <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
                       <p className='text-[#a1a7aa] text-sm'><span className='text-[#00ace6] font-semibold'>Conception PHASE:</span> 2023 Q1</p>

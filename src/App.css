@@ -93,13 +93,21 @@ svg {
   padding-left: 2rem;
 }
 
-.bg-bottom-bottom-center{
-  background-position: center,right,0px -146px;
+.whale{
+  background-position: 0px -60px;
 }
 
-.bg-no-repeat-no-repeat-repeat{
-  background-repeat: no-repeat,no-repeat,no-repeat;
+.bg-bottom-bottom-center {
+  background-position: 0px 15vh, right, 0px -146px;
 }
+
+.bg-no-repeat-no-repeat-repeat {
+  background-repeat: no-repeat, no-repeat, no-repeat;
+}
+
+/* .bg-right-top-bottom {
+  background-position: right top, 300px 800px;
+} */
 
 @media screen and (min-width:1024px) {
   .navbar {
@@ -148,6 +156,7 @@ svg {
   .swiper-pagination {
     padding: 1.2rem 0.5rem;
   }
+
   svg {
     top: 12rem;
     left: 7rem;
@@ -162,8 +171,9 @@ svg {
   .swiper-pagination {
     padding: 0.5rem 0.5rem;
   }
-  .bg-bottom-bottom-center{
-    background-position: 0px 45vh,bottom,0px -116px;
+
+  .bg-bottom-bottom-center {
+    background-position: 0px 45vh, bottom, 0px -116px;
   }
 }
 
@@ -172,8 +182,8 @@ svg {
     gap: 1rem
   }
 
-  .bg-bottom-bottom-center{
-    background-position: 0px 340px,bottom,-380px -135px;
+  .bg-bottom-bottom-center {
+    background-position: 0px 270px, bottom, -380px -135px;
   }
 
   .swiper-pagination {
@@ -184,7 +194,8 @@ svg {
     top: 11.5rem;
     left: 4rem;
   }
-  .container{
+
+  .container {
     padding-left: 0;
   }
 }

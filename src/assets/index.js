@@ -28,5 +28,6 @@ import telegramIcon from './telegramIcon.png'
 import vector from './vector.svg'
 import tick from './tick.png'
 import mask from './mask.svg'
+import mountain from './mountain.png'
 
-export { logo, logo1, hero, svg1, svg2, svg3, author1, author2,tick, author3, author4,mask, author5 ,sec1,sec2,ellipse,goldWolf,bigEllipse,whaleLeft,whaleRight,discord,telegram,x,github ,icon,telegramIcon,twitterIcon,xIcon,discordIcon,vector}
+export { logo, logo1, hero, svg1, svg2, svg3, author1, author2,tick,mountain, author3, author4,mask, author5 ,sec1,sec2,ellipse,goldWolf,bigEllipse,whaleLeft,whaleRight,discord,telegram,x,github ,icon,telegramIcon,twitterIcon,xIcon,discordIcon,vector}
