@@ -81,10 +81,6 @@ svg {
   width: 58rem;
 }
 
-.mask {
-  width: 15%;
-}
-
 .container {
   display: flex;
   width: 100%;

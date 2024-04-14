@@ -57,6 +57,10 @@ function App() {
     });
 
     gsap.to('.mask', {
+      width: "7.5%"
+    });
+
+    gsap.to('.mask', {
       width: "100%",
       scrollTrigger: {
         trigger: ".wrapper",
@@ -204,7 +208,7 @@ function App() {
                           {/* <path d="M-400 58.23H1900" stroke="#33BDEB" style={{strokeWidth:3}} /> */}
                           <rect class="mask" y="55" height="5" fill="#33BDEB" />
                         </g>
-                        <filter id="filter1_d_1261_1133" className='mask w-[15%]' x="0" y="46.4999" height="23.0001" filterUnits="userSpaceOnUse" style={{colorInterpolation:"sRGB"}}>
+                        <filter id="filter1_d_1261_1133" className='mask' x="0" y="46.4999" height="23.0001" filterUnits="userSpaceOnUse" style={{colorInterpolation:"sRGB"}}>
                           <feFlood style={{floodOpacity:0}} result="BackgroundImageFix" />
                           <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                           <feOffset />
