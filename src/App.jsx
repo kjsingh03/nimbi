@@ -226,7 +226,7 @@ function App() {
                         <defs>
                         </defs>
                       </svg>
-                      <img src={mountain} className='absolute opacity-80 -top-[50rem] w-full left-[35rem] h-[50rem] z-[35]' alt="" />
+                      <img src={mountain} className='absolute opacity-80 -top-[20rem] sm:-top-[50rem] w-full left-[35rem] h-[20rem] sm:h-[50rem] z-[35]' alt="" />
                     </div>
                     <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
                       <p className='text-[#a1a7aa] text-sm'><span className='text-[#00ace6] font-semibold'>Conception PHASE:</span> 2023 Q1</p>
