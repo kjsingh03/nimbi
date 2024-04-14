@@ -80,7 +80,7 @@ function App() {
       <Navbar />
       <div className="z-0 capitalize py-12" ref={main}>
 
-        <div className="w-[90%] lg:w-[80%] mx-auto h-[45vw] lg:h-[80vh] ">
+        <div className="w-[90%] lg:w-[80%] mx-auto h-[45vw] lg:h-[35rem]">
           <Swiper
             style={{
               "--swiper-navigation-color": "#000",
@@ -140,7 +140,7 @@ function App() {
                   <p className='btn w-max'>Explore the Collection</p>
                 </div>
               </div>
-              <div className="collectionRight grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 py-6 xl:py-0">
+              <div className="collectionRight grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 py-6 xl:py-0 xl:w-[50%]">
                 <AuthorCard />
                 <AuthorCard img={author1} />
                 <AuthorCard img={author2} />

@@ -21,7 +21,7 @@ function Navbar() {
     }
 
     return (
-        <nav className='fixed w-full border-b border-b-[#c4c0c8] bg-[#242d32] z-50'>
+        <nav className='fixed w-full border-b border-b-[#c4c0c8] bg-[#242d32] z-50 '>
             <div className="flex items-center justify-between sm:w-[90%] lg:w-[80%] mx-auto px-4">
 
                 <button onClick={activateNavbar} id="navbar-toggler" className="block lg:hidden text-xl py-[0.9rem] text-white"  >☰</button>
@@ -38,7 +38,7 @@ function Navbar() {
                 </div>
 
                 <div className="flex items-center justify-between gap-2">
-                    <div className="w-[5rem] ">
+                    <div className="w-[5rem] h-[2rem]">
                         <img src={logo} className="w-full h-full object-fill" alt="" />
                     </div>
                 </div>
