@@ -61,8 +61,8 @@ function App() {
     });
 
     if (width > 1280) {
-      gsap.to('.collectionLeft', { x: -800, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 75%", end: "start -50%", scrub: true, } })
-      gsap.to('.collectionRight', { x: 875, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: "bottom 75%", end: "start -50%", scrub: true } })
+      gsap.to('.collectionLeft', { x: -800, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 95%", end: "start -50%", scrub: true, } })
+      gsap.to('.collectionRight', { x: 875, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: "bottom 95%", end: "start -50%", scrub: true } })
     }
 
   }, { dependencies: [width], scope: main });
@@ -117,7 +117,7 @@ function App() {
           <IntroCard img={svg3} title="Daily Profits" desc="The other half of the tokens obtained through the buyback process will be automatically transferred to the Nimbi Staking Pool. This staking pool then distributes rewards daily to $NIMBI holders based on the number of tokens they hold, generating daily profits for them." />
         </div>
 
-        <div className="bg-[url(./assets/whaleLeft.png)] whale bg-no-repeat bg-contain">
+        <div className="bg-[url(./assets/whaleLeft.png)] whale bg-no-repeat">
 
           <div className="overflow-hidden">
             <div className="flex xl:flex-row flex-col justify-between w-[80%] xl:w-[90%] 2xl:w-[80%] mx-auto pt-16 md:pt-[8rem] h-[128rem] xs:h-[73rem] sm:h-[78rem] md:h-[66rem] lg:h-[auto]">
@@ -143,7 +143,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="roadmap-container bg-[url(./assets/Roadmap.png),url(./assets/bigEllipse.png)] bg-bottom-bottom-center bg-no-repeat-no-repeat-repeat bg-[contain,contain,cover] xl:bg-[contain,contain,contain] flex flex-col gap-6 sm:gap-12 pt-16 sm:pt-8 xl:pt-[5rem]">
+          <div className="roadmap-container bg-[url(./assets/Roadmap.png),url(./assets/bigEllipse.png)] bg-bottom-bottom-center bg-no-repeat-no-repeat-repeat bg-[contain,contain,cover] xl:bg-[contain,contain,contain] flex flex-col gap-6 sm:gap-12 pt-16 sm:pt-8 xl:pt-[6rem]">
 
             <div className="flex flex-col gap-4 sm:gap-12 w-[80%] mx-auto">
 
@@ -226,7 +226,7 @@ function App() {
                         <defs>
                         </defs>
                       </svg>
-                      <img src={mountain} className='absolute opacity-80 -top-[39rem] w-full left-[35rem] h-[39rem] z-30' alt="" />
+                      <img src={mountain} className='absolute opacity-80 -top-[50rem] w-full left-[35rem] h-[50rem] z-[35]' alt="" />
                     </div>
                     <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
                       <p className='text-[#a1a7aa] text-sm'><span className='text-[#00ace6] font-semibold'>Conception PHASE:</span> 2023 Q1</p>
