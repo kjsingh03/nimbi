@@ -40,7 +40,7 @@ function App() {
     });
 
     gsap.to(sections, {
-      xPercent: -100 * (sections.length - (width > 1024 ? 3 : 2)),
+      xPercent: -100 * (sections.length - (width > 1024 ? 4 : 1)),
       ease: "none",
       scrollTrigger: {
         trigger: ".roadmap-container",
@@ -71,7 +71,7 @@ function App() {
     <div className=''>
 
       <Navbar />
-      <div className="z-0 capitalize" ref={main}>
+      <div className="z-0 capitalize py-12" ref={main}>
 
         <div className="w-[90%] lg:w-[80%] mx-auto h-[45vw] lg:h-[80vh] ">
           <Swiper
