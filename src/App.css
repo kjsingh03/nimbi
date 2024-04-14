@@ -98,11 +98,9 @@ svg {
   background-size: 70rem 55rem;
 }
 
-.bg-bottom-bottom-center {
-  background-position: 0px 15vh, right, 0px -146px;
-}
-
-.bg-no-repeat-no-repeat-repeat {
+.bg-roadmap {
+  background-size: 80vw 14vw,contain, 55rem;
+  background-position: 8rem 25vh, right, 0px -146px;
   background-repeat: no-repeat, no-repeat, no-repeat;
 }
 
@@ -147,6 +145,9 @@ svg {
   .phase {
     width: 24rem
   }
+  .bg-roadmap{
+    background-position: 6rem 29vh, right, 0px -146px;
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -162,6 +163,9 @@ svg {
     top: 12rem;
     left: 7rem;
   }
+  .bg-roadmap{
+    background-position: 4rem 29vh, right, 0px -146px;
+  }
 }
 
 @media screen and (max-width:640px) {
@@ -173,8 +177,8 @@ svg {
     padding: 0.5rem 0.5rem;
   }
 
-  .bg-bottom-bottom-center {
-    background-position: 0px 45vh, bottom, 0px -116px;
+  .bg-roadmap{
+    background-position: 4rem 36vh, right, 0px -146px;
   }
 }
 
@@ -183,8 +187,9 @@ svg {
     gap: 1rem
   }
 
-  .bg-bottom-bottom-center {
-    background-position: 0px 270px, bottom, -380px -135px;
+  .bg-roadmap {
+    background-size: 95vw 14vw,contain, 55rem;
+    background-position: 0.5rem 41vh, right, 0px -146px;
   }
 
   .swiper-pagination {

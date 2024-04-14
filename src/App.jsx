@@ -143,7 +143,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="roadmap-container bg-[url(./assets/Roadmap.png),url(./assets/bigEllipse.png)] bg-bottom-bottom-center bg-no-repeat-no-repeat-repeat bg-[contain,contain,cover] xl:bg-[contain,contain,contain] flex flex-col gap-6 sm:gap-12 pt-16 sm:pt-8 xl:pt-[6rem]">
+          <div className="roadmap-container bg-[url(./assets/Roadmap.png),url(./assets/bigEllipse.png)] bg-roadmap flex flex-col gap-6 sm:gap-12 pt-16 sm:pt-8 xl:pt-[6rem]">
 
             <div className="flex flex-col gap-4 sm:gap-12 w-[80%] mx-auto">
 
