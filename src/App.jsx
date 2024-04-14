@@ -128,7 +128,7 @@ function App() {
 
           <div className="overflow-hidden">
             <div className="flex xl:flex-row flex-col justify-between w-[80%] xl:w-[90%] 2xl:w-[80%] mx-auto pt-16 md:pt-[8rem] h-[128rem] xs:h-[73rem] sm:h-[78rem] md:h-[66rem] lg:h-[auto]">
-              <div className="collectionLeft flex flex-col gap-12 xl:w-[50%]">
+              <div className="collectionLeft flex flex-col gap-12 xl:w-[45%]">
                 <div className="relative">
                   <div className="btn bg-[#5c666c] w-max font-semibold text-[0.9rem] z-10"><p>Collection</p></div>
                   <img src={ellipse} className='absolute -top-6 left-[4rem] w-[5rem] -z-0' alt="" />
@@ -140,7 +140,7 @@ function App() {
                   <p className='btn w-max'>Explore the Collection</p>
                 </div>
               </div>
-              <div className="collectionRight grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 py-6 xl:py-0 xl:w-[50%]">
+              <div className="collectionRight grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 py-6 xl:py-0 xl:w-[55%]">
                 <AuthorCard />
                 <AuthorCard img={author1} />
                 <AuthorCard img={author2} />
