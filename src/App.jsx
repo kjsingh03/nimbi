@@ -56,14 +56,14 @@ function App() {
       }
     });
 
-    // gsap.to('.mask', {
-    //   width: "100%",
-    //   scrollTrigger: {
-    //     trigger: ".wrapper",
-    //     start: "top left",
-    //     scrub: 1,
-    //   }
-    // });
+    gsap.to('.mask', {
+      width: "100%",
+      scrollTrigger: {
+        trigger: ".wrapper",
+        start: "top left",
+        scrub: 1,
+      }
+    });
 
     if (width > 1280) {
       gsap.to('.collectionLeft', { x: -800, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 95%", end: "top -50%", scrub: true, } })
