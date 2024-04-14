@@ -194,7 +194,7 @@ function App() {
                     <div className="w-[250rem] relative">
                       {/* <img src={mask} className='absolute -top-12 w-[105rem] left-[110rem]  z-50' alt="" /> */}
                       <svg className='absolute -top-12 w-[105rem] left-[110rem] z-50' viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="141.001" cy="57.1469" r="50.5" transform="rotate(97.4043 141.001 57.1469)" stroke="#8AD9F4" style={{strokeLinejoin:"2 12"}} />
+                        <circle cx="141.001" cy="57.1469" r="40.5" transform="rotate(97.4043 141.001 57.1469)" stroke="#8AD9F4" style={{strokeDasharray:"2 13"}} />
                         <g>
                           {/* <path d="M-400 58.23H1900" stroke="#33BDEB" style={{strokeWidth:3}} /> */}
                           <rect class="mask" y="55" height="5" fill="#33BDEB" />
@@ -226,7 +226,7 @@ function App() {
                         <defs>
                         </defs>
                       </svg>
-                      <img src={mountain} className='absolute opacity-80 -top-[24rem] w-full left-[35rem] h-[24rem] z-30' alt="" />
+                      <img src={mountain} className='absolute opacity-80 -top-[39rem] w-full left-[35rem] h-[39rem] z-30' alt="" />
                     </div>
                     <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
                       <p className='text-[#a1a7aa] text-sm'><span className='text-[#00ace6] font-semibold'>Conception PHASE:</span> 2023 Q1</p>
