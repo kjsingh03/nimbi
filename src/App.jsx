@@ -180,7 +180,7 @@ function App() {
                 </section>*/}
                 <section>
                   <div className="phase">
-                    <ul className='list-none text-xs flex flex-col gap-1 lg:w-[90%] xl:w-[70%] px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
+                    <ul className='list-none z-40 text-xs flex flex-col gap-1 lg:w-[90%] xl:w-[70%] px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
                       <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />Launch Website</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />Market Strategy Planning</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />White Paper creation</li>
@@ -193,7 +193,7 @@ function App() {
                     </ul>
                     <div className="w-[250rem] relative">
                       <img src={mask} className='absolute -top-12 w-[105rem] left-[110rem]  z-50' alt="" />
-                      <img src={mountain} className='absolute -top-[24rem] w-full left-[35rem] h-[24rem] z-40' alt="" />
+                      <img src={mountain} className='absolute opacity-80 -top-[24rem] w-full left-[35rem] h-[24rem] z-30' alt="" />
                     </div>
                     <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
                       <p className='text-[#a1a7aa] text-sm'><span className='text-[#00ace6] font-semibold'>Conception PHASE:</span> 2023 Q1</p>
@@ -205,7 +205,7 @@ function App() {
                 <section>
                   <div className="phase">
 
-                    <ul className='list-none  text-xs flex flex-col gap-1 lg:w-[90%] xl:w-[70%] px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
+                    <ul className='list-none z-40  text-xs flex flex-col gap-1 lg:w-[90%] xl:w-[70%] px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />community building</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />partnerships and collaborations</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />building CDR</li>
@@ -227,7 +227,7 @@ function App() {
                 <section>
                   <div className="phase">
 
-                    <ul className='list-none  text-xs flex flex-col gap-1 lg:w-[90%] xl:w-[70%] px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
+                    <ul className='list-none z-40  text-xs flex flex-col gap-1 lg:w-[90%] xl:w-[70%] px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />community building</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />partnerships and collaborations</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />building CDR</li>
@@ -249,7 +249,7 @@ function App() {
                 <section>
                   <div className="phase">
 
-                    <ul className='list-none  text-xs flex flex-col gap-1 lg:w-[90%] xl:w-[70%] px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
+                    <ul className='list-none z-40  text-xs flex flex-col gap-1 lg:w-[90%] xl:w-[70%] px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />community building</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />partnerships and collaborations</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />building CDR</li>
@@ -271,7 +271,7 @@ function App() {
                 <section>
                   <div className="phase">
 
-                    <ul className='list-none text-xs flex flex-col gap-1 lg:w-[90%] xl:w-[70%] px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
+                    <ul className='list-none z-40 text-xs flex flex-col gap-1 lg:w-[90%] xl:w-[70%] px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />community building</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />partnerships and collaborations</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />building CDR</li>
