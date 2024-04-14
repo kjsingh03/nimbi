@@ -79,9 +79,10 @@ svg {
   top: 14rem;
   left: 13rem;
   width: 58rem;
-  .mask {
-    width: 15%;
-  }
+}
+
+.mask {
+  width: 15%;
 }
 
 .container {
