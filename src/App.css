@@ -189,7 +189,7 @@ svg {
 
   .bg-roadmap {
     background-size: 95vw 14vw,contain, 55rem;
-    background-position: 0.5rem 41vh, right, 0px -146px;
+    background-position: center, right, 0px -146px;
   }
 
   .swiper-pagination {
