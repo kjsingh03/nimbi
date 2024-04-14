@@ -73,7 +73,7 @@ function App() {
       <Navbar />
       <div className="z-0 capitalize" ref={main}>
 
-        <div className="w-[90%] lg:w-[80%] mx-auto h-[calc(100vh-8.5rem)] ">
+        <div className="w-[90%] lg:w-[80%] mx-auto h-[45vw] lg:h-[80vh] ">
           <Swiper
             style={{
               "--swiper-navigation-color": "#000",
