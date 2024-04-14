@@ -87,10 +87,10 @@ svg {
 
 .container {
   display: flex;
-  width: 80%;
-  overflow: hidden;
+  width: 100%;
+  /* margin: auto; */
+  /* overflow: hidden; */
   padding-left: 2rem;
-  margin: auto;
 }
 
 .bg-bottom-bottom-center{
@@ -111,7 +111,7 @@ svg {
   }
 
   .phase {
-    width: 20rem
+    width: 24rem
   }
 }
 
@@ -193,10 +193,10 @@ svg {
 
 @media screen and (min-width:1200px) {
   .container {
-    padding-left: 10rem;
+    padding-left: 3rem;
   }
 
   .phase {
-    width: 28rem
+    width: 24rem
   }
 }
