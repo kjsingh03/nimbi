@@ -37,7 +37,12 @@ function App() {
     const sections = gsap.utils.toArray(".container section");
 
     gsap.from(sections, {
-      opacity: 0
+      opacity: 0,
+      duration:1,
+      scrollTrigger: {
+        trigger: ".roadmap-container",
+        scrub:1
+      }
     });
 
     gsap.to(sections, {
@@ -61,8 +66,8 @@ function App() {
     });
 
     if (width > 1280) {
-      gsap.to('.collectionLeft', { x: -800, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 95%", end: "start -50%", scrub: true, } })
-      gsap.to('.collectionRight', { x: 875, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: "bottom 95%", end: "start -50%", scrub: true } })
+      gsap.to('.collectionLeft', { x: -800, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 95%", end: "top -50%", scrub: true, } })
+      gsap.to('.collectionRight', { x: 875, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: "bottom 95%", end: "top -50%", scrub: true } })
     }
 
   }, { dependencies: [width], scope: main });
