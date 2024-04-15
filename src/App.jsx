@@ -69,8 +69,8 @@ function App() {
     });
 
     if (width > 1280) {
-      gsap.to('.collectionLeft', { x: -800, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 85%", end: "top -50%", scrub: true, } })
-      gsap.to('.collectionRight', { x: 875, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: "bottom 85%", end: "top -50%", scrub: true } })
+      gsap.to('.collectionLeft', { x: -800, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 75%", end: "top -50%", scrub: true, } })
+      gsap.to('.collectionRight', { x: 875, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: "bottom 75%", end: "top -50%", scrub: true } })
     }
 
   }, { dependencies: [width], scope: main });
