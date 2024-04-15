@@ -56,17 +56,25 @@ function App() {
       }
     });
 
-    gsap.fromTo('.mask', {
-      width: "7.5%"
-    }, {
-      width: "100%",
-      ease: "slow(0.7,0.7,false)",
-      scrollTrigger: {
-        trigger: ".wrapper",
-        start: "top left",
-        scrub: 1,
-      }
-    });
+    if (width > 475) {
+      gsap.fromTo('.mask', {
+        width: "7.5%"
+      }, {
+        width: "100%",
+        ease: width>=1024?"slow(0.7,0.7,false)":"power4.in",
+        scrollTrigger: {
+          trigger: ".wrapper",
+          start: "top left",
+          scrub: 1,
+        }
+      });
+    }
+    else{
+      gsap.to('.mask', {
+        width: "100%"
+        }
+      );
+    }
 
     if (width > 1280) {
       gsap.to('.collectionLeft', { x: -800, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 75%", end: "top -50%", scrub: true, } })
@@ -199,7 +207,7 @@ function App() {
                       <li className='flex gap-3 pl-[118rem] md:pl-[6rem] lg:pl-0'><img className='w-4 h-4' src={tick} alt="" />smart contract development</li>
                       <li className='flex gap-3 pl-[118rem] md:pl-[6rem] lg:pl-0'><img className='w-4 h-4' src={tick} alt="" />secure initial funding</li>
                       <div className="w-[250rem] relative">
-                        <svg className='absolute -top-[1rem] md:-top-[0.7rem] lg:top-[0.4rem] xl:-top-[1.7rem] w-[103rem] sm:w-[101rem] lg:w-[101vw] xl:w-[140vw] left-[110rem] md:-left-[2rem] lg:-left-[4rem] xl:-left-[9.5rem] z-50' viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg className='absolute -top-[1rem] md:-top-[0.7rem] lg:top-[0.4rem] xl:-top-[1.7rem] w-[103rem] sm:w-[101rem] lg:w-[101vw] xl:w-[140vw] left-[110rem] xs:left-[110rem] md:-left-[2rem] lg:-left-[4rem] xl:-left-[9.5rem] z-50' viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <circle cx="141.001" cy="57.1469" r="34.5" transform="rotate(97.4043 141.001 57.1469)" stroke="#8AD9F4" style={{ strokeDasharray: "2 13" }} />
                           <g filter='url(#filter1_d_1261_1133)'>
                             <rect class="mask" y="55" height="3" fill="#33BDEB" />

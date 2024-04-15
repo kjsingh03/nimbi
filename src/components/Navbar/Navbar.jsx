@@ -50,8 +50,8 @@ function Navbar() {
                     <li className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>FAQ</li>
                 </ul>
                 <div className="hidden lg:flex items-center gap-2 ">
-                    <div className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8'>Collections</div>
-                    <div className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8'>Presale</div>
+                    <div className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8 w-[8rem] text-center'>Collections</div>
+                    <div className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8 w-[8rem] text-center'>Presale</div>
                 </div>
             </div>
 
