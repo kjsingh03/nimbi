@@ -9,6 +9,7 @@ body {
   background-color: #242d32;
   color: #e6f7fd;
   font-family: "Inter", sans-serif;
+  overflow-y: auto;
 }
 
 nav li.active {

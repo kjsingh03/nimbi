@@ -1,6 +1,7 @@
 import React from 'react'
-import { logo } from '../../assets'
+import { logo, sound } from '../../assets'
 import '../../App.css'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
 
@@ -28,30 +29,33 @@ function Navbar() {
 
                 <div className="flex overflow-hidden">
                     <ul className="navbar transition-all duration-200 ease-in px-8 py-16 lg:shadow-none shadow-xl z-[100] fixed left-0 top-0 bg-[#242d32] w-[16rem] h-screen" id="navbar">
-                        <li className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>Home</li>
-                        <li className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>About</li>
-                        <li className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>Our Team</li>
-                        <li className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>Documents</li>
-                        <li className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>FAQ</li>
+                        <Link to="/" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>Home</Link>
+                        <Link to="/about" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>About</Link>
+                        <Link to="/team" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>Our Team</Link>
+                        <Link to="/documents" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>Documents</Link>
+                        <Link to="/faq" onClick={()=>console.log('click')} className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>FAQ</Link>
                     </ul>
                     <div className="black fixed translate-x-[-100vw] right-0 w-[calc(100vw-16rem)] top-0 z-40 bg-[#0000005b] h-screen"></div>
                 </div>
 
-                <div className="flex items-center justify-between gap-2">
-                    <div className="w-[5rem] h-[2rem]">
+                <div className="lg:w-[10%]">
+                    <div className="w-[4.5rem] h-[1.6rem]">
                         <img src={logo} className="w-full h-full object-fill" alt="" />
                     </div>
                 </div>
-                <ul className="hidden lg:flex items-center justify-end gap-2 text-xs list-none">
-                    <li className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] active'>Home</li>
-                    <li className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>About</li>
-                    <li className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>Our Team</li>
-                    <li className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>Documents</li>
-                    <li className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>FAQ</li>
+                <ul className="hidden lg:flex items-center justify-center gap-2 text-xs list-none w-[54%]">
+                    <Link to="/" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] active'>Home</Link>
+                    <Link to="/about" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>About</Link>
+                    <Link to="/team" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>Our Team</Link>
+                    <Link to="/documents" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>Documents</Link>
+                    <Link to="/faq" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>FAQ</Link>
                 </ul>
-                <div className="hidden lg:flex items-center gap-2 ">
+                <div className="hidden lg:flex items-center gap-2 w-[36%] justify-end">
                     <div className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8 w-[8rem] text-center'>Collections</div>
                     <div className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8 w-[8rem] text-center'>Presale</div>
+                    <div className="w-[2.5rem]">
+                    <img src={sound} alt="" className='w-full h-full object-cover' />
+                    </div>
                 </div>
             </div>
 
