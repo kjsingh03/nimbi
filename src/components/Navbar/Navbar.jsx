@@ -9,22 +9,20 @@ function Navbar() {
         const toggler = document.getElementById('navbar-toggler')
         const navbar = document.querySelector('.navbar')
 
-        if (navbar.classList.contains('active'))
+        if (navbar?.classList.contains('active'))
             navbar.classList.remove('active')
         else
             navbar.classList.add('active')
-
-        document.querySelector('.navbar ~ .black').addEventListener('click', () => {
-            navbar.classList.remove('active')
-        })
     }
 
     const activeTab = (e) => {
         const active = document.querySelectorAll("nav .active")
 
-        active.forEach((tab) => {
-            tab.classList.remove('active')
-        })
+        if(active){
+            active.forEach((tab) => {
+                tab.classList.remove('active')
+            })
+        }
 
         e.target.classList.add('active')
 
@@ -65,14 +63,14 @@ function Navbar() {
                 <button onClick={activateNavbar} id="navbar-toggler" className="block lg:hidden text-xl py-[0.9rem] text-white"  >☰</button>
 
                 <div className="flex overflow-hidden">
-                    <ul className="navbar flex flex-col gap-3 transition-all duration-200 ease-in px-8 py-16 lg:shadow-none shadow-xl z-[100] fixed left-0 top-0 bg-[#242d32] w-[16rem] h-screen" id="navbar">
+                    <ul className="navbar flex flex-col gap-3 transition-all duration-200 ease-in px-8 py-16 lg:shadow-none shadow-xl z-[100] fixed left-0 top-0 bg-[#242d32] text-center w-screen h-screen" id="navbar">
+                        <p className='text-right' onClick={()=>document.querySelector('.navbar').classList.remove('active')}>☰</p>
                         <Link onClick={activeTab} id="home" to="/" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee]'>Home</Link>
                         <Link onClick={activeTab} id="about" to="/about" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>About</Link>
                         <Link onClick={activeTab} id="team" to="/team" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>Our Team</Link>
                         <Link onClick={activeTab} id="documents" to="/documents" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>Documents</Link>
                         <Link onClick={activeTab} id="faq" to="/faq" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>FAQ</Link>
                     </ul>
-                    <div className="black fixed translate-x-[-100vw] right-0 w-[calc(100vw-16rem)] top-0 z-40 bg-[#0000005b] h-screen"></div>
                 </div>
 
                 <div className="lg:w-[10%]">

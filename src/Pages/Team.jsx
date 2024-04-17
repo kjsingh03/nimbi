@@ -7,7 +7,7 @@ import { card1,card2,card3,card4,card5,card6,card7,card8 } from '../assets'
 function Team() {
   return (
     <>
-      <div className="flex flex-col justify-center gap-12 w-full px-[3rem] md:px-[5rem] xl:px-[11rem] mx-auto capitalize py-16 bg-[url(./assets/whaleLeft.png),url(./assets/mountain.png),url('./assets/bigEllipse.png')] team bg-no-repeat font-['Inter',sans-serif]">
+      <div className="flex flex-col justify-center gap-12 w-full px-[2rem] md:px-[5rem] xl:px-[11rem] mx-auto capitalize py-16 bg-[url(./assets/whaleLeft.png),url(./assets/mountain.png),url('./assets/bigEllipse.png')] team bg-no-repeat font-['Inter',sans-serif]">
 
         <div className="w-full border-b border-b-[#c4c0c8] py-6 font-['Roboto_Condensed',sans-serif]">
           <p className='uppercase text-3xl font-semibold text-left py-3'>The people behind the scenes</p>

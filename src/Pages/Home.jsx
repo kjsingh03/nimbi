@@ -56,6 +56,7 @@ function Home() {
         // markers: 1
       }
     });
+    
     gsap.to('.mountain',{
       x:-400,
       ease: "none",
@@ -187,8 +188,8 @@ function Home() {
                 <g filter='url(#filter0_d_230_5843)'>
                   <rect y="42.5" height="0.8" width="5000" fill="#767F84" />
                 </g>
-                <filter id="filter0_d_230_5843"  filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <filter id="filter0_d_230_5843"  filterUnits="userSpaceOnUse"  style={{ colorInterpolation: "sRGB" }}>
+                    <feFlood style={{floodOpacity:0}} result="BackgroundImageFix" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset />
                     <feGaussianBlur stdDeviation="5" />
