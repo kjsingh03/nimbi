@@ -53,7 +53,17 @@ function Home() {
         start: "top 65%",
         end: "bottom 64%",
         scrub: 1,
-        markers: 1
+        // markers: 1
+      }
+    });
+    gsap.to('.mountain',{
+      x:-400,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".roadmap-container",
+        start: "top 0%",
+        end: "bottom 50%",
+        scrub: 1,
       }
     });
 
@@ -68,7 +78,7 @@ function Home() {
             trigger: section,
             containerAnimation: scrollTween,
             start: `left ${20 * index + 5 - index}%`,
-            markers: 1
+            // markers: 1
           }
         });
       }
@@ -171,13 +181,28 @@ function Home() {
           <div className="wrapper">
             <section>
               <div className="w-[250rem] relative">
-                <img src={mountain} className='absolute opacity-80 -top-[17.5rem] sm:-top-[20.5rem] w-full left-[35rem] sm:left-[50rem] md:-left-[67rem] h-[20rem] sm:h-[34rem] -z-10' alt="" />
+                <img src={mountain} className='mountain absolute opacity-80 -top-[17.5rem] sm:-top-[20.5rem] w-full left-[35rem] sm:left-[50rem] md:-left-[67rem] h-[20rem] sm:h-[34rem] -z-10' alt="" />
               </div>
+              <svg className={`absolute -z-10 top-[13rem] md:top-[12rem] lg:top-[12rem] xl:top-[11.4rem] w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter='url(#filter0_d_230_5843)'>
+                  <rect y="42.5" height="0.8" width="5000" fill="#767F84" />
+                </g>
+                <filter id="filter0_d_230_5843"  filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="5" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_230_5843" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_230_5843" result="shape" />
+                  </filter>
+              </svg>
               <svg className={`absolute -z-10 top-[13rem] md:top-[12.2rem] lg:top-[12rem] xl:top-[11.4rem] ${width >= 1024 ? 'w-[78vw]' : 'w-[67vw]'}`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter='url(#filter1_d_1261_1133)'>
                   <rect className="mask" y="55" height="150" fill="#33BDEB" />
                 </g>
-                <filter id="filter1_d_1261_1133" className='mask' x="0" y="33" height="23.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
+                <filter id="filter1_d_1261_1133" className='mask' x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
                   <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                   <feOffset />
@@ -186,7 +211,7 @@ function Home() {
                   <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
                   <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
                   <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
-                </filter>
+                </filter> 
               </svg>
             </section>
             <div className="container scrollx ">
