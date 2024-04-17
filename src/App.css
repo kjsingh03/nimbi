@@ -145,6 +145,10 @@ svg {
     background-position: right,bottom left;
     background-size: auto,fill;
   }
+  .team{
+    background-position: 30rem 10rem,bottom left,-9rem 70rem;
+    background-size: auto,fill;
+  }
 }
 
 @media screen and (max-width:1023px) {
@@ -177,7 +181,10 @@ svg {
       background-position: -5rem 3rem,bottom left;
       background-size: fill,fill;
     }
-    
+    .team{
+      background-position: 4rem 3rem,bottom left,-9rem 70rem;
+      background-size: auto,fill;
+    }
 }
 
 @media screen and (max-width:768px) {

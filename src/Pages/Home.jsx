@@ -183,7 +183,7 @@ function Home() {
               <div className="w-[250rem] relative">
                 <img src={mountain} className='mountain absolute opacity-80 -top-[17.5rem] sm:-top-[20.5rem] w-full left-[35rem] sm:left-[50rem] md:-left-[67rem] h-[20rem] sm:h-[34rem] -z-10' alt="" />
               </div>
-              <svg className={`absolute -z-10 top-[13rem] md:top-[12rem] lg:top-[12rem] xl:top-[11.4rem] w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className={`absolute -z-10 top-[12.8rem] md:top-[12rem] lg:top-[12rem] xl:top-[11.4rem] w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter='url(#filter0_d_230_5843)'>
                   <rect y="42.5" height="0.8" width="5000" fill="#767F84" />
                 </g>

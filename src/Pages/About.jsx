@@ -9,7 +9,7 @@ function About() {
       <div className="flex flex-col items-center justify-center gap-12 w-full px-[1rem] md:px-[5rem] xl:px-[11rem] mx-auto capitalize py-16 bg-[url(./assets/whaleLeft.png),url(./assets/mountain.png)] about bg-no-repeat font-['Roboto_Condensed',sans-serif]">
 
         <div className="w-full border-b border-b-[#c4c0c8] py-6">
-          <p className='uppercase text-3xl font-semibold text-left py-3'>about us</p>
+          <p className='uppercase text-3xl font-semibold text-left py-3'>About us</p>
         </div>
 
         <div className="flex flex-col items-center justify-center gap-6 lg:w-[75%] text-center">
