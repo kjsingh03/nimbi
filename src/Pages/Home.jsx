@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import '../App.css'
-import { IntroCard, AuthorCard } from '../components'
+import { IntroCard, NFTCard } from '../components'
 import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, telegramIcon, discordIcon, twitterIcon, xIcon, vector, tick, mask, mountain, indicator, round } from '../assets'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -11,6 +11,7 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(useGSAP, ScrollTrigger)
+import Footer from '../components/Footer/Footer';
 
 function Home() {
 
@@ -18,60 +19,60 @@ function Home() {
   const width = window.innerWidth
 
   useGSAP(() => {
-    const boxes = gsap.utils.toArray('.phase');
-    boxes.forEach((box, index) => {
-      gsap.from(box, {
-        opacity: 0,
-        duration: 1,
-        delay: 0.75 * index * 0.5,
-        scrollTrigger: {
-          trigger: box,
-          start: `${width < 1024 ? "bottom 90%" : "bottom 100%"}`,
-          end: 'top 20%'
-        },
-      });
-    });
 
+    const container = document.querySelector(".container");
     const sections = gsap.utils.toArray(".container section");
+    const texts = gsap.utils.toArray(".anim");
+    const mask = document.querySelector(".mask");
 
-    gsap.from(sections, {
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: ".roadmap-container",
-        scrub: 1
-      }
-    });
+    var xPercent = 0, from = 0, to = 0;
 
-    var xPercent, from, to;
+    if (width >= 1024) { xPercent = -100 * (sections.length - 4); from = '9%'; to = '100%' }
+    else if (width >= 475) { xPercent = -100 * (sections.length - 2); from = '30%'; to = '100%' }
+    else { xPercent = -100 * (sections.length - 1); from = '40%'; to = '40%' }
 
-    if (width >= 1024) { xPercent = -100 * (sections.length - 4); from = "4.5%"; to = "50%" }
-    else if (width >= 576) { xPercent = -100 * (sections.length - 2); from = "4.5%"; to = "65%" }
-    else { xPercent = -100 * (sections.length - 1); from = "4.5%"; to = "90%" }
-
-    gsap.to(sections, {
+    let scrollTween = gsap.to(sections, {
       xPercent: xPercent,
       ease: "none",
       scrollTrigger: {
         trigger: ".roadmap-container",
         pin: true,
         scrub: 1,
-        end: "+=600",
+        end: "+=300",
+        // markers: true,
       }
     });
 
-    gsap.fromTo('.mask', {
+    gsap.fromTo(mask, {
       width: from
     }, {
       width: to,
-      ease: "slow(0.7,0.7,false)",
+      ease: "power4.in",
       scrollTrigger: {
         trigger: ".roadmap-container",
-        start: "top left",
+        start: "top 65%",
+        end: "bottom 64%",
         scrub: 1,
+        markers: 1
       }
     });
 
+    sections.forEach((section, index) => {
+      if (index !== 0) {
+        gsap.from(section, {
+          x: 20,
+          opacity: 0,
+          duration: 0.75,
+          delay: index * 1 / 32,
+          scrollTrigger: {
+            trigger: section,
+            containerAnimation: scrollTween,
+            start: `left ${20 * index + 5 - index}%`,
+            markers: 1
+          }
+        });
+      }
+    });
 
     if (width > 1280) {
       gsap.to('.collectionLeft', { x: -800, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 75%", end: "top -50%", scrub: true, } })
@@ -144,12 +145,12 @@ function Home() {
               </div>
             </div>
             <div className="collectionRight grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 py-6 xl:py-0 xl:w-[55%]">
-              <AuthorCard />
-              <AuthorCard img={author1} />
-              <AuthorCard img={author2} />
-              <AuthorCard img={author3} />
-              <AuthorCard img={author4} />
-              <AuthorCard img={author5} />
+              <NFTCard />
+              <NFTCard img={author1} />
+              <NFTCard img={author2} />
+              <NFTCard img={author3} />
+              <NFTCard img={author4} />
+              <NFTCard img={author5} />
             </div>
           </div>
         </div>
@@ -168,42 +169,44 @@ function Home() {
           </div>
 
           <div className="wrapper">
+            <section>
+              <div className="w-[250rem] relative">
+                <img src={mountain} className='absolute opacity-80 -top-[17.5rem] sm:-top-[20.5rem] w-full left-[35rem] sm:left-[50rem] md:-left-[67rem] h-[20rem] sm:h-[34rem] -z-10' alt="" />
+              </div>
+              <svg className={`absolute -z-10 top-[13rem] md:top-[12.2rem] lg:top-[12rem] xl:top-[11.4rem] ${width >= 1024 ? 'w-[78vw]' : 'w-[67vw]'}`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter='url(#filter1_d_1261_1133)'>
+                  <rect className="mask" y="55" height="150" fill="#33BDEB" />
+                </g>
+                <filter id="filter1_d_1261_1133" className='mask' x="0" y="33" height="23.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
+                  <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="5" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
+                </filter>
+              </svg>
+            </section>
             <div className="container scrollx ">
               <section>
-                <div className="phase">
+                <div className="phase ">
                   <ul className='list-none z-40 text-xs flex flex-col relative gap-1 lg:w-[90%] xl:w-[70%] px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
-                    <li className='flex gap-3 pl-[118rem] md:pl-[6rem] lg:pl-0'><img className='w-4 h-4' src={tick} alt="" />Launch Website</li>
-                    <li className='flex gap-3 pl-[118rem] md:pl-[6rem] lg:pl-0'><img className='w-4 h-4' src={tick} alt="" />Market Strategy Planning</li>
-                    <li className='flex gap-3 pl-[118rem] md:pl-[6rem] lg:pl-0'><img className='w-4 h-4' src={tick} alt="" />White Paper creation</li>
-                    <li className='flex gap-3 pl-[118rem] md:pl-[6rem] lg:pl-0'><img className='w-4 h-4' src={tick} alt="" />Market research</li>
-                    <li className='flex gap-3 pl-[118rem] md:pl-[6rem] lg:pl-0'><img className='w-4 h-4' src={tick} alt="" />feasability analysis</li>
-                    <li className='flex gap-3 pl-[118rem] md:pl-[6rem] lg:pl-0'><img className='w-4 h-4' src={tick} alt="" />competitor analysis</li>
-                    <li className='flex gap-3 pl-[118rem] md:pl-[6rem] lg:pl-0'><img className='w-4 h-4' src={tick} alt="" />tokenomics development</li>
-                    <li className='flex gap-3 pl-[118rem] md:pl-[6rem] lg:pl-0'><img className='w-4 h-4' src={tick} alt="" />smart contract development</li>
-                    <li className='flex gap-3 pl-[118rem] md:pl-[6rem] lg:pl-0'><img className='w-4 h-4' src={tick} alt="" />secure initial funding</li>
-                    <div className="w-[250rem] relative">                    
-                      <svg className='absolute z-10 -top-[2.7rem] md:-top-[5rem] w-[170rem] md:w-full left-[110rem] md:-left-[10rem] md:pl-[6rem] lg:pl-0' viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter='url(#filter1_d_1261_1133)'>
-                          <rect className="mask" y="55" height="1.5" fill="#33BDEB" />
-                        </g>
-                        <filter id="filter1_d_1261_1133" className='mask' x="0" y="46.4999" height="23.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
-                          <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
-                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                          <feOffset />
-                          <feGaussianBlur stdDeviation="5" />
-                          <feComposite in2="hardAlpha" operator="out" />
-                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
-                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
-                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
-                        </filter>
-                      </svg> 
-                      <img src={mountain} className='absolute opacity-80 -top-[17.5rem] sm:-top-[31.5rem] w-full left-[35rem] sm:left-[50rem] md:-left-[67rem] h-[20rem] sm:h-[34rem] z-[35' alt="" />
-                    </div>
-                    <img src={round} className="w-8 h-8 absolute left-[119.2rem] md:left-[5.6rem] lg:left-0 top-[12.5rem] z-20" />
+                    <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />Launch Website</li>
+                    <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />Market Strategy Planning</li>
+                    <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />White Paper creation</li>
+                    <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />Market research</li>
+                    <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />feasability analysis</li>
+                    <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />competitor analysis</li>
+                    <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />tokenomics development</li>
+                    <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />smart contract development</li>
+                    <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />secure initial funding</li>
+                    <img src={round} className="w-8 h-8 absolute left-[rem] top-[12.5rem] z-20" />
                     <img src={ellipse} className="w-[5rem] h-[5rem] absolute left-[117.7rem] md:left-[4rem] lg:-left-[1.5rem] top-[11rem]" />
                   </ul>
                   <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
-                    <p className='text-[#a1a7aa] text-sm'><span className='text-[#00ace6] font-semibold'>Conception PHASE:</span> 2023 Q1</p>
+                    <p className='text-[#a1a7aa] text-sm'><span className='text-[#00ace6] font-semibold'>PRE-SALE PHASE:</span> 2023 Q1</p>
                     <p className='text-3xl font-semibold text-white'>Phase 01</p>
                     <p className='text-[#2b3338] text-5xl font-extrabold'>2023</p>
                   </div>
@@ -299,7 +302,6 @@ function Home() {
                   </div>
                 </div>
               </section>
-
             </div>
           </div>
         </div>
@@ -423,36 +425,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="text-[0.6rem] flex flex-col gap-4 bg-[#1c2327] px-[2rem] lg:px-[4rem] xl:px-[8rem] py-8 border-t border-[#767f84]md:">
-        <div className="flex md:flex-row flex-col md:gap-0 gap-2 items-center justify-between">
-          <div className=" flex flex-col md:items-start items-center text-center md:text-left w-full gap-4 sm:gap-2 md:w-[40%] xl:w-[30%]">
-            <p className='text-xs'>Register here</p>
-            <div className=" flex sm:flex-row flex-col items-center  gap-2 sm:gap-4 w-full">
-              <input type="text" placeholder='Email' className='bg-transparent p-2 border border-[#767f84] w-full' />
-              <div className="btn px-6 w-full sm:w-[8rem] text-center text-[0.6rem]">Sign up</div>
-            </div>
-            <p className='text-[#a1a7aa]'>your email addresses will only be used forairdrop notifications and won't be shared with third parties</p>
-          </div>
-          <ul className="list-none flex sm:gap-8 items-center sm:flex-row gap-4 flex-col">
-            <li className='hover:underline hover:text-[#00ACE6] cursor-pointer'>Terms and conditions</li>
-            <li className='hover:underline hover:text-[#00ACE6] cursor-pointer'>privacy policy</li>
-            <li className='hover:underline hover:text-[#00ACE6] cursor-pointer'>contact us</li>
-            <li className='hover:underline hover:text-[#00ACE6] cursor-pointer'>see our whitepaper</li>
-          </ul>
-        </div>
-        <div className="flex items-center sm:flex-row gap-4 flex-col pt-4 justify-between border-t border-[#767f84]">
-          <div className="flex items-center gap-4">
-            <p className='text-[#a1a7aa]'>our community</p>
-            <ul className="list-none flex gap-2 items-center">
-              <li><img src={telegramIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></li>
-              <li><img src={discordIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></li>
-              <li><img src={twitterIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></li>
-              <li><img src={xIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></li>
-            </ul>
-          </div>
-          <p className='normal-case'>Copyright &copy; 2024 NIMBI.COM | All rights reserved</p>
-        </div>
-      </div>
+      <Footer />
 
     </div>
   )

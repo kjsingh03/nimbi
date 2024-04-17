@@ -12,7 +12,7 @@ body {
   overflow-y: auto;
 }
 
-nav li.active {
+nav a.active {
   background-color: #3a4247;
   color: #54c7ee;
 }
@@ -89,7 +89,8 @@ nav li.active {
   flex-direction: column;
   align-items: center;
   gap: 5rem;
-  width: 18rem
+    /* width: 18rem; */
+  /* overflow: hidden; */
 }
 
 .wrapper {
@@ -98,10 +99,10 @@ nav li.active {
 }
 
 svg {
-  position: absolute;
-  top: 14rem;
-  left: 13rem;
-  width: 58rem;
+  /* position: absolute; */
+  /* top: 14rem;
+  left: 13rem; */
+  /* width: 150rem; */
 }
 
 .container {
@@ -123,9 +124,7 @@ svg {
   background-repeat: no-repeat, no-repeat, no-repeat;
 }
 
-/* .bg-right-top-bottom {
-  background-position: right top, 300px 800px;
-} */
+
 
 @media screen and (min-width:1024px) {
   .navbar {
@@ -141,6 +140,10 @@ svg {
   }
   .container {
     padding-left: 3rem;
+  }
+  .about{
+    background-position: right,bottom left;
+    background-size: auto,fill;
   }
 }
 
@@ -166,9 +169,14 @@ svg {
     background-position: 6rem 29vh, right, 0px -146px;
   }
 
-    /* .container {
-      padding-left: 1.5rem;
-    } */
+  .container {
+    padding-left: 3rem;
+  }
+
+    .about{
+      background-position: -5rem 3rem,bottom left;
+      background-size: fill,fill;
+    }
     
 }
 
@@ -219,10 +227,10 @@ svg {
     padding: 0.25rem 0.5rem;
   }
 
-  svg {
+  /* svg {
     top: 11.5rem;
     left: 4rem;
-  }
+  } */
 
   .container {
     padding-left: 0;

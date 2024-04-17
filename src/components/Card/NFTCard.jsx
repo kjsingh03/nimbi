@@ -1,7 +1,7 @@
 import React from 'react'
 import { logo1 } from '../../assets'
 
-function AuthorCard({ img }) {
+function NFTCard({ img }) {
     return (
         <>
             {
@@ -37,4 +37,4 @@ function AuthorCard({ img }) {
     )
 }
 
-export default AuthorCard
+export default NFTCard

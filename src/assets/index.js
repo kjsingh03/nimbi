@@ -33,12 +33,15 @@ import mountain from './mountain.png'
 import round from './round.png'
 import indicator from './Indicator.png'
 import rightWolf from './rightWolf.png'
+import leftWolf from './leftWolf.png'
 import card1 from './card1.png'
 import card2 from './card2.png'
 import card3 from './card3.png'
 import card4 from './card4.png'
 import card5 from './card5.png'
 import card6 from './card6.png'
+import card7 from './card7.png'
+import card8 from './card8.png'
 import sound from './sound.svg'
 
-export {sound,card1,card2,card3,card4,card5,card6, logo,rightWolf, logo1, hero, svg1, svg2, svg3,round,indicator, author1, author2,tick,mountain, author3, author4,mask,mask1, author5 ,sec1,sec2,ellipse,goldWolf,bigEllipse,whaleLeft,whaleRight,discord,telegram,x,github ,icon,telegramIcon,twitterIcon,xIcon,discordIcon,vector}
+export {leftWolf,sound,card1,card2,card3,card4,card5,card6,card7,card8, logo,rightWolf, logo1, hero, svg1, svg2, svg3,round,indicator, author1, author2,tick,mountain, author3, author4,mask,mask1, author5 ,sec1,sec2,ellipse,goldWolf,bigEllipse,whaleLeft,whaleRight,discord,telegram,x,github ,icon,telegramIcon,twitterIcon,xIcon,discordIcon,vector}

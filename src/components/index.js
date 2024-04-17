@@ -1,5 +1,6 @@
 import Navbar from "./Navbar/Navbar";
 import IntroCard from "./Card/IntroCard";
-import AuthorCard from "./Card/AuthorCard";
+import NFTCard from "./Card/NFTCard";
+import TeamCard from "./Card/TeamCard";
 
-export { Navbar ,IntroCard,AuthorCard}
+export { Navbar, IntroCard, NFTCard, TeamCard }
