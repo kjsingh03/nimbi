@@ -124,7 +124,40 @@ svg {
   background-repeat: no-repeat, no-repeat, no-repeat;
 }
 
+.accordion>p{
+  height: 0;
+  transform: translateY(5rem);
+}
 
+.accordion.active>p{
+  height: 100%;
+  transition: all 0.2s ease;
+  transform: translateY(0);
+}
+
+.accordion img{
+  rotate: 0deg;
+  transition: all 0.3s ease;
+}
+.accordion.active img{
+  rotate: 90deg;
+  transition: all 0.3s ease;
+}
+
+.document{
+/* hover:bg-[#28343b] py-3 px-2 rounded-lg cursor-pointer */
+cursor: pointer;
+padding: 0.6rem 0.5rem;
+border-radius: 0.5rem;
+}
+
+.document:hover{
+  background-color: #28343b;
+}
+
+.document.active{
+  background-color: #28343b;
+}
 
 @media screen and (min-width:1024px) {
   .navbar {
@@ -187,29 +220,31 @@ svg {
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:767px) {
 
   .swiper-pagination {
     padding: 1.2rem 0.5rem;
   }
 
-  /* svg {
-    top: 12rem;
-    left: 7rem;
-  } */
   .bg-roadmap{
     background-position: 4rem 29vh, right, 0px -146px;
   }
-  /* .container {
-    padding-left: 2.5rem;
-  } */
+
+  .phase {
+    /* gap: 2rem; */
+    width:100vw;
+    flex-direction: column-reverse;
+    gap:2rem
+  }
+
+  .container{
+    flex-direction: column;
+    gap:4rem
+  }
+
 }
 
 @media screen and (max-width:640px) {
-
-  /* .phases{
-    gap:2rem
-  } */
   .swiper-pagination {
     padding: 0.5rem 0.5rem;
   }
@@ -220,10 +255,7 @@ svg {
 }
 
 @media screen and (max-width:475px) {
-  .phase {
-    /* gap: 2rem; */
-    width:100vw
-  }
+  
 
   .bg-roadmap {
     background-size: 95vw 14vw,contain, 55rem;
@@ -240,6 +272,6 @@ svg {
   } */
 
   .container {
-    padding-left: 0;
+    padding-left: 1rem;
   }
 }

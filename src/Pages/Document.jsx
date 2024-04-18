@@ -1,8 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Footer from '../components/Footer/Footer'
 import { icon, leftArrow, rightArrow } from '../assets'
+import '../App.css'
+import { Link, useParams } from 'react-router-dom'
 
 function Document() {
+
+  const { id } = useParams()
+  
+  const data = [
+    { id: "current-state", title: "The current state of project launches on solana", desc: "" },
+    { id: "launchpad", title: "nimbi launchpad", desc: "" },
+    { id: "user-flow", title: "user flow for solster launchpad", desc: "" },
+    { id: "economics", title: "token economics", desc: "" },
+    { id: "burn", title: "token burn", desc: "" },
+    { id: "road", title: "road to nimbi success", desc: "" },
+    { id: "chapter", title: "chapter name", desc: "" },
+    { id: "testnet", title: "testnet launch", desc: "" },
+  ]
+
+  const [title,setTitle] = useState("")
+
+  useEffect(()=>{
+    setTitle(data.filter(obj=>obj.id===id)[0]?.title)
+  },[id])
+  
+  const handleClick = (e) => {
+    document.querySelectorAll('.document.active').forEach(doc => doc.classList.remove('active'))
+    e.target.classList.add('active')
+  }
+
   return (
     <>
       <div className='flex capitalize pt-16 sm:flex-row flex-col'>
@@ -15,10 +42,10 @@ function Document() {
                 <p className=''>launchpad</p>
                 <img src={icon} className='w-3 h-3 rotate-90' alt="" />
               </div>
-              <ul className='pl-8 text-[0.65rem] md:text-[0.83rem]'>
-                <li className='hover:bg-[#28343b] py-3 px-2 rounded-lg cursor-pointer'>The current state of project launches on solana</li>
-                <li className='hover:bg-[#28343b] py-3 px-2 rounded-lg cursor-pointer bg-[#28343b]'>nimbi launchpad</li>
-                <li className='hover:bg-[#28343b] py-3 px-2 rounded-lg cursor-pointer'>user flow for solster launchpad</li>
+              <ul className='pl-8 text-[0.65rem] md:text-[0.83rem] flex flex-col gap-1'>
+                <Link to="/documents/current-state" id="current-state" className='document' onClick={handleClick}>The current state of project launches on solana</Link>
+                <Link to="/documents/launchpad" id="launchpad" className='document active' onClick={handleClick}>nimbi launchpad</Link>
+                <Link to="/documents/user-flow" id="user-flow" className='document' onClick={handleClick}>user flow for solster launchpad</Link>
               </ul>
             </div>
           </div>
@@ -26,10 +53,9 @@ function Document() {
             <p className='uppercase text-left font-semibold'>tokenomics</p>
             <div className="flex flex-col gap-2">
 
-              <ul className='pl-8 text-[0.65rem] md:text-[0.83rem]'>
-                <li className='hover:bg-[#28343b] py-3 px-2 rounded-lg cursor-pointer'>token economics</li>
-                <li className='hover:bg-[#28343b] py-3 px-2 rounded-lg cursor-pointer'>token burn</li>
-                <li className='hover:bg-[#28343b] py-3 px-2 rounded-lg cursor-pointer'>user flow for solster launchpad</li>
+              <ul className='pl-8 text-[0.65rem] md:text-[0.83rem] flex flex-col gap-1'>
+                <Link to="/documents/economics" id="economics" className='document' onClick={handleClick}>token economics</Link>
+                <Link to="/documents/burn" id="burn" className='document' onClick={handleClick}>token burn</Link>
               </ul>
             </div>
           </div>
@@ -37,9 +63,9 @@ function Document() {
             <p className='uppercase text-left font-semibold'>roadmap</p>
             <div className="flex flex-col gap-2">
 
-              <ul className='pl-8 text-[0.65rem] md:text-[0.83rem]'>
-                <li className='hover:bg-[#28343b] py-3 px-2 rounded-lg cursor-pointer'>road to nimbi success</li>
-                <li className='hover:bg-[#28343b] py-3 px-2 rounded-lg cursor-pointer'>chapter name</li>
+              <ul className='pl-8 text-[0.65rem] md:text-[0.83rem] flex flex-col gap-1'>
+                <Link to="/documents/road" id="road" className='document' onClick={handleClick}>road to nimbi success</Link>
+                <Link to="/documents/chapter" id="chapter" className='document' onClick={handleClick}>chapter name</Link>
               </ul>
             </div>
           </div>
@@ -47,18 +73,17 @@ function Document() {
             <p className='uppercase text-left font-semibold'>testnet launch</p>
             <div className="flex flex-col gap-2">
 
-              <ul className='pl-8 text-[0.65rem] md:text-[0.83rem]'>
-                <li className='hover:bg-[#28343b] py-3 px-2 rounded-lg cursor-pointer'>how to receive testnet tokens</li>
+              <ul className='pl-8 text-[0.65rem] md:text-[0.83rem] flex flex-col gap-1'>
+                <Link to="/documents/testnet" id="testnet" className='document' onClick={handleClick}>how to receive testnet tokens</Link>
               </ul>
             </div>
           </div>
         </div>
 
-        <div className=" px-[3rem] md:px-[3rem] sm:w-[67%] md:w-[67%] pb-4 capitalize bg-[url('./assets/mountain.png')] bg-cover bg-right-bottom bg-no-repeat font-['Inter',sans-serif]">
-
+        <div className="px-[3rem] md:px-[3rem] sm:w-[67%] md:w-[67%] pb-4 capitalize bg-[url('./assets/mountain.png')] bg-cover bg-right-bottom bg-no-repeat font-['Inter',sans-serif]">
           <div className="flex flex-col gap-10">
             <div className="w-full border-b border-b-[#c4c0c8] py-6 font-['Roboto',sans-serif]">
-              <p className='uppercase text-3xl font-semibold text-left py-3'>Nimbi Launchpad</p>
+              <p className='uppercase text-3xl font-semibold text-left py-3'>{title || 'nimbi launchpad'}</p>
             </div>
 
             <div className='text-[0.65rem] md:text-[0.83rem] leading-loose'>

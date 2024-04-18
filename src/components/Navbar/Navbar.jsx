@@ -75,12 +75,12 @@ function Navbar() {
 
                 <div className="lg:w-[10%]">
                     <Link to="/">
-                        <div className="w-[4.5rem] h-[1.6rem]">
+                        <div className="w-[5rem] h-[1.9rem]">
                             <img src={logo} className="w-full h-full object-fill" alt="" />
                         </div>
                     </Link>
                 </div>
-                <ul className="hidden lg:flex items-center justify-center gap-2 text-xs list-none w-[54%]">
+                <ul className="hidden lg:flex items-center justify-center gap-2 text-sm list-none w-[54%]">
                     <Link onClick={activeTab} id="home" to="/" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee]'>Home</Link>
                     <Link onClick={activeTab} id="about" to="/about" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>About</Link>
                     <Link onClick={activeTab} id="team" to="/team" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>Our Team</Link>

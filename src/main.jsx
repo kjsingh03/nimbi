@@ -13,6 +13,7 @@ const router = createBrowserRouter(
       <Route path="/about" element={<About />} />
       <Route path="/team" element={<Team />} />
       <Route path="/documents" element={<Document />} />
+      <Route path="/documents/:id" element={<Document />} />
       <Route path="/faq" element={<Faq />} />
       <Route path="/gsap" element={<Gsap />} />
     </Route>

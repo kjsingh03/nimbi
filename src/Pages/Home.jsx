@@ -28,37 +28,25 @@ function Home() {
     var xPercent = 0, from = 0, to = 0;
 
     if (width >= 1024) { xPercent = -100 * (sections.length - 4); from = '9%'; to = '100%' }
-    else if (width >= 475) { xPercent = -100 * (sections.length - 2); from = '30%'; to = '100%' }
-    else { xPercent = -100 * (sections.length - 1); from = '40%'; to = '40%' }
-
-    let scrollTween = gsap.to(sections, {
-      xPercent: xPercent,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".roadmap-container",
-        pin: true,
-        scrub: 1,
-        end: "+=300",
-        // markers: true,
-      }
-    });
+    else if (width >= 768) { xPercent = -100 * (sections.length - 2); from = '30%'; to = '100%' }
+    else { from = '0%'; to = '100%' }
 
     gsap.fromTo(mask, {
       width: from
     }, {
       width: to,
-      ease: "power4.in",
+      ease: width > 768 ?"power4.in":"none",
       scrollTrigger: {
         trigger: ".roadmap-container",
-        start: "top 65%",
-        end: "bottom 64%",
+        start: width > 768 ? "top 65%" : "top 52%",
+        end: width > 768 ? "bottom 64%" : "bottom 80%",
         scrub: 1,
         // markers: 1
       }
     });
-    
-    gsap.to('.mountain',{
-      x:-400,
+
+    gsap.to('.mountain', {
+      x: -400,
       ease: "none",
       scrollTrigger: {
         trigger: ".roadmap-container",
@@ -68,22 +56,55 @@ function Home() {
       }
     });
 
-    sections.forEach((section, index) => {
-      if (index !== 0) {
-        gsap.from(section, {
-          x: 20,
-          opacity: 0,
-          duration: 0.75,
-          delay: index * 1 / 32,
-          scrollTrigger: {
-            trigger: section,
-            containerAnimation: scrollTween,
-            start: `left ${20 * index + 5 - index}%`,
-            // markers: 1
-          }
-        });
-      }
-    });
+    if (width < 768) {
+      sections.forEach((section, index) => {
+        if (index !== 0) {
+          gsap.from(section, {
+            y: 20,
+            opacity: 0,
+            duration: 0.75,
+            delay: index * 1 / 32,
+            scrollTrigger: {
+              trigger: section,
+              start: `top ${60}%`,
+              // markers: 1
+            }
+          });
+        }
+      });
+    } else {
+      let scrollTween = gsap.to(sections, {
+        xPercent: xPercent,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".roadmap-container",
+          pin: true,
+          scrub: 1,
+          end: "+=300",
+          // markers: true,
+        }
+      });
+
+      sections.forEach((section, index) => {
+        if (index !== 0) {
+          gsap.from(section, {
+            x: 20,
+            opacity: 0,
+            duration: 0.75,
+            delay: index * 1 / 32,
+            scrollTrigger: {
+              trigger: section,
+              containerAnimation: scrollTween,
+              start: `left ${20 * index + 5 - index}%`,
+              // markers: 1
+            }
+          });
+        }
+      });
+    }
+
+
+
 
     if (width > 1280) {
       gsap.to('.collectionLeft', { x: -800, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 75%", end: "top -50%", scrub: true, } })
@@ -95,7 +116,7 @@ function Home() {
   return (
     <div className="z-0 capitalize pt-12" ref={main}>
 
-      <div className="w-[90%] lg:w-[80%] mx-auto h-[45vw] lg:h-[83vh]">
+      <div className="w-[90%] lg:w-[80%] mx-auto h-[45vw] lg:h-[77vh]">
         <Swiper
           style={{
             "--swiper-navigation-color": "#000",
@@ -180,26 +201,50 @@ function Home() {
           </div>
 
           <div className="wrapper">
-            <section>
-              <div className="w-[250rem] relative">
-                <img src={mountain} className='mountain absolute opacity-80 -top-[17.5rem] sm:-top-[20.5rem] w-full left-[35rem] sm:left-[50rem] md:-left-[67rem] h-[20rem] sm:h-[34rem] -z-10' alt="" />
-              </div>
-              <svg className={`absolute -z-10 top-[12.8rem] md:top-[12rem] lg:top-[12rem] xl:top-[11.4rem] w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <section className='md:static relative rotate-90 md:rotate-0 w-screen h-[10vh] md:h-0'>
+
+              {
+                (width > 768) &&
+                <div className="md:w-[250rem] relative">
+                  <img src={mountain} className='mountain absolute opacity-80 -top-[17.5rem] sm:-top-[20.5rem] w-full left-[35rem] sm:left-[50rem] md:-left-[67rem] h-[20rem] sm:h-[34rem] -z-10' alt="" />
+                </div>
+              }
+              <svg className={`absolute -z-10 top-[6.4rem] xs:top-[4.3rem] md:top-[12.35rem] lg:top-[11.9rem] xl:top-[11.6rem] 2xl:top-[11.2rem] md:left-0 -left-[3rem] w-[160rem] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter='url(#filter0_d_230_5843)'>
                   <rect y="42.5" height="0.8" width="5000" fill="#767F84" />
                 </g>
-                <filter id="filter0_d_230_5843"  filterUnits="userSpaceOnUse"  style={{ colorInterpolation: "sRGB" }}>
-                    <feFlood style={{floodOpacity:0}} result="BackgroundImageFix" />
+                <filter id="filter0_d_230_5843" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
+                  <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                  <feOffset />
+                  <feGaussianBlur stdDeviation="5" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_230_5843" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_230_5843" result="shape" />
+                </filter>
+              </svg>
+              {
+                width < 768 &&
+                <svg className={`absolute -z-0 top-[6.8rem] xs:top-[4.8rem] -left-[3rem] w-[140rem] `} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter='url(#filter1_d_1261_1133)'>
+                    <rect y="42.5" className='mask' height="0.8" fill="#33BDEB" />
+                  </g>
+                  <filter id="filter1_d_1261_1133" className='mask' x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
+                    <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset />
                     <feGaussianBlur stdDeviation="5" />
                     <feComposite in2="hardAlpha" operator="out" />
                     <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_230_5843" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_230_5843" result="shape" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
                   </filter>
-              </svg>
-              <svg className={`absolute -z-10 top-[13rem] md:top-[12.2rem] lg:top-[12rem] xl:top-[11.4rem] ${width >= 1024 ? 'w-[78vw]' : 'w-[67vw]'}`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                </svg>
+              }
+              {
+                width >=768 &&
+              <svg className={`absolute -z-10 top-[8.4rem] xs:top-[4.3rem] md:top-[12.45rem] lg:top-[11.9rem] xl:top-[11.6rem] 2xl:top-[11.2rem] ${width >= 1024 ? 'w-[78vw]' : 'w-[67vw]'}`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter='url(#filter1_d_1261_1133)'>
                   <rect className="mask" y="55" height="150" fill="#33BDEB" />
                 </g>
@@ -212,8 +257,10 @@ function Home() {
                   <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
                   <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
                   <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
-                </filter> 
+                </filter>
               </svg>
+              }
+
             </section>
             <div className="container scrollx ">
               <section>
@@ -228,7 +275,7 @@ function Home() {
                     <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />tokenomics development</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />smart contract development</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />secure initial funding</li>
-                    <img src={round} className="w-8 h-8 absolute left-[rem] top-[12.5rem] z-20" />
+                    <img src={round} className="w-8 h-8 absolute -left-4 xs:-left-10 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
                     <img src={ellipse} className="w-[5rem] h-[5rem] absolute left-[117.7rem] md:left-[4rem] lg:-left-[1.5rem] top-[11rem]" />
                   </ul>
                   <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
@@ -250,7 +297,7 @@ function Home() {
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                    <img src={indicator} className="w-8 h-8 absolute left-[rem] top-[12.5rem] z-20" />
+                    <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
                   </ul>
                   <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
 
@@ -273,7 +320,7 @@ function Home() {
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                    <img src={indicator} className="w-8 h-8 absolute left-[rem] top-[12.5rem] z-20" />
+                    <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
                   </ul>
 
                   <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
@@ -295,7 +342,7 @@ function Home() {
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                    <img src={indicator} className="w-8 h-8 absolute left-[rem] top-[12.5rem] z-20" />
+                    <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
                   </ul>
 
                   <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
@@ -318,7 +365,7 @@ function Home() {
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                    <img src={indicator} className="w-8 h-8 absolute left-[rem] top-[12.5rem] z-20" />
+                    <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
                   </ul>
 
                   <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
