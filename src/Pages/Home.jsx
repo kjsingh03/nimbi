@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import '../App.css'
 import { IntroCard, NFTCard } from '../components'
-import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, telegramIcon, discordIcon, twitterIcon, xIcon, vector, tick, mask, mountain, indicator, round } from '../assets'
+import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, vector, tick, mask, mountain, indicator, round,animation } from '../assets'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -226,7 +226,7 @@ function Home() {
               </svg>
               {
                 width < 768 &&
-                <svg className={`absolute -z-0 top-[6.8rem] xs:top-[4.8rem] -left-[3rem] w-[140rem] `} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={`absolute -z-0 top-[6.8rem] xs:top-[4.7rem] -left-[3rem] w-[142rem] `} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter='url(#filter1_d_1261_1133)'>
                     <rect y="42.5" className='mask' height="0.8" fill="#33BDEB" />
                   </g>
@@ -275,7 +275,7 @@ function Home() {
                     <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />tokenomics development</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />smart contract development</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />secure initial funding</li>
-                    <img src={round} className="w-8 h-8 absolute -left-4 xs:-left-10 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
+                    <img src={round} className="w-8 h-8 absolute -left-5 xs:-left-11 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
                     <img src={ellipse} className="w-[5rem] h-[5rem] absolute left-[117.7rem] md:left-[4rem] lg:-left-[1.5rem] top-[11rem]" />
                   </ul>
                   <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
@@ -297,7 +297,7 @@ function Home() {
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                    <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
+                    <img src={indicator} className="w-8 h-8 absolute -left-3 xs:-left-[2.125rem] -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
                   </ul>
                   <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
 
@@ -320,7 +320,7 @@ function Home() {
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                    <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
+                    <img src={indicator} className="w-8 h-8 absolute -left-3 xs:-left-[2.125rem] -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
                   </ul>
 
                   <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
@@ -342,7 +342,7 @@ function Home() {
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                    <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
+                    <img src={indicator} className="w-8 h-8 absolute -left-3 xs:-left-[2.125rem] -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
                   </ul>
 
                   <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
@@ -365,7 +365,7 @@ function Home() {
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                    <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
+                    <img src={indicator} className="w-8 h-8 absolute -left-3 xs:-left-[2.125rem] -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
                   </ul>
 
                   <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
@@ -410,10 +410,11 @@ function Home() {
         </div>
       </div>
 
-      <div className="relative h-[66rem] xs:h-[77rem] sm:h-[80rem] md:h-[45rem] lg:h-[45rem] xl:h-[55rem]">
-        <div className="bg-[url(./assets/sec2.png)] relative w-full h-[35rem] xs:h-[50rem] sm:h-[55rem] md:h-[45rem] lg:h-[45rem] xl:h-[55rem] mt-16 xl:bg-center bg-[-30rem_0rem] xs:bg-[-45rem_0rem] sm:bg-[-44rem_0rem] md:bg-right bg-no-repeat bg-cover bg-white pb-[20rem] md:pb-0">
+      <div className="relative h-[66rem] xs:h-[77rem] sm:h-[75rem] md:h-[45rem] lg:h-[45rem] xl:h-[55rem]">
+        
+        <div className="bg-[url(./assets/sec2.png)] relative w-full h-[35rem] xs:h-[50rem] sm:h-[50rem] md:h-[45rem] lg:h-[45rem] xl:h-[55rem] mt-16 xl:bg-center bg-[-30rem_0rem] xs:bg-[-45rem_0rem] sm:bg-[-42rem_0rem] md:bg-right bg-no-repeat bg-cover bg-white pb-[20rem] md:pb-0">
         </div>
-        <div className="h-[34rem] sm:h-[30rem] flex flex-col absolute bottom-0 pl-8 pr-8 md:static pt-12 pb-12 xs:pr-16 md:pr-0 md:pt-[8rem] xl:pt-[12rem] xs:pl-16 xl:pl-[8rem] w-full md:w-[43%] gap-6 items-center justify-center text-[#151b1e] bg-white md:bg-transparent">
+        <div className="h-[34rem] sm:h-[30rem] flex flex-col absolute bottom-0 lg:top-[7rem] xl:top-[10rem] pl-8 pr-8 pt-12 pb-12 xs:pr-16 md:pr-0 md:pt-[8rem] xl:pt-[12rem] xs:pl-16 xl:pl-[8rem] w-full md:w-[43%] gap-6 items-center justify-center text-[#151b1e] bg-white md:bg-transparent">
           <p className='md:text-[1.75rem] text-[1.75rem] lg:text-[2.75rem] xl:text-[3.4rem] font-bold uppercase leading-snug'>Web3 Crypto Dust Runner Game</p>
           <p className='text-sm xl:text-lg font-medium tracking-tighter'>Introducing Crypto Dust Runner, the web 3 game that's here to bring the heat to those corporate whales invading our precious crypto space! 🌬️🐺</p>
           <p className='text-xs font-medium block'>👋 In this epic quest, you'll join forces with Nimbi, the fearless white wolf, as he races through a treacherous frozen gulch, fueled by the magnificent power of crypto dust! 💪✨ His mission? To collect as much of this precious resource as possible and transform into a legendary force against those pesky corporate giants. 😎🐋Picture this: you're in control of the nimble Nimbi, dodging obstacles, jumping over icy chasms, and racing against time ⏰ to reach power-up spots that will elevate your game to a whole new level! 💯✨ Discover abandoned crypto mines that will boost Nimbi's dust collection abilities, allowing him to dominate the leaderboard like a true crypto champ! 🏆💰</p>

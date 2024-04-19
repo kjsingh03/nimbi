@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { logo, sound } from '../../assets'
+import { logo, sound,animation } from '../../assets'
 import '../../App.css'
 import { Link } from 'react-router-dom'
+import Lottie from 'lottie-react'
+
 
 function Navbar() {
 
@@ -56,6 +58,8 @@ function Navbar() {
 
     }, [path])
 
+    // const {View} = useLottie({animationData:animation,loop:true})
+
     return (
         <nav className='fixed w-full border-b border-b-[#c4c0c8] bg-[#242d32] z-50 '>
             <div className="flex items-center justify-between sm:w-[90%] lg:w-[80%] mx-auto px-4">
@@ -90,8 +94,8 @@ function Navbar() {
                 <div className="hidden lg:flex items-center gap-2 w-[36%] justify-end">
                     <div className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8 w-[8rem] text-center'>Collections</div>
                     <div className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8 w-[8rem] text-center'>Presale</div>
-                    <div className="w-[2.5rem]">
-                        <img src={sound} alt="" className='w-full h-full object-cover' />
+                    <div className="w-[1.5rem]">
+                        {<Lottie animationData={animation} loop={true} />}
                     </div>
                 </div>
             </div>
