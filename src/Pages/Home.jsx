@@ -35,7 +35,7 @@ function Home() {
       width: from
     }, {
       width: to,
-      ease: width > 768 ?"power4.in":"none",
+      ease: width > 768 ? "power4.in" : "none",
       scrollTrigger: {
         trigger: ".roadmap-container",
         start: width > 768 ? "top 65%" : "top 52%",
@@ -116,7 +116,7 @@ function Home() {
   return (
     <div className="z-0 capitalize pt-12" ref={main}>
 
-      <div className="w-[90%] lg:w-[80%] mx-auto h-[45vw] lg:h-[77vh]">
+      <div className="w-[90%] lg:w-[80%] mx-auto h-[45vw] lg:h-[77vh] carousel">
         <Swiper
           style={{
             "--swiper-navigation-color": "#000",
@@ -209,7 +209,7 @@ function Home() {
                   <img src={mountain} className='mountain absolute opacity-80 -top-[17.5rem] sm:-top-[20.5rem] w-full left-[35rem] sm:left-[50rem] md:-left-[67rem] h-[20rem] sm:h-[34rem] -z-10' alt="" />
                 </div>
               }
-              <svg className={`absolute -z-10 top-[6.4rem] xs:top-[4.3rem] md:top-[12.35rem] lg:top-[11.9rem] xl:top-[11.6rem] 2xl:top-[11.2rem] md:left-0 -left-[3rem] w-[160rem] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className={`absolute -z-10 top-[6.4rem] xs:top-[4.3rem] md:top-[12.37rem] lg:top-[11.9rem] xl:top-[11.6rem] 2xl:top-[11.2rem] 3xl:top-[11rem] 4xl:top-[10.8rem] 5xl:top-[10.6rem] 6xl:top-[10.3rem] 7xl:top-[10rem] md:left-0 -left-[3rem] w-[160rem] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter='url(#filter0_d_230_5843)'>
                   <rect y="42.5" height="0.8" width="5000" fill="#767F84" />
                 </g>
@@ -243,22 +243,22 @@ function Home() {
                 </svg>
               }
               {
-                width >=768 &&
-              <svg className={`absolute -z-10 top-[8.4rem] xs:top-[4.3rem] md:top-[12.45rem] lg:top-[11.9rem] xl:top-[11.6rem] 2xl:top-[11.2rem] ${width >= 1024 ? 'w-[78vw]' : 'w-[67vw]'}`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter='url(#filter1_d_1261_1133)'>
-                  <rect className="mask" y="55" height="150" fill="#33BDEB" />
-                </g>
-                <filter id="filter1_d_1261_1133" className='mask' x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
-                  <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
-                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                  <feOffset />
-                  <feGaussianBlur stdDeviation="5" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
-                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
-                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
-                </filter>
-              </svg>
+                width >= 768 &&
+                <svg className={`absolute -z-10 top-[8.4rem] xs:top-[4.3rem] md:top-[12.45rem] lg:top-[11.9rem] xl:top-[11.6rem] 2xl:top-[11.2rem] 3xl:top-[11rem] 4xl:top-[10.8rem] 5xl:top-[10.6rem] 6xl:top-[10.3rem] 7xl:top-[10rem] ${width >= 1024 ? 'w-[77.53vw]' : 'w-[67vw]'}`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter='url(#filter1_d_1261_1133)'>
+                    <rect className="mask" y="55" height="150" fill="#33BDEB" />
+                  </g>
+                  <filter id="filter1_d_1261_1133" className='mask' x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
+                    <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="5" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
+                  </filter>
+                </svg>
               }
 
             </section>
@@ -410,11 +410,13 @@ function Home() {
         </div>
       </div>
 
-      <div className="bg-[url(./assets/sec2.png)] w-full h-[30rem] xl:h-[55rem] mt-16 xl:bg-center bg-right bg-no-repeat bg-cover">
-        <div className="flex flex-col pt-4 xl:pt-[12rem] pl-16 xl:pl-[8rem] w-[90%] lg:w-[60%] xl:w-[43%] gap-6 items-center justify-center text-white xl:text-[#151b1e]">
-          <p className='text-2xl xl:text-[3.4rem] font-bold uppercase leading-snug'>Web3 Crypto Dust Runner Game</p>
+      <div className="relative h-[66rem] xs:h-[77rem] sm:h-[80rem] md:h-[45rem] lg:h-[45rem] xl:h-[55rem]">
+        <div className="bg-[url(./assets/sec2.png)] relative w-full h-[35rem] xs:h-[50rem] sm:h-[55rem] md:h-[45rem] lg:h-[45rem] xl:h-[55rem] mt-16 xl:bg-center bg-[-30rem_0rem] xs:bg-[-45rem_0rem] sm:bg-[-44rem_0rem] md:bg-right bg-no-repeat bg-cover bg-white pb-[20rem] md:pb-0">
+        </div>
+        <div className="h-[34rem] sm:h-[30rem] flex flex-col absolute bottom-0 pl-8 pr-8 md:static pt-12 pb-12 xs:pr-16 md:pr-0 md:pt-[8rem] xl:pt-[12rem] xs:pl-16 xl:pl-[8rem] w-full md:w-[43%] gap-6 items-center justify-center text-[#151b1e] bg-white md:bg-transparent">
+          <p className='md:text-[1.75rem] text-[1.75rem] lg:text-[2.75rem] xl:text-[3.4rem] font-bold uppercase leading-snug'>Web3 Crypto Dust Runner Game</p>
           <p className='text-sm xl:text-lg font-medium tracking-tighter'>Introducing Crypto Dust Runner, the web 3 game that's here to bring the heat to those corporate whales invading our precious crypto space! 🌬️🐺</p>
-          <p className='text-xs font-medium hidden xl:block'>👋 In this epic quest, you'll join forces with Nimbi, the fearless white wolf, as he races through a treacherous frozen gulch, fueled by the magnificent power of crypto dust! 💪✨ His mission? To collect as much of this precious resource as possible and transform into a legendary force against those pesky corporate giants. 😎🐋Picture this: you're in control of the nimble Nimbi, dodging obstacles, jumping over icy chasms, and racing against time ⏰ to reach power-up spots that will elevate your game to a whole new level! 💯✨ Discover abandoned crypto mines that will boost Nimbi's dust collection abilities, allowing him to dominate the leaderboard like a true crypto champ! 🏆💰</p>
+          <p className='text-xs font-medium block'>👋 In this epic quest, you'll join forces with Nimbi, the fearless white wolf, as he races through a treacherous frozen gulch, fueled by the magnificent power of crypto dust! 💪✨ His mission? To collect as much of this precious resource as possible and transform into a legendary force against those pesky corporate giants. 😎🐋Picture this: you're in control of the nimble Nimbi, dodging obstacles, jumping over icy chasms, and racing against time ⏰ to reach power-up spots that will elevate your game to a whole new level! 💯✨ Discover abandoned crypto mines that will boost Nimbi's dust collection abilities, allowing him to dominate the leaderboard like a true crypto champ! 🏆💰</p>
           <div className="w-full text-left">
             <p className="btn w-[12rem] text-center">Launch APP</p>
           </div>

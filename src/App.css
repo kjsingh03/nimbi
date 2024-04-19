@@ -63,6 +63,12 @@ nav a.active {
   cursor: pointer;
   background-color: #0000006d;
   padding: 1rem 1rem;
+  display: none;
+}
+
+.carousel:hover .swiper-button-next::after,
+.carousel:hover .swiper-button-prev::after{
+  display: block;
 }
 
 .swiper-pagination {
