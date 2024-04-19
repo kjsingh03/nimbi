@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { logo, sound,animation } from '../../assets'
+import { logo, sound, animation } from '../../assets'
 import '../../App.css'
 import { Link } from 'react-router-dom'
 import Lottie from 'lottie-react'
@@ -20,7 +20,7 @@ function Navbar() {
     const activeTab = (e) => {
         const active = document.querySelectorAll("nav .active")
 
-        if(active){
+        if (active) {
             active.forEach((tab) => {
                 tab.classList.remove('active')
             })
@@ -33,42 +33,40 @@ function Navbar() {
     let [path, setPath] = useState(window.location.pathname.split("/")[1])
 
     useEffect(() => {
-
-        if(path){
+        if (path) {
             const activeTabs = document.querySelectorAll("nav active")
-    
+
             activeTabs.forEach(tab => {
                 tab.classList.remove('active')
             })
-    
-            const tabs = document.querySelectorAll(`#${path}`)
-    
-            tabs.forEach(tab => {
-                tab.classList.add('active')
-            })
-        }
-        else{
-            const tabs = document.querySelectorAll(`#home`)
-    
-            tabs.forEach(tab => {
-                tab.classList.add('active')
-            })
-            
-        }
 
+            const tabs = document.querySelectorAll(`#${path}`)
+
+            tabs.forEach(tab => {
+                tab.classList.add('active')
+            })
+        }
+        else {
+            const tabs = document.querySelectorAll(`#home`)
+
+            tabs.forEach(tab => {
+                tab.classList.add('active')
+            })
+
+        }
     }, [path])
 
     // const {View} = useLottie({animationData:animation,loop:true})
 
     return (
         <nav className='fixed w-full border-b border-b-[#c4c0c8] bg-[#242d32] z-50 '>
-            <div className="flex items-center justify-between sm:w-[90%] lg:w-[80%] mx-auto px-4">
+            <div className="flex items-center justify-between sm:w-[90%] xl:w-[80%] mx-auto px-4">
 
                 <button onClick={activateNavbar} id="navbar-toggler" className="block lg:hidden text-xl py-[0.9rem] text-white"  >☰</button>
 
                 <div className="flex overflow-hidden">
-                    <ul className="navbar flex flex-col gap-3 transition-all duration-200 ease-in px-8 py-16 lg:shadow-none shadow-xl z-[100] fixed left-0 top-0 bg-[#242d32] text-center w-screen h-screen" id="navbar">
-                        <p className='text-right' onClick={()=>document.querySelector('.navbar').classList.remove('active')}>☰</p>
+                    <ul className="navbar flex lg:hidden flex-col gap-3 transition-all duration-200 ease-in px-8 py-16 lg:shadow-none shadow-xl z-[100] fixed left-0 top-0 bg-[#242d32] text-center w-screen h-screen" id="navbar">
+                        <p className='text-right' onClick={() => document.querySelector('.navbar').classList.remove('active')}>☰</p>
                         <Link onClick={activeTab} id="home" to="/" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee]'>Home</Link>
                         <Link onClick={activeTab} id="about" to="/about" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>About</Link>
                         <Link onClick={activeTab} id="team" to="/team" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>Our Team</Link>
@@ -78,7 +76,7 @@ function Navbar() {
                 </div>
 
                 <div className="lg:w-[10%]">
-                    <Link to="/">
+                    <Link to="/" onClick={(e) => { document.querySelector("nav active").classList.remove('active') ; document.querySelectorAll(`#home`).forEach(tab => tab.classList.add('active') )}}>
                         <div className="w-[5rem] h-[1.9rem]">
                             <img src={logo} className="w-full h-full object-fill" alt="" />
                         </div>

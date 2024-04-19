@@ -1,13 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Footer from '../components/Footer/Footer'
-import { ellipse } from '../assets'
+import { cross, ellipse, telegram } from '../assets'
 import { TeamCard } from '../components'
-import { card1,card2,card3,card4,card5,card6,card7,card8 } from '../assets'
+import { card1, card2, card3, card4, card5, card6, card7, card8 } from '../assets'
+import '../App.css'
 
 function Team() {
+
+  const [modal, setModal] = useState({})
+
+  const handleClick = ({ img, position, title, desc, id }) => {
+
+    document.querySelector(`.modal`).classList.add('active')    
+    setModal({ img, position, title, desc, id })
+    
+    // const query = document.querySelector(`#${id}`)
+    // window.addEventListener('click', (e) => {
+    //   if (!query.contains(e.target)) {
+    //     setModal({})
+    //     document.querySelector(`.modal`).classList.remove('active')
+    //   }
+    // })
+  }
+
+  const closeModal = () => {
+    document.querySelector(`.modal`).classList.remove('active')
+  }
+
   return (
-    <>
-      <div className="flex flex-col justify-center gap-12 w-full px-[2rem] md:px-[5rem] xl:px-[11rem] mx-auto capitalize py-16 bg-[url(./assets/whaleLeft.png),url(./assets/mountain.png),url('./assets/bigEllipse.png')] team bg-no-repeat font-['Inter',sans-serif]">
+    <div className='h-screen overflow-y-auto'>
+      <div className="flex flex-col  justify-center gap-12 w-full px-[2rem] md:px-[5rem] xl:px-[11rem] mx-auto capitalize py-16 bg-[url(./assets/whaleLeft.png),url(./assets/mountain.png),url('./assets/bigEllipse.png')] team bg-no-repeat font-['Inter',sans-serif]">
 
         <div className="w-full border-b border-b-[#c4c0c8] py-6 font-['Roboto_Condensed',sans-serif]">
           <p className='uppercase text-3xl font-semibold text-left py-3'>The people behind the scenes</p>
@@ -20,11 +42,29 @@ function Team() {
             <img src={ellipse} className='absolute -top-6 -right-10 w-[5rem] -z-0' alt="" />
           </div>
 
+          <div id={modal.id} className="modal hidden h-screen w-screen absolute top-0 left-0 z-30 items-center justify-center bg-black/40">
+            <div className='team relative capitalize lg:h-[26rem] xl:h-[26rem] w-[70%] md:w-[50%] xl:w-[40%] mx-auto flex flex-col gap-2 bg-[#334047] border border-[#5c666c] p-2 '>
+              <div className="xs:h-[16rem] xl:h-[18rem]">
+                <img src={modal.img} alt="" className='w-full h-full object-cover' />
+              </div>
+              <div className="absolute w-10 h-10 right-3 top-3 ">
+                <img src={telegram} alt="" className='w-full h-full object-cover' />
+              </div>
+              <div className="absolute w-10 h-10 left-3 top-3 ">
+                <img onClick={closeModal} src={cross} alt="" className='w-full h-full object-cover' />
+              </div>
+              <p className="uppercase font-semibold text-[#00ace6] text-[0.83rem]">{modal.position}</p>
+              <p className="text-white underline text-2xl font-semibold cursor-pointer">{modal.title}</p>
+              <p className="text-[#e4e5e6] text-[0.67rem] font-light">{modal.desc}</p>
+            </div>
+          </div>
+
+
           <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
-            <TeamCard img={card8} position="ceo and founder" title="dack thomas" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
-            <TeamCard img={card8} position="ceo and founder" title="dack thomas" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
-            <TeamCard img={card8} position="ceo and founder" title="dack thomas" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
-            <TeamCard img={card8} position="ceo and founder" title="dack thomas" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
+            <TeamCard handleClick={handleClick} id="teamCard1" img={card8} position="ceo and founder" title="dack thomas" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
+            <TeamCard handleClick={handleClick} id="teamCard2" img={card8} position="ceo and founder" title="dack thomas" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
+            <TeamCard handleClick={handleClick} id="teamCard3" img={card8} position="ceo and founder" title="dack thomas" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
+            <TeamCard handleClick={handleClick} id="teamCard4" img={card8} position="ceo and founder" title="dack thomas" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
           </div>
 
           <div className="relative w-max">
@@ -33,10 +73,10 @@ function Team() {
           </div>
 
           <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
-            <TeamCard img={card7} position="backend dev" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
-            <TeamCard img={card2} position="ui/ux" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
-            <TeamCard img={card3} position="technical officer" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
-            <TeamCard img={card3} position="technical officer" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
+            <TeamCard handleClick={handleClick} id="teamCard5" img={card7} position="backend dev" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
+            <TeamCard handleClick={handleClick} id="teamCard6" img={card2} position="ui/ux" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
+            <TeamCard handleClick={handleClick} id="teamCard7" img={card3} position="technical officer" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
+            <TeamCard handleClick={handleClick} id="teamCard8" img={card3} position="technical officer" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
           </div>
 
           <div className="relative w-max">
@@ -45,10 +85,10 @@ function Team() {
           </div>
 
           <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
-            <TeamCard img={card4} position="smart contract dev" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
-            <TeamCard img={card5} position="marketing" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
-            <TeamCard img={card6} position="frontend dev" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
-            <TeamCard img={card6} position="frontend dev" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
+            <TeamCard handleClick={handleClick} id="teamCard9" img={card4} position="smart contract dev" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
+            <TeamCard handleClick={handleClick} id="teamCard10" img={card5} position="marketing" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
+            <TeamCard handleClick={handleClick} id="teamCard11" img={card6} position="frontend dev" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
+            <TeamCard handleClick={handleClick} id="teamCard12" img={card6} position="frontend dev" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
           </div>
 
           <div className="relative w-max">
@@ -57,19 +97,19 @@ function Team() {
           </div>
 
           <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
-            <TeamCard img={card7} position="backend dev" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
-            <TeamCard img={card2} position="ui/ux" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
-            <TeamCard img={card1} position="community moderation" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
-            <TeamCard img={card1} position="community moderation" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
+            <TeamCard handleClick={handleClick} id="teamCard13" img={card7} position="backend dev" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
+            <TeamCard handleClick={handleClick} id="teamCard14" img={card2} position="ui/ux" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
+            <TeamCard handleClick={handleClick} id="teamCard15" img={card1} position="community moderation" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
+            <TeamCard handleClick={handleClick} id="teamCard16" img={card1} position="community moderation" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
           </div>
 
-          
+
         </div>
 
 
       </div>
       <Footer path='/about' />
-    </>
+    </div>
   )
 }
 

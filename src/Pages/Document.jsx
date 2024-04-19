@@ -7,7 +7,7 @@ import { Link, useParams } from 'react-router-dom'
 function Document() {
 
   const { id } = useParams()
-  
+
   const data = [
     { id: "current-state", title: "The current state of project launches on solana", desc: "" },
     { id: "launchpad", title: "nimbi launchpad", desc: "" },
@@ -19,15 +19,59 @@ function Document() {
     { id: "testnet", title: "testnet launch", desc: "" },
   ]
 
-  const [title,setTitle] = useState("")
+  const [title, setTitle] = useState("")
 
-  useEffect(()=>{
-    setTitle(data.filter(obj=>obj.id===id)[0]?.title)
-  },[id])
+  useEffect(() => {
+    setTitle(data.filter(obj => obj.id === id)[0]?.title)
+
+    if (!id) {
+      document.querySelector('.docHead').classList.add('active')
+      document.querySelector('.document').classList.add('active')
+    }
+    else {
+      document.querySelector(`#${id}`).classList.add('active')
+
+      document.querySelectorAll('.docTitle').forEach((doc, index) => {
+        doc.childNodes[0].classList.remove('active')
+      })
   
+      document.querySelectorAll('.docTitle').forEach((doc, index) => {
+        doc.childNodes[1].childNodes.forEach((li) => {
+          if (li.classList.contains('active')) {
+            doc.childNodes[0].classList.add('active')
+            return;
+          }
+        })
+      })
+    }
+
+  }, [id])
+
   const handleClick = (e) => {
     document.querySelectorAll('.document.active').forEach(doc => doc.classList.remove('active'))
     e.target.classList.add('active')
+
+    document.querySelectorAll('.docTitle').forEach((doc, index) => {
+      doc.childNodes[0].classList.remove('active')
+    })
+
+    document.querySelectorAll('.docTitle').forEach((doc, index) => {
+      doc.childNodes[1].childNodes.forEach((li) => {
+        if (li.classList.contains('active')) {
+          doc.childNodes[0].classList.add('active')
+          return;
+        }
+      })
+    })
+  }
+
+  const activeTab = (id) => {
+
+    if (document.querySelector(`.${id} ~ .docContent`).classList.contains('active'))
+      document.querySelector(`.${id} ~ .docContent`).classList.remove('active')
+    else{
+      document.querySelector(`.${id} ~ .docContent`).classList.add('active')
+    }
   }
 
   return (
@@ -37,19 +81,19 @@ function Document() {
         <div className="sm:w-[33%] flex flex-col gap-4 items-center sm:items-end min-h-screen border-r border-r-[#c4c0c8] py-6">
           <div className="w-[90%] xl:w-[75%] flex flex-col gap-2 px-2">
             <p className='uppercase text-left font-semibold'>overview</p>
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center justify-between bg-[#28343b] rounded-lg py-2 px-4 cursor-pointer">
+            <div className="flex flex-col gap-2 docTitle">
+              <div onClick={() => activeTab('launchTab')} className={`launchTab docHead flex items-center justify-between bg-transparent rounded-lg py-2 px-4 cursor-pointer`}>
                 <p className=''>launchpad</p>
                 <img src={icon} className='w-3 h-3 rotate-90' alt="" />
               </div>
-              <ul className='pl-8 text-[0.65rem] md:text-[0.83rem] flex flex-col gap-1'>
+              <ul className='docContent pl-8 text-[0.65rem] md:text-[0.83rem] flex flex-col gap-1'>
                 <Link to="/documents/current-state" id="current-state" className='document' onClick={handleClick}>The current state of project launches on solana</Link>
-                <Link to="/documents/launchpad" id="launchpad" className='document active' onClick={handleClick}>nimbi launchpad</Link>
+                <Link to="/documents/launchpad" id="launchpad" className='document ' onClick={handleClick}>nimbi launchpad</Link>
                 <Link to="/documents/user-flow" id="user-flow" className='document' onClick={handleClick}>user flow for solster launchpad</Link>
               </ul>
             </div>
           </div>
-          <div className="w-[90%] xl:w-[75%] flex flex-col gap-2 px-2">
+          <div className="w-[90%] xl:w-[75%] flex flex-col gap-2 px-2 bg-[#242d32]">
             <p className='uppercase text-left font-semibold'>tokenomics</p>
             <div className="flex flex-col gap-2">
 
@@ -59,7 +103,7 @@ function Document() {
               </ul>
             </div>
           </div>
-          <div className="w-[90%] xl:w-[75%] flex flex-col gap-2 px-2">
+          <div className="w-[90%] xl:w-[75%] flex flex-col gap-2 px-2 bg-[#242d32]">
             <p className='uppercase text-left font-semibold'>roadmap</p>
             <div className="flex flex-col gap-2">
 
@@ -69,7 +113,7 @@ function Document() {
               </ul>
             </div>
           </div>
-          <div className="w-[90%] xl:w-[75%] flex flex-col gap-2 px-2">
+          <div className="w-[90%] xl:w-[75%] flex flex-col gap-2 px-2 bg-[#242d32]">
             <p className='uppercase text-left font-semibold'>testnet launch</p>
             <div className="flex flex-col gap-2">
 
@@ -83,7 +127,7 @@ function Document() {
         <div className="px-[3rem] md:px-[3rem] sm:w-[67%] md:w-[67%] pb-4 capitalize bg-[url('./assets/mountain.png')] bg-cover bg-right-bottom bg-no-repeat font-['Inter',sans-serif]">
           <div className="flex flex-col gap-10">
             <div className="w-full border-b border-b-[#c4c0c8] py-6 font-['Roboto',sans-serif]">
-              <p className='uppercase text-3xl font-semibold text-left py-3'>{title || 'nimbi launchpad'}</p>
+              <p className='uppercase text-3xl font-semibold text-left py-3'>{title || 'THE CURRENT STATE OF PROJECT LAUNCHES ON SOLANA'}</p>
             </div>
 
             <div className='text-[0.65rem] md:text-[0.83rem] leading-loose'>
@@ -116,18 +160,18 @@ function Document() {
                 Note: IDO projects will determine international regulations, KYC, and other sales requirements.</p>
             </div>
 
-            <div className="flex flex-col md:flex-row items-center gap-2">
-              <div className="flex items-center gap-1 lg:gap-7 border border-[#334047] bg-transparent hover:bg-[#28343b66] cursor-pointer py-3 px-4 rounded-lg w-full">
+            <div className="flex flex-col lg:flex-row items-center gap-2">
+              <div className="flex items-center gap-1 lg:gap-3 border border-[#334047] bg-transparent hover:bg-[#28343b66] cursor-pointer py-3 px-4 rounded-lg w-full">
                 <img src={leftArrow} alt="" className='w-4 h-3' />
                 <div className="flex flex-col gap-2">
                   <p className='text-[0.6rem] md:text-xs'>Previous</p>
-                  <p className='text-[0.6rem] md:text-xs lg:text-sm font-semibold md:w-[95%]'>the current state of project launches on solana</p>
+                  <p className='text-[0.6rem] md:text-xs lg:text-sm font-semibold'>the current state of project launches on solana</p>
                 </div>
               </div>
-              <div className="flex items-center justify-end gap-1 lg:gap-7 border border-[#334047] bg-transparent hover:bg-[#28343b66] cursor-pointer py-3 px-4 rounded-lg w-full">
+              <div className="flex items-center justify-end gap-1 lg:gap-3 border border-[#334047] bg-transparent hover:bg-[#28343b66] cursor-pointer py-3 px-4 rounded-lg w-full">
                 <div className="flex flex-col gap-2 text-right ">
                   <p className='text-[0.6rem] md:text-xs text-[#00ace6]'>Next</p>
-                  <p className='text-[0.6rem] md:text-xs lg:text-sm font-semibold md:w-[95%]'>user flow for solester launchpad</p>
+                  <p className='text-[0.6rem] md:text-xs lg:text-sm font-semibold'>user flow for solester launchpad</p>
                 </div>
                 <img src={rightArrow} alt="" className='w-4 h-3' />
               </div>

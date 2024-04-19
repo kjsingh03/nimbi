@@ -165,6 +165,54 @@ border-radius: 0.5rem;
   background-color: #28343b;
 }
 
+.docHead{
+  background-color: transparent;
+}
+
+.docHead.active{
+  background-color: #28343b;
+}
+
+.docTitle{
+  gap:0rem
+}
+.docTitle.active{
+  gap:0.5rem
+}
+
+.docContent{
+  height:0;
+  transform: translateY(2rem);
+  opacity: 0;
+}
+
+.docContent.active{
+  height:auto;
+  transform: translateY(0rem);
+  opacity: 100;
+}
+
+.docHead img{
+  transform: rotate(0deg);
+}
+
+.docHead.active img{
+  transform: rotate(90deg);
+}
+
+.team.active{
+  width:60vw;
+  height:80vh;
+}
+
+.modal{
+  display:none
+}
+
+.modal.active{
+  display: flex;
+}
+
 @media screen and (min-width:1024px) {
   .navbar {
     transform: translateX(-100%);

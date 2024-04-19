@@ -4,7 +4,6 @@ import App from './App.jsx'
 import './index.css'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import { Document, About, Team, Home,Faq } from './Pages'
-import Gsap from './Pages/Gsap.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -15,7 +14,6 @@ const router = createBrowserRouter(
       <Route path="/documents" element={<Document />} />
       <Route path="/documents/:id" element={<Document />} />
       <Route path="/faq" element={<Faq />} />
-      <Route path="/gsap" element={<Gsap />} />
     </Route>
   )
 )
