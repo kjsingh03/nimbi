@@ -275,7 +275,7 @@ function Home() {
                     <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />tokenomics development</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />smart contract development</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />secure initial funding</li>
-                    <img src={round} className="w-8 h-8 absolute -left-5 xs:-left-11 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
+                    <img src={round} className="w-8 h-8 absolute -left-4 xs:-left-10 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
                     <img src={ellipse} className="w-[5rem] h-[5rem] absolute left-[117.7rem] md:left-[4rem] lg:-left-[1.5rem] top-[11rem]" />
                   </ul>
                   <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
@@ -297,7 +297,7 @@ function Home() {
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                    <img src={indicator} className="w-8 h-8 absolute -left-3 xs:-left-[2.125rem] -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
+                    <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
                   </ul>
                   <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
 
@@ -320,7 +320,7 @@ function Home() {
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                    <img src={indicator} className="w-8 h-8 absolute -left-3 xs:-left-[2.125rem] -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
+                    <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
                   </ul>
 
                   <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
@@ -342,7 +342,7 @@ function Home() {
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                    <img src={indicator} className="w-8 h-8 absolute -left-3 xs:-left-[2.125rem] -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
+                    <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
                   </ul>
 
                   <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
@@ -365,7 +365,7 @@ function Home() {
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                     <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                    <img src={indicator} className="w-8 h-8 absolute -left-3 xs:-left-[2.125rem] -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
+                    <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
                   </ul>
 
                   <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
