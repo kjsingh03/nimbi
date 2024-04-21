@@ -11,25 +11,30 @@ function Team() {
 
   const handleClick = ({ img, position, title, desc, id }) => {
 
-    document.querySelector(`.modal`).classList.add('active')    
+    document.querySelector(`.modal`).classList.add('active')
+
     setModal({ img, position, title, desc, id })
-    
-    // const query = document.querySelector(`#${id}`)
-    // window.addEventListener('click', (e) => {
-    //   if (!query.contains(e.target)) {
-    //     setModal({})
-    //     document.querySelector(`.modal`).classList.remove('active')
-    //   }
-    // })
+
+    const query = document.querySelector(`.modal-card`)
+
+    setTimeout(()=>{
+      document.addEventListener('click', (e) => {
+        if (!query.contains(e.target)) {
+          setModal({})
+          document.querySelector(`.modal`).classList.remove('active')
+        }
+      },50)
+
+    })
   }
 
   const closeModal = () => {
-    document.querySelector(`.modal`).classList.remove('active')
+    document.querySelector(`.modal`)?.classList.remove('active')
   }
 
   return (
     <div className='h-screen overflow-y-auto'>
-      <div className="flex flex-col  justify-center gap-12 w-full px-[2rem] md:px-[5rem] xl:px-[11rem] mx-auto capitalize py-16 bg-[url(./assets/whaleLeft.png),url(./assets/mountain.png),url('./assets/bigEllipse.png')] team bg-no-repeat font-['Inter',sans-serif]">
+      <div className="flex  flex-col justify-center gap-12 w-full px-[2rem] md:px-[5rem] xl:px-[11rem] mx-auto capitalize py-16 bg-[url(./assets/whaleLeft.png),url(./assets/mountain.png),url('./assets/bigEllipse.png')] team bg-no-repeat font-['Inter',sans-serif]">
 
         <div className="w-full border-b border-b-[#c4c0c8] py-6 font-['Roboto_Condensed',sans-serif]">
           <p className='uppercase text-3xl font-semibold text-left py-3'>The people behind the scenes</p>
@@ -42,15 +47,15 @@ function Team() {
             <img src={ellipse} className='absolute -top-6 -right-10 w-[5rem] -z-0' alt="" />
           </div>
 
-          <div id={modal.id} className="modal hidden h-screen w-screen absolute top-0 left-0 z-30 items-center justify-center bg-black/40">
-            <div className='team relative capitalize lg:h-[26rem] xl:h-[26rem] w-[70%] md:w-[50%] xl:w-[40%] mx-auto flex flex-col gap-2 bg-[#334047] border border-[#5c666c] p-2 '>
+          <div id={modal.id} className="modal hidden h-screen w-full absolute top-0 left-0 z-30 items-center justify-center bg-black/40">
+            <div className='modal-card team relative capitalize z-40 h-[20rem] w-[20rem] md:h-[25rem] md:w-[25rem] lg:h-[26rem] xl:h-[26rem] lg:w-[26rem] xl:w-[26rem] mx-auto flex flex-col gap-2 bg-[#334047] border border-[#5c666c] p-2 '>
               <div className="xs:h-[16rem] xl:h-[18rem]">
                 <img src={modal.img} alt="" className='w-full h-full object-cover' />
               </div>
               <div className="absolute w-10 h-10 right-3 top-3 ">
                 <img src={telegram} alt="" className='w-full h-full object-cover' />
               </div>
-              <div className="absolute w-10 h-10 left-3 top-3 ">
+              <div className="absolute w-10 h-10 left-3 top-3 cursor-pointer hover:opacity-100 opacity-50">
                 <img onClick={closeModal} src={cross} alt="" className='w-full h-full object-cover' />
               </div>
               <p className="uppercase font-semibold text-[#00ace6] text-[0.83rem]">{modal.position}</p>
@@ -102,11 +107,7 @@ function Team() {
             <TeamCard handleClick={handleClick} id="teamCard15" img={card1} position="community moderation" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
             <TeamCard handleClick={handleClick} id="teamCard16" img={card1} position="community moderation" title="nimbi token" desc="Building the Nimbi community day in, day out. Shaping NIMBI’s vision into reality a step at a time. Visionary behind the project" />
           </div>
-
-
         </div>
-
-
       </div>
       <Footer path='/about' />
     </div>

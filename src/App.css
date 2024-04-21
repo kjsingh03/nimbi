@@ -192,13 +192,13 @@ border-radius: 0.5rem;
   opacity: 100;
 }
 
-.docHead img{
+/* .docHead img{
   transform: rotate(0deg);
 }
 
 .docHead.active img{
   transform: rotate(90deg);
-}
+} */
 
 .team.active{
   width:60vw;
@@ -329,3 +329,4 @@ border-radius: 0.5rem;
     padding-left: 1rem;
   }
 }
+

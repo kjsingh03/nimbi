@@ -67,15 +67,19 @@ function Document() {
 
   const activeTab = (id) => {
 
-    if (document.querySelector(`.${id} ~ .docContent`).classList.contains('active'))
+    if (document.querySelector(`.${id} ~ .docContent`).classList.contains('active')){
       document.querySelector(`.${id} ~ .docContent`).classList.remove('active')
+    document.querySelector(`.${id} img`).style.transform="rotate(0deg)"
+  }
     else{
       document.querySelector(`.${id} ~ .docContent`).classList.add('active')
+      document.querySelector(`.${id} img`).style.transform="rotate(90deg)"
     }
   }
 
   return (
-    <>
+    <div className=''>
+    
       <div className='flex capitalize pt-16 sm:flex-row flex-col'>
 
         <div className="sm:w-[33%] flex flex-col gap-4 items-center sm:items-end min-h-screen border-r border-r-[#c4c0c8] py-6">
@@ -84,7 +88,7 @@ function Document() {
             <div className="flex flex-col gap-2 docTitle">
               <div onClick={() => activeTab('launchTab')} className={`launchTab docHead flex items-center justify-between bg-transparent rounded-lg py-2 px-4 cursor-pointer`}>
                 <p className=''>launchpad</p>
-                <img src={icon} className='w-3 h-3 rotate-90' alt="" />
+                <img src={icon} className='w-3 h-3 rotate-0' alt="" />
               </div>
               <ul className='docContent pl-8 text-[0.65rem] md:text-[0.83rem] flex flex-col gap-1'>
                 <Link to="/documents/current-state" id="current-state" className='document' onClick={handleClick}>The current state of project launches on solana</Link>
@@ -180,7 +184,7 @@ function Document() {
         </div>
       </div>
       <Footer path='/documents' />
-    </>
+    </div>
   )
 }
 
