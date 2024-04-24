@@ -3,7 +3,7 @@ import { discordIcon, telegramIcon, twitterIcon, xIcon } from '../../assets'
 
 function Footer({path="/"}) {
   return (
-    <div className="capitalize text-[0.6rem] flex flex-col gap-4 bg-[#1c2327] px-[2rem] lg:px-[4rem] xl:px-[8rem] py-8 border-t border-[#767f84]md:">
+    <div className="capitalize text-xs flex flex-col gap-4 bg-[#1c2327] px-[2rem] lg:px-[4rem] xl:px-[8rem] py-8 border-t border-[#767f84]md:">
         {
             path==="/" &&
         <div className="flex md:flex-row flex-col md:gap-0 gap-2 items-center justify-between">
@@ -11,7 +11,7 @@ function Footer({path="/"}) {
             <p className='text-xs'>Register here</p>
             <div className=" flex sm:flex-row flex-col items-center  gap-2 sm:gap-4 w-full">
               <input type="text" placeholder='Email' className='bg-transparent p-2 border border-[#767f84] w-full' />
-              <div className="btn px-6 w-full sm:w-[8rem] text-center text-[0.6rem]">Sign up</div>
+              <div className="btn px-6 w-full sm:w-[8rem] text-center">Sign up</div>
             </div>
             <p className='text-[#a1a7aa]'>your email addresses will only be used forairdrop notifications and won't be shared with third parties</p>
           </div>

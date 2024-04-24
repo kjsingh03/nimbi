@@ -118,13 +118,18 @@ function Home() {
 
     <Navbar/>
 
-      <div className="z-0 capitalize pt-12" ref={main}>
+      <div className="z-0 capitalize pt-14" ref={main}>
 
-        <div className="w-[90%] lg:w-[80%] mx-auto h-[45vw] lg:h-[77vh] carousel">
+        <div className="w-[90%] xl:w-[85%] mx-auto h-[40vw] lg:h-[77vh] carousel">
           <Swiper
             style={{
               "--swiper-navigation-color": "#000",
               "--swiper-navigation-size": "15px",
+                "--swiper-pagination-color": "#ffffff",
+                "--swiper-pagination-bullet-inactive-color": "#999999",
+                "--swiper-pagination-bullet-inactive-opacity": "1",
+                "--swiper-pagination-bullet-size": "6.6px",
+                "--swiper-pagination-bullet-horizontal-gap": "2.5px"
             }}
             spaceBetween={30}
             autoplay={{
@@ -138,22 +143,22 @@ function Home() {
             pagination={{
               dynamicBullets: false,
             }}
-            className="mySwiper relative h-full"
+            className="mySwiper relative h-full w-full"
           >
             <SwiperSlide>
-              <img src={hero} className="w-full h-full object-bottom" />
+              <img src={hero} className="w-full h-full object-cover" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={hero} className="w-full h-full object-bottom" />
+              <img src={hero} className="w-full h-full object-cover" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={hero} className="w-full h-full object-bottom" />
+              <img src={hero} className="w-full h-full object-cover" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={hero} className="w-full h-full object-bottom" />
+              <img src={hero} className="w-full h-full object-cover" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={hero} className="w-full h-full object-bottom" />
+              <img src={hero} className="w-full h-full object-cover" />
             </SwiperSlide>
           </Swiper>
         </div>
@@ -167,17 +172,17 @@ function Home() {
         <div className="bg-[url(./assets/whaleLeft.png)] whale bg-no-repeat">
 
           <div className="overflow-hidden">
-            <div className="flex xl:flex-row flex-col justify-between w-[80%] xl:w-[90%] 2xl:w-[80%] mx-auto pt-16 md:pt-[8rem] h-[128rem] xs:h-[73rem] sm:h-[78rem] md:h-[66rem] lg:h-[auto]">
+            <div className="flex xl:flex-row flex-col justify-between w-[80%] xl:w-[90%] 2xl:w-[85%] mx-auto pt-16 md:pt-[8rem] h-[128rem] xs:h-[73rem] sm:h-[78rem] md:h-[66rem] lg:h-[auto]">
               <div className="collectionLeft flex flex-col gap-12 xl:w-[45%]">
                 <div className="relative">
                   <div className="btn bg-[#5c666c] w-max font-semibold text-[0.9rem] z-10"><p>Collection</p></div>
                   <img src={ellipse} className='absolute -top-6 left-[4rem] w-[5rem] -z-0' alt="" />
                 </div>
                 <div className="flex flex-col gap-6">
-                  <p className='text-2xl sm:text-5xl xl:text-[4rem] leading-tight font-bold uppercase text-[#5c666c]'>Discover Our Exclusive NFT Collection</p>
-                  <p className='text-lg sm:text-lg font-medium'>Discover Our Exclusive NFT Collection.</p>
-                  <p className='text-[0.6rem] sm:text-xs w-[70%]'>Explore our curated selection of digital artworks, each a unique masterpiece created by talented artists from around the world. From stunning visual designs to thought-provoking concepts, our NFTs offer a glimpse into the vibrant world of digital art.</p>
-                  <p className='btn w-[12rem] text-center'>Explore the Collection</p>
+                  <p className='text-2xl sm:text-5xl xl:text-[4.5rem] leading-tight font-bold uppercase text-[#5c666c]'>Discover Our Exclusive NFT Collection</p>
+                  <p className='text-2xl font-semibold'>Discover Our Exclusive NFT Collection.</p>
+                  <p className='text-base w-[70%]'>Explore our curated selection of digital artworks, each a unique masterpiece created by talented artists from around the world. From stunning visual designs to thought-provoking concepts, our NFTs offer a glimpse into the vibrant world of digital art.</p>
+                  <p className='btn w-[16rem] text-base text-center'>Explore the Collection</p>
                 </div>
               </div>
               <div className="collectionRight grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 py-6 xl:py-0 xl:w-[55%]">
@@ -388,7 +393,7 @@ function Home() {
           <img src={sec1} alt="" />
         </div>
 
-        <div className="bg-[url(./assets/wolfMask.png)] bg-center bg-no-repeat bg-contain">
+        <div className="bg-[url(./assets/wolfMask.png)] bg-[35rem_5rem] bg-no-repeat bg-contain">
           <div className="flex mx-auto w-[80%] items-center justify-between lg:flex-row gap-4 flex-col py-10 ">
             <div className="">
               <div className="relative">
@@ -397,13 +402,13 @@ function Home() {
               </div>
               <p className='text-[#a1a7aa] text-2xl md:text-4xl xl:text-[2.7rem] font-bold py-4 md:py-12 leading-snug'>NIMBI VIP LOYALTY WOLF PACK</p>
             </div>
-            <p className='sm:w-[90%] lg:w-[60%] text-[0.65rem] md:text-xs'>👋 Say goodbye to rigged games and hello to fairness and transparency! 🔍🚫 No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source! 📜💻 We've taken the power from the greedy hands of the centralized lotto gods and put it back into the hands of the people! 💪💰 Want to win big while knowing you're not being hoodwinked? Look no further! 🌟 Participate in our decentralized lottery and enjoy the thrill of a fair game. #NoMoreRiggedGames Play Crypto Lotto today and experience the excitement of a true equal opportunity lottery! 🎊💸💪
+            <p className='sm:w-[90%] lg:w-[60%] text-sm px-16'>👋 Say goodbye to rigged games and hello to fairness and transparency! 🔍🚫 No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source! 📜💻 We've taken the power from the greedy hands of the centralized lotto gods and put it back into the hands of the people! 💪💰 Want to win big while knowing you're not being hoodwinked? Look no further! 🌟 Participate in our decentralized lottery and enjoy the thrill of a fair game. #NoMoreRiggedGames Play Crypto Lotto today and experience the excitement of a true equal opportunity lottery! 🎊💸💪
               nimbi knows you should only play the open sourced, decentralized and transparent lotto. convert your crypto dust to nimbi token, become part of the wolfpack and use all of our crypto dust to stand strong together.</p>
           </div>
           <div className="border-b border-[#767f84]">
           </div>
           <div className="flex lg:flex-row flex-col-reverse mx-auto w-[80%] lg:text-left items-center justify-between py-10">
-            <p className='sm:w-[90%] lg:w-[45%] text-[0.65rem] md:text-xs'>👋 Say goodbye to rigged games and hello to fairness and transparency! 🔍🚫 No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source! 📜💻 We've taken the power from the greedy hands of the centralized lotto gods and put it back into the hands of the people! 💪💰 Want to win big while knowing you're not being hoodwinked? Look no further! 🌟 Participate in our decentralized lottery and enjoy the thrill of a fair game. #NoMoreRiggedGames Play Crypto Lotto today and experience the excitement of a true equal opportunity lottery! 🎊💸💪
+            <p className='sm:w-[90%] lg:w-[45%] text-sm'>👋 Say goodbye to rigged games and hello to fairness and transparency! 🔍🚫 No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source! 📜💻 We've taken the power from the greedy hands of the centralized lotto gods and put it back into the hands of the people! 💪💰 Want to win big while knowing you're not being hoodwinked? Look no further! 🌟 Participate in our decentralized lottery and enjoy the thrill of a fair game. #NoMoreRiggedGames Play Crypto Lotto today and experience the excitement of a true equal opportunity lottery! 🎊💸💪
               nimbi knows you should only play the open sourced, decentralized and transparent lotto. convert your crypto dust to nimbi token, become part of the wolfpack and use all of our crypto dust to stand strong together.</p>
             <div className="lg:w-[45%]">
               <p className='text-[#a1a7aa] text-2xl md:text-4xl xl:text-[2.7rem] font-bold pb-4 md:pb-12 leading-snug'>Open-Source Decentralized Lottery</p>
@@ -421,7 +426,7 @@ function Home() {
           <div className="h-[34rem] sm:h-[30rem] flex flex-col absolute bottom-0 lg:top-[7rem] xl:top-[10rem] pl-8 pr-8 pt-12 pb-12 xs:pr-16 md:pr-0 md:pt-[8rem] xl:pt-[12rem] xs:pl-16 xl:pl-[8rem] w-full md:w-[43%] gap-6 items-center justify-center text-[#151b1e] bg-white md:bg-transparent">
             <p className='md:text-[1.75rem] text-[1.75rem] lg:text-[2.75rem] xl:text-[3.4rem] font-bold uppercase leading-snug'>Web3 Crypto Dust Runner Game</p>
             <p className='text-sm xl:text-lg font-medium tracking-tighter'>Introducing Crypto Dust Runner, the web 3 game that's here to bring the heat to those corporate whales invading our precious crypto space! 🌬️🐺</p>
-            <p className='text-xs font-medium block'>👋 In this epic quest, you'll join forces with Nimbi, the fearless white wolf, as he races through a treacherous frozen gulch, fueled by the magnificent power of crypto dust! 💪✨ His mission? To collect as much of this precious resource as possible and transform into a legendary force against those pesky corporate giants. 😎🐋Picture this: you're in control of the nimble Nimbi, dodging obstacles, jumping over icy chasms, and racing against time ⏰ to reach power-up spots that will elevate your game to a whole new level! 💯✨ Discover abandoned crypto mines that will boost Nimbi's dust collection abilities, allowing him to dominate the leaderboard like a true crypto champ! 🏆💰</p>
+            <p className='text-sm font-medium block'>👋 In this epic quest, you'll join forces with Nimbi, the fearless white wolf, as he races through a treacherous frozen gulch, fueled by the magnificent power of crypto dust! 💪✨ His mission? To collect as much of this precious resource as possible and transform into a legendary force against those pesky corporate giants. 😎🐋Picture this: you're in control of the nimble Nimbi, dodging obstacles, jumping over icy chasms, and racing against time ⏰ to reach power-up spots that will elevate your game to a whole new level! 💯✨ Discover abandoned crypto mines that will boost Nimbi's dust collection abilities, allowing him to dominate the leaderboard like a true crypto champ! 🏆💰</p>
             <div className="w-full text-left">
               <p className="btn w-[12rem] text-center">Launch APP</p>
             </div>
@@ -436,7 +441,7 @@ function Home() {
           <div className="flex flex-col w-[80%] lg:text-start lg:w-[40%] gap-6 justify-center pb-10  text-[#a1a7aa]">
             <p className='text-xl sm:text-5xl lg:text-[3.4rem] leading-tight font-extrabold uppercase'>KAZI token </p>
             <p className='text-sm sm:text-lg font-medium text-white'>Your Bridge to Streamlined Crypto Conversion! 🌉💱</p>
-            <p className='text-[0.6rem] sm:text-xs '>KAZI Token stands as a beacon of efficiency in the world of cryptocurrency. As an ERC-20 token, it serves as the perfect conduit for users looking to convert their wallet crypto dust into tangible value. Whether you're a seasoned investor or just dipping your toes into the crypto waters, KAZI Token offers a seamless and accessible pathway to transform those fractions of cryptocurrency left lingering in your wallet into meaningful assets.
+            <p className='text-sm '>KAZI Token stands as a beacon of efficiency in the world of cryptocurrency. As an ERC-20 token, it serves as the perfect conduit for users looking to convert their wallet crypto dust into tangible value. Whether you're a seasoned investor or just dipping your toes into the crypto waters, KAZI Token offers a seamless and accessible pathway to transform those fractions of cryptocurrency left lingering in your wallet into meaningful assets.
               With KAZI Token, say goodbye to the frustration of unused cryptocurrency fragments and hello to a practical solution for maximizing your digital assets. Join the movement towards streamlined crypto conversion today with KAZI Token – where every fragment counts towards your financial success. 💼🚀</p>
             <div className="w-full lg:text-left z-30">
               <p className="btn text-center w-[12rem] cursor-pointer">Buy KAZI</p>
@@ -449,7 +454,7 @@ function Home() {
             <div className="bg-[#1c2327] bg-[url(./assets/logoMask.png)] bg-no-repeat bg-cover md:bg-contain flex md:flex-row gap-4 flex-col items-center px-[2rem] lg:px-[8rem] xl:px-[15rem] justify-between py-8">
               <div className="flex flex-col gap-6 md:w-[50%] text-center md:text-left">
                 <p className='text-4xl leading-tight font-semibold'>Join our community </p>
-                <p className='text-xs'>Join us as we celebrate the launch of our project by offering exclusive rewards to our early supporters. By participating in our ecosystem, you'll have the opportunity to receive free token airdrops and access to exciting perks. Don't miss out on this chance to be part of our growing community!</p>
+                <p className='text-sm'>Join us as we celebrate the launch of our project by offering exclusive rewards to our early supporters. By participating in our ecosystem, you'll have the opportunity to receive free token airdrops and access to exciting perks. Don't miss out on this chance to be part of our growing community!</p>
               </div>
               <div className="w-[90%] sm:w-[70%] md:w-[40%]">
                 <div className="flex items-center justify-between gap-4 cursor-pointer hover:bg-[#242d32] rounded-md px-4 py-2">
@@ -497,9 +502,9 @@ function Home() {
           </div>
           <div className="flex flex-col gap-6 w-[90%] lg:md:w-[70%] xl:w-[50%] px-16 md:px-0 md:items-center text-center">
             <p className='text-xl sm:text-4xl leading-tight font-semibold uppercase'>Whitepaper </p>
-            <p className='text-xs'>Explore the Nimbi whitepaper and get an in-depth breakdown of the unique benefits, innovative features, and overall vision of the NIMBI ecosystem and its native token. This clear, concise, and expertly crafted informational report will help you understand exactly what sets NIMBI apart from other crypto projects.<br /><br />Dive into our educational white paper and find out why taking this journey with us is an absolute no-brainer!</p>
+            <p className='text-sm'>Explore the Nimbi whitepaper and get an in-depth breakdown of the unique benefits, innovative features, and overall vision of the NIMBI ecosystem and its native token. This clear, concise, and expertly crafted informational report will help you understand exactly what sets NIMBI apart from other crypto projects.<br /><br />Dive into our educational white paper and find out why taking this journey with us is an absolute no-brainer!</p>
             <div className="btn border border-[#00ace6] bg-transparent text-[#00ace6] hover:text-[#c4c0c8] w-[12rem] text-center">Access the whitepaper</div>
-            <div className="w-full flex justify-end">
+            <div className="w-full flex justify-end" onClick={()=>window.scrollTo({top:0,left:0,behavior:'smooth'})}>
               <img src={icon} className=' absolute right-24 w-8 bg-[#43545e] px-3 -rotate-90 py-2.5 cursor-pointer' alt="" />
             </div>
           </div>

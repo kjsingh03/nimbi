@@ -1,6 +1,6 @@
 import logo from './logo.png'
 import logo1 from './logo1.png'
-import hero from './hero.png'
+import hero from './hero.svg'
 import svg1 from './svg1.svg'
 import svg2 from './svg2.svg'
 import svg3 from './svg3.svg'

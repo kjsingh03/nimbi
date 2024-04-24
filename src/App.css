@@ -75,7 +75,7 @@ nav a.active {
   position: absolute;
   display: flex;
   justify-content: flex-start;
-  padding: 2rem 0.5rem;
+  padding: 2.5rem .5rem;
 }
 
 .phases {
@@ -120,7 +120,7 @@ svg {
 }
 
 .whale{
-  background-position: 20rem 0rem;
+  background-position: 40rem 10rem;
   background-size: 70rem 55rem;
 }
 
@@ -330,3 +330,6 @@ border-radius: 0.5rem;
   }
 }
 
+.fixed{
+  position: fixed;
+}

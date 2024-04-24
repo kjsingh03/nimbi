@@ -13,15 +13,16 @@ function Team() {
 
     document.querySelector(`.modal`).classList.add('active')
 
+    document.querySelector(`.team-page`).classList.add('fixed')
+    
     setModal({ img, position, title, desc, id })
-
+    
     const query = document.querySelector(`.modal-card`)
-
+    
     setTimeout(()=>{
       document.addEventListener('click', (e) => {
         if (!query.contains(e.target)) {
-          setModal({})
-          document.querySelector(`.modal`).classList.remove('active')
+          closeModal()
         }
       },50)
 
@@ -30,11 +31,14 @@ function Team() {
 
   const closeModal = () => {
     document.querySelector(`.modal`)?.classList.remove('active')
+    setModal({})
+    document.querySelector(`.team-page`).classList.remove('fixed')
+
   }
 
   return (
-    <div className='h-screen overflow-y-auto'>
-      <div className="flex  flex-col justify-center gap-12 w-full px-[2rem] md:px-[5rem] xl:px-[11rem] mx-auto capitalize py-16 bg-[url(./assets/whaleLeft.png),url(./assets/mountain.png),url('./assets/bigEllipse.png')] team bg-no-repeat font-['Inter',sans-serif]">
+    <div className=''>
+      <div className="team-page flex flex-col justify-center gap-12 w-full px-[2rem] md:px-[5rem] xl:px-[11rem] mx-auto capitalize py-16 bg-[url(./assets/whaleLeft.png),url(./assets/mountain.png),url('./assets/bigEllipse.png')] team bg-no-repeat font-['Inter',sans-serif]">
 
         <div className="w-full border-b border-b-[#c4c0c8] py-6 font-['Roboto_Condensed',sans-serif]">
           <p className='uppercase text-3xl font-semibold text-left py-3'>The people behind the scenes</p>
@@ -47,7 +51,7 @@ function Team() {
             <img src={ellipse} className='absolute -top-6 -right-10 w-[5rem] -z-0' alt="" />
           </div>
 
-          <div id={modal.id} className="modal hidden h-screen w-full absolute top-0 left-0 z-30 items-center justify-center bg-black/40">
+          <div id={modal.id} className="modal hidden h-screen w-full fixed top-0 left-0 z-30 items-center justify-center bg-black/40">
             <div className='modal-card team relative capitalize z-40 h-[20rem] w-[20rem] md:h-[25rem] md:w-[25rem] lg:h-[26rem] xl:h-[26rem] lg:w-[26rem] xl:w-[26rem] mx-auto flex flex-col gap-2 bg-[#334047] border border-[#5c666c] p-2 '>
               <div className="xs:h-[16rem] xl:h-[18rem]">
                 <img src={modal.img} alt="" className='w-full h-full object-cover' />
