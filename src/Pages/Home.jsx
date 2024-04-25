@@ -271,7 +271,7 @@ function Home() {
                   width > 768 &&
                   <svg className={`absolute -z-10 top-[8.4rem] xs:top-[4.3rem] md:top-[12.45rem] lg:top-[11.9rem] xl:top-[11.6rem] 2xl:top-[11.2rem] 3xl:top-[11rem] 4xl:top-[10.8rem] 5xl:top-[10.6rem] 6xl:top-[10.3rem] 7xl:top-[10rem] ${width >= 1024 ? 'w-[77.53vw]' : 'w-[67vw]'}`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter='url(#filter1_d_1261_1133)'>
-                      <rect className="mask" y="55" height="150" fill="#33BDEB" />
+                      <rect className={width>768?'100%':'0%'} y="55" height="150" fill="#33BDEB" />
                     </g>
                     <filter id="filter1_d_1261_1133" className='mask' x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
                       <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
@@ -287,7 +287,7 @@ function Home() {
                 }*/}
                  {
                     width <= 768 &&
-                    <svg className={`absolute -z-0 top-[6.8rem] xs:top-[4.9rem] -left-[3rem] w-[142rem] `} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className={`absolute -z-0 top-[7.5rem] xs:top-[5.5rem] -left-[3rem] w-[142rem] `} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g filter='url(#filter1_d_1261_1133)'>
                         <rect y="42.5" width="100%" height="0.8" fill="#33BDEB" />
                       </g>
@@ -322,7 +322,7 @@ function Home() {
                       <img src={ellipse} className="w-[5rem] h-[5rem] absolute left-[117.7rem] md:left-[4rem] lg:-left-[1.5rem] top-[11rem]" />
                       <svg className={`w-[75rem] absolute top-[11.25rem] -left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter='url(#filter1_d_1261_1133)'>
-                          <rect className='z-10' width="100%" y="55" height="150" fill="#33BDEB" />
+                          <rect className='z-10' width={width>768?'100%':'0%'} y="55" height="150" fill="#33BDEB" />
                         </g>
                         <filter id="filter1_d_1261_1133" x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
                           <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
@@ -359,7 +359,7 @@ function Home() {
                       <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-[500] " />
                       <svg className={`w-[75rem] absolute top-[11.25rem] -left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter='url(#filter1_d_1261_1133)'>
-                          <rect className='z-10' width="100%" y="55" height="150" fill="#33BDEB" />
+                          <rect className='z-10' width={width>768?'100%':'0%'} y="55" height="150" fill="#33BDEB" />
                         </g>
                         <filter id="filter1_d_1261_1133" x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
                           <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
@@ -396,7 +396,7 @@ function Home() {
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                       <svg className={`w-[75rem] absolute top-[11.25rem] -left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter='url(#filter1_d_1261_1133)'>
-                          <rect className='z-10' width="100%" y="55" height="150" fill="#33BDEB" />
+                          <rect className='z-10' width={width>768?'100%':'0%'} y="55" height="150" fill="#33BDEB" />
                         </g>
                         <filter id="filter1_d_1261_1133" x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
                           <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
@@ -433,7 +433,7 @@ function Home() {
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
                       <svg className={`w-[75rem] absolute top-[11.25rem] -left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter='url(#filter1_d_1261_1133)'>
-                          <rect className='z-10' width="100%" y="55" height="150" fill="#33BDEB" />
+                          <rect className='z-10' width={width>768?'100%':'0%'} y="55" height="150" fill="#33BDEB" />
                         </g>
                         <filter id="filter1_d_1261_1133" x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
                           <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
@@ -471,7 +471,7 @@ function Home() {
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
                       <svg className={`w-[75rem] absolute top-[11.25rem] -left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter='url(#filter1_d_1261_1133)'>
-                          <rect className='z-10' width="100%" y="55" height="150" fill="#33BDEB" />
+                          <rect className='z-10' width={width>768?'100%':'0%'} y="55" height="150" fill="#33BDEB" />
                         </g>
                         <filter id="filter1_d_1261_1133" x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
                           <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
