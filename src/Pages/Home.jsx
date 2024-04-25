@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import '../App.css'
 import { IntroCard, NFTCard, Navbar } from '../components'
-import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, vector, tick, mask, mountain, indicator, round, animation } from '../assets'
+import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, vector, tick, mask, mountain, indicator, round, animation, whaleLeft, roadmap } from '../assets'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -85,7 +85,31 @@ function Home() {
           });
         }
       });
-    } 
+
+      gsap.from('.roadmap', {
+        y: 100,
+        opacity: 0,
+        duration: 4.5,
+        scrollTrigger: {
+          trigger: '.roadmap-container',
+          start: `top 30%`,
+          end: `top -40%`,
+          scrub:1
+        }
+      });
+
+      gsap.from('.whaleLeft', {
+        x: 200,
+        opacity: 0,
+        duration: 4.5,
+        scrollTrigger: {
+          trigger: '.roadmap-container',
+          start: `top 70%`,
+          end: `top -80%`,
+          scrub:1
+        }
+      });
+    }
     // else {
     //   sections.forEach((section, index) => {
     //     if (index !== 0) {
@@ -117,7 +141,7 @@ function Home() {
   return (
     <>
 
-    <Navbar/>
+      <Navbar />
 
       <div className="z-0 capitalize pt-14" ref={main}>
 
@@ -126,11 +150,11 @@ function Home() {
             style={{
               "--swiper-navigation-color": "#000",
               "--swiper-navigation-size": "15px",
-                "--swiper-pagination-color": "#ffffff",
-                "--swiper-pagination-bullet-inactive-color": "#999999",
-                "--swiper-pagination-bullet-inactive-opacity": "1",
-                "--swiper-pagination-bullet-size": "6.6px",
-                "--swiper-pagination-bullet-horizontal-gap": "2.5px"
+              "--swiper-pagination-color": "#ffffff",
+              "--swiper-pagination-bullet-inactive-color": "#999999",
+              "--swiper-pagination-bullet-inactive-opacity": "1",
+              "--swiper-pagination-bullet-size": "6.6px",
+              "--swiper-pagination-bullet-horizontal-gap": "2.5px"
             }}
             spaceBetween={30}
             autoplay={{
@@ -170,11 +194,11 @@ function Home() {
           <IntroCard img={svg3} title="Daily Profits" desc="The other half of the tokens obtained through the buyback process will be automatically transferred to the Nimbi Staking Pool. This staking pool then distributes rewards daily to $NIMBI holders based on the number of tokens they hold, generating daily profits for them." />
         </div>
 
-        <div className="bg-[url(./assets/whaleLeft.png)] whale bg-no-repeat">
+        <div className="">
 
           <div className="overflow-hidden">
-            <div className="flex xl:flex-row flex-col justify-between items-end w-[80%] xl:w-[90%] 2xl:w-[85%] mx-auto pt-16 md:pt-[8rem] h-[128rem] xs:h-[90rem] sm:h-[84rem] lg:h-[auto]">
-              <div className="collectionLeft flex flex-col gap-12 xl:w-[45%]">
+            <div className="flex xl:flex-row flex-col justify-between items-end w-[80%] xl:w-[90%] 2xl:w-[85%] mx-auto pt-16 md:pt-[8rem] h-[158rem] xs:h-[90rem] sm:h-[84rem] lg:h-[auto] z-0">
+              <div className="collectionLeft flex flex-col gap-12 w-[100%] xl:w-[45%]">
                 <div className="relative">
                   <div className="btn bg-[#5c666c] w-max font-semibold text-[0.9rem] z-10"><p>Collection</p></div>
                   <img src={ellipse} className='absolute -top-6 left-[4rem] w-[5rem] -z-0' alt="" />
@@ -186,7 +210,7 @@ function Home() {
                   <p className='btn w-[16rem] text-base text-center'>Explore the Collection</p>
                 </div>
               </div>
-              <div className="collectionRight grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 py-6 xl:py-0 w-full xl:w-[60%] h-[80%]">
+              <div className="collectionRight grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 py-6 xl:py-0 w-full xl:w-[60%] h-[80%] z-0">
                 <NFTCard />
                 <NFTCard img={author1} />
                 <NFTCard img={author2} />
@@ -197,7 +221,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="roadmap-container bg-[url(./assets/Roadmap.png),url(./assets/bigEllipse.png)] bg-roadmap flex flex-col gap-6 sm:gap-12 pt-16 sm:pt-8 xl:pt-[6rem]">
+          <div className="roadmap-container bg-[url(./assets/bigEllipse.png)] bg-[_28rem_28rem] bg-[85rem_0rem] bg-no-repeat flex flex-col gap-6 sm:gap-12 pt-16 sm:pt-8 xl:pt-[6rem] overflow-hidden">
 
             <div className="flex flex-col gap-4 sm:gap-12 w-[80%] mx-auto">
 
@@ -208,6 +232,13 @@ function Home() {
 
               <p className='text-[0.6rem] sm:text-[0.8rem] w-[70%]'>We follow these roadmap for launching the Nimbi ecosystem. We may experience certain setbacks while developing the whole Nimbi ecosystem, but our team has a right attitude to stick to the course, no matter what!
               </p>
+
+              <div className="relative">
+                <img src={whaleLeft} className='whaleLeft absolute -top-[43rem] -right-[28rem] -z-50' alt="" />
+              </div>
+              <div className="relative">
+                <img src={roadmap} className='roadmap absolute -top-[5rem] -right-[0] -z-40' alt="" />
+              </div>
             </div>
 
             <div className="wrapper">
@@ -216,10 +247,10 @@ function Home() {
                 {
                   (width > 768) &&
                   <div className="md:w-[250rem] relative">
-                    <img src={mountain} className='mountain absolute opacity-80 -top-[17.5rem] sm:-top-[20.5rem] w-full left-[35rem] sm:left-[50rem] md:-left-[67rem] h-[20rem] sm:h-[34rem] -z-10' alt="" />
+                    <img src={mountain} className='mountain absolute opacity-80 -top-[17.5rem] sm:-top-[20.5rem] w-full left-[35rem] sm:left-[50rem] md:-left-[67rem] h-[20rem] sm:h-[34rem] -z-50' alt="" />
                   </div>
                 }
-                <svg className={`absolute -z-10 top-[6.4rem] xs:top-[4.3rem] md:top-[12.37rem] lg:top-[11.9rem] xl:top-[11.6rem] 2xl:top-[11.2rem] 3xl:top-[11rem] 4xl:top-[10.8rem] 5xl:top-[10.6rem] 6xl:top-[10.3rem] 7xl:top-[10rem] md:left-0 -left-[3rem] w-[160rem] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={`absolute -z-10 top-[6.3rem] xs:top-[4.3rem] md:top-[12.35rem] lg:top-[11.9rem] xl:top-[11.6rem] 2xl:top-[11.2rem] 3xl:top-[11rem] 4xl:top-[10.8rem] 5xl:top-[10.6rem] 6xl:top-[10.3rem] 7xl:top-[10rem] md:left-0 -left-[3rem] w-[160rem] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter='url(#filter0_d_230_5843)'>
                     <rect y="42.5" height="0.8" width="5000" fill="#767F84" />
                   </g>
@@ -234,9 +265,9 @@ function Home() {
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_230_5843" result="shape" />
                   </filter>
                 </svg>
-                {
+                {/* {
                   width < 768 &&
-                  <svg className={`absolute -z-0 top-[6.8rem] xs:top-[4.7rem] -left-[3rem] w-[142rem] `} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg className={`absolute -z-0 top-[6.7rem] xs:top-[4.7rem] -left-[3rem] w-[142rem] `} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter='url(#filter1_d_1261_1133)'>
                       <rect y="42.5" className='mask' height="0.8" fill="#33BDEB" />
                     </g>
@@ -251,7 +282,7 @@ function Home() {
                       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
                     </filter>
                   </svg>
-                }
+                } */}
                 {
                   width >= 768 &&
                   <svg className={`absolute -z-10 top-[8.4rem] xs:top-[4.3rem] md:top-[12.45rem] lg:top-[11.9rem] xl:top-[11.6rem] 2xl:top-[11.2rem] 3xl:top-[11rem] 4xl:top-[10.8rem] 5xl:top-[10.6rem] 6xl:top-[10.3rem] 7xl:top-[10rem] ${width >= 1024 ? 'w-[77.53vw]' : 'w-[67vw]'}`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -270,6 +301,8 @@ function Home() {
                     </filter>
                   </svg>
                 }
+
+
 
               </section>
               <div className="container scrollx ">
@@ -394,7 +427,7 @@ function Home() {
           <img src={sec1} alt="" />
         </div>
 
-        <div className="bg-[url(./assets/wolfMask.png)] md:bg-[35rem_5rem] bg-no-repeat bg-contain">
+        <div className="bg-[url(./assets/wolfMask.png)] wolfMask bg-no-repeat">
           <div className="flex mx-auto w-[80%] items-center justify-between lg:flex-row gap-4 flex-col py-10 ">
             <div className="flex flex-col gap-6 md:gap-0 lg:w-[55%]">
               <div className="relative">
@@ -420,11 +453,11 @@ function Home() {
           </div> */}
         </div>
 
-        <div className="relative h-[93.2rem] xs:h-[107rem] sm:h-[85rem] md:h-[55rem] lg:h-[63rem] xl:h-[65rem] ">
+        <div className="relative h-[110rem] xs:h-[107rem] sm:h-[85rem] md:h-[70rem] lg:h-[63rem] xl:h-[65rem] ">
 
-          <div className="bg-[url(./assets/sec2.png)] relative w-full h-[35rem] xs:h-[50rem] sm:h-[50rem] md:h-[55rem] lg:h-[58rem] xl:h-[65rem]  md:mt-16 xl:bg-center bg-[-30rem_0rem] xs:bg-[-45rem_0rem] sm:bg-[-35rem_-0.5rem] md:bg-right bg-no-repeat bg-cover bg-white pb-[4rem] md:pb-0">
+          <div className="bg-[url(./assets/sec2.png)] relative w-full h-[35rem] xs:h-[50rem] sm:h-[50rem] md:h-[70rem] lg:h-[58rem] xl:h-[65rem] xl:bg-center bg-[-30rem_0rem] xs:bg-[-45rem_0rem] sm:bg-[-35rem_-0.5rem] md:bg-right bg-no-repeat bg-cover bg-white pb-[4rem] md:pb-0">
           </div>
-          <div className="h-[61rem] sm:h-[40rem] lg:h-[46rem] xl:h-[40rem] flex flex-col absolute bottom-0 xl:bottom-28 md:top-28 lg:top-[10rem] xl:top-[20rem] pl-8 pr-8 pt-12 pb-12 xs:pr-12 xs:pl-12 md:pr-0 md:pt-[rem] lg:pt-[0rem] xl:pb-[8rem] xl:pl-[6rem] w-full md:w-[83%] lg:w-[50%] gap-6 xl:gap-12 items-center md:items-start justify-around lg:justify-center text-[#151b1e] bg-white md:bg-transparent">
+          <div className="h-[78rem] sm:h-[40rem] lg:h-[46rem] xl:h-[40rem] flex flex-col absolute bottom-0 xl:bottom-28 md:top-28 lg:top-[10rem] xl:top-[20rem] pl-8 pr-8 pt-12 pb-12 xs:pr-12 xs:pl-12 md:pr-0 md:pt-[rem] lg:pt-[0rem] xl:pb-[8rem] xl:pl-[6rem] w-full md:w-[83%] lg:w-[50%] gap-6 xl:gap-12 items-center md:items-start justify-around lg:justify-center text-[#151b1e] bg-white md:bg-transparent">
             <p className='text-[3rem] xs:text-[3.625rem] font-bold uppercase leading-snug '>Web3 Crypto Dust Runner Game</p>
             <p className='text-base xl:text-lg font-medium tracking-tighter md:w-[53%] lg:w-full'>Introducing Crypto Dust Runner, the web 3 game that's here to bring the heat to those corporate whales invading our precious crypto space! 🌬️🐺</p>
             <p className='text-base font-medium block md:w-[53%] lg:w-full'>👋 In this epic quest, you'll join forces with Nimbi, the fearless white wolf, as he races through a treacherous frozen gulch, fueled by the magnificent power of crypto dust! 💪✨ His mission? To collect as much of this precious resource as possible and transform into a legendary force against those pesky corporate giants. 😎🐋Picture this: you're in control of the nimble Nimbi, dodging obstacles, jumping over icy chasms, and racing against time ⏰ to reach power-up spots that will elevate your game to a whole new level! 💯✨ Discover abandoned crypto mines that will boost Nimbi's dust collection abilities, allowing him to dominate the leaderboard like a true crypto champ! 🏆💰</p>
@@ -505,7 +538,7 @@ function Home() {
             <p className='text-[3rem] xs:text-[3.625rem] leading-tight font-semibold uppercase'>Whitepaper </p>
             <p className='text-sm'>Explore the Nimbi whitepaper and get an in-depth breakdown of the unique benefits, innovative features, and overall vision of the NIMBI ecosystem and its native token. This clear, concise, and expertly crafted informational report will help you understand exactly what sets NIMBI apart from other crypto projects.<br /><br />Dive into our educational white paper and find out why taking this journey with us is an absolute no-brainer!</p>
             <div className="btn border border-[#00ace6] bg-transparent text-[#00ace6] hover:text-[#c4c0c8] w-[12rem] text-center">Access the whitepaper</div>
-            <div className="w-full hidden lg:flex justify-end" onClick={()=>window.scrollTo({top:0,left:0,behavior:'smooth'})}>
+            <div className="w-full hidden lg:flex justify-end" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>
               <img src={icon} className=' absolute right-24 w-8 bg-[#43545e] px-3 -rotate-90 py-2.5 cursor-pointer' alt="" />
             </div>
           </div>

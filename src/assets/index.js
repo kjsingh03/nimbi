@@ -48,5 +48,6 @@ import leftArrow from './leftArrow.png'
 import rightArrow from './rightArrow.png'
 import animation from './lottie.json'
 import cross from './cross.png'
+import roadmap from './Roadmap.png'
 
-export {cross,animation,leftArrow,rightArrow,leftWolf,grayMask,sound,card1,card2,card3,card4,card5,card6,card7,card8, logo,rightWolf, logo1, hero, svg1, svg2, svg3,round,indicator, author1, author2,tick,mountain, author3, author4,mask,mask1, author5 ,sec1,sec2,ellipse,goldWolf,bigEllipse,whaleLeft,whaleRight,discord,telegram,x,github ,icon,telegramIcon,twitterIcon,xIcon,discordIcon,vector}
+export { cross,roadmap, animation, leftArrow, rightArrow, leftWolf, grayMask, sound, card1, card2, card3, card4, card5, card6, card7, card8, logo, rightWolf, logo1, hero, svg1, svg2, svg3, round, indicator, author1, author2, tick, mountain, author3, author4, mask, mask1, author5, sec1, sec2, ellipse, goldWolf, bigEllipse, whaleLeft, whaleRight, discord, telegram, x, github, icon, telegramIcon, twitterIcon, xIcon, discordIcon, vector }

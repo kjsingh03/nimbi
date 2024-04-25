@@ -120,14 +120,13 @@ svg {
 }
 
 .whale{
-  background-position: 40rem 20rem;
-  background-size: 70rem 55rem; 
+  background-position: 40rem 25rem;
+  background-size: 55rem 45rem; 
 }
 
-.bg-roadmap {
-  background-size: 80vw 14vw,contain, 55rem;
-  background-position: 8rem 25vh, right, 0px -146px;
-  background-repeat: no-repeat, no-repeat, no-repeat;
+.wolfMask{
+  background-size: 40rem 67rem; 
+  background-position: 32rem -0rem;
 }
 
 .accordion>p{
@@ -256,10 +255,6 @@ border-radius: 0.5rem;
     /* gap:5rem */
   }
 
-  .bg-roadmap{
-    background-position: 6rem 29vh, right, 0px -146px;
-  }
-
   .container {
     padding-left: 3rem;
   }
@@ -279,11 +274,6 @@ border-radius: 0.5rem;
   .swiper-pagination {
     padding: 1.2rem 0.5rem;
   }
-
-  .bg-roadmap{
-    background-position: 4rem 29vh, right, 0px -146px;
-  }
-
   .phase {
     /* gap: 2rem; */
     width:100vw;
@@ -303,18 +293,12 @@ border-radius: 0.5rem;
     padding: 0.5rem 0.5rem;
   }
 
-  .bg-roadmap{
-    background-position: 4rem 36vh, right, 0px -146px;
-  }
 }
 
 @media screen and (max-width:475px) {
   
 
-  .bg-roadmap {
-    background-size: 95vw 14vw,contain, 55rem;
-    background-position: center, right, 0px -146px;
-  }
+ 
 
   .swiper-pagination {
     padding: 0.25rem 0.5rem;

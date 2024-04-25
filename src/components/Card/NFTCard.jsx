@@ -6,7 +6,7 @@ function NFTCard({ img }) {
         <>
             {
                 img &&
-                <div className='h-[18rem] xs:h-[14rem] xl:h-full xl:w-full relative font-bold text-black'>
+                <div className='h-[18rem] xs:h-[14rem] xl:h-full xl:w-full relative font-bold text-black z-0'>
 
                     <img src={img} alt="" className='w-full h-full object-cover' />
 
