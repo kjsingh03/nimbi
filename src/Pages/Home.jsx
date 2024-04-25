@@ -72,7 +72,7 @@ function Home() {
       sections.forEach((section, index) => {
         if (index !== 0) {
           gsap.from(section, {
-            x: 20,
+            x: 0,
             opacity: 0,
             duration: 0.75,
             delay: index * 1 / 32,
@@ -94,7 +94,7 @@ function Home() {
           trigger: '.roadmap-container',
           start: `top 30%`,
           end: `top -40%`,
-          scrub:1
+          scrub: 1
         }
       });
 
@@ -106,7 +106,7 @@ function Home() {
           trigger: '.roadmap-container',
           start: `top 70%`,
           end: `top -80%`,
-          scrub:1
+          scrub: 1
         }
       });
     }
@@ -250,7 +250,8 @@ function Home() {
                     <img src={mountain} className='mountain absolute opacity-80 -top-[17.5rem] sm:-top-[20.5rem] w-full left-[35rem] sm:left-[50rem] md:-left-[67rem] h-[20rem] sm:h-[34rem] -z-50' alt="" />
                   </div>
                 }
-                <svg className={`absolute -z-10 top-[6.3rem] xs:top-[4.3rem] md:top-[12.35rem] lg:top-[11.9rem] xl:top-[11.6rem] 2xl:top-[11.2rem] 3xl:top-[11rem] 4xl:top-[10.8rem] 5xl:top-[10.6rem] 6xl:top-[10.3rem] 7xl:top-[10rem] md:left-0 -left-[3rem] w-[160rem] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                {/* <svg className={`absolute -z-10 top-[6.3rem] xs:top-[4.3rem] md:top-[12.35rem] lg:top-[11.9rem] xl:top-[11.6rem] 2xl:top-[11.2rem] 3xl:top-[11rem] 4xl:top-[10.8rem] 5xl:top-[10.6rem] 6xl:top-[10.3rem] 7xl:top-[10rem] md:left-0 -left-[3rem] w-[160rem] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter='url(#filter0_d_230_5843)'>
                     <rect y="42.5" height="0.8" width="5000" fill="#767F84" />
                   </g>
@@ -264,26 +265,8 @@ function Home() {
                     <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_230_5843" />
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_230_5843" result="shape" />
                   </filter>
-                </svg>
-                {/* {
-                  width < 768 &&
-                  <svg className={`absolute -z-0 top-[6.7rem] xs:top-[4.7rem] -left-[3rem] w-[142rem] `} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter='url(#filter1_d_1261_1133)'>
-                      <rect y="42.5" className='mask' height="0.8" fill="#33BDEB" />
-                    </g>
-                    <filter id="filter1_d_1261_1133" className='mask' x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
-                      <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
-                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                      <feOffset />
-                      <feGaussianBlur stdDeviation="5" />
-                      <feComposite in2="hardAlpha" operator="out" />
-                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
-                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
-                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
-                    </filter>
-                  </svg>
-                } */}
-                {
+                </svg> 
+                 {
                   width >= 768 &&
                   <svg className={`absolute -z-10 top-[8.4rem] xs:top-[4.3rem] md:top-[12.45rem] lg:top-[11.9rem] xl:top-[11.6rem] 2xl:top-[11.2rem] 3xl:top-[11rem] 4xl:top-[10.8rem] 5xl:top-[10.6rem] 6xl:top-[10.3rem] 7xl:top-[10rem] ${width >= 1024 ? 'w-[77.53vw]' : 'w-[67vw]'}`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter='url(#filter1_d_1261_1133)'>
@@ -301,8 +284,26 @@ function Home() {
                     </filter>
                   </svg>
                 }
+                 {
+                    width < 768 &&
+                    <svg className={`absolute -z-0 top-[6.7rem] xs:top-[4.7rem] -left-[3rem] w-[142rem] `} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g filter='url(#filter1_d_1261_1133)'>
+                        <rect y="42.5" className='mask' height="0.8" fill="#33BDEB" />
+                      </g>
+                      <filter id="filter1_d_1261_1133" className='mask' x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
+                        <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="5" />
+                        <feComposite in2="hardAlpha" operator="out" />
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
+                      </filter>
+                    </svg>
+                  }  */}
 
-
+                
 
               </section>
               <div className="container scrollx ">
@@ -320,6 +321,21 @@ function Home() {
                       <li className='flex gap-3'><img className='w-4 h-4' src={tick} alt="" />secure initial funding</li>
                       <img src={round} className="w-8 h-8 absolute -left-4 xs:-left-10 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
                       <img src={ellipse} className="w-[5rem] h-[5rem] absolute left-[117.7rem] md:left-[4rem] lg:-left-[1.5rem] top-[11rem]" />
+                      <svg className={`w-[75rem] absolute top-[11.25rem] -left-[20.5rem] z-0`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter='url(#filter1_d_1261_1133)'>
+                          <rect className='z-0' width="28.5%" y="55" height="150" fill="#33BDEB" />
+                        </g>
+                        <filter id="filter1_d_1261_1133" x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
+                          <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
+                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                          <feOffset />
+                          <feGaussianBlur stdDeviation="5" />
+                          <feComposite in2="hardAlpha" operator="out" />
+                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
+                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
+                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
+                        </filter>
+                      </svg>
                     </ul>
                     <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
                       <p className='text-[#a1a7aa] text-sm'><span className='text-[#00ace6] font-semibold'>PRE-SALE PHASE:</span> 2023 Q1</p>
@@ -341,6 +357,21 @@ function Home() {
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
                       <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
+                      <svg className={`w-[75rem] absolute top-[11.25rem] -left-[20.5rem] z-0`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter='url(#filter1_d_1261_1133)'>
+                          <rect className='z-0' width="28.5%" y="55" height="150" fill="#33BDEB" />
+                        </g>
+                        <filter id="filter1_d_1261_1133" x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
+                          <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
+                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                          <feOffset />
+                          <feGaussianBlur stdDeviation="5" />
+                          <feComposite in2="hardAlpha" operator="out" />
+                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
+                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
+                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
+                        </filter>
+                      </svg>
                     </ul>
                     <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
 
@@ -362,7 +393,21 @@ function Home() {
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />KYC and AUDIT</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
-                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
+                      <svg className={`w-[75rem] absolute top-[11.25rem] -left-[20.5rem] z-0`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter='url(#filter1_d_1261_1133)'>
+                          <rect className='z-0' width="28.5%" y="55" height="150" fill="#33BDEB" />
+                        </g>
+                        <filter id="filter1_d_1261_1133" x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
+                          <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
+                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                          <feOffset />
+                          <feGaussianBlur stdDeviation="5" />
+                          <feComposite in2="hardAlpha" operator="out" />
+                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
+                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
+                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
+                        </filter>
+                      </svg>
                       <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
                     </ul>
 
@@ -385,6 +430,21 @@ function Home() {
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
+                      <svg className={`w-[75rem] absolute top-[11.25rem] -left-[20.5rem] z-0`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter='url(#filter1_d_1261_1133)'>
+                          <rect className='z-0' width="28.5%" y="55" height="150" fill="#33BDEB" />
+                        </g>
+                        <filter id="filter1_d_1261_1133" x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
+                          <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
+                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                          <feOffset />
+                          <feGaussianBlur stdDeviation="5" />
+                          <feComposite in2="hardAlpha" operator="out" />
+                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
+                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
+                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
+                        </filter>
+                      </svg>
                       <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
                     </ul>
 
@@ -408,7 +468,23 @@ function Home() {
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
+                      <svg className={`w-[75rem] absolute top-[11.25rem] -left-[20.5rem] z-0`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter='url(#filter1_d_1261_1133)'>
+                          <rect className='z-0' width="28.5%" y="55" height="150" fill="#33BDEB" />
+                        </g>
+                        <filter id="filter1_d_1261_1133" x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
+                          <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
+                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                          <feOffset />
+                          <feGaussianBlur stdDeviation="5" />
+                          <feComposite in2="hardAlpha" operator="out" />
+                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
+                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
+                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
+                        </filter>
+                      </svg>
                       <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-20" />
+
                     </ul>
 
                     <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
