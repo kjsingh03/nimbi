@@ -3,11 +3,11 @@ import { discordIcon, telegramIcon, twitterIcon, xIcon } from '../../assets'
 
 function Footer({path="/"}) {
   return (
-    <div className="capitalize text-xs flex flex-col gap-4 bg-[#1c2327] px-[2rem] lg:px-[4rem] xl:px-[8rem] py-8 border-t border-[#767f84]md:">
+    <div className="capitalize text-xs flex flex-col gap-4 bg-[#1c2327] px-[2rem] lg:px-[4rem] xl:px-[8rem] py-8 border-t border-[#767f84]">
         {
             path==="/" &&
-        <div className="flex md:flex-row flex-col md:gap-0 gap-2 items-center justify-between">
-          <div className=" flex flex-col md:items-start items-center text-center md:text-left w-full gap-4 sm:gap-2 md:w-[40%] xl:w-[30%]">
+        <div className="flex lg:flex-row flex-col lg:gap-0 gap-4 items-center justify-between">
+          <div className=" flex flex-col lg:items-start items-center text-center lg:text-left w-full gap-4 sm:gap-6 lg:w-[40%] xl:w-[30%]">
             <p className='text-xs'>Register here</p>
             <div className=" flex sm:flex-row flex-col items-center  gap-2 sm:gap-4 w-full">
               <input type="text" placeholder='Email' className='bg-transparent p-2 border border-[#767f84] w-full' />

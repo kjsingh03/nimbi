@@ -120,8 +120,8 @@ svg {
 }
 
 .whale{
-  background-position: 40rem 10rem;
-  background-size: 70rem 55rem;
+  background-position: 40rem 20rem;
+  background-size: 70rem 55rem; 
 }
 
 .bg-roadmap {
@@ -274,7 +274,7 @@ border-radius: 0.5rem;
     }
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:768px) {
 
   .swiper-pagination {
     padding: 1.2rem 0.5rem;
