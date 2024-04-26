@@ -134,7 +134,7 @@ function Document() {
               <p className='uppercase text-3xl font-semibold text-left py-3'>{title || 'THE CURRENT STATE OF PROJECT LAUNCHES ON SOLANA'}</p>
             </div>
 
-            <div className='text-[0.65rem] md:text-[0.83rem] leading-loose'>
+            <div className='text-base leading-loose'>
               <p>IDO Launchpad for Decentralized Fundraising<br />
                 Conventional launchpads rely on first come and first clicks. Unlike them, our launchpad is fair and equitable for all and yet rewards token holders.<br />
                 The Solster launchpad doesn’t have high financial barriers to get into the market. It also doesn’t have whitelist spots based on first form fillers.<br />
@@ -168,14 +168,14 @@ function Document() {
               <div className="flex items-center gap-1 lg:gap-3 border border-[#334047] bg-transparent hover:bg-[#28343b66] cursor-pointer py-3 px-4 rounded-lg w-full">
                 <img src={leftArrow} alt="" className='w-4 h-3' />
                 <div className="flex flex-col gap-2">
-                  <p className='text-[0.6rem] md:text-xs'>Previous</p>
-                  <p className='text-[0.6rem] md:text-xs lg:text-sm font-semibold'>the current state of project launches on solana</p>
+                  <p className='text-sm'>Previous</p>
+                  <p className='text-sm lg:text-sm font-semibold'>the current state of project launches on solana</p>
                 </div>
               </div>
               <div className="flex items-center justify-end gap-1 lg:gap-3 border border-[#334047] bg-transparent hover:bg-[#28343b66] cursor-pointer py-3 px-4 rounded-lg w-full">
                 <div className="flex flex-col gap-2 text-right ">
-                  <p className='text-[0.6rem] md:text-xs text-[#00ace6]'>Next</p>
-                  <p className='text-[0.6rem] md:text-xs lg:text-sm font-semibold'>user flow for solester launchpad</p>
+                  <p className='text-sm text-[#00ace6]'>Next</p>
+                  <p className='text-sm lg:text-sm font-semibold'>user flow for solester launchpad</p>
                 </div>
                 <img src={rightArrow} alt="" className='w-4 h-3' />
               </div>
