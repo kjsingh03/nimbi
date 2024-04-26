@@ -82,7 +82,7 @@ function Document() {
     
       <div className='flex capitalize pt-16 sm:flex-row flex-col'>
 
-        <div className="sm:w-[33%] flex flex-col gap-4 items-center sm:items-end min-h-screen border-r border-r-[#c4c0c8] py-6">
+        <div className="sm:w-[33%] flex flex-col gap-4 items-center sm:items-end sm:min-h-screen border-r border-r-[#c4c0c8] py-6">
           <div className="w-[90%] xl:w-[75%] flex flex-col gap-2 px-2">
             <p className='uppercase text-left font-semibold'>overview</p>
             <div className="flex flex-col gap-2 docTitle">

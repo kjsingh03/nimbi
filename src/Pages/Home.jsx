@@ -250,7 +250,7 @@ function Home() {
                   </div>
                 }
 
-                 <svg className={`absolute -z-10 top-[7rem] xs:top-[5rem] md:top-[12.15rem] lg:top-[11.9rem] xlg:top-[11.6rem] xl:top-[11.45rem] 2xl:top-[11.2rem] 3xl:top-[10.9rem] 4xl:top-[10.8rem] 5xl:top-[10.6rem] 6xl:top-[10.3rem] 7xl:top-[10rem] md:left-0 -left-[3rem] w-[160rem] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <svg className={`absolute -z-10 top-[7.1rem] xs:top-[5.1rem] md:top-[12.15rem] lg:top-[11.9rem] xlg:top-[11.6rem] xl:top-[11.45rem] 2xl:top-[11.2rem] 3xl:top-[10.9rem] 4xl:top-[10.8rem] 5xl:top-[10.6rem] 6xl:top-[10.3rem] 7xl:top-[10rem] md:left-0 -left-[3rem] w-[160rem] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter='url(#filter0_d_230_5843)'>
                     <rect y="42.5" height="0.6" width="5000" fill="#767F84" />
                   </g>
