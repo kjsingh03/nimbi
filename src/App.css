@@ -181,11 +181,13 @@ border-radius: 0.5rem;
 
 .docContent{
   height:0;
+  display: none;
   transform: translateY(2rem);
   opacity: 0;
 }
 
 .docContent.active{
+  display: flex;
   height:auto;
   transform: translateY(0rem);
   opacity: 100;

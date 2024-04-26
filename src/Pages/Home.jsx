@@ -519,9 +519,9 @@ function Home() {
           </div>
         </div>
 
-        <div className="bg-[url(./assets/whaleRight.png)] w-full h-[69rem] sm:h-[58rem] md:h-[62rem] lg:pt-[15rem] bg-[-4rem_-2rem] lg:bg-[10rem_-2rem] lg:bg-[_90rem_70rem] bg-no-repeat bg-cover flex flex-col items-center gap-8 md:gap-16 justify-center relative">
+        <div className="bg-[url(./assets/whaleRight.png)] w-full h-[69rem] sm:h-[66rem] md:h-[62rem] lg:pt-[15rem] bg-[-5rem_40rem] lg:bg-[10rem_-2rem] bg-[_50rem_30rem] lg:bg-[_90rem_70rem] bg-no-repeat flex flex-col items-center gap-8 md:gap-16 justify-center relative">
           <div className="flex items-center justify-center">
-            <div className="bg-[#1c2327] bg-[url(./assets/logoMask.png)] bg-no-repeat bg-cover md:bg-contain flex md:flex-row gap-10 md:gap-4 flex-col items-center px-[2rem] lg:px-[14rem] xl:px-[18rem] 2xl:px-[24rem] 3xl:px-[28rem] justify-between py-8">
+            <div className="bg-[#1c2327] bg-[url(./assets/logoMask.png)] bg-no-repeat bg-[_25rem_20rem] md:bg-contain flex md:flex-row gap-10 md:gap-4 flex-col items-center px-[2rem] lg:px-[14rem] xl:px-[18rem] 2xl:px-[24rem] 3xl:px-[28rem] justify-between py-8">
               <div className="flex flex-col gap-6 md:w-[50%] text-left w-[90%] xs:w-[85%]">
                 <p className="text-[3.125rem] leading-tight font-semibold font-['Roboto_Condensed',sans-serif]">Join our community </p>
                 <p className='text-sm'>Join us as we celebrate the launch of our project by offering exclusive rewards to our early supporters. By participating in our ecosystem, you'll have the opportunity to receive free token airdrops and access to exciting perks. Don't miss out on this chance to be part of our growing community!</p>
