@@ -75,7 +75,7 @@ function Home() {
             x: 0,
             opacity: 0,
             duration: 0.75,
-            delay: index * 1 / 32,
+            delay: index * 1 / 12,
             scrollTrigger: {
               trigger: section,
               containerAnimation: scrollTween,
@@ -489,14 +489,14 @@ function Home() {
           </div> */}
         </div>
 
-        <div className="relative h-[110rem] xs:h-[107rem] sm:h-[85rem] md:h-[70rem] lg:h-[63rem] xl:h-[65rem] 3xl:h-[75rem] ">
+        <div className="relative h-[110rem] xs:h-[107rem] sm:h-[85rem] md:h-[70rem] lg:h-[74rem] xl:h-[70rem] 3xl:h-[75rem] ">
 
-          <div className="bg-[url(./assets/sec2.png)] relative w-full h-[35rem] xs:h-[50rem] sm:h-[50rem] md:h-[70rem] lg:h-[58rem] xl:h-[65rem] 3xl:h-[75rem] xl:bg-center bg-[-30rem_0rem] xs:bg-[-45rem_0rem] sm:bg-[-35rem_-0.5rem] md:bg-right bg-no-repeat bg-cover bg-white pb-[4rem] md:pb-0">
+          <div className="bg-[url(./assets/sec2.png)] relative w-full h-[35rem] xs:h-[50rem] sm:h-[50rem] md:h-[70rem] lg:h-[74rem] xl:h-[70rem] 3xl:h-[75rem] xl:bg-center bg-[-30rem_0rem] xs:bg-[-45rem_0rem] sm:bg-[-35rem_-0.5rem] md:bg-right bg-no-repeat bg-cover bg-white pb-[4rem] md:pb-0">
           </div>
-          <div className="h-[78rem] sm:h-[40rem] lg:h-[46rem] xl:h-[40rem] flex flex-col absolute bottom-0 xl:bottom-28 md:top-28 lg:top-[10rem] xl:top-[20rem] pl-8 pr-8 pt-12 pb-12 xs:pr-12 xs:pl-12 md:pr-0 md:pt-[rem] lg:pt-[0rem] xl:pb-[8rem] xl:pl-[6rem] w-full md:w-[83%] lg:w-[50%] gap-6 xl:gap-12 items-center md:items-start justify-around lg:justify-center text-[#151b1e] bg-white md:bg-transparent">
-            <p className='text-[3rem] xs:text-[3.625rem] font-bold uppercase leading-snug '>Web3 Crypto Dust Runner Game</p>
-            <p className='text-base xl:text-lg font-medium tracking-tighter md:w-[53%] lg:w-full'>Introducing Crypto Dust Runner, the web 3 game that's here to bring the heat to those corporate whales invading our precious crypto space! 🌬️🐺</p>
-            <p className='text-base font-medium block md:w-[53%] lg:w-full'>👋 In this epic quest, you'll join forces with Nimbi, the fearless white wolf, as he races through a treacherous frozen gulch, fueled by the magnificent power of crypto dust! 💪✨ His mission? To collect as much of this precious resource as possible and transform into a legendary force against those pesky corporate giants. 😎🐋Picture this: you're in control of the nimble Nimbi, dodging obstacles, jumping over icy chasms, and racing against time ⏰ to reach power-up spots that will elevate your game to a whole new level! 💯✨ Discover abandoned crypto mines that will boost Nimbi's dust collection abilities, allowing him to dominate the leaderboard like a true crypto champ! 🏆💰</p>
+          <div className="h-[78rem] sm:h-[40rem] lg:h-[46rem] xl:h-[40rem] flex flex-col absolute bottom-0 xl:bottom-28 md:top-28 lg:top-[18rem] xl:top-[22rem] 3xl:top-[25rem] pl-8 pr-8 pt-12 pb-12 xs:pr-12 xs:pl-12 md:pr-0 md:pt-[rem] lg:pt-[0rem] xl:pb-[8rem] xl:pl-[6rem] w-full md:w-[83%] lg:w-[60%] 3xl:w-[40%] gap-6 xl:gap-12 items-center md:items-start justify-around lg:justify-center text-[#151b1e] bg-white md:bg-transparent">
+            <p className="text-[3.625rem] lg:text-[6.125rem] font-bold uppercase leading-tight font-['Roboto_Condensed',sans-serif]">Web3 Crypto Dust Runner Game</p>
+            <p className='text-base xl:text-lg font-medium tracking-tighter md:w-[53%] lg:w-[75%] 3xl:w-full'>Introducing Crypto Dust Runner, the web 3 game that's here to bring the heat to those corporate whales invading our precious crypto space! 🌬️🐺</p>
+            <p className='text-base font-medium block md:w-[53%] lg:w-[75%] 3xl:w-full'>👋 In this epic quest, you'll join forces with Nimbi, the fearless white wolf, as he races through a treacherous frozen gulch, fueled by the magnificent power of crypto dust! 💪✨ His mission? To collect as much of this precious resource as possible and transform into a legendary force against those pesky corporate giants. 😎🐋Picture this: you're in control of the nimble Nimbi, dodging obstacles, jumping over icy chasms, and racing against time ⏰ to reach power-up spots that will elevate your game to a whole new level! 💯✨ Discover abandoned crypto mines that will boost Nimbi's dust collection abilities, allowing him to dominate the leaderboard like a true crypto champ! 🏆💰</p>
             <div className="w-full text-left">
               <p className="btn w-[12rem] text-center">Launch APP</p>
             </div>
@@ -509,7 +509,7 @@ function Home() {
             <img src={bigEllipse} className='absolute top-0 lg:-right-[15rem] w-[30rem] z-20' alt="" />
           </div>
           <div className="flex flex-col w-[80%] lg:text-start lg:w-[40%] gap-6 justify-center pb-10  text-[#a1a7aa]">
-            <p className='text-[3rem] xs:text-[3.625rem] leading-tight font-extrabold uppercase'>KAZI token </p>
+            <p className="text-[3rem] xs:text-[3.625rem] leading-tight font-extrabold uppercase font-['Roboto_Condensed',sans-serif]">KAZI token </p>
             <p className='text-sm sm:text-lg font-medium text-white'>Your Bridge to Streamlined Crypto Conversion! 🌉💱</p>
             <p className='text-sm '>KAZI Token stands as a beacon of efficiency in the world of cryptocurrency. As an ERC-20 token, it serves as the perfect conduit for users looking to convert their wallet crypto dust into tangible value. Whether you're a seasoned investor or just dipping your toes into the crypto waters, KAZI Token offers a seamless and accessible pathway to transform those fractions of cryptocurrency left lingering in your wallet into meaningful assets.
               With KAZI Token, say goodbye to the frustration of unused cryptocurrency fragments and hello to a practical solution for maximizing your digital assets. Join the movement towards streamlined crypto conversion today with KAZI Token – where every fragment counts towards your financial success. 💼🚀</p>
@@ -519,11 +519,11 @@ function Home() {
           </div>
         </div>
 
-        <div className="bg-[url(./assets/whaleRight.png)] w-full h-[69rem] sm:h-[58rem] md:h-[55rem] lg:pt-16 bg-center bg-no-repeat bg-cover lg:bg-contain flex flex-col items-center gap-8 md:gap-16 justify-center relative">
+        <div className="bg-[url(./assets/whaleRight.png)] w-full h-[69rem] sm:h-[58rem] md:h-[62rem] lg:pt-[15rem] bg-[-4rem_-2rem] lg:bg-[10rem_-2rem] lg:bg-[_90rem_70rem] bg-no-repeat bg-cover flex flex-col items-center gap-8 md:gap-16 justify-center relative">
           <div className="flex items-center justify-center">
             <div className="bg-[#1c2327] bg-[url(./assets/logoMask.png)] bg-no-repeat bg-cover md:bg-contain flex md:flex-row gap-10 md:gap-4 flex-col items-center px-[2rem] lg:px-[14rem] xl:px-[18rem] 2xl:px-[24rem] 3xl:px-[28rem] justify-between py-8">
               <div className="flex flex-col gap-6 md:w-[50%] text-left w-[90%] xs:w-[85%]">
-                <p className='text-[3.125rem] leading-tight font-semibold'>Join our community </p>
+                <p className="text-[3.125rem] leading-tight font-semibold font-['Roboto_Condensed',sans-serif]">Join our community </p>
                 <p className='text-sm'>Join us as we celebrate the launch of our project by offering exclusive rewards to our early supporters. By participating in our ecosystem, you'll have the opportunity to receive free token airdrops and access to exciting perks. Don't miss out on this chance to be part of our growing community!</p>
               </div>
               <div className="w-full xs:w-[90%] md:w-[40%] flex flex-col gap-4">
@@ -571,7 +571,7 @@ function Home() {
             </div>
           </div>
           <div className="flex flex-col gap-6 w-[85%] xl:w-[50%]  md:px-0 items-center text-center">
-            <p className='text-[3rem] xs:text-[3.625rem] leading-tight font-semibold uppercase'>Whitepaper </p>
+            <p className="text-[3rem] xs:text-[3.625rem] leading-tight font-semibold uppercase font-['Roboto_Condensed',sans-serif]">Whitepaper </p>
             <p className='text-sm'>Explore the Nimbi whitepaper and get an in-depth breakdown of the unique benefits, innovative features, and overall vision of the NIMBI ecosystem and its native token. This clear, concise, and expertly crafted informational report will help you understand exactly what sets NIMBI apart from other crypto projects.<br /><br />Dive into our educational white paper and find out why taking this journey with us is an absolute no-brainer!</p>
             <div className="btn border border-[#00ace6] bg-transparent text-[#00ace6] hover:text-[#c4c0c8] w-[12rem] text-center">Access the whitepaper</div>
             <div className="w-full hidden lg:flex justify-end" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>
