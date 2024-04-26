@@ -95,7 +95,7 @@ function Navbar() {
                 </div>
             </div>
             <div className="flex overflow-hidden z-[100]">
-                <ul className="bg-[url(./assets/mountain.png)] bg-no-repeat bg-[0.25rem_1rem] bg-[_160rem_50rem] navbar z-[100] flex lg:hidden flex-col items-center gap-3 transition-all duration-200 ease-in px-8 py-10 lg:shadow-none shadow-xl fixed left-0 top-0 bg-[#242d32] text-center w-screen h-screen" id="navbar">
+                <ul className="bg-[url(./assets/mountain.png)] bg-no-repeat bg-left-bottom bg-[_160rem_50rem] navbar z-[100] flex lg:hidden flex-col items-center gap-3 transition-all duration-200 ease-in px-8 py-10 lg:shadow-none shadow-xl fixed left-0 top-0 bg-[#242d32] text-center w-screen h-screen" id="navbar">
                     <div className="w-full flex justify-end">
                         <p className='text-right' onClick={() => { document.querySelector('.navbar').classList.remove('active'); document.querySelector('nav').style.position = "fixed" }}>
                             <img src={cross} className='w-8 h-8' alt="" />
