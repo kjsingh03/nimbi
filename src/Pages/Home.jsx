@@ -22,7 +22,6 @@ function Home() {
 
     const container = document.querySelector(".container");
     const sections = gsap.utils.toArray(".container section");
-    const texts = gsap.utils.toArray(".anim");
     const mask = document.querySelector(".mask");
 
     var xPercent = 0, from = 0, to = 0;
@@ -51,7 +50,7 @@ function Home() {
       scrollTrigger: {
         trigger: ".roadmap-container",
         start: "top 0%",
-        end: "bottom 50%",
+        end: "bottom 60%",
         scrub: 1,
       }
     });
@@ -60,7 +59,7 @@ function Home() {
       let scrollTween = gsap.to(sections, {
         xPercent: xPercent,
         ease: "none",
-        duration:3,
+        duration: 3,
         scrollTrigger: {
           trigger: ".roadmap-container",
           pin: true,
@@ -80,7 +79,7 @@ function Home() {
             scrollTrigger: {
               trigger: section,
               containerAnimation: scrollTween,
-              start: `left ${20 * index + 5 - index}%`,
+              start: `left ${16.5 * index + 6 + index }%`,
               // markers: 1,
             }
           });
@@ -128,7 +127,6 @@ function Home() {
     //     }
     //   });
     // }
-
 
 
 
@@ -198,7 +196,7 @@ function Home() {
         <div className="">
 
           <div className="overflow-hidden">
-            <div className="flex xl:flex-row flex-col justify-between items-end w-[80%] xl:w-[90%] 2xl:w-[85%] mx-auto pt-16 md:pt-[8rem] h-[158rem] xs:h-[90rem] sm:h-[84rem] lg:h-[auto] z-0">
+            <div className="flex xl:flex-row flex-col justify-between items-end w-[80%] xl:w-[90%] 2xl:w-[85%] mx-auto pt-16 md:pt-[8rem] h-[158rem] xs:h-[90rem] sm:h-[88rem] lg:h-[auto] z-0">
               <div className="collectionLeft flex flex-col gap-12 w-[100%] xl:w-[45%]">
                 <div className="relative">
                   <div className="btn bg-[#5c666c] w-max font-semibold text-[0.9rem] z-10"><p>Collection</p></div>
@@ -252,9 +250,9 @@ function Home() {
                   </div>
                 }
 
-                {/* <svg className={`absolute -z-10 top-[6.3rem] xs:top-[4.3rem] md:top-[12.35rem] lg:top-[11.9rem] xl:top-[11.6rem] 2xl:top-[11.2rem] 3xl:top-[11rem] 4xl:top-[10.8rem] 5xl:top-[10.6rem] 6xl:top-[10.3rem] 7xl:top-[10rem] md:left-0 -left-[3rem] w-[160rem] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <svg className={`absolute -z-10 top-[7rem] xs:top-[5rem] md:top-[12.15rem] lg:top-[11.9rem] xlg:top-[11.6rem] xl:top-[11.45rem] 2xl:top-[11.2rem] 3xl:top-[10.9rem] 4xl:top-[10.8rem] 5xl:top-[10.6rem] 6xl:top-[10.3rem] 7xl:top-[10rem] md:left-0 -left-[3rem] w-[160rem] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter='url(#filter0_d_230_5843)'>
-                    <rect y="42.5" height="0.8" width="5000" fill="#767F84" />
+                    <rect y="42.5" height="0.6" width="5000" fill="#767F84" />
                   </g>
                   <filter id="filter0_d_230_5843" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
                     <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
@@ -267,6 +265,7 @@ function Home() {
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_230_5843" result="shape" />
                   </filter>
                 </svg> 
+                {/*
                  {
                   width > 768 &&
                   <svg className={`absolute -z-10 top-[8.4rem] xs:top-[4.3rem] md:top-[12.45rem] lg:top-[11.9rem] xl:top-[11.6rem] 2xl:top-[11.2rem] 3xl:top-[11rem] 4xl:top-[10.8rem] 5xl:top-[10.6rem] 6xl:top-[10.3rem] 7xl:top-[10rem] ${width >= 1024 ? 'w-[77.53vw]' : 'w-[67vw]'}`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -328,7 +327,7 @@ function Home() {
                           <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
                           <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                           <feOffset />
-                          <feGaussianBlur stdDeviation="5" />
+                          {/* <feGaussianBlur stdDeviation="0" /> */}
                           <feComposite in2="hardAlpha" operator="out" />
                           <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
                           <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
@@ -361,16 +360,6 @@ function Home() {
                         <g filter='url(#filter1_d_1261_1133)'>
                           <rect className='z-10' width={width>768?'100%':'0%'} y="55" height="150" fill="#33BDEB" />
                         </g>
-                        <filter id="filter1_d_1261_1133" x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
-                          <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
-                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                          <feOffset />
-                          <feGaussianBlur stdDeviation="5" />
-                          <feComposite in2="hardAlpha" operator="out" />
-                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
-                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
-                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
-                        </filter>
                       </svg>
                     </ul>
                     <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
@@ -398,16 +387,6 @@ function Home() {
                         <g filter='url(#filter1_d_1261_1133)'>
                           <rect className='z-10' width={width>768?'100%':'0%'} y="55" height="150" fill="#33BDEB" />
                         </g>
-                        <filter id="filter1_d_1261_1133" x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
-                          <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
-                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                          <feOffset />
-                          <feGaussianBlur stdDeviation="5" />
-                          <feComposite in2="hardAlpha" operator="out" />
-                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
-                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
-                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
-                        </filter>
                       </svg>
                       <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-[500] " />
                     </ul>
@@ -435,16 +414,6 @@ function Home() {
                         <g filter='url(#filter1_d_1261_1133)'>
                           <rect className='z-10' width={width>768?'100%':'0%'} y="55" height="150" fill="#33BDEB" />
                         </g>
-                        <filter id="filter1_d_1261_1133" x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
-                          <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
-                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                          <feOffset />
-                          <feGaussianBlur stdDeviation="5" />
-                          <feComposite in2="hardAlpha" operator="out" />
-                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
-                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
-                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
-                        </filter>
                       </svg>
                       <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-[500] " />
                     </ul>
@@ -473,16 +442,6 @@ function Home() {
                         <g filter='url(#filter1_d_1261_1133)'>
                           <rect className='z-10' width={width>768?'100%':'0%'} y="55" height="150" fill="#33BDEB" />
                         </g>
-                        <filter id="filter1_d_1261_1133" x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
-                          <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
-                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                          <feOffset />
-                          <feGaussianBlur stdDeviation="5" />
-                          <feComposite in2="hardAlpha" operator="out" />
-                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
-                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
-                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
-                        </filter>
                       </svg>
                       <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-[500] " />
 
