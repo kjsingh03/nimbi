@@ -131,8 +131,8 @@ function Home() {
 
 
     if (width > 1280) {
-      gsap.to('.collectionLeft', { x: -1200, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 95%", end: "top -100%", scrub: true, } })
-      gsap.to('.collectionRight', { x: 1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: "bottom 95%", end: "top -100%", scrub: true } })
+      gsap.to('.collectionLeft', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 85%", end: "top -100%", scrub: true, } })
+      gsap.to('.collectionRight', { x: 1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: "bottom 78%", end: "top -100%", scrub: true } })
     }
 
   }, { dependencies: [width], scope: main });
@@ -144,7 +144,7 @@ function Home() {
 
       <div className="z-0 capitalize pt-14" ref={main}>
 
-        <div className="w-[90%] xl:w-[85%] mx-auto h-[40vw] lg:h-[69vh] xl:h-[62vh] 4xl:h-[694px] carousel">
+        <div className="w-[90%] xl:w-[85%] mx-auto h-[40vw] lg:h-[69vh] xl:h-[68vh] 4xl:h-[694px] carousel">
           <Swiper
             style={{
               "--swiper-navigation-color": "#000",
@@ -191,7 +191,7 @@ function Home() {
         <div className="">
 
           <div className="overflow-hidden">
-            <div className="flex xl:flex-row flex-col justify-between items-end lg:items-center w-[80%] xl:w-[90%] 2xl:w-[85%] mx-auto pt-16 md:pt-[8rem] h-[158rem] xs:h-[90rem] sm:h-[88rem] lg:h-[70rem] z-0">
+            <div className="flex xl:flex-row flex-col justify-between items-end lg:items-center w-[80%] xl:w-[90%] 2xl:w-[85%] mx-auto pt-16 md:pt-[8rem] h-[158rem] xs:h-[90rem] sm:h-[88rem] lg:h-[50rem] z-0">
               <div className="collectionLeft flex flex-col gap-12 w-[100%] xl:w-[45%]">
                 <div className="relative">
                   <div className="btn bg-[#5c666c] w-max font-semibold text-[0.9rem] z-10"><p>Collection</p></div>
@@ -204,7 +204,7 @@ function Home() {
                   <p className='btn w-[16rem] text-base text-center'>Explore the Collection</p>
                 </div>
               </div>
-              <div className="collectionRight grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 py-6 xl:py-0 w-full xl:w-[60%] h-[80%] z-0">
+              <div className="collectionRight grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 py-6 xl:py-0 w-full xl:w-[60%] 3xl:w-[45%] h-[80%] z-0">
                 <NFTCard />
                 <NFTCard img={author1} />
                 <NFTCard img={author2} />
