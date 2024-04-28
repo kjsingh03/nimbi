@@ -21,26 +21,31 @@ function Document() {
   ]
 
   const [title, setTitle] = useState("The current state of project launches on solana")
-  const [index,setIndex] = useState(0)
+  const [index, setIndex] = useState(0)
 
   useEffect(() => {
 
     if (!id) {
-      document.querySelector('.docHead').classList.add('active')
-      document.querySelector('.document').classList.add('active')
-    }
-
-    else {
-      setTitle(data.filter(obj => obj.id === id)[0]?.title)
-
       document.querySelectorAll('.document.active').forEach(doc => doc.classList.remove('active'))
-
-      document.querySelector(`#${id}`).classList.add('active')
-
+      
       document.querySelectorAll('.docTitle').forEach((doc, index) => {
         doc.childNodes[0]?.classList.remove('active')
       })
-  
+
+      document.querySelector('.docHead').classList.add('active')
+      document.querySelector('.document').classList.add('active')
+    }
+    else {
+      setTitle(data.filter(obj => obj.id === id)[0]?.title)
+      
+      document.querySelectorAll('.document.active').forEach(doc => doc.classList.remove('active'))
+      
+      document.querySelectorAll('.docTitle').forEach((doc, index) => {
+        doc.childNodes[0]?.classList.remove('active')
+      })
+
+      document.querySelector(`#${id}`).classList.add('active')
+
       document.querySelectorAll('.docTitle').forEach((doc, index) => {
         doc.childNodes[1].childNodes.forEach((li) => {
           if (li.classList.contains('active')) {
@@ -53,39 +58,21 @@ function Document() {
 
   }, [id])
 
-  const handleClick = (e) => {
-    document.querySelectorAll('.document.active').forEach(doc => doc.classList.remove('active'))
-    e.target.classList.add('active')
-
-    document.querySelectorAll('.docTitle').forEach((doc, index) => {
-      doc.childNodes[0].classList.remove('active')
-    })
-
-    document.querySelectorAll('.docTitle').forEach((doc, index) => {
-      doc.childNodes[1].childNodes.forEach((li) => {
-        if (li.classList.contains('active')) {
-          doc.childNodes[0].classList.add('active')
-          return;
-        }
-      })
-    })
-  }
-
   const activeTab = (id) => {
 
-    if (document.querySelector(`.${id} ~ .docContent`).classList.contains('active')){
+    if (document.querySelector(`.${id} ~ .docContent`).classList.contains('active')) {
       document.querySelector(`.${id} ~ .docContent`).classList.remove('active')
-    document.querySelector(`.${id} img`).style.transform="rotate(0deg)"
-  }
-    else{
+      document.querySelector(`.${id} img`).style.transform = "rotate(0deg)"
+    }
+    else {
       document.querySelector(`.${id} ~ .docContent`).classList.add('active')
-      document.querySelector(`.${id} img`).style.transform="rotate(90deg)"
+      document.querySelector(`.${id} img`).style.transform = "rotate(90deg)"
     }
   }
 
   return (
     <div className=''>
-    
+
       <div className='flex capitalize pt-16 sm:flex-row flex-col'>
 
         <div className="sm:w-[33%] flex flex-col gap-4 items-center sm:items-end sm:min-h-screen border-r border-r-[#c4c0c8] py-6">
@@ -94,12 +81,12 @@ function Document() {
             <div className="flex flex-col gap-2 docTitle">
               <div onClick={() => activeTab('launchTab')} className={`launchTab docHead flex items-center justify-between bg-transparent rounded-lg py-2 px-4 cursor-pointer`}>
                 <p className=''>launchpad</p>
-                <img src={icon} className='w-3 h-3 rotate-0' alt="" />
+                <img src={icon} className='w-3 h-3 rotate-90' alt="" />
               </div>
               <ul className='docContent active pl-8 text-sm flex flex-col gap-1'>
-                <Link to="/documents/current-state" id="current-state" className='document' onClick={handleClick}>The current state of project launches on solana</Link>
-                <Link to="/documents/launchpad" id="launchpad" className='document ' onClick={handleClick}>nimbi launchpad</Link>
-                <Link to="/documents/user-flow" id="user-flow" className='document' onClick={handleClick}>user flow for solster launchpad</Link>
+                <Link to="/documents/current-state" id="current-state" className='document'>The current state of project launches on solana</Link>
+                <Link to="/documents/launchpad" id="launchpad" className='document '>nimbi launchpad</Link>
+                <Link to="/documents/user-flow" id="user-flow" className='document'>user flow for solster launchpad</Link>
               </ul>
             </div>
           </div>
@@ -108,8 +95,8 @@ function Document() {
             <div className="flex flex-col gap-2">
 
               <ul className='docContent active pl-8 text-sm flex flex-col gap-1'>
-                <Link to="/documents/economics" id="economics" className='document' onClick={handleClick}>token economics</Link>
-                <Link to="/documents/burn" id="burn" className='document' onClick={handleClick}>token burn</Link>
+                <Link to="/documents/economics" id="economics" className='document'>token economics</Link>
+                <Link to="/documents/burn" id="burn" className='document'>token burn</Link>
               </ul>
             </div>
           </div>
@@ -118,8 +105,8 @@ function Document() {
             <div className="flex flex-col gap-2">
 
               <ul className='docContent active pl-8 text-sm flex flex-col gap-1'>
-                <Link to="/documents/road" id="road" className='document' onClick={handleClick}>road to nimbi success</Link>
-                <Link to="/documents/chapter" id="chapter" className='document' onClick={handleClick}>chapter name</Link>
+                <Link to="/documents/road" id="road" className='document'>road to nimbi success</Link>
+                <Link to="/documents/chapter" id="chapter" className='document'>chapter name</Link>
               </ul>
             </div>
           </div>
@@ -128,7 +115,7 @@ function Document() {
             <div className="flex flex-col gap-2">
 
               <ul className='docContent active pl-8 text-sm flex flex-col gap-1'>
-                <Link to="/documents/testnet" id="testnet" className='document' onClick={handleClick}>how to receive testnet tokens</Link>
+                <Link to="/documents/testnet" id="testnet" className='document'>how to receive testnet tokens</Link>
               </ul>
             </div>
           </div>
@@ -171,17 +158,17 @@ function Document() {
             </div>
 
             <div className="flex flex-col lg:flex-row items-center gap-2">
-              <div onClick={()=> {navigate(`/documents/${data[index===0?data.length-1:index-1].id}`); setIndex(index===0?data.length-1:index-1)}} className="flex items-center gap-1 lg:gap-3 border border-[#334047] bg-transparent hover:bg-[#28343b66] cursor-pointer py-3 px-4 rounded-lg w-full">
+              <div onClick={() => { if(index!==0) { setTimeout(navigate(`/documents/${data[index === 0 ? data.length - 1 : index - 1].id}`),10); setIndex(index === 0 ? data.length - 1 : index - 1) }}} className={`flex items-center gap-1 lg:gap-3 border border-[#334047] bg-transparent hover:bg-[#28343b66] cursor-pointer py-3 px-4 rounded-lg w-full ${index!==0?'active:text-[#00ace6]':''}`}>
                 <img src={leftArrow} alt="" className='w-4 h-3' />
                 <div className="flex flex-col gap-2">
                   <p className='text-sm'>Previous</p>
-                  <p className='text-sm lg:text-sm font-semibold'>{data[index===0?data.length-1:index-1].title}</p>
+                  <p className='text-sm lg:text-sm font-semibold text-white'>{data[index === 0 ? data.length - 1 : index - 1].title}</p>
                 </div>
               </div>
-              <div onClick={()=> {navigate(`/documents/${data[index===data.length-1?0:index+1]?.id}`); setIndex(index===data.length-1?0:index+1)}} className="flex items-center justify-end gap-1 lg:gap-3 border border-[#334047] bg-transparent hover:bg-[#28343b66] cursor-pointer py-3 px-4 rounded-lg w-full">
-                <div className="flex flex-col gap-2 text-right ">
-                  <p className='text-sm text-[#00ace6]'>Next</p>
-                  <p className='text-sm lg:text-sm font-semibold'>{data[index===data.length-1?0:index+1].title}</p>
+              <div onClick={() => { if(index!==data.length-1) { setTimeout(navigate(`/documents/${data[index === data.length - 1 ? 0 : index + 1]?.id}`),10); setIndex(index === data.length - 1 ? 0 : index + 1) }}} className={`flex items-center justify-end gap-1 lg:gap-3 border border-[#334047] bg-transparent hover:bg-[#28343b66] cursor-pointer py-3 px-4 rounded-lg w-full ${index!==data.length-1?'active:text-[#00ace6]':''}`}>
+                <div className="flex flex-col gap-2 text-right  ">
+                  <p className='text-sm'>Next</p>
+                  <p className='text-sm lg:text-sm font-semibold text-white'>{data[index === data.length - 1 ? 0 : index + 1].title}</p>
                 </div>
                 <img src={rightArrow} alt="" className='w-4 h-3' />
               </div>

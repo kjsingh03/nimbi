@@ -1,7 +1,9 @@
 import logo from './logo.png'
 import logo1 from './logo1.png'
-import hero from './hero.svg'
 import svg1 from './svg1.svg'
+import hero from './hero.svg'
+import hero1 from './hero1.svg'
+import hero2 from './hero2.svg'
 import svg2 from './svg2.svg'
 import svg3 from './svg3.svg'
 import author1 from './author1.png'
@@ -50,4 +52,4 @@ import animation from './lottie.json'
 import cross from './cross.png'
 import roadmap from './Roadmap.png'
 
-export { cross,roadmap, animation, leftArrow, rightArrow, leftWolf, grayMask, sound, card1, card2, card3, card4, card5, card6, card7, card8, logo, rightWolf, logo1, hero, svg1, svg2, svg3, round, indicator, author1, author2, tick, mountain, author3, author4, mask, mask1, author5, sec1, sec2, ellipse, goldWolf, bigEllipse, whaleLeft, whaleRight, discord, telegram, x, github, icon, telegramIcon, twitterIcon, xIcon, discordIcon, vector }
+export { hero1,hero2,cross,roadmap, animation, leftArrow, rightArrow, leftWolf, grayMask, sound, card1, card2, card3, card4, card5, card6, card7, card8, logo, rightWolf, logo1, hero, svg1, svg2, svg3, round, indicator, author1, author2, tick, mountain, author3, author4, mask, mask1, author5, sec1, sec2, ellipse, goldWolf, bigEllipse, whaleLeft, whaleRight, discord, telegram, x, github, icon, telegramIcon, twitterIcon, xIcon, discordIcon, vector }

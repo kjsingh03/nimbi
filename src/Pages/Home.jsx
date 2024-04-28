@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import '../App.css'
 import { IntroCard, NFTCard, Navbar } from '../components'
-import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, vector, tick, mask, mountain, indicator, round, animation, whaleLeft, roadmap } from '../assets'
+import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, vector, tick, mask, mountain, indicator, round, animation, whaleLeft, roadmap, hero1, hero2 } from '../assets'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -131,8 +131,8 @@ function Home() {
 
 
     if (width > 1280) {
-      gsap.to('.collectionLeft', { x: -800, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 75%", end: "top -50%", scrub: true, } })
-      gsap.to('.collectionRight', { x: 875, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: "bottom 75%", end: "top -50%", scrub: true } })
+      gsap.to('.collectionLeft', { x: -1200, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 95%", end: "top -100%", scrub: true, } })
+      gsap.to('.collectionRight', { x: 1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: "bottom 95%", end: "top -100%", scrub: true } })
     }
 
   }, { dependencies: [width], scope: main });
@@ -144,7 +144,7 @@ function Home() {
 
       <div className="z-0 capitalize pt-14" ref={main}>
 
-        <div className="w-[90%] xl:w-[85%] mx-auto h-[40vw] lg:h-[77vh] carousel">
+        <div className="w-[90%] xl:w-[85%] mx-auto h-[40vw] lg:h-[77vh] 3xl:h-[85vh] carousel">
           <Swiper
             style={{
               "--swiper-navigation-color": "#000",
@@ -173,17 +173,12 @@ function Home() {
               <img src={hero} className="w-full h-full object-cover" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={hero} className="w-full h-full object-cover" />
+              <img src={hero1} className="w-full h-full object-cover" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={hero} className="w-full h-full object-cover" />
+              <img src={hero2} className="w-full h-full object-cover" />
             </SwiperSlide>
-            <SwiperSlide>
-              <img src={hero} className="w-full h-full object-cover" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src={hero} className="w-full h-full object-cover" />
-            </SwiperSlide>
+          
           </Swiper>
         </div>
 

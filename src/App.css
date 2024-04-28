@@ -24,28 +24,28 @@ nav a.active {
   border-radius: 0.1rem;
   font-size: 12px;
   cursor: pointer;
-  border:1px solid transparent;
+  border: 1px solid transparent;
   width: max-content;
 }
 
-.btn1{
+.btn1 {
   width: max-content;
   background-color: transparent;
-  border-radius:0.25rem;
-  border:1px solid #c4c0c8;
+  border-radius: 0.25rem;
+  border: 1px solid #c4c0c8;
   padding: 0.5rem 2rem;
   font-size: 12px;
   cursor: pointer;
 }
 
-.btn1:hover{
+.btn1:hover {
   background-color: #00ACE6;
-  border:1px solid transparent;
+  border: 1px solid transparent;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: #242d32;
-  border:1px solid #c4c0c8;
+  border: 1px solid #c4c0c8;
 }
 
 .navbar.active {
@@ -67,7 +67,7 @@ nav a.active {
 }
 
 .carousel:hover .swiper-button-next::after,
-.carousel:hover .swiper-button-prev::after{
+.carousel:hover .swiper-button-prev::after {
   display: block;
 }
 
@@ -95,7 +95,7 @@ nav a.active {
   flex-direction: column;
   align-items: center;
   gap: 5rem;
-    /* width: 18rem; */
+  /* width: 18rem; */
   /* overflow: hidden; */
 }
 
@@ -119,76 +119,78 @@ svg {
   padding-left: 2rem;
 }
 
-.whale{
+.whale {
   background-position: 40rem 25rem;
-  background-size: 55rem 45rem; 
+  background-size: 55rem 45rem;
 }
 
-.wolfMask{
-  background-size: 40rem 67rem; 
+.wolfMask {
+  background-size: 40rem 67rem;
   background-position: 32rem -0rem;
 }
 
-.accordion>p{
+.accordion>p {
   height: 0;
   transform: translateY(5rem);
 }
 
-.accordion.active>p{
+.accordion.active>p {
   height: 100%;
   transition: all 0.2s ease;
   transform: translateY(0);
 }
 
-.accordion img{
+.accordion img {
   rotate: 0deg;
   transition: all 0.3s ease;
 }
-.accordion.active img{
+
+.accordion.active img {
   rotate: 90deg;
   transition: all 0.3s ease;
 }
 
-.document{
-/* hover:bg-[#28343b] py-3 px-2 rounded-lg cursor-pointer */
-cursor: pointer;
-padding: 0.6rem 0.5rem;
-border-radius: 0.5rem;
+.document {
+  /* hover:bg-[#28343b] py-3 px-2 rounded-lg cursor-pointer */
+  cursor: pointer;
+  padding: 0.6rem 0.5rem;
+  border-radius: 0.5rem;
 }
 
-.document:hover{
+.document:hover {
   background-color: #28343b;
 }
 
-.document.active{
+.document.active {
   background-color: #28343b;
 }
 
-.docHead{
+.docHead {
   background-color: transparent;
 }
 
-.docHead.active{
+.docHead.active {
   background-color: #28343b;
 }
 
-.docTitle{
-  gap:0rem
-}
-.docTitle.active{
-  gap:0.5rem
+.docTitle {
+  gap: 0rem
 }
 
-.docContent{
-  height:0;
+.docTitle.active {
+  gap: 0.5rem
+}
+
+.docContent {
+  height: 0;
   display: none;
   transform: translateY(2rem);
   opacity: 0;
 }
 
-.docContent.active{
+.docContent.active {
   display: flex;
-  height:auto;
+  height: auto;
   transform: translateY(0rem);
   opacity: 100;
 }
@@ -201,16 +203,16 @@ border-radius: 0.5rem;
   transform: rotate(90deg);
 } */
 
-.team.active{
-  width:60vw;
-  height:80vh;
+.team.active {
+  width: 60vw;
+  height: 80vh;
 }
 
-.modal{
-  display:none
+.modal {
+  display: none
 }
 
-.modal.active{
+.modal.active {
   display: flex;
 }
 
@@ -226,16 +228,19 @@ border-radius: 0.5rem;
   .phase {
     width: 23.5vw
   }
+
   .container {
     padding-left: 3rem;
   }
-  .about{
-    background-position: right,bottom left;
-    background-size: auto,fill;
+
+  .about {
+    background-position: right, bottom left;
+    background-size: auto, fill;
   }
-  .team{
-    background-position: 30rem 10rem,bottom left,-9rem 70rem;
-    background-size: auto,fill;
+
+  .team {
+    background-position: 30rem 10rem, bottom left, -9rem 70rem;
+    background-size: auto, fill;
   }
 }
 
@@ -254,40 +259,38 @@ border-radius: 0.5rem;
 
   .phase {
     width: 48vw;
-    /* gap:5rem */
   }
 
   .container {
     padding-left: 3rem;
   }
 
-    .about{
-      background-position: -5rem 3rem,bottom left;
-      background-size: fill,fill;
-    }
-    .team{
-      background-position: 4rem 3rem,bottom left,-9rem 70rem;
-      background-size: auto,fill;
-    }
+  .about {
+    background-position: -5rem 3rem, bottom left;
+    background-size: fill, fill;
+  }
+
+  .team {
+    background-position: 4rem 3rem, bottom left, -9rem 70rem;
+    background-size: auto, fill;
+  }
 }
 
 @media screen and (max-width:768px) {
-
   .swiper-pagination {
     padding: 1.2rem 0.5rem;
   }
+
   .phase {
-    /* gap: 2rem; */
-    width:100vw;
+    width: 100vw;
     flex-direction: column-reverse;
-    gap:2rem
+    gap: 2rem
   }
 
-  .container{
+  .container {
     flex-direction: column;
-    gap:4rem
+    gap: 4rem
   }
-
 }
 
 @media screen and (max-width:640px) {
@@ -298,24 +301,15 @@ border-radius: 0.5rem;
 }
 
 @media screen and (max-width:475px) {
-  
-
- 
-
   .swiper-pagination {
     padding: 0.25rem 0.5rem;
   }
-
-  /* svg {
-    top: 11.5rem;
-    left: 4rem;
-  } */
 
   .container {
     padding-left: 1rem;
   }
 }
 
-.fixed{
+.fixed {
   position: fixed;
 }
