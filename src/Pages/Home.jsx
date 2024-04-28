@@ -144,7 +144,7 @@ function Home() {
 
       <div className="z-0 capitalize pt-14" ref={main}>
 
-        <div className="w-[90%] xl:w-[85%] mx-auto h-[40vw] lg:h-[77vh] 3xl:h-[85vh] carousel">
+        <div className="w-[90%] xl:w-[85%] mx-auto h-[40vw] lg:h-[69vh] xl:h-[62vh] 4xl:h-[694px] carousel">
           <Swiper
             style={{
               "--swiper-navigation-color": "#000",
@@ -191,7 +191,7 @@ function Home() {
         <div className="">
 
           <div className="overflow-hidden">
-            <div className="flex xl:flex-row flex-col justify-between items-end w-[80%] xl:w-[90%] 2xl:w-[85%] mx-auto pt-16 md:pt-[8rem] h-[158rem] xs:h-[90rem] sm:h-[88rem] lg:h-[auto] z-0">
+            <div className="flex xl:flex-row flex-col justify-between items-end lg:items-center w-[80%] xl:w-[90%] 2xl:w-[85%] mx-auto pt-16 md:pt-[8rem] h-[158rem] xs:h-[90rem] sm:h-[88rem] lg:h-[70rem] z-0">
               <div className="collectionLeft flex flex-col gap-12 w-[100%] xl:w-[45%]">
                 <div className="relative">
                   <div className="btn bg-[#5c666c] w-max font-semibold text-[0.9rem] z-10"><p>Collection</p></div>
