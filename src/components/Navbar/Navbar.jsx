@@ -88,7 +88,7 @@ function Navbar() {
                 </ul>
                 <div className="hidden lg:flex items-center gap-2 w-[36%] justify-end">
                     <div className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8 w-[8rem] text-center'>Collections</div>
-                    <div className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8 w-[8rem] text-center'>Presale</div>
+                    <Link to="/wallet" className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8 w-[8rem] text-center'>Presale</Link>
                     <div className="w-[1.5rem]">
                         {<Lottie animationData={animation} loop={true} />}
                     </div>

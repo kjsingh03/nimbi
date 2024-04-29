@@ -313,3 +313,20 @@ svg {
 .fixed {
   position: fixed;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 12px;
+  background-color: #2e2e2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #334047;
+  border-radius: 6px;
+  border: 3px solid #2f2f2f;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1c2327;
+}

@@ -157,7 +157,7 @@ function Home() {
             }}
             spaceBetween={30}
             autoplay={{
-              delay: 2000,
+              delay: 7000,
               // disableOnInteraction: true,
             }}
             speed={1200}
