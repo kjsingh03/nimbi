@@ -6,7 +6,7 @@ function NFTCard({ img }) {
         <>
             {
                 img &&
-                <div className='h-[18rem] xs:h-[14rem] xl:h-full xl:w-full relative font-bold text-black z-0'>
+                <div className='h-[18rem] xs:h-[14rem] 4xl:h-[314px] 4xl:w-[286px] relative font-bold text-black z-0'>
 
                     <img src={img} alt="" className='w-full h-full object-cover' />
 
@@ -14,7 +14,7 @@ function NFTCard({ img }) {
                         <p className='text-white bg-black/25 rounded-xl font-normal py-1 px-1.5 text-xs'>@author</p>
                     </div>
                     <div className="absolute w-full bottom-0 flex justify-between items-center bg-[#eff2f3] opacity-80 backdrop-blur-3xl">
-                        <div className="flex gap-2 items-center justify-center p-2">
+                        <div className="flex gap-2 items-center justify-center p-2 pb-4">
                             <div className="w-8 overflow-hidden">
                                 <img src={logo1} alt="" className='w-full h-full object-fill' />
                             </div>

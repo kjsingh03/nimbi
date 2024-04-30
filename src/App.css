@@ -75,7 +75,7 @@ nav a.active {
   position: absolute;
   display: flex;
   justify-content: flex-start;
-  padding: 1.5rem .5rem;
+  padding: 4.5rem .5rem;
 }
 
 .swiper-slide {
@@ -98,7 +98,7 @@ nav a.active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
+  gap: 8rem;
 }
 
 .wrapper {
@@ -127,8 +127,8 @@ svg {
 }
 
 .wolfMask {
-  background-size: 40rem 67rem;
-  background-position: 32rem -0rem;
+  background-size: 45rem 77rem;
+  background-position: 42rem 0rem;
 }
 
 .accordion>p {
@@ -209,21 +209,21 @@ svg {
   display: flex;
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1280px) {
+  .container {
+    padding-left: 28vw;
+  }
+  
+  .phase {
+    width: 23.5vw
+  }
+
   .navbar {
     transform: translateX(-100%);
   }
 
   .navbar.active {
     transform: translateX(-100%);
-  }
-
-  .phase {
-    width: 23.5vw
-  }
-
-  .container {
-    padding-left: 3rem;
   }
 
   .about {
@@ -237,7 +237,23 @@ svg {
   }
 }
 
-@media screen and (max-width:1023px) {
+@media screen and (max-width:1280px) {
+  
+   .phase {
+    width: 32vw
+  } 
+  
+  .container {
+    padding-left: 8vw;
+  }
+
+  .wolfMask {
+    background-size: 45rem 77rem;
+    background-position: 19rem 0rem;
+  }
+}
+
+@media screen and (max-width:1024px) {
   .navbar {
     transform: translateX(-100%);
   }
