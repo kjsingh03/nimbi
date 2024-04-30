@@ -42,7 +42,7 @@ function Team() {
 
         <div className="w-full border-b border-b-[#c4c0c8] py-6 font-['Roboto_Condensed',sans-serif]">
           <p className='uppercase text-3xl font-semibold text-left py-3'>The people behind the scenes</p>
-          <p className='text-[0.65rem] md:text-[0.83rem] text-center md:text-left py-3'>Decentralized Collaboration is at the heart of our mission. We are proud to partner with industry leaders, innovators, and like-minded projects to drive forward our vision of a decentralized future. Together, we're building bridges, fostering innovation, and creating opportunities for growth and advancement in the blockchain space.</p>
+          <p className='text-[16px] text-center md:text-left py-3'>Decentralized Collaboration is at the heart of our mission. We are proud to partner with industry leaders, innovators, and like-minded projects to drive forward our vision of a decentralized future. Together, we're building bridges, fostering innovation, and creating opportunities for growth and advancement in the blockchain space.</p>
         </div>
 
         <div className="flex flex-col gap-16">

@@ -6,9 +6,10 @@ import '../App.css'
 function Wallet() {
 
   const connectModal = (e) => {
-    e.preventDefault()
 
-    document.querySelector('.connectModal').style.display='flex'
+    const query = document.querySelector('.connectModal')
+    
+    query.style.display='flex'
     
   }
 

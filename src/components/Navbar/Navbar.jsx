@@ -68,8 +68,6 @@ function Navbar() {
 
                 <button onClick={activateNavbar} id="navbar-toggler" className="block lg:hidden text-xl py-[0.9rem] text-white"  >☰</button>
 
-
-
                 <div className="lg:w-[10%]">
                     <div onClick={() => {
                          document.querySelectorAll("nav .active")?.forEach((tab) => {tab.classList.remove('active')}); document.querySelectorAll(`#home`).forEach(tab => tab?.classList.add('active')); navigate("/")
@@ -79,7 +77,7 @@ function Navbar() {
                         </div>
                     </div>
                 </div>
-                <ul className="hidden lg:flex items-center justify-center gap-2 text-sm list-none w-[54%]">
+                <ul className="hidden lg:flex items-center justify-end gap-2 text-sm list-none w-[54%]">
                     <Link onClick={() => activeTab("home")} id="home" to="/" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee]'>Home</Link>
                     <Link onClick={() => activeTab("about")} id="about" to="/about" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>About</Link>
                     <Link onClick={() => activeTab("team")} id="team" to="/team" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] '>Our Team</Link>
@@ -88,7 +86,7 @@ function Navbar() {
                 </ul>
                 <div className="hidden lg:flex items-center gap-2 w-[36%] justify-end">
                     <div className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8 w-[8rem] text-center'>Collections</div>
-                    <Link to="/wallet" className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8 w-[8rem] text-center'>Presale</Link>
+                    <div className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8 w-[8rem] text-center'>Presale</div>
                     <div className="w-[1.5rem]">
                         {<Lottie animationData={animation} loop={true} />}
                     </div>

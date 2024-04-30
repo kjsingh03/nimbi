@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import '../App.css'
 import { IntroCard, NFTCard, Navbar } from '../components'
-import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, vector, tick, mask, mountain, indicator, round, animation, whaleLeft, roadmap, hero1, hero2 } from '../assets'
+import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, vector, tick, mask, mountain, indicator, round, animation, whaleLeft, roadmap, hero1, hero2, mountain1 } from '../assets'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -12,6 +12,7 @@ import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 import Footer from '../components/Footer/Footer';
+import { Link } from 'react-router-dom';
 
 function Home() {
 
@@ -50,7 +51,7 @@ function Home() {
       scrollTrigger: {
         trigger: ".roadmap-container",
         start: "top 0%",
-        end: "bottom 60%",
+        end: "bottom 20%",
         scrub: 1,
       }
     });
@@ -64,7 +65,7 @@ function Home() {
           trigger: ".roadmap-container",
           pin: true,
           scrub: 1,
-          end: "+=300",
+          end: "+=600",
           // markers: true,
         }
       });
@@ -79,7 +80,7 @@ function Home() {
             scrollTrigger: {
               trigger: section,
               containerAnimation: scrollTween,
-              start: `left ${16.5 * index + 6 + index }%`,
+              start: `left ${16.5 * index + 4.5 + index}%`,
               // markers: 1,
             }
           });
@@ -92,8 +93,8 @@ function Home() {
         duration: 4.5,
         scrollTrigger: {
           trigger: '.roadmap-container',
-          start: `top 30%`,
-          end: `top -40%`,
+          start: `top 40%`,
+          end: `top -80%`,
           scrub: 1
         }
       });
@@ -132,7 +133,7 @@ function Home() {
 
     if (width > 1280) {
       gsap.to('.collectionLeft', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 85%", end: "top -100%", scrub: true, } })
-      gsap.to('.collectionRight', { x: 1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: "bottom 78%", end: "top -100%", scrub: true } })
+      gsap.to('.collectionRight', { x: 1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: width < 1720 ? "bottom 65%" : "bottom 71%", end: "top -100%", scrub: true } })
     }
 
   }, { dependencies: [width], scope: main });
@@ -144,7 +145,7 @@ function Home() {
 
       <div className="z-0 capitalize pt-14" ref={main}>
 
-        <div className="w-[90%] xl:w-[85%] mx-auto h-[40vw] lg:h-[69vh] xl:h-[68vh] 4xl:h-[694px] carousel">
+        <div className=" w-[90%] mx-auto h-[40vw] xl:h-[69vh] xl:w-[85%] 2xl:h-[76vh] 3xl:w-[1506px] 3xl:h-[694px] carousel">
           <Swiper
             style={{
               "--swiper-navigation-color": "#000",
@@ -167,6 +168,7 @@ function Home() {
             pagination={{
               dynamicBullets: false,
             }}
+
             className="mySwiper relative h-full w-full"
           >
             <SwiperSlide>
@@ -178,7 +180,7 @@ function Home() {
             <SwiperSlide>
               <img src={hero2} className="w-full h-full object-cover" />
             </SwiperSlide>
-          
+
           </Swiper>
         </div>
 
@@ -191,20 +193,20 @@ function Home() {
         <div className="">
 
           <div className="overflow-hidden">
-            <div className="flex xl:flex-row flex-col justify-between items-end lg:items-center w-[80%] xl:w-[90%] 2xl:w-[85%] mx-auto pt-16 md:pt-[8rem] h-[158rem] xs:h-[90rem] sm:h-[88rem] lg:h-[50rem] z-0">
-              <div className="collectionLeft flex flex-col gap-12 w-[100%] xl:w-[45%]">
+            <div className="flex xl:flex-row flex-col justify-between gap-4 xl:gap-0 items-end lg:items-center  w-[80%] xl:w-[90%] 2xl:w-[85%] mx-auto pt-8 lg:pt-16 md:pt-[8rem] h-[158rem] xs:h-[90rem] sm:h-[79rem] xl:h-[56rem] 4xl:h-[75rem] 6xl:h-[65rem] z-0">
+              <div className="collectionLeft flex flex-col gap-5 w-[100%] xl:w-[55%]">
                 <div className="relative">
                   <div className="btn bg-[#5c666c] w-max font-semibold text-[0.9rem] z-10"><p>Collection</p></div>
                   <img src={ellipse} className='absolute -top-6 left-[4rem] w-[5rem] -z-0' alt="" />
                 </div>
                 <div className="flex flex-col gap-6 ">
-                  <p className='text-[3rem] md:text-[5rem] lg:text-[4rem] leading-tight font-bold uppercase text-[#5c666c]'>Discover Our Exclusive NFT Collection</p>
+                  <p className='text-[3rem] md:text-[5rem] 4xl:text-[8rem] leading-tight font-bold uppercase text-[#5c666c]'>Discover Our Exclusive NFT Collection</p>
                   <p className='text-2xl font-semibold'>Discover Our Exclusive NFT Collection.</p>
                   <p className='text-base w-[70%]'>Explore our curated selection of digital artworks, each a unique masterpiece created by talented artists from around the world. From stunning visual designs to thought-provoking concepts, our NFTs offer a glimpse into the vibrant world of digital art.</p>
                   <p className='btn w-[16rem] text-base text-center'>Explore the Collection</p>
                 </div>
               </div>
-              <div className="collectionRight grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 py-6 xl:py-0 w-full xl:w-[60%] 3xl:w-[45%] h-[80%] z-0">
+              <div className="collectionRight grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5 py-6 xl:py-0 w-full xl:w-[60%] 3xl:w-[50%] h-[80%] xl:h-[55%] z-0">
                 <NFTCard />
                 <NFTCard img={author1} />
                 <NFTCard img={author2} />
@@ -228,24 +230,23 @@ function Home() {
               </p>
 
               <div className="relative">
-                <img src={whaleLeft} className='whaleLeft absolute -top-[43rem] -right-[28rem] -z-50' alt="" />
-              </div>
-              <div className="relative">
+                <img src={whaleLeft} className='whaleLeft absolute -top-[23rem] lg:-top-[43rem] -right-[28rem] -z-50' alt="" />
                 <img src={roadmap} className='roadmap absolute -top-[5rem] -right-[0] -z-40' alt="" />
               </div>
+
             </div>
 
             <div className="wrapper">
               <section className='md:static relative rotate-90 md:rotate-0 w-screen h-[10vh] md:h-0'>
-
                 {
                   (width > 768) &&
-                  <div className="md:w-[250rem] relative">
-                    <img src={mountain} className='mountain absolute opacity-80 -top-[17.5rem] sm:-top-[20.5rem] w-full left-[35rem] sm:left-[50rem] md:-left-[67rem] h-[20rem] sm:h-[34rem] -z-50' alt="" />
+                  <div className="md:w-[250rem] relative ">
+                    <img src={mountain1} className='mountain absolute bg-blend-soft-light opacity-60 -top-[17.5rem] sm:-top-[20.5rem] w-[120rem] 3xl:w-[170rem] left-[35rem] sm:left-[50rem] md:left-[0rem] h-[20rem] sm:h-[34rem] -z-50' alt="" />
+                    {/* <img src={mountain1} className='mountain absolute bg-pink-700 -top-[17.5rem] sm:top-[1.8rem] w-[120rem] 3xl:w-[170rem] left-[35rem] sm:left-[50rem] md:left-[0rem] h-[20rem] sm:h-[14rem] -z-50' alt="" /> */}
                   </div>
                 }
 
-                 <svg className={`absolute -z-10 top-[7.1rem] xs:top-[5.1rem] md:top-[12.15rem] lg:top-[11.9rem] xlg:top-[11.6rem] xl:top-[11.45rem] 2xl:top-[11.2rem] 3xl:top-[10.9rem] 4xl:top-[10.8rem] 5xl:top-[10.6rem] 6xl:top-[10.3rem] 7xl:top-[10rem] md:left-0 -left-[3rem] w-[160rem] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={`absolute -z-10 top-[7.1rem] xs:top-[5.1rem] md:top-[12.15rem] lg:top-[11.9rem] xlg:top-[11.6rem] xl:top-[11.45rem] 2xl:top-[11.2rem] 3xl:top-[10.9rem] 4xl:top-[10.8rem] 5xl:top-[10.6rem] 6xl:top-[10.3rem] 7xl:top-[10rem] md:left-0 -left-[3rem] w-[160rem] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter='url(#filter0_d_230_5843)'>
                     <rect y="42.5" height="0.6" width="5000" fill="#767F84" />
                   </g>
@@ -259,13 +260,12 @@ function Home() {
                     <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_230_5843" />
                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_230_5843" result="shape" />
                   </filter>
-                </svg> 
-                {/*
-                 {
-                  width > 768 &&
-                  <svg className={`absolute -z-10 top-[8.4rem] xs:top-[4.3rem] md:top-[12.45rem] lg:top-[11.9rem] xl:top-[11.6rem] 2xl:top-[11.2rem] 3xl:top-[11rem] 4xl:top-[10.8rem] 5xl:top-[10.6rem] 6xl:top-[10.3rem] 7xl:top-[10rem] ${width >= 1024 ? 'w-[77.53vw]' : 'w-[67vw]'}`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                </svg>
+                {
+                  width <= 768 &&
+                  <svg className={`absolute -z-0 top-[7.5rem] xs:top-[5.5rem] -left-[3rem] w-[142rem] `} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter='url(#filter1_d_1261_1133)'>
-                      <rect className={width>768?'100%':'0%'} y="55" height="150" fill="#33BDEB" />
+                      <rect y="42.5" width="100%" height="0.8" fill="#33BDEB" />
                     </g>
                     <filter id="filter1_d_1261_1133" className='mask' x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
                       <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
@@ -278,25 +278,7 @@ function Home() {
                       <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
                     </filter>
                   </svg>
-                }*/}
-                 {
-                    width <= 768 &&
-                    <svg className={`absolute -z-0 top-[7.5rem] xs:top-[5.5rem] -left-[3rem] w-[142rem] `} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g filter='url(#filter1_d_1261_1133)'>
-                        <rect y="42.5" width="100%" height="0.8" fill="#33BDEB" />
-                      </g>
-                      <filter id="filter1_d_1261_1133" className='mask' x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
-                        <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                        <feOffset />
-                        <feGaussianBlur stdDeviation="5" />
-                        <feComposite in2="hardAlpha" operator="out" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
-                      </filter>
-                    </svg>
-                  }  
+                }
 
               </section>
               <div className="container scrollx ">
@@ -316,20 +298,19 @@ function Home() {
                       <img src={ellipse} className="w-[5rem] h-[5rem] absolute left-[117.7rem] md:left-[4rem] lg:-left-[1.5rem] top-[11rem]" />
                       <svg className={`w-[75rem] absolute top-[11.25rem] -left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter='url(#filter1_d_1261_1133)'>
-                          <rect className='z-10' width={width>768?'100%':'0%'} y="55" height="150" fill="#33BDEB" />
+                          <rect className='z-10' width={width > 768 ? '100%' : '0%'} y="55" height="150" fill="#33BDEB" />
                         </g>
                         <filter id="filter1_d_1261_1133" x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
                           <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
                           <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                           <feOffset />
-                          {/* <feGaussianBlur stdDeviation="0" /> */}
                           <feComposite in2="hardAlpha" operator="out" />
                           <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
                           <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
                           <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
                         </filter>
                       </svg>
-                      
+
                     </ul>
                     <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
                       <p className='text-[#a1a7aa] text-sm'><span className='text-[#00ace6] font-semibold'>PRE-SALE PHASE:</span> 2023 Q1</p>
@@ -353,12 +334,40 @@ function Home() {
                       <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-[500] " />
                       <svg className={`w-[75rem] absolute top-[11.25rem] -left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter='url(#filter1_d_1261_1133)'>
-                          <rect className='z-10' width={width>768?'100%':'0%'} y="55" height="150" fill="#33BDEB" />
+                          <rect className='z-10' width={width > 768 ? '100%' : '0%'} y="55" height="150" fill="#33BDEB" />
                         </g>
                       </svg>
                     </ul>
                     <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
 
+                      <p className='text-[#a1a7aa] text-sm'><span className='text-[#00ace6] font-semibold'>PRE-SALE PHASE:</span> 2024 Q3</p>
+                      <p className='text-3xl font-semibold text-white'>Phase 02</p>
+                      <p className='text-[#2b3338] text-5xl font-extrabold'>2024</p>
+                    </div>
+                  </div>
+                </section>
+                <section>
+                  <div className="phase ">
+
+                    <ul className='relative list-none z-40  text-xs flex flex-col gap-1 lg:w-[90%] xl:w-[70%] px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
+                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />community building</li>
+                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />partnerships and collaborations</li>
+                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />building CDR</li>
+                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />completing private sale</li>
+                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />completing launchpad launch</li>
+                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />KYC and AUDIT</li>
+                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
+                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
+                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
+                      <svg className={`w-[75rem] absolute top-[11.25rem] -left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter='url(#filter1_d_1261_1133)'>
+                          <rect className='z-10' width={width > 768 ? '100%' : '0%'} y="55" height="150" fill="#33BDEB" />
+                        </g>
+                      </svg>
+                      <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-[500] " />
+                    </ul>
+
+                    <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
                       <p className='text-[#a1a7aa] text-sm'><span className='text-[#00ace6] font-semibold'>PRE-SALE PHASE:</span> 2024 Q3</p>
                       <p className='text-3xl font-semibold text-white'>Phase 03</p>
                       <p className='text-[#2b3338] text-5xl font-extrabold'>2024</p>
@@ -367,7 +376,6 @@ function Home() {
                 </section>
                 <section>
                   <div className="phase ">
-
                     <ul className='relative list-none z-40  text-xs flex flex-col gap-1 lg:w-[90%] xl:w-[70%] px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />community building</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />partnerships and collaborations</li>
@@ -376,11 +384,11 @@ function Home() {
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />completing launchpad launch</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />KYC and AUDIT</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
-                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
+                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
                       <svg className={`w-[75rem] absolute top-[11.25rem] -left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter='url(#filter1_d_1261_1133)'>
-                          <rect className='z-10' width={width>768?'100%':'0%'} y="55" height="150" fill="#33BDEB" />
+                          <rect className='z-10' width={width > 768 ? '100%' : '0%'} y="55" height="150" fill="#33BDEB" />
                         </g>
                       </svg>
                       <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-[500] " />
@@ -389,33 +397,6 @@ function Home() {
                     <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
                       <p className='text-[#a1a7aa] text-sm'><span className='text-[#00ace6] font-semibold'>PRE-SALE PHASE:</span> 2024 Q3</p>
                       <p className='text-3xl font-semibold text-white'>Phase 04</p>
-                      <p className='text-[#2b3338] text-5xl font-extrabold'>2024</p>
-                    </div>
-                  </div>
-                </section>
-                <section>
-                  <div className="phase ">
-                    <ul className='relative list-none z-40  text-xs flex flex-col gap-1 lg:w-[90%] xl:w-[70%] px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
-                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />community building</li>
-                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />partnerships and collaborations</li>
-                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />building CDR</li>
-                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />completing private sale</li>
-                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />completing launchpad launch</li>
-                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />KYC and AUDIT</li>
-                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
-                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
-                      <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                      <svg className={`w-[75rem] absolute top-[11.25rem] -left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter='url(#filter1_d_1261_1133)'>
-                          <rect className='z-10' width={width>768?'100%':'0%'} y="55" height="150" fill="#33BDEB" />
-                        </g>
-                      </svg>
-                      <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-[500] " />
-                    </ul>
-
-                    <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
-                      <p className='text-[#a1a7aa] text-sm'><span className='text-[#00ace6] font-semibold'>PRE-SALE PHASE:</span> 2024 Q3</p>
-                      <p className='text-3xl font-semibold text-white'>Phase 05</p>
                       <p className='text-[#2b3338] text-5xl font-extrabold'>2025</p>
                     </div>
                   </div>
@@ -435,7 +416,7 @@ function Home() {
                       <li className='flex gap-3'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
                       <svg className={`w-[75rem] absolute top-[11.25rem] -left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter='url(#filter1_d_1261_1133)'>
-                          <rect className='z-10' width={width>768?'100%':'0%'} y="55" height="150" fill="#33BDEB" />
+                          <rect className='z-10' width={width > 768 ? '100%' : '0%'} y="55" height="150" fill="#33BDEB" />
                         </g>
                       </svg>
                       <img src={indicator} className="w-8 h-8 absolute -left-2 xs:-left-8 -top-[8.5rem] md:left-[0rem] md:top-[12.5rem] z-[500] " />
@@ -444,7 +425,7 @@ function Home() {
 
                     <div className="lg:w-[70%] px-12 xs:px-6 sm:px-16 md:px-0 md:mx-auto">
                       <p className='text-[#a1a7aa] text-sm'><span className='text-[#00ace6] font-semibold'>PRE-SALE PHASE:</span> 2024 Q3</p>
-                      <p className='text-2xl font-semibold text-white'>Phase 06</p>
+                      <p className='text-2xl font-semibold text-white'>Phase 05</p>
                       <p className='text-[#2b3338] text-5xl font-extrabold'>2026</p>
                     </div>
                   </div>
@@ -509,7 +490,7 @@ function Home() {
             <p className='text-sm '>KAZI Token stands as a beacon of efficiency in the world of cryptocurrency. As an ERC-20 token, it serves as the perfect conduit for users looking to convert their wallet crypto dust into tangible value. Whether you're a seasoned investor or just dipping your toes into the crypto waters, KAZI Token offers a seamless and accessible pathway to transform those fractions of cryptocurrency left lingering in your wallet into meaningful assets.
               With KAZI Token, say goodbye to the frustration of unused cryptocurrency fragments and hello to a practical solution for maximizing your digital assets. Join the movement towards streamlined crypto conversion today with KAZI Token – where every fragment counts towards your financial success. 💼🚀</p>
             <div className="w-full lg:text-left z-30">
-              <p className="btn text-center w-[12rem] cursor-pointer">Buy KAZI</p>
+              <Link to="/wallet" className="btn text-center w-[12rem] cursor-pointer">Buy KAZI</Link>
             </div>
           </div>
         </div>
