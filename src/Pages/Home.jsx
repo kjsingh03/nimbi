@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import '../App.css'
 import { IntroCard, NFTCard, Navbar } from '../components'
-import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, vector, tick, mask, mountain, indicator, round, animation, whaleLeft, roadmap, hero1, hero2, mountain1 } from '../assets'
+import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, vector, tick, mask, mountain, indicator, round, animation, whaleLeft, roadmap, hero1, hero2, mountain1, border, mountainThumbnail } from '../assets'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -47,7 +47,7 @@ function Home() {
     });
 
     gsap.to('.mountain', {
-      x: -400,
+      x: -750,
       ease: "none",
       scrollTrigger: {
         trigger: ".roadmap-container",
@@ -132,10 +132,10 @@ function Home() {
 
 
 
-    // if (width > 1280) {
-    //   gsap.to('.collectionLeft', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 85%", end: "top -100%", scrub: true, } })
-    //   gsap.to('.collectionRight', { x: 1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: width < 1720 ? "bottom 65%" : "bottom 71%", end: "top -100%", scrub: true } })
-    // }
+    if (width > 1280) {
+      gsap.to('.collectionLeft', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: "bottom 85%", end: "top -100%", scrub: true, } })
+      gsap.to('.collectionRight', { x: 1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: "bottom 85%" , end: "top -100%", scrub: true} })
+    }
 
   }, { dependencies: [width], scope: main });
 
@@ -146,7 +146,8 @@ function Home() {
 
       <div className="z-0 capitalize pt-[4.4rem]" ref={main}>
 
-        <div className="w-[90%] mx-auto h-[40vw] xl:h-[69vh] xl:w-[85%] 2xl:h-[76vh] 3xl:w-[1506px] 3xl:h-[694px] carousel">
+        <div className="relative w-[90%] mx-auto h-[40vw] xl:h-[69vh] xl:w-[85%] 2xl:h-[76vh] 3xl:w-[1506px] 3xl:h-[694px] carousel">
+          <img src={mountainThumbnail} className='absolute bottom-0 -left-64 w-[70rem] ' alt="" />
           <Swiper
             style={{
               "--swiper-navigation-color": "#000",
@@ -191,16 +192,16 @@ function Home() {
         </div>
 
 
-        <div className="overflow-hidden">
-          <div className="flex xl:flex-row flex-col justify-between gap-4 xl:gap-0 items-center lg:items-end w-[85%] 2xl:w-[79%] mx-auto pt-[6rem] md:pt-[8rem] h-[158rem] xs:h-[96rem] md:h-[84rem] lg:h-[72rem] xl:h-[56rem] z-0">
-            <div className="collectionLeft flex flex-col gap-[38px] w-full xl:w-[675px]">
+        <div className="overflow-hidden ">
+          <div className="flex xl:flex-row flex-col justify-between gap-4 xl:gap-0 items-center lg:items-end w-[85%] 2xl:w-[79%] mx-auto pt-[6rem] md:pt-[8rem] h-[168rem] xs:h-[96rem] md:h-[84rem] lg:h-[75rem] xl:h-[56rem] z-0">
+            <div className="collectionLeft flex flex-col gap-[50px] w-full xl:w-[675px]">
               <div className="relative">
                 <div className="btn bg-[#5c666c] w-max font-semibold text-lg py-[5px] px-[10px] z-10"><p>Collection</p></div>
                 <img src={ellipse} className='absolute -top-8 left-[4rem] w-[6.375rem] -z-0' alt="" />
               </div>
               <div className="flex flex-col gap-[38px] ">
-                <p className="text-[4.25rem] md:text-[5rem] xl:text-[5.5rem] font-['Roboto_Condensed',sans-serif] leading-[1.2] font-bold uppercase text-[#5c666c]">Discover Our Exclusive NFT Collection</p>
-                <p className="text-2xl font-semibold font-['Roboto_Condensed',sans-serif]">Discover Our Exclusive NFT Collection.</p>
+                <p className="text-[4.25rem] md:text-[5rem] xl:text-[5.5rem] font-['Roboto_Condensed',sans-serif] leading-[1.2] tracking-wide font-bold uppercase text-[#5c666c]">Discover Our Exclusive NFT Collection</p>
+                <p className="text-2xl font-medium font-['Roboto_Condensed',sans-serif]">Discover Our Exclusive NFT Collection.</p>
                 <p className='text-base w-[70%]'>Explore our curated selection of digital artworks, each a unique masterpiece created by talented artists from around the world. From stunning visual designs to thought-provoking concepts, our NFTs offer a glimpse into the vibrant world of digital art.</p>
                 <p className='btn w-[16rem] text-base text-center'>Explore the Collection</p>
               </div>
@@ -216,20 +217,22 @@ function Home() {
           </div>
         </div>
 
-        <div className="roadmap-container bg-[url(./assets/bigEllipse.png)] bg-[_28rem_28rem] bg-[85rem_0rem] bg-no-repeat flex flex-col gap-6 sm:gap-12 pt-[6rem] sm:pt-8 xl:pt-[6rem] overflow-x-hidden overflow-y-visible sm:mt-[6rem]">
+        <div className="lg:block hidden border-t mt-16 xl:mt-[6rem] xl:pb-0 -translate-x-[50%]"></div>
 
-          <div className="flex flex-col gap-12 w-[80%] mx-auto">
+        <div className="roadmap-container  bg-[url(./assets/bigEllipse.png)] bg-[_33rem_33rem] bg-[152vw_6rem] xl:bg-[72vw_6rem] 3xl:bg-[77vw_6rem] bg-no-repeat flex flex-col gap-6 sm:gap-12 overflow-x-hidden overflow-y-visible pt-[8rem] ">
+
+          <div className="flex  flex-col gap-12 w-[80%] mx-auto">
 
             <div className="relative">
               <div className="btn bg-[#5c666c] w-max font-semibold text-lg py-[5px] px-[10px] z-10"><p>Roadmap</p></div>
               <img src={ellipse} className='absolute -top-8 left-[4rem] w-[6.375rem] -z-0' alt="" />
             </div>
 
-            <p className='text-base w-[70%]'>We follow these roadmap for launching the Nimbi ecosystem. We may experience certain setbacks while developing the whole Nimbi ecosystem, but our team has a right attitude to stick to the course, no matter what!
+            <p className='text-base w-[70%] pt-2'>We follow these roadmap for launching the Nimbi ecosystem. We may experience certain setbacks while developing the whole Nimbi ecosystem, but our team has a right attitude to stick to the course, no matter what!
             </p>
 
             <div className="relative">
-              <img src={whaleLeft} className='whaleLeft absolute -top-[23rem] lg:-top-[46rem] -right-[28rem] -z-50' alt="" />
+              <img src={whaleLeft} className='whaleLeft absolute -top-[23rem] lg:-top-[46rem] right-[100rem] md:-right-[28rem] -z-50' alt="" />
               <img src={roadmap} className='roadmap absolute -top-[0rem] -right-[0] -z-40' alt="" />
             </div>
 
@@ -241,11 +244,10 @@ function Home() {
                 (width > 768) &&
                 <div className="md:w-[250rem] relative ">
                   <img src={mountain1} className='mountain absolute bg-blend-soft-light opacity-60 -top-[17.5rem] sm:-top-[11.1rem] w-[120rem] 3xl:w-[170rem] left-[35rem] sm:left-[50rem] md:left-[0rem] h-[20rem] sm:h-[34rem] -z-50' alt="" />
-                  {/* <img src={mountain1} className='mountain absolute bg-pink-700 -top-[17.5rem] sm:top-[1.8rem] w-[120rem] 3xl:w-[170rem] left-[35rem] sm:left-[50rem] md:left-[0rem] h-[20rem] sm:h-[14rem] -z-50' alt="" /> */}
                 </div>
               }
 
-              <svg className={`absolute -z-10 top-[6.6rem] xs:top-[4.6rem] md:top-[21.75rem] lg:top-[21.4rem] xlg:top-[21.3rem] xl:top-[20.95rem] 2xl:top-[20.7rem] 3xl:top-[20.4rem] 4xl:top-[20.3rem] 5xl:top-[20.1rem] 6xl:top-[19.8rem] 7xl:top-[19.5rem] md:left-0 left-[2rem] w-[202rem] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className={`absolute -z-10 top-[7rem] xs:top-[4.9rem] md:top-[21.75rem] lg:top-[21.4rem] xlg:top-[21.3rem] xl:top-[20.95rem] 2xl:top-[20.7rem] 3xl:top-[20.4rem] 4xl:top-[20.3rem] 5xl:top-[20.1rem] 6xl:top-[19.8rem] 7xl:top-[19.5rem] md:left-0 left-[2rem] w-[202rem] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter='url(#filter0_d_230_5843)'>
                   <rect y="42.5" height="0.05" width="5000" fill="#767F84" />
                 </g>
@@ -262,7 +264,7 @@ function Home() {
               </svg>
               {
                 width <= 768 &&
-                <svg className={`absolute -z-0 top-[6.5rem] xs:top-[4.6rem] left-[2rem] w-[202rem] md:w-[142rem] `} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={`absolute -z-0 top-[6.9rem] xs:top-[4.9rem] left-[2rem] w-[202rem] md:w-[142rem] `} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter='url(#filter1_d_1261_1133)'>
                     <rect y="42.5" width="100%" height="0.8" fill="#33BDEB" />
                   </g>
@@ -434,43 +436,43 @@ function Home() {
         </div>
 
         <div className="py-12">
-          <img src={sec1} alt="" />
+          <img src={sec1} alt="" className='w-full' />
         </div>
 
         <div className="bg-[url(./assets/wolfMask.png)] wolfMask bg-no-repeat">
-          <div className="flex mx-auto w-[80%] items-center justify-between lg:flex-row gap-8 flex-col py-10 ">
-            <div className="flex flex-col gap-6 md:gap-0 lg:w-[55%]">
+          <div className="flex mx-auto w-[82%] items-center justify-between lg:flex-row gap-[60px] flex-col py-16 ">
+            <div className="flex flex-col gap-[77px] lg:w-[55%]">
               <div className="relative">
                 <div className="btn bg-[#5c666c] w-max font-semibold text-lg py-[5px] px-[10px]">Supporting dapps</div>
                 <img src={ellipse} className='absolute -top-8 left-[8rem] w-[6.375rem]' alt="" />
               </div>
-              <p className="text-[#a1a7aa] text-[3.625rem] md:text-[5rem] 2xl:text-[6.25rem] font-bold font-['Roboto_Condensed',sans-serif] py-4 md:py-12 leading-tight m:leading-snug">NIMBI VIP LOYALTY WOLF PACK</p>
+              <p className="text-[#a1a7aa] text-[2.625rem] md:text-[5rem] lg:text-[4rem] xlg:[5rem] 2xl:text-[6.25rem] font-bold font-['Roboto_Condensed',sans-serif] py-4 md:py-12 leading-[1.03] tracking-[0.12rem]">NIMBI VIP LOYALTY WOLF PACK</p>
             </div>
             <p className='md:w-[90% lg:w-[45%] text-base'>👋 Say goodbye to rigged games and hello to fairness and transparency! 🔍🚫 No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source! 📜💻 We've taken the power from the greedy hands of the centralized lotto gods and put it back into the hands of the people! 💪💰 Want to win big while knowing you're not being hoodwinked? Look no further! 🌟 Participate in our decentralized lottery and enjoy the thrill of a fair game. #NoMoreRiggedGames Play Crypto Lotto today and experience the excitement of a true equal opportunity lottery! 🎊💸💪
               nimbi knows you should only play the open sourced, decentralized and transparent lotto. convert your crypto dust to nimbi token, become part of the wolfpack and use all of our crypto dust to stand strong together.</p>
           </div>
           <div className="border-b border-[#767f84]">
           </div>
-          <div className="flex lg:flex-row flex-col-reverse gap-6 md:gap-0 mx-auto w-[80%] lg:text-left items-center justify-between py-10">
+          <div className="flex lg:flex-row flex-col-reverse gap-[77px] mx-auto w-[80%] lg:text-left items-center justify-between py-16">
             <p className='md:w-[90% lg:w-[45%] text-base'>👋 Say goodbye to rigged games and hello to fairness and transparency! 🔍🚫 No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source! 📜💻 We've taken the power from the greedy hands of the centralized lotto gods and put it back into the hands of the people! 💪💰 Want to win big while knowing you're not being hoodwinked? Look no further! 🌟 Participate in our decentralized lottery and enjoy the thrill of a fair game. #NoMoreRiggedGames Play Crypto Lotto today and experience the excitement of a true equal opportunity lottery! 🎊💸💪
               nimbi knows you should only play the open sourced, decentralized and transparent lotto. convert your crypto dust to nimbi token, become part of the wolfpack and use all of our crypto dust to stand strong together.</p>
             <div className="lg:w-[45%] flex flex-col gap-6 md:gap-0">
-              <p className="uppercase text-[#a1a7aa] text-[3.625rem] md:text-[5rem] 2xl:text-[6.25rem] font-bold font-['Roboto_Condensed',sans-serif] pb-4 md:pb-12 leading-tight m:leading-snug">Open-Source Decentralized Lottery</p>
-              <p className="text-2xl font-['Roboto_Condensed',sans-serif] text-white lg:pb-0 pb-12">Introducing Crypto Lotto, the web 3 Dapp 🎉 that puts all those centralized lotto's to shame!</p>
+              <p className="uppercase text-[#a1a7aa] text-[2.625rem] md:text-[5rem] lg:text-[4rem] xlg:[5rem] 2xl:text-[6.25rem] font-bold font-['Roboto_Condensed',sans-serif] py-4 md:py-12 leading-[1.03] tracking-[0.12rem]">Open-Source Decentralized Lottery</p>
+              <p className="text-2xl font-['Roboto_Condensed',sans-serif] text-white lg:pb-0 pb-8">Introducing Crypto Lotto, the web 3 Dapp 🎉 that puts all those centralized lotto's to shame!</p>
             </div>
           </div>
           {/* <div className="border-b w-[80%] border-[#767f84]">
           </div> */}
         </div>
 
-        <div className="relative h-[110rem] xs:h-[107rem] sm:h-[85rem] md:h-[70rem] lg:h-[74rem] xl:h-[70rem] 3xl:h-[75rem] ">
+        <div className="relative sm:h-[85rem] md:h-[70rem] lg:h-[74rem] xl:h-[70rem] 3xl:h-[75rem] ">
 
-          <div className="bg-[url(./assets/sec2.png)] relative w-full h-[35rem] xs:h-[50rem] sm:h-[50rem] md:h-[70rem] lg:h-[74rem] xl:h-[70rem] 3xl:h-[75rem] xl:bg-center bg-[-30rem_0rem] xs:bg-[-45rem_0rem] sm:bg-[-35rem_-0.5rem] md:bg-right bg-no-repeat bg-cover bg-white pb-[4rem] md:pb-0">
+          <div className="bg-[url(./assets/sec2.png)] relative w-full h-[35rem] xs:h-[50rem] sm:h-[50rem] md:h-[70rem] lg:h-[74rem] xl:h-[70rem] 3xl:h-[75rem] xl:bg-center bg-[-30rem_0rem] xs:bg-[-45rem_0rem] sm:bg-[-39rem_-0.5rem] md:bg-right bg-no-repeat bg-cover bg-white sm:pb-[4rem] md:pb-0">
           </div>
-          <div className="h-[78rem] sm:h-[40rem] lg:h-[46rem] xl:h-[40rem] flex flex-col absolute bottom-0 xl:bottom-28 md:top-28 lg:top-[18rem] xl:top-[22rem] 3xl:top-[25rem] pl-8 pr-8 pt-12 pb-12 xs:pr-12 xs:pl-12 md:pr-0 md:pt-[rem] lg:pt-[0rem] xl:pb-[8rem] xl:pl-[6rem] w-full md:w-[83%] lg:w-[60%] 3xl:w-[40%] gap-6 xl:gap-12 items-center md:items-start justify-around lg:justify-center text-[#151b1e] bg-white md:bg-transparent">
+          <div className="sm:h-[40rem] lg:h-[46rem] xl:h-[40rem] flex flex-col -translate-y-[3rem] xs:-translate-y-[5rem] sm:translate-y-0 sm:absolute bottom-0 xl:bottom-28 md:top-28 lg:top-[18rem] xl:top-[22rem] 3xl:top-[25rem] pl-8 pr-8 pt-12 pb-12 xs:pr-12 xs:pl-12 md:pr-0 md:pt-[rem] lg:pt-[0rem] xl:pb-[8rem] xl:pl-[6rem] w-full md:w-[63%] lg:w-[60%] 3xl:w-[40%] gap-6 xl:gap-12 items-center md:items-start justify-around lg:justify-center text-[#151b1e] bg-white md:bg-transparent">
             <p className="text-[3.625rem] lg:text-[6.125rem] font-bold uppercase leading-tight font-['Roboto_Condensed',sans-serif]">Web3 Crypto Dust Runner Game</p>
-            <p className='text-base xl:text-lg font-medium tracking-tighter md:w-[53%] lg:w-[75%] 3xl:w-full'>Introducing Crypto Dust Runner, the web 3 game that's here to bring the heat to those corporate whales invading our precious crypto space! 🌬️🐺</p>
-            <p className='text-base font-medium block md:w-[53%] lg:w-[75%] 3xl:w-full'>👋 In this epic quest, you'll join forces with Nimbi, the fearless white wolf, as he races through a treacherous frozen gulch, fueled by the magnificent power of crypto dust! 💪✨ His mission? To collect as much of this precious resource as possible and transform into a legendary force against those pesky corporate giants. 😎🐋Picture this: you're in control of the nimble Nimbi, dodging obstacles, jumping over icy chasms, and racing against time ⏰ to reach power-up spots that will elevate your game to a whole new level! 💯✨ Discover abandoned crypto mines that will boost Nimbi's dust collection abilities, allowing him to dominate the leaderboard like a true crypto champ! 🏆💰</p>
+            <p className='text-base xl:text-lg font-medium tracking-tighter md:w-[73%] lg:w-[75%] 3xl:w-full'>Introducing Crypto Dust Runner, the web 3 game that's here to bring the heat to those corporate whales invading our precious crypto space! 🌬️🐺</p>
+            <p className='text-base font-medium block md:w-[73%] lg:w-[75%] 3xl:w-full'>👋 In this epic quest, you'll join forces with Nimbi, the fearless white wolf, as he races through a treacherous frozen gulch, fueled by the magnificent power of crypto dust! 💪✨ His mission? To collect as much of this precious resource as possible and transform into a legendary force against those pesky corporate giants. 😎🐋Picture this: you're in control of the nimble Nimbi, dodging obstacles, jumping over icy chasms, and racing against time ⏰ to reach power-up spots that will elevate your game to a whole new level! 💯✨ Discover abandoned crypto mines that will boost Nimbi's dust collection abilities, allowing him to dominate the leaderboard like a true crypto champ! 🏆💰</p>
             <div className="w-full text-left">
               <p className="btn w-[12rem] text-center">Launch APP</p>
             </div>

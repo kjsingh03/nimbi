@@ -126,10 +126,6 @@ svg {
   background-size: 55rem 45rem;
 }
 
-.wolfMask {
-  background-size: 45rem 77rem;
-  background-position: 42rem 0rem;
-}
 
 .accordion>p {
   height: 0;
@@ -210,6 +206,11 @@ svg {
 }
 
 @media screen and (min-width:1280px) {
+  .wolfMask {
+    background-size: 55rem 87rem;
+    background-position:  center top;
+  }
+
   .container {
     padding-left: 28vw;
   }
@@ -249,7 +250,7 @@ svg {
 
   .wolfMask {
     background-size: 45rem 77rem;
-    background-position: 19rem 0rem;
+    background-position:  center top;
   }
 }
 

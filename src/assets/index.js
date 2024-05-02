@@ -81,8 +81,12 @@ import math from './math.svg'
 import opera from './opera.svg'
 import safepal from './safepal.svg'
 import W from './W.svg'
+import border from './border.svg'
+import mountainThumbnail from './mountainThumbnail.svg'
 
 export {
+  mountainThumbnail,
+  border,
   W,
   wallet98,
   binance,
