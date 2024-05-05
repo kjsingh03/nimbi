@@ -245,7 +245,7 @@ function Home() {
                 </div>
               }
 
-              <svg className={`absolute -z-10 top-[14.8rem] xs:top-[16.3rem] sm:top-[15.8rem] md:top-[16.75rem] lg:top-[16.4rem] xlg:top-[16.3rem] xl:top-[15.95rem] 2xl:top-[15.7rem] 3xl:top-[23.9rem] 4xl:top-[23.8rem] 5xl:top-[23.6rem] 6xl:top-[23.3rem] 7xl:top-[23rem] md:left-0  w-[220vw] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className={`absolute -z-10 top-[14.8rem] xs:top-[16.3rem] sm:top-[15.6rem] md:top-[16.5rem] lg:top-[16.4rem] xlg:top-[16.3rem] xl:top-[15.95rem] 2xl:top-[15.7rem] 3xl:top-[23.9rem] 4xl:top-[23.8rem] 5xl:top-[23.6rem] 6xl:top-[23.3rem] 7xl:top-[23rem] md:left-0  w-[220vw] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter='url(#filter0_d_230_5843)'>
                   <rect y="42.5" height="0.05" width="5000" fill="#767F84" />
                 </g>
@@ -283,9 +283,9 @@ function Home() {
                     <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />secure initial funding</li>
                     <img src={round} className="w-8 h-8 absolute  top-[15rem] xs:left-[0rem] xs:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
                     <img src={ellipse} className="w-[5rem] h-[5rem] absolute left-[1.5rem] top-[13.5rem] xs:-left-[1.6rem] xs:top-[15.5rem] 3xl:top-[24rem]" />
-                    <svg className={`w-[75rem] absolute top-[15.75rem] 3xl:top-[24.25rem] -left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className={`w-[75rem] absolute top-[13.75rem] xs:top-[15.75rem] 3xl:top-[24.25rem] -left-[70rem] xs:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g filter='url(#filter1_d_1261_1133)'>
-                        <rect className='z-10' width={width > 768 ? '100%' : '0%'} y="55" height="150" fill="#33BDEB" />
+                        <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
                       </g>
                       <filter id="filter1_d_1261_1133" x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
                         <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
@@ -319,9 +319,9 @@ function Home() {
                     <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                     <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
                     <img src={indicator} className="w-8 h-8 absolute top-[15rem] xs:left-[0rem] xs:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
-                    <svg className={`w-[75rem] absolute top-[15.75rem] 3xl:top-[24.25rem] -left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className={`w-[75rem] absolute top-[13.75rem] xs:top-[15.75rem] 3xl:top-[24.25rem] -left-[70rem] xs:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g filter='url(#filter1_d_1261_1133)'>
-                        <rect className='z-10' width={width > 768 ? '100%' : '0%'} y="55" height="150" fill="#33BDEB" />
+                        <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
                       </g>
                     </svg>
                   </ul>
@@ -345,9 +345,9 @@ function Home() {
                     <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
                     <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                     <img src={indicator} className="w-8 h-8 absolute top-[15rem] xs:left-[0rem] xs:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
-                    <svg className={`w-[75rem] absolute top-[15.75rem] 3xl:top-[24.25rem] -left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className={`w-[75rem] absolute top-[13.75rem] xs:top-[15.75rem] 3xl:top-[24.25rem] -left-[70rem] xs:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g filter='url(#filter1_d_1261_1133)'>
-                        <rect className='z-10' width={width > 768 ? '100%' : '0%'} y="55" height="150" fill="#33BDEB" />
+                        <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
                       </g>
                     </svg>
                   </ul>
@@ -371,9 +371,9 @@ function Home() {
                     <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                     <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
                     <img src={indicator} className="w-8 h-8 absolute top-[15rem] xs:left-[0rem] xs:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
-                    <svg className={`w-[75rem] absolute top-[15.75rem] 3xl:top-[24.25rem] -left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className={`w-[75rem] absolute top-[13.75rem] xs:top-[15.75rem] 3xl:top-[24.25rem] -left-[70rem] xs:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g filter='url(#filter1_d_1261_1133)'>
-                        <rect className='z-10' width={width > 768 ? '100%' : '0%'} y="55" height="150" fill="#33BDEB" />
+                        <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
                       </g>
                     </svg>
                   </ul>
@@ -397,9 +397,9 @@ function Home() {
                     <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                     <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
                     <img src={indicator} className="w-8 h-8 absolute top-[15rem] xs:left-[0rem] xs:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
-                    <svg className={`w-[75rem] absolute top-[15.75rem] 3xl:top-[24.25rem] -left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className={`w-[75rem] absolute top-[13.75rem] xs:top-[15.75rem] 3xl:top-[24.25rem] -left-[70rem] xs:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g filter='url(#filter1_d_1261_1133)'>
-                        <rect className='z-10' width={width > 768 ? '100%' : '0%'} y="55" height="150" fill="#33BDEB" />
+                        <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
                       </g>
                     </svg>
                   </ul>

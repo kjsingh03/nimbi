@@ -270,6 +270,7 @@ svg {
 
   .phase {
     width: 48vw;
+    gap:3rem
   }
 
   .container {
