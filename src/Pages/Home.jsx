@@ -419,24 +419,24 @@ function Home() {
         </div>
 
         <div className="bg-[url(./assets/wolfMask.png)] wolfMask bg-no-repeat">
-          <div className="flex mx-auto w-[80%] items-center justify-between lg:flex-row gap-[60px] flex-col py-16 ">
-            <div className="flex flex-col gap-[77px] lg:w-[55%]">
+          <div className="flex mx-auto w-[80%] items-center justify-between lg:flex-row gap-6 3xl:gap-[60px] flex-col pt-16 3xl:pb-16">
+            <div className="flex flex-col gap-4 3xl:gap-[77px] lg:w-[55%]">
               <div className="relative">
-                <div className="btn bg-[#5c666c] w-max font-semibold text-lg py-[5px] px-[10px]">Supporting dapps</div>
-                <img src={ellipse} className='absolute -top-8 left-[8rem] w-[6.375rem]' alt="" />
+                <div className="btn bg-[#5c666c] w-max font-semibold text-sm 3xl:text-lg py-[5px] px-[10px]">Supporting dapps</div>
+                <img src={ellipse} className='absolute -top-8 left-[6rem] 3xl:left-[8rem] w-[6.375rem]' alt="" />
               </div>
-              <p className="text-[#a1a7aa] text-[2.625rem] md:text-[5rem] lg:text-[4rem] xlg:[5rem] 2xl:text-[6.25rem] font-bold font-['Roboto_Condensed',sans-serif] py-4 md:py-12 leading-[1.03] tracking-[0.12rem]">NIMBI VIP LOYALTY WOLF PACK</p>
+              <p className="text-[#a1a7aa] text-[2.625rem] md:text-[5rem] lg:text-[4rem] xlg:[5rem] 3xl:text-[6.25rem] font-bold font-['Roboto_Condensed',sans-serif] py-4 md:py-12 leading-[1.03] tracking-[0.12rem]">NIMBI VIP LOYALTY WOLF PACK</p>
             </div>
-            <p className='md:w-[90% lg:w-[45%] text-base'>👋 Say goodbye to rigged games and hello to fairness and transparency! 🔍🚫 No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source! 📜💻 We've taken the power from the greedy hands of the centralized lotto gods and put it back into the hands of the people! 💪💰 Want to win big while knowing you're not being hoodwinked? Look no further! 🌟 Participate in our decentralized lottery and enjoy the thrill of a fair game. #NoMoreRiggedGames Play Crypto Lotto today and experience the excitement of a true equal opportunity lottery! 🎊💸💪
+            <p className='md:w-[90% lg:w-[45%] text-xs 3xl:text-base'>👋 Say goodbye to rigged games and hello to fairness and transparency! 🔍🚫 No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source! 📜💻 We've taken the power from the greedy hands of the centralized lotto gods and put it back into the hands of the people! 💪💰 Want to win big while knowing you're not being hoodwinked? Look no further! 🌟 Participate in our decentralized lottery and enjoy the thrill of a fair game. #NoMoreRiggedGames Play Crypto Lotto today and experience the excitement of a true equal opportunity lottery! 🎊💸💪
               nimbi knows you should only play the open sourced, decentralized and transparent lotto. convert your crypto dust to nimbi token, become part of the wolfpack and use all of our crypto dust to stand strong together.</p>
           </div>
           <div className="border-b border-[#767f84]">
           </div>
-          <div className="flex lg:flex-row flex-col-reverse gap-[77px] mx-auto w-[80%] lg:text-left items-center justify-between py-16">
-            <p className='md:w-[90% lg:w-[45%] text-base'>👋 Say goodbye to rigged games and hello to fairness and transparency! 🔍🚫 No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source! 📜💻 We've taken the power from the greedy hands of the centralized lotto gods and put it back into the hands of the people! 💪💰 Want to win big while knowing you're not being hoodwinked? Look no further! 🌟 Participate in our decentralized lottery and enjoy the thrill of a fair game. #NoMoreRiggedGames Play Crypto Lotto today and experience the excitement of a true equal opportunity lottery! 🎊💸💪
+          <div className="flex lg:flex-row flex-col-reverse gap-[77px] mx-auto w-[80%] lg:text-left items-center justify-between pb-16">
+            <p className='md:w-[90% lg:w-[45%] text-xs 3xl:text-base'>👋 Say goodbye to rigged games and hello to fairness and transparency! 🔍🚫 No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source! 📜💻 We've taken the power from the greedy hands of the centralized lotto gods and put it back into the hands of the people! 💪💰 Want to win big while knowing you're not being hoodwinked? Look no further! 🌟 Participate in our decentralized lottery and enjoy the thrill of a fair game. #NoMoreRiggedGames Play Crypto Lotto today and experience the excitement of a true equal opportunity lottery! 🎊💸💪
               nimbi knows you should only play the open sourced, decentralized and transparent lotto. convert your crypto dust to nimbi token, become part of the wolfpack and use all of our crypto dust to stand strong together.</p>
             <div className="lg:w-[45%] flex flex-col gap-6 md:gap-0">
-              <p className="uppercase text-[#a1a7aa] text-[2.625rem] md:text-[5rem] lg:text-[4rem] xlg:[5rem] 2xl:text-[6.25rem] font-bold font-['Roboto_Condensed',sans-serif] py-4 md:py-12 leading-[1.03] tracking-[0.12rem]">Open-Source Decentralized Lottery</p>
+              <p className="uppercase text-[#a1a7aa] text-[2.625rem] md:text-[5rem] lg:text-[4rem] xlg:[5rem] 3xl:text-[6.25rem] font-bold font-['Roboto_Condensed',sans-serif] py-4 md:py-12 leading-[1.03] tracking-[0.12rem]">Open-Source Decentralized Lottery</p>
               <p className="text-2xl font-['Roboto_Condensed',sans-serif] text-white lg:pb-0 pb-8">Introducing Crypto Lotto, the web 3 Dapp 🎉 that puts all those centralized lotto's to shame!</p>
             </div>
           </div>
@@ -449,7 +449,7 @@ function Home() {
           <div className="bg-[url(./assets/sec2.png)] relative w-full h-[35rem] xs:h-[50rem] sm:h-[50rem] md:h-[70rem] lg:h-[74rem] xl:h-[70rem] 3xl:h-[75rem] xl:bg-center bg-[-30rem_0rem] xs:bg-[-45rem_0rem] sm:bg-[-39rem_-0.5rem] md:bg-right bg-no-repeat bg-cover bg-white sm:pb-[4rem] md:pb-0">
           </div>
           <div className="sm:h-[40rem] lg:h-[46rem] xl:h-[40rem] flex flex-col -translate-y-[3rem] xs:-translate-y-[5rem] sm:translate-y-0 sm:absolute bottom-0 xl:bottom-28 md:top-28 lg:top-[18rem] xl:top-[22rem] 3xl:top-[25rem] pl-8 pr-8 pt-12 pb-12 xs:pr-12 xs:pl-12 md:pr-0 md:pt-[rem] lg:pt-[0rem] 3xl:pl-[16rem] xl:pb-[8rem] xl:pl-[6rem] w-full md:w-[63%] lg:w-[60%] 3xl:w-[40%] gap-6 xl:gap-12 items-center md:items-start justify-around lg:justify-center text-[#151b1e] bg-white md:bg-transparent">
-            <p className="text-[3.25rem] lg:text-[6.125rem] font-bold uppercase leading-tight font-['Roboto_Condensed',sans-serif]">Web3 Crypto Dust Runner Game</p>
+            <p className="text-[3.25rem] lg:text-[5.125rem] 3xl:text-[6.125rem] font-bold uppercase leading-tight font-['Roboto_Condensed',sans-serif]">Web3 Crypto Dust Runner Game</p>
             <p className='text-base xl:text-lg font-medium tracking-tighter md:w-[73%] lg:w-[75%] 3xl:w-full'>Introducing Crypto Dust Runner, the web 3 game that's here to bring the heat to those corporate whales invading our precious crypto space! 🌬️🐺</p>
             <p className='text-base font-medium block md:w-[73%] lg:w-[75%] 3xl:w-full'>👋 In this epic quest, you'll join forces with Nimbi, the fearless white wolf, as he races through a treacherous frozen gulch, fueled by the magnificent power of crypto dust! 💪✨ His mission? To collect as much of this precious resource as possible and transform into a legendary force against those pesky corporate giants. 😎🐋Picture this: you're in control of the nimble Nimbi, dodging obstacles, jumping over icy chasms, and racing against time ⏰ to reach power-up spots that will elevate your game to a whole new level! 💯✨ Discover abandoned crypto mines that will boost Nimbi's dust collection abilities, allowing him to dominate the leaderboard like a true crypto champ! 🏆💰</p>
             <div className="w-full text-left">
