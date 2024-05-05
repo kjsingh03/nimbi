@@ -6,7 +6,7 @@ function Footer({path="/"}) {
     <div className="capitalize text-xs flex flex-col gap-4 bg-[#1c2327] px-[2rem] lg:px-[4rem] xl:px-[8rem] py-8 border-t border-[#767f84]">
         {
             path==="/" &&
-        <div className="flex lg:flex-row flex-col lg:gap-0 gap-4 items-center justify-between">
+        <div className="flex lg:flex-row flex-col lg:gap-0 gap-4 items-center justify-between  3xl:w-[90%] mx-auto">
           <div className=" flex flex-col lg:items-start items-center text-center lg:text-left w-full gap-4 sm:gap-6 lg:w-[40%] xl:w-[30%]">
             <p className='text-xs'>Register here</p>
             <div className=" flex sm:flex-row flex-col items-center  gap-2 sm:gap-4 w-full">
@@ -23,7 +23,7 @@ function Footer({path="/"}) {
           </ul>
         </div>
         }
-        <div className={`flex items-center sm:flex-row gap-4 flex-col  justify-between ${path==="/"?'pt-4 border-t border-[#767f84]':""}`}>
+        <div className={`flex items-center sm:flex-row gap-4 flex-col  justify-between ${path==="/"?'pt-4 border-t border-[#767f84]':""}  3xl:w-[90%] mx-auto`}>
           <div className="flex items-center gap-4">
             <p className='text-[#a1a7aa]'>our community</p>
             <ul className="list-none flex gap-2 items-center">

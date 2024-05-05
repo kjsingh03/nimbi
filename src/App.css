@@ -216,7 +216,8 @@ svg {
   }
   
   .phase {
-    width: 23.5vw
+    width: 23.5vw;
+    gap:4rem
   }
 
   .navbar {
@@ -293,14 +294,14 @@ svg {
 
   .phase {
     width: 100vw;
-    flex-direction: column-reverse;
-    gap: 2rem
-  }
-
-  .container {
-    flex-direction: column;
+    /* flex-direction: column-reverse; */
     gap: 4rem
   }
+
+  /* .container {
+    flex-direction: column;
+    gap: 4rem
+  } */
 }
 
 @media screen and (max-width:640px) {

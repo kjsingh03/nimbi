@@ -52,8 +52,8 @@ function Team() {
           </div>
 
           <div id={modal.id} className="modal hidden h-screen w-full fixed top-0 left-0 z-30 items-center justify-center bg-black/40">
-            <div className='modal-card team relative capitalize z-40 h-[20rem] w-[20rem] md:h-[25rem] md:w-[25rem] lg:h-[26rem] xl:h-[26rem] lg:w-[26rem] xl:w-[26rem] mx-auto flex flex-col gap-2 bg-[#334047] border border-[#5c666c] p-2 '>
-              <div className="xs:h-[16rem] xl:h-[18rem]">
+            <div className='modal-card team relative capitalize z-40 h-[20rem] w-[20rem] md:h-[25rem] md:w-[25rem] lg:h-[26rem] xl:h-[26rem] 3xl:h-[41rem] lg:w-[26rem] xl:w-[26rem] 3xl:w-[60rem] mx-auto flex flex-col gap-2 bg-[#334047] border border-[#5c666c] p-2 '>
+              <div className="xs:h-[16rem] xl:h-[18rem] 3xl:h-[31rem]">
                 <img src={modal.img} alt="" className='w-full h-full object-cover' />
               </div>
               <div className="absolute w-10 h-10 right-3 top-3 ">
