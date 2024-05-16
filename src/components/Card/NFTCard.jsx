@@ -13,11 +13,11 @@ function NFTCard({ img }) {
                     <div className="absolute top-2 left-2">
                         <p className='text-white bg-black/25 rounded-xl font-normal py-1 px-1.5 text-xs'>@author</p>
                     </div>
-                    <div className="absolute w-full bottom-0 flex justify-between items-center bg-[#eff2f3] opacity-80 backdrop-blur-3xl">
+                    <div className="absolute w-full bottom-0 flex justify-between items-center bg-[#eff2f3] opacity-80 backdrop-blur-xl">
                         <div className="flex gap-2 items-center justify-center p-2 pb-2">
-                            <div className="w-8 overflow-hidden">
+                            {/* <div className="w-8 overflow-hidden">
                                 <img src={logo1} alt="" className='w-full h-full object-fill' />
-                            </div>
+                            </div> */}
                             <div className="">
                                 <p className='text-xs'>Nimbi #50</p>
                                 <p className='text-[0.625rem] font-medium'>@author</p>

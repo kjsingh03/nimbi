@@ -83,8 +83,10 @@ import safepal from './safepal.svg'
 import W from './W.svg'
 import border from './border.svg'
 import mountainThumbnail from './mountainThumbnail.svg'
+import logoMask from './logoMask.png'
 
 export {
+  logoMask,
   mountainThumbnail,
   border,
   W,

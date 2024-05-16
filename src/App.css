@@ -208,15 +208,15 @@ svg {
 @media screen and (min-width:1280px) {
   .wolfMask {
     background-size: 55rem 87rem;
-    background-position:  center top;
+    background-position:  center 4rem;
   }
 
   .container {
-    padding-left: 28vw;
+    padding-left: 33vw;
   }
   
   .phase {
-    width: 23.5vw;
+    width: 24.25vw;
     gap:4rem
   }
 
@@ -255,7 +255,7 @@ svg {
   }
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1164px) {
   .navbar {
     transform: translateX(-100%);
   }
@@ -263,6 +263,8 @@ svg {
   .navbar.active {
     transform: translateX(0);
   }
+}
+@media screen and (max-width:1024px) {
 
   .swiper-pagination {
     padding: 2rem 0.5rem;
