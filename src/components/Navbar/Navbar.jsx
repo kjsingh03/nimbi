@@ -64,11 +64,11 @@ function Navbar() {
 
     return (
         <nav className='fixed w-full border-b border-b-[#c4c0c8] bg-[#242d32] z-50 '>
-            <div className="nav flex items-center justify-between sm:w-[90%] xlg:w-[80%] 4xl:w-[1504px] mx-auto z-40">
+            <div className="nav flex items-center justify-between w-[90%] xlg:w-[80%] 4xl:w-[1504px] mx-auto z-40">
 
                 <button onClick={activateNavbar} id="navbar-toggler" className="block xlg:hidden text-xl py-[0.9rem] text-white"  >☰</button>
 
-                <div className="lg:w-[10%] py-6 xlg:py-4">
+                <div className="lg:w-[10%] py-0 xlg:py-4">
                     <div onClick={() => {
                          document.querySelectorAll("nav .active")?.forEach((tab) => {tab.classList.remove('active')}); document.querySelectorAll(`#home`).forEach(tab => tab?.classList.add('active')); navigate("/")
                     }}>

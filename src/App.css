@@ -297,14 +297,14 @@ svg {
 
   .phase {
     width: 100vw;
-    /* flex-direction: column-reverse; */
-    gap: 4rem
+    flex-direction: column-reverse;
+    gap: 0rem
   }
 
-  /* .container {
+  .container {
     flex-direction: column;
     gap: 4rem
-  } */
+  }
 }
 
 @media screen and (max-width:640px) {

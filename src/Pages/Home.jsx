@@ -29,22 +29,68 @@ function Home() {
 
     if (width >= 1720) { xPercent = -100 * (sections.length - 3); from = '32.8%'; to = '79.8%'; sectionStart = 13.5 }
     else if (width >= 1024) { xPercent = -100 * (sections.length - 3); from = '32.8%'; to = '79.8%'; sectionStart = (11.5 + 1) }
-    else if (width > 0) { xPercent = -100 * (sections.length - 1); from = '30%'; to = '100%'; sectionStart = (11.5 + 1) }
+    else if (width > 768) { xPercent = -100 * (sections.length - 1); from = '30%'; to = '100%'; sectionStart = (11.5 + 1) }
     // else { from = '0%'; to = '100%' }
 
-    gsap.fromTo(mask, {
-      width: from
-    }, {
-      width: to,
-      ease: width > 1720 ? "slow(0.1,0.2,false)" : "power4.in",
-      scrollTrigger: {
-        trigger: ".roadmap-container",
-        start: width > 1720 ? "top -12%" : "top 310%",
-        end: width > 1720 ? "bottom 64%" : "bottom -4%",
-        scrub: 1,
-        // markers: 1
-      }
-    });
+    if (width > 768) {
+      let scrollTween = gsap.to(sections, {
+        xPercent: xPercent,
+        ease: "none",
+        duration: 3,
+        scrollTrigger: {
+          trigger: ".roadmap-container",
+          pin: true,
+          scrub: 1,
+          end: "+=800",
+          // markers: true,
+        }
+      });
+
+      sections.forEach((section, index) => {
+        if (index !== 0) {
+          gsap.from(section, {
+            x: 0,
+            opacity: 0,
+            duration: 0.75,
+            delay: index * 1 / 12,
+            scrollTrigger: {
+              trigger: section,
+              containerAnimation: scrollTween,
+              start: `left ${index * sectionStart + 33}%`,
+              // markers: 1,
+            }
+          });
+        }
+      });
+
+      gsap.from('.whaleLeft', {
+        x: 200,
+        duration: 4.5,
+        scrollTrigger: {
+          trigger: '.roadmap-container',
+          start: `top 0%`,
+          end: `top -100%`,
+          scrub: 1,
+          // markers: 1
+        }
+      });
+    }
+    else {
+      sections.forEach((section, index) => {
+        gsap.from(section, {
+          y: 20,
+          opacity: 0,
+          duration: 0.75,
+          delay: index * 1 / 32,
+          scrollTrigger: {
+            trigger: section,
+            start: `top ${60}%`,
+            markers: 1
+          }
+        });
+
+      });
+    }
 
     gsap.to('.mountain', {
       x: -750,
@@ -55,36 +101,6 @@ function Home() {
         end: width < 1720 ? "bottom -10%" : "bottom 25%",
         scrub: 1,
         // markers:1
-      }
-    });
-
-    let scrollTween = gsap.to(sections, {
-      xPercent: xPercent,
-      ease: "none",
-      duration: 3,
-      scrollTrigger: {
-        trigger: ".roadmap-container",
-        pin: true,
-        scrub: 1,
-        end: "+=800",
-        // markers: true,
-      }
-    });
-
-    sections.forEach((section, index) => {
-      if (index !== 0) {
-        gsap.from(section, {
-          x: 0,
-          opacity: 0,
-          duration: 0.75,
-          delay: index * 1 / 12,
-          scrollTrigger: {
-            trigger: section,
-            containerAnimation: scrollTween,
-            start: `left ${index * sectionStart + 33}%`,
-            // markers: 1,
-          }
-        });
       }
     });
 
@@ -100,35 +116,19 @@ function Home() {
       }
     });
 
-    gsap.from('.whaleLeft', {
-      x: 200,
-      duration: 4.5,
+    gsap.fromTo(mask, {
+      width: from
+    }, {
+      width: to,
+      ease: width > 1720 ? "slow(0.1,0.2,false)" : "power4.in",
       scrollTrigger: {
-        trigger: '.roadmap-container',
-        start: `top 0%`,
-        end: `top -100%`,
+        trigger: ".roadmap-container",
+        start: width > 1720 ? "top -12%" : "top 310%",
+        end: width > 1720 ? "bottom 64%" : "bottom -4%",
         scrub: 1,
-        markers: 1
+        // markers: 1
       }
     });
-
-    // else {
-    //   sections.forEach((section, index) => {
-    //     if (index !== 0) {
-    //       gsap.from(section, {
-    //         y: 20,
-    //         opacity: 0,
-    //         duration: 0.75,
-    //         delay: index * 1 / 32,
-    //         scrollTrigger: {
-    //           trigger: section,
-    //           start: `top ${60}%`,
-    //           // markers: 1
-    //         }
-    //       });
-    //     }
-    //   });
-    // }
 
     if (width > 1280) {
       gsap.to('.collectionLeft', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: width > 1536 ? "bottom 75%" : "bottom 98%", end: "top -300%", scrub: true, } })
@@ -190,7 +190,8 @@ function Home() {
         </div>
 
         <div className="overflow-x-hidden z-20">
-          <div className="flex xl:flex-row flex-col  justify-between relative gap-4 xl:gap-0 items-center lg:items-end w-[85%] 2xl:w-[80%] 4xl:w-[1506px] mx-auto pt-[6rem] md:pt-[8rem] h-[150rem] xs:h-[86rem] md:h-[84rem] lg:h-[75rem] xl:h-[42rem] 3xl:h-[50rem] 4xl:h-[800px] z-0">
+
+          <div className="flex xl:flex-row flex-col  justify-between relative gap-4 xl:gap-0 items-center lg:items-end w-[90%] md:w-[85%] lg:w-[80%] 4xl:w-[1506px] mx-auto pt-[3rem] md:pt-[8rem] h-[140rem] xs:h-[78rem] md:h-[84rem] lg:h-[75rem] xl:h-[42rem] 3xl:h-[50rem] 4xl:h-[800px] z-0">
             <div className="collectionLeft flex flex-col gap-8 w-full xl:w-[45%] 4xl:w-[675px] 4xl:h-[670px]">
               <div className="relative">
                 <div className="btn bg-[#5c666c] w-max font-semibold py-[5px] px-[10px] z-10 text-sm 3xl:text-lg"><p>Collection</p></div>
@@ -212,201 +213,210 @@ function Home() {
               <NFTCard img={author5} />
             </div>
           </div>
-        </div>
 
-        <div className="roadmap-container -z-50 bg-[url(./assets/bigEllipse.png)] sm:bg-[_33rem_33rem] bg-contain bg-[center_17rem] sm:bg-[152vw_6rem] xl:bg-[72vw_6rem] 3xl:bg-[77vw_6rem] bg-no-repeat flex flex-col sm:gap-0 mt-16 xl:mt-[5rem]">
-          <div className="lg:block hidden border-t xl:pb-0 -translate-x-[55%] relative -z-50 pb-[6.5rem] 3xl:pb-[7rem]">
-            <img src={whaleLeft} className='whaleLeft absolute top-[303rem] lg:-top-[35.5rem] right-[10rem] md:-right-[52rem] -z-50' alt="" />
-          </div>
-
-          <div className="flex flex-col gap-4 sm:gap-8 3xl:gap-[6rem] w-[77.5%] mx-auto">
-            <div className="relative">
-              <div className="btn bg-[#5c666c] w-max font-semibold py-[5px] px-[10px] z-10 text-sm 3xl:text-lg"><p>roadmap</p></div>
-              <img src={ellipse} className='absolute -top-6 3xl:-top-8 left-[3.5rem] w-[4.875rem] 3xl:w-[6.375rem] -z-0' alt="" />
+          <div className="roadmap-container -z-50 bg-[url(./assets/bigEllipse.png)] sm:bg-[_33rem_33rem] bg-contain bg-[center_17rem] sm:bg-[152vw_6rem] xl:bg-[72vw_6rem] 3xl:bg-[77vw_6rem] bg-no-repeat flex flex-col sm:gap-0 mt-16 xl:mt-[5rem]">
+            <div className="lg:block hidden border-t  -translate-x-[55%] relative -z-50 pb-[6.5rem] 3xl:pb-[7rem]">
+              <img src={whaleLeft} className='whaleLeft absolute top-[303rem] lg:-top-[35.5rem] right-[10rem] md:-right-[52rem] -z-50' alt="" />
             </div>
 
-            <p className='text-xs md:text-sm 3xl:text-lg xs:w-[70%] pt-6 sm:pt-2'>We follow these roadmap for launching the Nimbi ecosystem. We may experience certain setbacks while developing the whole Nimbi ecosystem, but our team has a right attitude to stick to the course, no matter what!
-            </p>
-
-            <div className="relative">
-              <img src={roadmap} className='roadmap absolute top-[8rem] md:-top-[0rem] -right-[0] 3xl:right-14 5xl:right-48 -z-40' alt="" />
-            </div>
-          </div>
-
-          <div className="wrapper sm:mt-0">
-            <section className='md:static relative w-screen md:h-0'>
-
-              <div className="hidden md:block md:w-[250rem] relative ">
-                <img src={mountain1} className='mountain absolute bg-blend-soft-light opacity-60 -top-[17.5rem] sm:-top-[16rem] 3xl:-top-[7.5rem] w-[150rem] 3xl:w-[205rem] left-[35rem] sm:left-[50rem] md:left-[0rem] h-[20rem] sm:h-[34rem] -z-50' alt="" />
+            <div className="flex flex-col gap-4 sm:gap-8 3xl:gap-[6rem] w-[90%] md:w-[77.5%] mx-auto">
+              <div className="relative">
+                <div className="btn bg-[#5c666c] w-max font-semibold py-[5px] px-[10px] z-10 text-sm 3xl:text-lg"><p>roadmap</p></div>
+                <img src={ellipse} className='absolute -top-6 3xl:-top-8 left-[3.5rem] w-[4.875rem] 3xl:w-[6.375rem] -z-0' alt="" />
               </div>
 
-              <svg className={`absolute -z-10 top-[14.8rem] xs:top-[16.3rem] sm:top-[15.6rem] md:top-[16.5rem] lg:top-[16.4rem] xlg:top-[16.3rem] xl:top-[15.95rem] 2xl:top-[15.7rem] 3xl:top-[23.9rem] 4xl:top-[23.8rem] 5xl:top-[23.6rem] 6xl:top-[23.3rem] 7xl:top-[23rem] md:left-0  w-[220vw] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter='url(#filter0_d_230_5843)'>
-                  <rect y="42.5" height="0.05" width="5000" fill="#767F84" />
-                </g>
-                <filter id="filter0_d_230_5843" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
-                  <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
-                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                  <feOffset />
-                  <feGaussianBlur stdDeviation="4" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
-                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_230_5843" />
-                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_230_5843" result="shape" />
-                </filter>
-              </svg>
+              <p className='text-xs md:text-sm 3xl:text-lg xs:w-[70%] pt-6 sm:pt-2'>We follow these roadmap for launching the Nimbi ecosystem. We may experience certain setbacks while developing the whole Nimbi ecosystem, but our team has a right attitude to stick to the course, no matter what!
+              </p>
 
-              {/* <svg className={`absolute -z-10 top-[14.8rem] xs:top-[16.3rem] sm:top-[15.8rem] md:top-[16.75rem] lg:top-[16.4rem] xlg:top-[16.3rem] xl:top-[15.95rem] 2xl:top-[15.7rem] 3xl:top-[23.9rem] 4xl:top-[23.8rem] 5xl:top-[23.6rem] 6xl:top-[23.3rem] 7xl:top-[23rem] md:left-0  w-[220vw] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter='url(#filter1_d_1261_1133)'>
-                  <rect y="42.5" height="2.8" className='mask' fill="#33BDEB" />
-                </g>
-              </svg> */}
+              <div className="relative">
+                <img src={roadmap} className='roadmap absolute top-[8rem] md:-top-[0rem] -right-[0] 3xl:right-14 5xl:right-48 -z-40' alt="" />
+              </div>
+            </div>
 
-            </section>
-            <div className="container scrollx ">
-              <section>
-                <div className="phase ">
-                  <ul className='list-none z-40 text-xs xs:text-sm 3xl:text-lg flex flex-col relative gap-2 3xl:gap-4 lg:w-[90%]  px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />Launch Website</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />Market Strategy Planning</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />White Paper creation</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />Market research</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />feasability analysis</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />competitor analysis</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />tokenomics development</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />smart contract development</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />secure initial funding</li>
-                    <img src={round} className="w-8 h-8 absolute  top-[15rem] xs:left-[0rem] xs:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
-                    <img src={ellipse} className="w-[5rem] h-[5rem] absolute left-[1.5rem] top-[13.5rem] xs:-left-[1.6rem] xs:top-[15.5rem] 3xl:top-[24rem]" />
-                    <svg className={`w-[75rem] absolute top-[13.75rem] xs:top-[15.75rem] 3xl:top-[24.25rem] -left-[70rem] xs:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g filter='url(#filter1_d_1261_1133)'>
-                        <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
-                      </g>
-                      <filter id="filter1_d_1261_1133" x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
-                        <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                        <feOffset />
-                        {/* <feGaussianBlur stdDeviation="1" /> */}
-                        <feComposite in2="hardAlpha" operator="out" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
-                      </filter>
-                    </svg>
-                  </ul>
-                  <div className="lg:w-[70%] px-12 xs:px-6 flex flex-col 3xl:gap-3 py-6 sm:px-16 md:px-0 md:mx-auto">
-                    <p className='text-[#a1a7aa] text-base'><span className='text-[#00ace6] font-semibold'>PRE-SALE PHASE:</span> 2023 Q1</p>
-                    <p className='text-[30px] font-semibold text-white'>Phase 01</p>
-                    <p className='text-[#2b3338] text-[44px] font-extrabold -translate-y-3 '>2023</p>
-                  </div>
+            <div className="wrapper sm:mt-0">
+              <section className='md:static relative w-screen md:h-0'>
+
+                <div className="hidden md:block md:w-[250rem] relative ">
+                  <img src={mountain1} className='mountain absolute bg-blend-soft-light opacity-60 -top-[17.5rem] sm:-top-[16rem] 3xl:-top-[7.5rem] w-[150rem] 3xl:w-[205rem] left-[35rem] sm:left-[50rem] md:left-[0rem] h-[20rem] sm:h-[34rem] -z-50' alt="" />
                 </div>
+
+                <svg className={`hidden md:block absolute -z-10 top-[14.8rem] xs:top-[16.3rem] sm:top-[15.6rem] md:top-[16.5rem] lg:top-[16.4rem] xlg:top-[16.3rem] xl:top-[15.95rem] 2xl:top-[15.7rem] 3xl:top-[23.9rem] 4xl:top-[23.8rem] 5xl:top-[23.6rem] 6xl:top-[23.3rem] 7xl:top-[23rem] md:left-0  w-[220vw] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter='url(#filter0_d_230_5843)'>
+                    <rect y="42.5" height="0.05" width="5000" fill="#767F84" />
+                  </g>
+                  <filter id="filter0_d_230_5843" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
+                    <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="4" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_230_5843" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_230_5843" result="shape" />
+                  </filter>
+                </svg>
+
               </section>
-              <section>
-                <div className="phase ">
-                  <ul className='list-none z-40 text-xs xs:text-sm 3xl:text-lg flex flex-col relative gap-2 3xl:gap-4 lg:w-[90%]  px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />community building</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />partnerships and collaborations</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />building CDR</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />completing private sale</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />completing launchpad launch</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />KYC and AUDIT</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                    <img src={indicator} className="w-8 h-8 absolute top-[15rem] xs:left-[0rem] xs:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
-                    <svg className={`w-[75rem] absolute top-[13.75rem] xs:top-[15.75rem] 3xl:top-[24.25rem] -left-[70rem] xs:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g filter='url(#filter1_d_1261_1133)'>
-                        <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
-                      </g>
-                    </svg>
-                  </ul>
-                  <div className="lg:w-[70%] px-12 xs:px-6 flex flex-col 3xl:gap-3 py-6 sm:px-16 md:px-0 md:mx-auto">
-                    <p className='text-[#a1a7aa] text-base'><span className='text-[#00ace6] font-semibold'>PRE-SALE PHASE:</span> 2024 Q3</p>
-                    <p className='text-[30px] font-semibold text-white'>Phase 02</p>
-                    <p className='text-[#2b3338] text-[44px] font-extrabold -translate-y-3 '>2024</p>
+              <div className="container scrollx ">
+                <section>
+                  <div className="phase ">
+                    <ul className='list-none z-[500] text-xs xs:text-sm 3xl:text-lg flex flex-col relative gap-2 3xl:gap-4 lg:w-[90%]  px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />Launch Website</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />Market Strategy Planning</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />White Paper creation</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />Market research</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />feasability analysis</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />competitor analysis</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />tokenomics development</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />smart contract development</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />secure initial funding</li>
+                      <img src={round} className="w-8 h-8 absolute -top-[8.5rem] -left-2 xs:-left-10 md:left-[0rem] md:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
+                      <img src={ellipse} className="w-16 h-16 xs:w-[5rem] xs:h-[5rem] absolute -left-[1.6rem] -top-[9.5rem] xs:-left-[4.1rem] xs:-top-[9.9rem] md:-left-[1.6rem] 3xl:top-[24rem]" />
+                      <svg className={`w-[75rem] rotate-90 md:rotate-0 absolute -top-[23rem] 3xl:top-[24.25rem] -left-[39.15rem] md:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter='url(#filter1_d_1261_1133)'>
+                          <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
+                        </g>
+                        <filter id="filter1_d_1261_1133" x="0" y="33" height="24.0001" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
+                          <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
+                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                          <feOffset />
+                          <feComposite in2="hardAlpha" operator="out" />
+                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
+                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1261_1133" />
+                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
+                        </filter>
+                      </svg>
+                      <svg className={`block md:hidden w-[355rem] rotate-90 absolute -top-[23rem] -left-[179.75rem] xs:-left-[181.825rem]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter='url(#filter0_d_230_5849)'>
+                          <rect className='z-10' y="42.5" height="0.25" width="5000" fill="#767F84" />
+                        </g>
+                        <filter id="filter0_d_230_5849" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
+                          <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
+                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                          <feOffset />
+                          <feGaussianBlur stdDeviation="1" />
+                          <feComposite in2="hardAlpha" operator="out" />
+                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
+                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_230_5843" />
+                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_230_5843" result="shape" />
+                        </filter>
+                      </svg>
+                    </ul>
+                    <div className="lg:w-[70%] px-12 xs:px-6 flex flex-col 3xl:gap-3 pb-0 py-6 sm:px-16 md:px-0 md:mx-auto">
+                      <p className='text-[#a1a7aa] text-base'><span className='text-[#00ace6] font-semibold'>PRE-SALE PHASE:</span> 2023 Q1</p>
+                      <p className='text-[30px] font-semibold text-white'>Phase 01</p>
+                      <p className='text-[#2b3338] text-[44px] font-extrabold -translate-y-3 '>2023</p>
+                    </div>
                   </div>
-                </div>
-              </section>
-              <section>
-                <div className="phase ">
-                  <ul className='relative list-none z-40 text-xs xs:text-sm 3xl:text-lg flex flex-col gap-2 3xl:gap-4 lg:w-[90%]  px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />community building</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />partnerships and collaborations</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />building CDR</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />completing private sale</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />completing launchpad launch</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />KYC and AUDIT</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
-                    <img src={indicator} className="w-8 h-8 absolute top-[15rem] xs:left-[0rem] xs:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
-                    <svg className={`w-[75rem] absolute top-[13.75rem] xs:top-[15.75rem] 3xl:top-[24.25rem] -left-[70rem] xs:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g filter='url(#filter1_d_1261_1133)'>
-                        <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
-                      </g>
-                    </svg>
-                  </ul>
-                  <div className="lg:w-[70%] px-12 xs:px-6 flex flex-col 3xl:gap-3 py-6 sm:px-16 md:px-0 md:mx-auto">
-                    <p className='text-[#a1a7aa] text-base'><span className='text-[#00ace6] font-semibold'>PRE-SALE PHASE:</span> 2024 Q3</p>
-                    <p className='text-[30px] font-semibold text-white'>Phase 03</p>
-                    <p className='text-[#2b3338] text-[44px] font-extrabold -translate-y-3 '>2024</p>
+                </section>
+                <section>
+                  <div className="phase ">
+                    <ul className='list-none z-40 text-xs xs:text-sm 3xl:text-lg flex flex-col relative gap-2 3xl:gap-4 lg:w-[90%]  px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />community building</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />partnerships and collaborations</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />building CDR</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />completing private sale</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />completing launchpad launch</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />KYC and AUDIT</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
+                      <img src={indicator} className="w-8 h-8 absolute -top-[8.5rem] -left-0 xs:-left-8 md:left-[0rem] md:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
+                      <svg className={`w-[75rem] rotate-90 md:rotate-0 absolute -top-[46.75rem] 3xl:top-[24.25rem] -left-[36.5rem] xs:-left-[38.5rem] md:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter='url(#filter1_d_1261_1133)'>
+                          <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
+                        </g>
+                      </svg>
+                    </ul>
+                    <div className="lg:w-[70%] px-12 xs:px-6 flex flex-col 3xl:gap-3 pb-0 py-6 sm:px-16 md:px-0 md:mx-auto">
+                      <p className='text-[#a1a7aa] text-base'><span className='text-[#00ace6] font-semibold'>PRE-SALE PHASE:</span> 2024 Q3</p>
+                      <p className='text-[30px] font-semibold text-white'>Phase 02</p>
+                      <p className='text-[#2b3338] text-[44px] font-extrabold -translate-y-3 '>2024</p>
+                    </div>
                   </div>
-                </div>
-              </section>
-              <section>
-                <div className="phase ">
-                  <ul className='relative list-none z-40 text-xs xs:text-sm 3xl:text-lg flex flex-col gap-2 3xl:gap-4 lg:w-[90%]  px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />community building</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />partnerships and collaborations</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />building CDR</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />completing private sale</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />completing launchpad launch</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />KYC and AUDIT</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                    <img src={indicator} className="w-8 h-8 absolute top-[15rem] xs:left-[0rem] xs:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
-                    <svg className={`w-[75rem] absolute top-[13.75rem] xs:top-[15.75rem] 3xl:top-[24.25rem] -left-[70rem] xs:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g filter='url(#filter1_d_1261_1133)'>
-                        <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
-                      </g>
-                    </svg>
-                  </ul>
-                  <div className="lg:w-[70%] px-12 xs:px-6 flex flex-col 3xl:gap-3 py-6 sm:px-16 md:px-0 md:mx-auto">
-                    <p className='text-[#a1a7aa] text-base'><span className='text-[#00ace6] font-semibold'>PRE-SALE PHASE:</span> 2024 Q3</p>
-                    <p className='text-[30px] font-semibold text-white'>Phase 04</p>
-                    <p className='text-[#2b3338] text-[44px] font-extrabold -translate-y-3 '>2025</p>
+                </section>
+                <section>
+                  <div className="phase ">
+                    <ul className='relative list-none z-40 text-xs xs:text-sm 3xl:text-lg flex flex-col gap-2 3xl:gap-4 lg:w-[90%]  px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />community building</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />partnerships and collaborations</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />building CDR</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />completing private sale</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />completing launchpad launch</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />KYC and AUDIT</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
+                      <img src={indicator} className="w-8 h-8 absolute -top-[8.5rem] -left-0 xs:-left-8 md:left-[0rem] md:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
+                      <svg className={`w-[75rem] rotate-90 md:rotate-0 absolute -top-[46.75rem] 3xl:top-[24.25rem] -left-[36.5rem] xs:-left-[38.5rem] md:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter='url(#filter1_d_1261_1133)'>
+                          <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
+                        </g>
+                      </svg>
+                    </ul>
+                    <div className="lg:w-[70%] px-12 xs:px-6 flex flex-col 3xl:gap-3 pb-0 py-6 sm:px-16 md:px-0 md:mx-auto">
+                      <p className='text-[#a1a7aa] text-base'><span className='text-[#00ace6] font-semibold'>PRE-SALE PHASE:</span> 2024 Q3</p>
+                      <p className='text-[30px] font-semibold text-white'>Phase 03</p>
+                      <p className='text-[#2b3338] text-[44px] font-extrabold -translate-y-3 '>2024</p>
+                    </div>
                   </div>
-                </div>
-              </section>
-              <section>
-                <div className="phase ">
-                  <ul className='relative list-none z-40 text-xs xs:text-sm 3xl:text-lg flex flex-col gap-2 3xl:gap-4 lg:w-[90%]  px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />community building</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />partnerships and collaborations</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />building CDR</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />completing private sale</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />completing launchpad launch</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />KYC and AUDIT</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
-                    <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                    <img src={indicator} className="w-8 h-8 absolute top-[15rem] xs:left-[0rem] xs:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
-                    <svg className={`w-[75rem] absolute top-[13.75rem] xs:top-[15.75rem] 3xl:top-[24.25rem] -left-[70rem] xs:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g filter='url(#filter1_d_1261_1133)'>
-                        <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
-                      </g>
-                    </svg>
-                  </ul>
-                  <div className="lg:w-[70%] px-12 xs:px-6 flex flex-col 3xl:gap-3 py-6 sm:px-16 md:px-0 md:mx-auto">
-                    <p className='text-[#a1a7aa] text-base'><span className='text-[#00ace6] font-semibold'>PRE-SALE PHASE:</span> 2024 Q3</p>
-                    <p className='text-[30px] font-semibold text-white'>Phase 05</p>
-                    <p className='text-[#2b3338] text-[44px] font-extrabold -translate-y-3 '>2026</p>
+                </section>
+                <section>
+                  <div className="phase ">
+                    <ul className='relative list-none z-40 text-xs xs:text-sm 3xl:text-lg flex flex-col gap-2 3xl:gap-4 lg:w-[90%]  px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />community building</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />partnerships and collaborations</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />building CDR</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />completing private sale</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />completing launchpad launch</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />KYC and AUDIT</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
+                      <img src={indicator} className="w-8 h-8 absolute -top-[8.5rem] -left-0 xs:-left-8 md:left-[0rem] md:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
+                      <svg className={`w-[75rem] rotate-90 md:rotate-0 absolute -top-[46.75rem] 3xl:top-[24.25rem] -left-[36.5rem] xs:-left-[38.5rem] md:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter='url(#filter1_d_1261_1133)'>
+                          <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
+                        </g>
+                      </svg>
+                    </ul>
+                    <div className="lg:w-[70%] px-12 xs:px-6 flex flex-col 3xl:gap-3 pb-0 py-6 sm:px-16 md:px-0 md:mx-auto">
+                      <p className='text-[#a1a7aa] text-base'><span className='text-[#00ace6] font-semibold'>PRE-SALE PHASE:</span> 2024 Q3</p>
+                      <p className='text-[30px] font-semibold text-white'>Phase 04</p>
+                      <p className='text-[#2b3338] text-[44px] font-extrabold -translate-y-3 '>2025</p>
+                    </div>
                   </div>
-                </div>
-              </section>
+                </section>
+                <section>
+                  <div className="phase ">
+                    <ul className='relative list-none z-40 text-xs xs:text-sm 3xl:text-lg flex flex-col gap-2 3xl:gap-4 lg:w-[90%]  px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />community building</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />partnerships and collaborations</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />building CDR</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />completing private sale</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />completing launchpad launch</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />KYC and AUDIT</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
+                      <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
+                      <img src={indicator} className="w-8 h-8 absolute -top-[8.5rem] -left-0 xs:-left-8 md:left-[0rem] md:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
+                      <svg className={`w-[75rem] rotate-90 md:rotate-0 absolute -top-[46.75rem] 3xl:top-[24.25rem] -left-[36.5rem] xs:-left-[38.5rem] md:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter='url(#filter1_d_1261_1133)'>
+                          <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
+                        </g>
+                      </svg>
+                    </ul>
+                    <div className="lg:w-[70%] px-12 xs:px-6 flex flex-col 3xl:gap-3 pt-6 sm:px-16 md:px-0 md:mx-auto">
+                      <p className='text-[#a1a7aa] text-base'><span className='text-[#00ace6] font-semibold'>PRE-SALE PHASE:</span> 2024 Q3</p>
+                      <p className='text-[30px] font-semibold text-white'>Phase 05</p>
+                      <p className='text-[#2b3338] text-[44px] font-extrabold -translate-y-3 '>2026</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
             </div>
           </div>
+
         </div>
 
 
@@ -415,28 +425,28 @@ function Home() {
         </div>
 
         <div className="bg-[url(./assets/wolfMask.png)] wolfMask bg-no-repeat">
-          <div className="flex mx-auto w-[80%] 4xl:w-[1502px] items-center justify-between lg:flex-row gap-6 3xl:gap-[60px] flex-col pt-16 3xl:pb-16">
-            <div className="flex flex-col gap-4 3xl:gap-[77px] lg:w-[55%]">
+          <div className="flex mx-auto w-[90%] md:w-[80%] 4xl:w-[1502px] items-center justify-between lg:flex-row gap-6 3xl:gap-[0px] flex-col pt-16 3xl:pb-16">
+            <div className="flex flex-col gap-16 lg:w-[725px]">
               <div className="relative">
                 <div className="btn bg-[#5c666c] w-max font-semibold text-sm 3xl:text-lg py-[5px] px-[10px]">Supporting dapps</div>
                 <img src={ellipse} className='absolute -top-8 left-[6rem] 3xl:left-[8rem] w-[6.375rem]' alt="" />
               </div>
-              <p className="text-[#a1a7aa] text-[2.625rem] md:text-[5rem] lg:text-[4rem] xlg:[5rem] 3xl:text-[6.25rem] font-bold font-['Roboto_Condensed',sans-serif] py-4 md:py-12 leading-[1.03] tracking-[0.12rem]">NIMBI VIP LOYALTY WOLF PACK</p>
+              <p className="text-[#a1a7aa] text-[2.625rem] md:text-[5rem] lg:text-[4rem] xlg:[5rem] 3xl:text-[6.25rem]  py-4 md:py-0 font-['Roboto_Condensed',sans-serif] leading-tight tracking-wide font-bold uppercase">NIMBI VIP LOYALTY WOLF PACK</p>
             </div>
             <p className='md:w-[90% lg:w-[45%] text-xs 3xl:text-base'>👋 Say goodbye to rigged games and hello to fairness and transparency! 🔍🚫 No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source! 📜💻 We've taken the power from the greedy hands of the centralized lotto gods and put it back into the hands of the people! 💪💰 Want to win big while knowing you're not being hoodwinked? Look no further! 🌟 Participate in our decentralized lottery and enjoy the thrill of a fair game. #NoMoreRiggedGames Play Crypto Lotto today and experience the excitement of a true equal opportunity lottery! 🎊💸💪
               nimbi knows you should only play the open sourced, decentralized and transparent lotto. convert your crypto dust to nimbi token, become part of the wolfpack and use all of our crypto dust to stand strong together.</p>
           </div>
           <div className="border-b border-[#767f84]">
           </div>
-          <div className="flex lg:flex-row flex-col-reverse gap-[77px] mx-auto w-[80%] 4xl:w-[1502px] lg:text-left items-center justify-between py-16">
+          <div className="flex lg:flex-row flex-col-reverse md:gap-[77px] mx-auto w-[90%] md:w-[80%] 4xl:w-[1502px] lg:text-left items-center justify-between py-16">
             <p className='md:w-[90% lg:w-[45%] text-xs 3xl:text-base'>👋 Say goodbye to rigged games and hello to fairness and transparency! 🔍🚫 No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source! 📜💻 We've taken the power from the greedy hands of the centralized lotto gods and put it back into the hands of the people! 💪💰 Want to win big while knowing you're not being hoodwinked? Look no further! 🌟 Participate in our decentralized lottery and enjoy the thrill of a fair game. #NoMoreRiggedGames Play Crypto Lotto today and experience the excitement of a true equal opportunity lottery! 🎊💸💪
               nimbi knows you should only play the open sourced, decentralized and transparent lotto. convert your crypto dust to nimbi token, become part of the wolfpack and use all of our crypto dust to stand strong together.</p>
             <div className="lg:w-[45%] flex flex-col gap-6 md:gap-0">
-              <p className="uppercase text-[#a1a7aa] text-[2.625rem] md:text-[5rem] lg:text-[4rem] xlg:[5rem] 3xl:text-[6.25rem] font-bold font-['Roboto_Condensed',sans-serif] py-4 md:py-12 leading-[1.03] tracking-[0.12rem]">Open-Source Decentralized Lottery</p>
-              <p className="text-2xl font-['Roboto_Condensed',sans-serif] text-white lg:pb-0 pb-8">Introducing Crypto Lotto, the web 3 Dapp 🎉 that puts all those centralized lotto's to shame!</p>
+              <p className="text-[#a1a7aa] text-[2.625rem] md:text-[5rem] lg:text-[4rem] xlg:[5rem] 3xl:text-[6.25rem] font-['Roboto_Condensed',sans-serif] leading-tight tracking-wide font-bold uppercase py-4 md:py-12">Open-Source Decentralized Lottery</p>
+              <p className="text-2xl font-['Roboto_Condensed'] font-medium text-white lg:pb-0 pb-8">Introducing Crypto Lotto, the web 3 Dapp 🎉 that puts all those centralized lotto's to shame!</p>
             </div>
           </div>
-          <div className="border-b xl:pb-0 -translate-x-[25%] relative  pb-[6.5rem] 3xl:pb-[7rem]">
+          <div className="border-b xl:pb-0 -translate-x-[25%] relative md:pb-[6.5rem] 3xl:pb-[7rem]">
           </div>
         </div>
 
@@ -460,7 +470,7 @@ function Home() {
             <img src={bigEllipse} className='absolute top-0 lg:-right-[15rem] w-[30rem] z-20' alt="" />
           </div>
           <div className="flex flex-col w-[80%] lg:text-start lg:w-[40%] gap-6 justify-center pb-10  text-[#a1a7aa]">
-            <p className="text-[3rem] xs:text-[3.625rem] xl:text-[6.25rem] leading-tight font-extrabold uppercase font-['Roboto_Condensed',sans-serif]">KAZI token </p>
+            <p className="text-[3rem] xs:text-[3.625rem] xl:text-[6.25rem] leading-tight font-bold uppercase font-['Roboto_Condensed',sans-serif]">KAZI token </p>
             <p className='text-sm sm:text-2xl font-medium font-["Roboto_Condensed",sans-serif] text-white'>Your Bridge to Streamlined Crypto Conversion! 🌉💱</p>
             <p className='text-base font-["Roboto",sans-serif]'>KAZI Token stands as a beacon of efficiency in the world of cryptocurrency. As an ERC-20 token, it serves as the perfect conduit for users looking to convert their wallet crypto dust into tangible value. Whether you're a seasoned investor or just dipping your toes into the crypto waters, KAZI Token offers a seamless and accessible pathway to transform those fractions of cryptocurrency left lingering in your wallet into meaningful assets.
               With KAZI Token, say goodbye to the frustration of unused cryptocurrency fragments and hello to a practical solution for maximizing your digital assets. Join the movement towards streamlined crypto conversion today with KAZI Token – where every fragment counts towards your financial success. 💼🚀</p>
@@ -473,7 +483,7 @@ function Home() {
         <div className="bg-[url(./assets/whaleRight.png)] w-full h-[78rem] sm:h-[66rem] md:h-[58rem] lg:pt-[11rem] bg-[-5rem_40rem] lg:bg-[10rem_-2rem] bg-[_50rem_30rem] lg:bg-[_90rem_70rem] bg-no-repeat flex flex-col items-center gap-8 md:gap-16 justify-center relative">
           <div className="flex items-center justify-center">
             <div className="bg-[#1c2327] flex md:flex-row gap-10 md:gap-4 flex-col items-center px-[2rem] lg:px-[14rem] xl:px-[18rem] 2xl:px-[24rem] 3xl:px-[18rem] justify-between py-16">
-                <img src={logoMask} className='absolute w-[340px] h-[340px] object-cover opacity-25 -translate-x-44' alt="" />
+              <img src={logoMask} className='absolute w-[340px] h-[340px] object-cover opacity-25 -translate-x-44' alt="" />
               <div className="flex flex-col gap-6 md:w-[50%] text-left w-[90%] xs:w-[85%]">
                 <p className="text-[3.125rem] leading-tight font-semibold font-['Roboto_Condensed',sans-serif]">Join our community </p>
                 <p className='text-sm'>Join us as we celebrate the launch of our project by offering exclusive rewards to our early supporters. By participating in our ecosystem, you'll have the opportunity to receive free token airdrops and access to exciting perks. Don't miss out on this chance to be part of our growing community!</p>
