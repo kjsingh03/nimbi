@@ -32,7 +32,8 @@ import tick from "./tick.png";
 import mask from "./mask.svg";
 import mask1 from "./mask1.svg";
 import mountain from "./mountain.png";
-import mountain1 from "./mountain.svg";
+import mountainCover from "./mountainCover.svg";
+import mountainThumbnail from './mountainThumbnail.svg'
 import round from "./round.png";
 import indicator from "./Indicator.png";
 import rightWolf from "./rightWolf.png";
@@ -82,10 +83,10 @@ import opera from './opera.svg'
 import safepal from './safepal.svg'
 import W from './W.svg'
 import border from './border.svg'
-import mountainThumbnail from './mountainThumbnail.svg'
 import logoMask from './logoMask.png'
 
 export {
+  mountainCover,
   logoMask,
   mountainThumbnail,
   border,
@@ -149,7 +150,6 @@ export {
   author2,
   tick,
   mountain,
-  mountain1,
   author3,
   author4,
   mask,

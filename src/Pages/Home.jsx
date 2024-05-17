@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import '../App.css'
 import { IntroCard, NFTCard, Navbar } from '../components'
-import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, vector, tick, mask, mountain, indicator, round, animation, whaleLeft, roadmap, hero1, hero2, mountain1, border, mountainThumbnail, logoMask } from '../assets'
+import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, vector, tick, mask, mountain, indicator, round, animation, whaleLeft, roadmap, hero1, hero2, mountainThumbnail, logoMask, mountainCover } from '../assets'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -21,18 +21,22 @@ function Home() {
 
   useGSAP(() => {
 
-    const container = document.querySelector(".container");
     const sections = gsap.utils.toArray(".container section");
     const mask = document.querySelector(".mask");
 
     var xPercent = 0, from = 0, to = 0, sectionStart = 0;
 
-    if (width >= 1720) { xPercent = -100 * (sections.length - 3); from = '32.8%'; to = '79.8%'; sectionStart = 13.5 }
-    else if (width >= 1024) { xPercent = -100 * (sections.length - 3); from = '32.8%'; to = '79.8%'; sectionStart = (11.5 + 1) }
-    else if (width > 768) { xPercent = -100 * (sections.length - 1); from = '30%'; to = '100%'; sectionStart = (11.5 + 1) }
-    // else { from = '0%'; to = '100%' }
+    if (width >= 1720) { xPercent = -100 * (sections.length - 3); sectionStart = 13.5 }
+    else if (width >= 1024) { xPercent = -100 * (sections.length - 3); sectionStart = 12.5 }
+    else if (width > 768) { xPercent = -100 * (sections.length - 2); sectionStart = 12.5 }
+
+    if (width > 1280) {
+      gsap.to('.collectionLeft', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: width > 1536 ? "bottom 75%" : "bottom 98%", end: "top -300%", scrub: true, } })
+      gsap.to('.collectionRight', { x: 1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: width > 1536 ? "bottom 73%" : "bottom 98%", end: "top -150%", scrub: true } })
+    }
 
     if (width > 768) {
+
       let scrollTween = gsap.to(sections, {
         xPercent: xPercent,
         ease: "none",
@@ -74,9 +78,35 @@ function Home() {
           // markers: 1
         }
       });
+
+      gsap.to('.mountain', {
+        x: -750,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".roadmap-container",
+          start: "top 0%",
+          end: width < 1720 ? "bottom -10%" : "bottom 25%",
+          scrub: 1,
+          // markers:1
+        }
+      });
+  
+      gsap.from('.roadmap', {
+        y: 100,
+        opacity: 0,
+        duration: 4.5,
+        scrollTrigger: {
+          trigger: '.roadmap-container',
+          start: `top 60%`,
+          end: `top -80%`,
+          scrub: 1
+        }
+      });
+
     }
     else {
       sections.forEach((section, index) => {
+        if (index !== 0) {
         gsap.from(section, {
           y: 20,
           opacity: 0,
@@ -85,55 +115,26 @@ function Home() {
           scrollTrigger: {
             trigger: section,
             start: `top ${60}%`,
-            markers: 1
+            // markers: 1
           }
         });
-
+      }
       });
     }
 
-    gsap.to('.mountain', {
-      x: -750,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".roadmap-container",
-        start: "top 0%",
-        end: width < 1720 ? "bottom -10%" : "bottom 25%",
-        scrub: 1,
-        // markers:1
-      }
-    });
-
-    gsap.from('.roadmap', {
-      y: 100,
-      opacity: 0,
-      duration: 4.5,
-      scrollTrigger: {
-        trigger: '.roadmap-container',
-        start: `top 60%`,
-        end: `top -80%`,
-        scrub: 1
-      }
-    });
-
-    gsap.fromTo(mask, {
-      width: from
-    }, {
-      width: to,
-      ease: width > 1720 ? "slow(0.1,0.2,false)" : "power4.in",
-      scrollTrigger: {
-        trigger: ".roadmap-container",
-        start: width > 1720 ? "top -12%" : "top 310%",
-        end: width > 1720 ? "bottom 64%" : "bottom -4%",
-        scrub: 1,
-        // markers: 1
-      }
-    });
-
-    if (width > 1280) {
-      gsap.to('.collectionLeft', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: width > 1536 ? "bottom 75%" : "bottom 98%", end: "top -300%", scrub: true, } })
-      gsap.to('.collectionRight', { x: 1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: width > 1536 ? "bottom 73%" : "bottom 98%", end: "top -150%", scrub: true } })
-    }
+    // gsap.fromTo(mask, {
+    //   width: from
+    // }, {
+    //   width: to,
+    //   ease: width > 1720 ? "slow(0.1,0.2,false)" : "power4.in",
+    //   scrollTrigger: {
+    //     trigger: ".roadmap-container",
+    //     start: width > 1720 ? "top -12%" : "top 310%",
+    //     end: width > 1720 ? "bottom 64%" : "bottom -4%",
+    //     scrub: 1,
+    //     // markers: 1
+    //   }
+    // });
 
   }, { dependencies: [width], scope: main });
 
@@ -144,7 +145,7 @@ function Home() {
 
       <div className="z-0 capitalize pt-[4.4rem]" ref={main}>
 
-        <div className="relative w-[90%] mx-auto h-[35vw]  md:w-[81%] 4xl:w-[1506px] 4xl:h-[694px] carousel">
+        <div className="relative w-[90%] mx-auto h-[35vw] md:w-[81%] 4xl:w-[1506px] 4xl:h-[694px] carousel">
           <img src={mountainThumbnail} className='absolute bottom-0 -left-48 w-[55rem] ' alt="" />
           <Swiper
             style={{
@@ -191,14 +192,14 @@ function Home() {
 
         <div className="overflow-x-hidden z-20">
 
-          <div className="flex xl:flex-row flex-col  justify-between relative gap-4 xl:gap-0 items-center lg:items-end w-[90%] md:w-[85%] lg:w-[80%] 4xl:w-[1506px] mx-auto pt-[3rem] md:pt-[8rem] h-[140rem] xs:h-[78rem] md:h-[84rem] lg:h-[75rem] xl:h-[42rem] 3xl:h-[50rem] 4xl:h-[800px] z-0">
+          <div className="flex xl:flex-row flex-col  justify-between relative gap-4 xl:gap-0 items-center lg:items-end w-[90%] md:w-[85%] lg:w-[80%] 4xl:w-[1506px] mx-auto pt-[3rem] md:pt-[8rem] h-[136rem] xs:h-[78rem] md:h-[84rem] lg:h-[75rem] xl:h-[42rem] 3xl:h-[50rem] 4xl:h-[800px] z-0">
             <div className="collectionLeft flex flex-col gap-8 w-full xl:w-[45%] 4xl:w-[675px] 4xl:h-[670px]">
               <div className="relative">
                 <div className="btn bg-[#5c666c] w-max font-semibold py-[5px] px-[10px] z-10 text-sm 3xl:text-lg"><p>Collection</p></div>
                 <img src={ellipse} className='absolute -top-6 3xl:-top-8 left-[3.5rem] w-[4.875rem] 3xl:w-[6.375rem] -z-0' alt="" />
               </div>
               <div className="flex flex-col gap-[28px] ">
-                <div className="text-[3.25rem] md:text-[5rem] xl:text-[4.5rem] 3xl:text-[6rem] font-['Roboto_Condensed',sans-serif] leading-[1.2] tracking-wide font-bold uppercase text-[#5c666c]">Discover Our Exclusive NFT Collection</div>
+                <div className="text-[3.25rem] md:text-[5rem] 3xl:text-[6.25rem] font-['Roboto_Condensed',sans-serif] leading-[0.93] tracking-[0.93] font-bold uppercase text-[#5c666c]">Discover Our Exclusive NFT Collection</div>
                 <p className="text-2xl font-medium font-['Roboto_Condensed',sans-serif]">Discover Our Exclusive NFT Collection.</p>
                 <p className='text-sm w-[70%]'>Explore our curated selection of digital artworks, each a unique masterpiece created by talented artists from around the world. From stunning visual designs to thought-provoking concepts, our NFTs offer a glimpse into the vibrant world of digital art.</p>
                 <p className='btn w-[16rem] text-sm text-center'>Explore the Collection</p>
@@ -214,7 +215,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="roadmap-container -z-50 bg-[url(./assets/bigEllipse.png)] sm:bg-[_33rem_33rem] bg-contain bg-[center_17rem] sm:bg-[152vw_6rem] xl:bg-[72vw_6rem] 3xl:bg-[77vw_6rem] bg-no-repeat flex flex-col sm:gap-0 mt-16 xl:mt-[5rem]">
+          <div className="roadmap-container -z-50 bg-[url(./assets/bigEllipse.png)] sm:bg-[_33rem_33rem] bg-[50rem_1rem] sm:bg-[152vw_6rem] xl:bg-[72vw_6rem] 3xl:bg-[77vw_6rem] bg-no-repeat flex flex-col sm:gap-0 mt-16 xl:mt-[5rem]">
             <div className="lg:block hidden border-t  -translate-x-[55%] relative -z-50 pb-[6.5rem] 3xl:pb-[7rem]">
               <img src={whaleLeft} className='whaleLeft absolute top-[303rem] lg:-top-[35.5rem] right-[10rem] md:-right-[52rem] -z-50' alt="" />
             </div>
@@ -229,38 +230,22 @@ function Home() {
               </p>
 
               <div className="relative">
-                <img src={roadmap} className='roadmap absolute top-[8rem] md:-top-[0rem] -right-[0] 3xl:right-14 5xl:right-48 -z-40' alt="" />
+                <img src={roadmap} className='roadmap absolute top-[2rem] md:-top-[0rem] -right-[0] 3xl:right-14 5xl:right-48 -z-40' alt="" />
               </div>
             </div>
 
-            <div className="wrapper sm:mt-0">
+            <div className="wrapper">
+
               <section className='md:static relative w-screen md:h-0'>
-
-                <div className="hidden md:block md:w-[250rem] relative ">
-                  <img src={mountain1} className='mountain absolute bg-blend-soft-light opacity-60 -top-[17.5rem] sm:-top-[16rem] 3xl:-top-[7.5rem] w-[150rem] 3xl:w-[205rem] left-[35rem] sm:left-[50rem] md:left-[0rem] h-[20rem] sm:h-[34rem] -z-50' alt="" />
+                <div className="w-[100rem] md:w-[250rem] relative">
+                  <img src={mountain} className='mountain absolute opacity-60 h-[45rem] md:h-[75rem] -top-[33rem] xs:-top-[30.5rem] md:-top-[56.75rem] 3xl:-top-[48.25rem] w-[150rem] 3xl:w-[205rem] -left-[30rem] xs:-left-[21.5rem] sm:-left-[17rem] md:left-[0rem] -z-50' alt="" />
                 </div>
-
-                <svg className={`hidden md:block absolute -z-10 top-[14.8rem] xs:top-[16.3rem] sm:top-[15.6rem] md:top-[16.5rem] lg:top-[16.4rem] xlg:top-[16.3rem] xl:top-[15.95rem] 2xl:top-[15.7rem] 3xl:top-[23.9rem] 4xl:top-[23.8rem] 5xl:top-[23.6rem] 6xl:top-[23.3rem] 7xl:top-[23rem] md:left-0  w-[220vw] md:w-[100vw]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g filter='url(#filter0_d_230_5843)'>
-                    <rect y="42.5" height="0.05" width="5000" fill="#767F84" />
-                  </g>
-                  <filter id="filter0_d_230_5843" filterUnits="userSpaceOnUse" style={{ colorInterpolation: "sRGB" }}>
-                    <feFlood style={{ floodOpacity: 0 }} result="BackgroundImageFix" />
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                    <feOffset />
-                    <feGaussianBlur stdDeviation="4" />
-                    <feComposite in2="hardAlpha" operator="out" />
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.64 0 0 0 0 1 0 0 0 1 0" />
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_230_5843" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_230_5843" result="shape" />
-                  </filter>
-                </svg>
-
               </section>
-              <div className="container scrollx ">
+
+              <div className="container scrollx overflow-hidden pt-[6rem] mt-[8rem] xs:mt-[12rem] md:mt-0 md:pt-0">
                 <section>
-                  <div className="phase ">
-                    <ul className='list-none z-[500] text-xs xs:text-sm 3xl:text-lg flex flex-col relative gap-2 3xl:gap-4 lg:w-[90%]  px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
+                  <div className="phase">
+                    <ul className='list-none z-40 text-xs xs:text-sm 3xl:text-lg flex flex-col relative gap-2 3xl:gap-4 lg:w-[90%]  px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
                       <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />Launch Website</li>
                       <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />Market Strategy Planning</li>
                       <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />White Paper creation</li>
@@ -270,9 +255,9 @@ function Home() {
                       <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />tokenomics development</li>
                       <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />smart contract development</li>
                       <li className='flex gap-3 items-center'><img className='w-4 h-4' src={tick} alt="" />secure initial funding</li>
-                      <img src={round} className="w-8 h-8 absolute -top-[8.5rem] -left-2 xs:-left-10 md:left-[0rem] md:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
+                      <img src={round} className="w-8 h-8 absolute -top-[8.5rem] -left-2 xs:-left-10 md:left-[0rem] md:top-[17rem] 3xl:top-[25.5rem] z-40 " />
                       <img src={ellipse} className="w-16 h-16 xs:w-[5rem] xs:h-[5rem] absolute -left-[1.6rem] -top-[9.5rem] xs:-left-[4.1rem] xs:-top-[9.9rem] md:-left-[1.6rem] 3xl:top-[24rem]" />
-                      <svg className={`w-[75rem] rotate-90 md:rotate-0 absolute -top-[23rem] 3xl:top-[24.25rem] -left-[39.15rem] md:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg className={`w-[75rem] rotate-90 md:rotate-0 absolute -top-[47rem] md:top-[15.7rem] 3xl:top-[24.25rem] -left-[37.05rem] xs:-left-[39.15rem] md:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter='url(#filter1_d_1261_1133)'>
                           <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
                         </g>
@@ -286,7 +271,7 @@ function Home() {
                           <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1261_1133" result="shape" />
                         </filter>
                       </svg>
-                      <svg className={`block md:hidden w-[355rem] rotate-90 absolute -top-[23rem] -left-[179.75rem] xs:-left-[181.825rem]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg className={`block w-[355rem] rotate-90 absolute -top-[23rem] -left-[179.75rem] xs:-left-[181.825rem] md:rotate-0 md:top-[10rem] 3xl:top-[18.55rem]`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter='url(#filter0_d_230_5849)'>
                           <rect className='z-10' y="42.5" height="0.25" width="5000" fill="#767F84" />
                         </g>
@@ -321,8 +306,8 @@ function Home() {
                       <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                       <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                       <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                      <img src={indicator} className="w-8 h-8 absolute -top-[8.5rem] -left-0 xs:-left-8 md:left-[0rem] md:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
-                      <svg className={`w-[75rem] rotate-90 md:rotate-0 absolute -top-[46.75rem] 3xl:top-[24.25rem] -left-[36.5rem] xs:-left-[38.5rem] md:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <img src={indicator} className="w-8 h-8 absolute -top-[8.5rem] -left-0 xs:-left-8 md:left-[0rem] md:top-[17rem] 3xl:top-[25.5rem] z-40 " />
+                      <svg className={`w-[75rem] rotate-90 md:rotate-0 absolute -top-[46.75rem] md:top-[15.7rem] 3xl:top-[24.25rem] -left-[36.5rem] xs:-left-[38.5rem] md:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter='url(#filter1_d_1261_1133)'>
                           <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
                         </g>
@@ -347,8 +332,8 @@ function Home() {
                       <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                       <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
                       <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
-                      <img src={indicator} className="w-8 h-8 absolute -top-[8.5rem] -left-0 xs:-left-8 md:left-[0rem] md:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
-                      <svg className={`w-[75rem] rotate-90 md:rotate-0 absolute -top-[46.75rem] 3xl:top-[24.25rem] -left-[36.5rem] xs:-left-[38.5rem] md:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <img src={indicator} className="w-8 h-8 absolute -top-[8.5rem] -left-0 xs:-left-8 md:left-[0rem] md:top-[17rem] 3xl:top-[25.5rem] z-40 " />
+                      <svg className={`w-[75rem] rotate-90 md:rotate-0 absolute -top-[46.75rem]  md:top-[15.7rem] 3xl:top-[24.25rem] -left-[36.5rem] xs:-left-[38.5rem] md:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter='url(#filter1_d_1261_1133)'>
                           <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
                         </g>
@@ -373,8 +358,8 @@ function Home() {
                       <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                       <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                       <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                      <img src={indicator} className="w-8 h-8 absolute -top-[8.5rem] -left-0 xs:-left-8 md:left-[0rem] md:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
-                      <svg className={`w-[75rem] rotate-90 md:rotate-0 absolute -top-[46.75rem] 3xl:top-[24.25rem] -left-[36.5rem] xs:-left-[38.5rem] md:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <img src={indicator} className="w-8 h-8 absolute -top-[8.5rem] -left-0 xs:-left-8 md:left-[0rem] md:top-[17rem] 3xl:top-[25.5rem] z-40 " />
+                      <svg className={`w-[75rem] rotate-90 md:rotate-0 absolute -top-[46.75rem]  md:top-[15.7rem] 3xl:top-[24.25rem] -left-[36.5rem] xs:-left-[38.5rem] md:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter='url(#filter1_d_1261_1133)'>
                           <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
                         </g>
@@ -399,8 +384,8 @@ function Home() {
                       <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />AMA's twitter spaces</li>
                       <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />airdrops</li>
                       <li className='flex gap-3 items-center'><img className='w-4 h-4' src={vector} alt="" />Pre-Sale alert</li>
-                      <img src={indicator} className="w-8 h-8 absolute -top-[8.5rem] -left-0 xs:-left-8 md:left-[0rem] md:top-[17rem] 3xl:top-[25.5rem] z-[500] " />
-                      <svg className={`w-[75rem] rotate-90 md:rotate-0 absolute -top-[46.75rem] 3xl:top-[24.25rem] -left-[36.5rem] xs:-left-[38.5rem] md:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <img src={indicator} className="w-8 h-8 absolute -top-[8.5rem] -left-0 xs:-left-8 md:left-[0rem] md:top-[17rem] 3xl:top-[25.5rem] z-40 " />
+                      <svg className={`w-[75rem] rotate-90 md:rotate-0 absolute -top-[46.75rem]  md:top-[15.7rem] 3xl:top-[24.25rem] -left-[36.5rem] xs:-left-[38.5rem] md:-left-[75rem] z-10`} viewBox="0 0 1920 115" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter='url(#filter1_d_1261_1133)'>
                           <rect className='z-10' width='100%' y="55" height="150" fill="#33BDEB" />
                         </g>
@@ -467,7 +452,7 @@ function Home() {
         <div className="bg-[#1c2327] flex lg:flex-row gap-4 flex-col items-center justify-center lg:gap-12 pt-[8rem] pb-[6rem] ">
           <div className="w-[20rem] lg:w-[27rem] relative">
             <img src={goldWolf} className='w-full h-full object-fill z-20' alt="" />
-            <img src={bigEllipse} className='absolute top-0 lg:-right-[15rem] w-[30rem] z-20' alt="" />
+            <img src={bigEllipse} className=' absolute top-0 lg:-right-[15rem] w-[30rem] z-20' alt="" />
           </div>
           <div className="flex flex-col w-[80%] lg:text-start lg:w-[40%] gap-6 justify-center pb-10  text-[#a1a7aa]">
             <p className="text-[3rem] xs:text-[3.625rem] xl:text-[6.25rem] leading-tight font-bold uppercase font-['Roboto_Condensed',sans-serif]">KAZI token </p>
