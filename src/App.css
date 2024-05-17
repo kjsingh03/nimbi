@@ -212,8 +212,8 @@ svg {
 
 @media screen and (min-width:1280px) {
   .wolfMask {
-    background-size: 55rem 87rem;
-    background-position:  center 4rem;
+    background-size:48rem 72rem;
+    background-position:  center 6rem ;
   }
 
   .container {

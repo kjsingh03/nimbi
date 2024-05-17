@@ -263,25 +263,25 @@ function Home() {
           <img src={sec1} alt="" className='w-full' />
         </div>
 
-        <div className="bg-[url(./assets/wolfMask.png)] wolfMask bg-no-repeat">
-          <div className="flex mx-auto w-[90%] lg:w-[80%] 4xl:w-[1502px] justify-between 2xl:flex-row gap-6 3xl:gap-[0px] flex-col pt-16 3xl:pt-16">
-            <div className="flex flex-col gap-16 w-full 2xl:w-[725px]">
+        <div className="bg-[url(./assets/wolfMask.png)] wolfMask bg-no-repeat h-[954px] overflow-hidden">
+          <div className="flex mx-auto w-[90%] lg:w-[80%] 4xl:w-[1502px] justify-between 2xl:flex-row gap-6 3xl:gap-[0px] flex-col pt-12">
+            <div className="flex flex-col gap-8 w-full 2xl:w-[725px]">
               <div className="relative">
                 <div className="btn bg-[#5c666c] w-max font-semibold text-sm 3xl:text-lg py-[5px] px-[10px]">Supporting dapps</div>
                 <img src={ellipse} className='absolute -top-8 left-[6rem] 3xl:left-[8rem] w-[6.375rem]' alt="" />
               </div>
-              <p className="text-[#a1a7aa] text-[3rem] md:text-[5rem] 2xl:text-[5rem] font-['Roboto_Condensed'] leading-tight 2xl:leading-[6.5rem] tracking-[0.25px] font-bold uppercase">NIMBI VIP LOYALTY WOLF PACK</p>
+              <p className="text-[#a1a7aa] text-[3rem] md:text-[4.5rem] font-['Roboto_Condensed'] leading-[5rem] 2xl:leading-[5.5rem] tracking-[0.25px] font-bold uppercase">NIMBI VIP LOYALTY WOLF PACK</p>
             </div>
             <p className='md:w-[90% 2xl:w-[45%] font-["Roboto"] leading-6 text-base'>👋 Say goodbye to rigged games and hello to fairness and transparency! 🔍🚫 No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source! 📜💻 We've taken the power from the greedy hands of the centralized lotto gods and put it back into the hands of the people! 💪💰 Want to win big while knowing you're not being hoodwinked? Look no further! 🌟 Participate in our decentralized lottery and enjoy the thrill of a fair game. #NoMoreRiggedGames Play Crypto Lotto today and experience the excitement of a true equal opportunity lottery! 🎊💸💪
               nimbi knows you should only play the open sourced, decentralized and transparent lotto. convert your crypto dust to nimbi token, become part of the wolfpack and use all of our crypto dust to stand strong together.</p>
           </div>
-          <div className="border-b border-[#767f84] my-16 md:my-[100px]">
+          <div className="border-b border-[#767f84] my-16 md:my-[68px] 3xl:my-[100px]">
           </div>
           <div className="flex 2xl:flex-row flex-col-reverse gap-4 2xl:gap-[77px] mx-auto w-[90%] lg:w-[80%] 4xl:w-[1502px] 2xl:text-left items-center justify-between">
             <p className='md:w-[90% 2xl:w-[45%] font-["Roboto"] leading-6 text-base'>👋 Say goodbye to rigged games and hello to fairness and transparency! 🔍🚫 No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source! 📜💻 We've taken the power from the greedy hands of the centralized lotto gods and put it back into the hands of the people! 💪💰 Want to win big while knowing you're not being hoodwinked? Look no further! 🌟 Participate in our decentralized lottery and enjoy the thrill of a fair game. #NoMoreRiggedGames Play Crypto Lotto today and experience the excitement of a true equal opportunity lottery! 🎊💸💪
               nimbi knows you should only play the open sourced, decentralized and transparent lotto. convert your crypto dust to nimbi token, become part of the wolfpack and use all of our crypto dust to stand strong together.</p>
             <div className="2xl:w-[45%] flex flex-col gap-6 md:gap-0">
-              <p className="text-[#a1a7aa] text-[3rem] md:text-[5rem] 2xl:text-[5rem] font-['Roboto_Condensed'] leading-tight 2xl:leading-[6.5rem] tracking-[0.25px] font-bold uppercase pb-4 md:pb-12">Open-Source Decentralized Lottery</p>
+              <p className="text-[#a1a7aa] text-[3rem] md:text-[4.5rem] font-['Roboto_Condensed'] leading-[5rem] 2xl:leading-[5.5rem] tracking-[0.25px] font-bold uppercase pb-4">Open-Source Decentralized Lottery</p>
               <p className="text-2xl font-['Roboto_Condensed'] font-medium text-white 2xl:pb-0 pb-8">Introducing Crypto Lotto, the web 3 Dapp 🎉 that puts all those centralized lotto's to shame!</p>
             </div>
           </div>
@@ -291,7 +291,7 @@ function Home() {
 
         <div className="relative h-[90rem] sm:h-[92rem] md:h-[70rem] lg:h-[74rem] xl:h-[70rem] 3xl:h-[75rem] xs:py-16">
 
-          <div className="bg-[url(./assets/sec2.png)] border border-transparent relative w-full h-[35rem] xs:h-[50rem] sm:h-[50rem] md:h-[70rem] lg:h-[74rem] xl:h-[70rem] 3xl:h-[75rem] xl:bg-center bg-[-36rem_0rem] xs:bg-[-45rem_0rem] sm:bg-[-39rem_-0.5rem] md:bg-right bg-no-repeat bg-cover sm:pb-[4rem] md:pb-0">
+          <div className="bg-[url(./assets/sec2.png)] border border-transparent relative w-full h-[35rem] xs:h-[50rem] sm:h-[50rem] md:h-full xl:bg-center bg-[-36rem_0rem] xs:bg-[-45rem_0rem] sm:bg-[-39rem_-0.5rem] md:bg-right bg-no-repeat bg-cover sm:pb-[4rem] md:pb-0">
           </div>
           <div className="sm:h-[42rem] lg:h-[46rem] xl:h-[40rem] flex flex-col -translate-y-[3rem] xs:-translate-y-[5rem] sm:translate-y-0 sm:absolute bottom-0 xl:bottom-28 md:top-28 lg:top-[18rem] xl:top-[22rem] 3xl:top-[25rem] pl-8 pr-8 pt-12 pb-12 xs:pr-12 xs:pl-10 md:pr-0 md:pt-[rem] lg:pt-[0rem] 3xl:pl-[13rem] xl:pb-[8rem] xl:pl-[10rem] w-full md:w-[63%] lg:w-[60%] 3xl:w-[50%] gap-6 xl:gap-12 items-center md:items-start justify-around lg:justify-center text-[#151b1e] bg-white md:bg-transparent">
             <p className="text-[3rem] sm:text-[5rem] 3xl:text-[6.25rem] font-bold uppercase leading-tight font-['Roboto_Condensed',sans-serif]">Web3 Crypto Dust Runner Game</p>
@@ -303,26 +303,24 @@ function Home() {
           </div>
         </div>
 
-        <div className="bg-[#1c2327] flex lg:flex-row gap-4 flex-col lg:items-center justify-center lg:gap-12 pt-[6rem] md:pt-[10rem] pb-[5rem] md:pb-[6rem] ">
-          <div className="w-[24rem] xs:w-[32rem] lg:w-[38rem] relative">
+        <div className="bg-[#1c2327] flex lg:flex-row gap-4 flex-col lg:items-center justify-center lg:gap-12 pt-[6rem] md:pt-[10rem] pb-[5rem] md:pb-[6rem] mt-[10rem]">
+          <div className="w-[24rem] xs:w-[32rem] lg:w-[36rem] relative">
             <img src={goldWolf} className='-translate-x-4 md:translate-x-0 w-full h-full object-cover z-20' alt="" />
-            <img src={bigEllipse} className='absolute top-2 left-10 lg:left-auto lg:top-0 lg:-right-[19rem] w-[20rem] xs:w-[26.625rem] z-20' alt="" />
+            <img src={bigEllipse} className='absolute top-2 left-10 lg:left-auto lg:top-0 lg:-right-[19rem] w-[20rem] xs:w-[34.625rem] z-20' alt="" />
           </div>
           <div className="flex flex-col w-[90%] mx-auto lg:mx-0 lg:text-start lg:w-[40%] gap-6 justify-between md:justify-center md:pb-10 xs:h-[447px] md:h-auto text-[#a1a7aa]">
             <p className="text-[3rem] xs:text-[3.625rem] 2xl:text-[5rem] leading-tight 2xl:leading-[6.5rem] tracking-[0.25px] font-bold uppercase font-['Roboto_Condensed',sans-serif]">KAZI token </p>
-            <p className='text-sm sm:text-2xl font-medium font-["Roboto_Condensed",sans-serif] text-white'>Your Bridge to Streamlined Crypto Conversion! 🌉💱</p>
-            <p className='text-base font-["Roboto",sans-serif]'>KAZI Token stands as a beacon of efficiency in the world of cryptocurrency. As an ERC-20 token, it serves as the perfect conduit for users looking to convert their wallet crypto dust into tangible value. Whether you're a seasoned investor or just dipping your toes into the crypto waters, KAZI Token offers a seamless and accessible pathway to transform those fractions of cryptocurrency left lingering in your wallet into meaningful assets.
-              With KAZI Token, say goodbye to the frustration of unused cryptocurrency fragments and hello to a practical solution for maximizing your digital assets. Join the movement towards streamlined crypto conversion today with KAZI Token – where every fragment counts towards your financial success. 💼🚀</p>
-            <div className="w-full lg:text-left z-30">
-              <Link to="/wallet" className="btn text-center text-base w-[12rem] cursor-pointer">Buy KAZI</Link>
-            </div>
+            <p className='text-sm sm:text-2xl font-medium font-["Roboto_Condensed",sans-serif] text-white'>The Mediator and Peacemaker</p>
+            <p className='text-base font-["Roboto",sans-serif]'>Kazi brings a different energy to the project. A six-year-old Aussie Husky, also a rescue, Kazi brings his experiences from the sweltering South to the cooler climates of the Rocky Mountains. His natural inclination to mediate and maintain peace, demonstrated by his behavior of breaking up fights at dog parks, is mirrored in the digital world.
+In Crypto Dust Runner, Kazi's role transcends mere play. He is envisioned as a mediator within the game's community, potentially influencing gameplay dynamics where cooperation among players is crucial. His presence in the game and the ecosystem symbolizes the project's commitment to fostering a cooperative and harmonious community, reflecting his peacemaking nature</p>
+            <div className="btn text-center text-base w-[11.125rem] h-[44px] z-30">buy kazi</div>
           </div>
         </div>
 
-        <div className="bg-[url(./assets/whaleRight.png)] w-full h-[77rem] sm:h-[85rem] lg:h-[75rem] lg:pt-[11rem] bg-[-18rem_14rem] lg:bg-[0rem_-2rem] bg-[_100rem_80rem] lg:bg-[_120rem_85rem] bg-no-repeat flex flex-col items-center gap-10 xs:gap-[90px] justify-end relative">
+        <div className="bg-[url(./assets/whaleRight.png)] w-full h-[77rem] sm:h-[85rem] lg:h-[77.9rem] lg:pt-[11rem] bg-[-18rem_14rem] lg:bg-[0rem_-2rem] bg-[_100rem_80rem] lg:bg-[_120rem_85rem] bg-no-repeat flex flex-col items-center gap-10 xs:gap-[90px] justify-end relative">
           <div className="flex items-center justify-center bg-[#1c2327] w-full">
             <div className="bg-[#1c2327] w-full flex lg:flex-row gap-6 lg:gap-4 flex-col items-center px-5 xs:px-10 lg:px-[12rem] xl:px-[12rem] py-10 xs:py-[7rem] lg:h-[411px] xs:h-[757px] 2xl:px-[18rem] 3xl:px-[24rem] justify-between lg:py-16">
-              <img src={logoMask} className='absolute w-32 h-32 xs:w-48 xs:h-48 lg:w-[340px] lg:h-[340px] top-64 xs:top-20 left-60 lg:top-[18.25rem] lg:left-[20rem] object-cover opacity-25 -translate-x-44' alt="" />
+              <img src={logoMask} className='absolute w-32 h-32 xs:w-48 xs:h-48 lg:w-[340px] lg:h-[340px] top-64 xs:top-20 left-60 lg:top-[23.75rem] lg:left-[20rem] object-cover opacity-25 -translate-x-44' alt="" />
               <div className="flex flex-col gap-6 lg:w-[50%] text-left w-full 3xl:w-[561px]">
                 <p className="text-[3.125rem] leading-tight font-semibold font-['Roboto_Condensed',sans-serif]">Join our community </p>
                 <p className='text-sm'>Join us as we celebrate the launch of our project by offering exclusive rewards to our early supporters. By participating in our ecosystem, you'll have the opportunity to receive free token airdrops and access to exciting perks. Don't miss out on this chance to be part of our growing community!</p>
@@ -372,7 +370,7 @@ function Home() {
             </div>
           </div>
           <div className="flex flex-col gap-5 justify-between w-[90%] 3xl:w-[50%] xs:h-[312px] md:px-0 items-center text-center font-normal text-[#f8f8f8] font-['Roboto',sans-serif]">
-            <p className="text-[3rem] xs:text-[3.75rem] leading-tight font-semibold uppercase font-['Roboto_Condensed',sans-serif]">Whitepaper </p>
+            <p className="text-[3rem] xs:text-[2.5rem] leading-tight font-semibold uppercase font-['Roboto_Condensed',sans-serif]">Whitepaper </p>
             <p className='text-base'>Explore the Nimbi whitepaper and get an in-depth breakdown of the unique benefits, innovative features, and overall vision of the NIMBI ecosystem and its native token. This clear, concise, and expertly crafted informational report will help you understand exactly what sets NIMBI apart from other crypto projects.<br /><br />Dive into our educational white paper and find out why taking this journey with us is an absolute no-brainer!</p>
             <div className="btn border border-[#00ace6] font-['Inter'] text-base bg-transparent text-[#00ace6] hover:text-[#c4c0c8] w-[219px] h-11 text-center">Access the whitepaper</div>
           </div>
