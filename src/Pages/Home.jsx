@@ -30,11 +30,11 @@ function Home() {
     else if (width >= 1024) { xPercent = -100 * (sections.length - 3); sectionStart = 12.5 }
     else if (width > 768) { xPercent = -100 * (sections.length - 2); sectionStart = 12.5 }
 
-    // if (width > 1280) {
-    //   gsap.to('.collectionLeft', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: width > 1536 ? "bottom 83%" : "bottom 98%", end: "top -300%", scrub: true, } })
-    //   gsap.to('.collectionRight', { x: 1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: width > 1536 ? "bottom 83%" : "bottom 98%", end: "top -150%", scrub: true } })
-    //   gsap.to('.collectiontop', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: width > 1536 ? "bottom 83%" : "bottom 98%", end: "top -300%", scrub: true } })
-    // }
+    if (width > 1280) {
+      gsap.to('.collectionLeft', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: width > 1536 ? "bottom 83%" : "bottom 98%", end: "top -300%", scrub: true, } })
+      gsap.to('.collectionRight', { x: 1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: width > 1536 ? "bottom 83%" : "bottom 98%", end: "top -150%", scrub: true } })
+      gsap.to('.collectiontop', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: width > 1536 ? "bottom 83%" : "bottom 98%", end: "top -300%", scrub: true } })
+    }
 
     if (width > 768) {
 
