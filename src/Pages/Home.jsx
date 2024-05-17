@@ -221,7 +221,7 @@ function Home() {
 
           <div className="roadmap-container -z-50 bg-[url(./assets/bigEllipse.png)] sm:bg-[_33rem_33rem] bg-[50rem_1rem] sm:bg-[152vw_6rem] xl:bg-[72vw_6rem] 3xl:bg-[77vw_6rem] bg-no-repeat flex flex-col sm:gap-0 mt-16 pt-[6rem] lg:pt-0 xl:mt-[5rem]">
             <div className="lg:block hidden border-t -translate-x-[55%] relative -z-50 mt-[2rem] pb-[6.5rem] 3xl:pb-[7rem]">
-              <img src={whaleLeft} className='whaleLeft absolute top-[303rem] lg:-top-[35.5rem] -right-[70rem] lg:-right-[47rem] 3xl:-right-[65rem] -z-50' alt="" />
+              <img src={whaleLeft} className='whaleLeft absolute top-[303rem] lg:-top-[35.5rem] -right-[70rem] lg:-right-[53rem] 3xl:-right-[65rem] -z-50' alt="" />
             </div>
 
             <div className="flex flex-col gap-4 sm:gap-16 3xl:gap-[6rem] w-[90%] lg:w-[77.5%] mx-auto">
@@ -242,7 +242,7 @@ function Home() {
 
               <section className='md:static relative w-screen md:h-0'>
                 <div className="w-[100rem] md:w-[250rem] relative">
-                  <img src={mountain} className='mountain absolute opacity-60 h-[45rem] md:h-[75rem] -top-[33rem] xs:-top-[30.5rem] md:-top-[56.75rem] 3xl:-top-[48.25rem] w-[150rem] 3xl:w-[205rem] -left-[30rem] xs:-left-[21.5rem] sm:-left-[17rem] md:left-[0rem] -z-50' alt="" />
+                  <img src={mountain} className='mountain absolute opacity-60 h-[45rem] md:h-[75rem] -top-[33rem] xs:-top-[30.5rem] md:-top-[54.75rem] 3xl:-top-[54.75rem] w-[150rem] 3xl:w-[205rem] -left-[30rem] xs:-left-[21.5rem] sm:-left-[17rem] md:left-[0rem] -z-50' alt="" />
                 </div>
               </section>
 
@@ -319,7 +319,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="bg-[url(./assets/whaleRight.png)] w-full h-[85rem] sm:h-[75rem] md:h-[75rem] lg:pt-[11rem] bg-[-5rem_40rem] lg:bg-[10rem_-2rem] bg-[_50rem_30rem] lg:bg-[_90rem_70rem] bg-no-repeat flex flex-col items-center gap-10 xs:gap-[90px] justify-center relative">
+        <div className="bg-[url(./assets/whaleRight.png)] w-full h-[85rem] sm:h-[75rem] md:h-[75rem] lg:pt-[11rem] bg-[-5rem_40rem] lg:bg-[0rem_-2rem] bg-[_50rem_30rem] lg:bg-[_120rem_85rem] bg-no-repeat flex flex-col items-center gap-10 xs:gap-[90px] justify-center relative">
           <div className="flex items-center justify-center bg-[#1c2327] w-full">
             <div className="bg-[#1c2327] w-full flex md:flex-row gap-10 md:gap-4 flex-col items-center px-10 lg:px-[14rem] xl:px-[18rem] 2xl:px-[24rem] 3xl:px-[24rem] justify-between py-16">
               <img src={logoMask} className='absolute w-[340px] h-[340px] object-cover opacity-25 -translate-x-44' alt="" />
@@ -374,7 +374,7 @@ function Home() {
           <div className="flex flex-col gap-6 w-[78%] 3xl:w-[50%] md:px-0 items-center text-center font-normal text-[#f8f8f8] font-['Roboto',sans-serif]">
             <p className="text-[3rem] xs:text-[3.75rem] leading-tight font-semibold uppercase font-['Roboto_Condensed',sans-serif]">Whitepaper </p>
             <p className='text-sm'>Explore the Nimbi whitepaper and get an in-depth breakdown of the unique benefits, innovative features, and overall vision of the NIMBI ecosystem and its native token. This clear, concise, and expertly crafted informational report will help you understand exactly what sets NIMBI apart from other crypto projects.<br /><br />Dive into our educational white paper and find out why taking this journey with us is an absolute no-brainer!</p>
-            <div className="btn border border-[#00ace6] font-['Inter'] text-base bg-transparent text-[#00ace6] hover:text-[#c4c0c8] w-[16rem] text-center">Access the whitepaper</div>
+            <div className="btn border border-[#00ace6] font-['Inter'] text-base bg-transparent text-[#00ace6] hover:text-[#c4c0c8] w-[219px] h-11 text-center">Access the whitepaper</div>
             <div className="w-full flex justify-end" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>
               <img src={icon} className='absolute right-12 md:right-24 bottom-8 md:bottom-12 w-11 h-11 bg-[#43545e] px-3 -rotate-90 py-2.5 cursor-pointer' alt="" />
             </div>
