@@ -303,7 +303,9 @@ svg {
   .phase {
     width: 100vw;
     flex-direction: column-reverse;
-    gap: 0rem
+    gap: 0rem;
+    align-items: center;
+    justify-content: center;
   }
 
   .container {
