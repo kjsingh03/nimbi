@@ -76,7 +76,7 @@ function Home() {
           start: `top 35%`,
           end: `top -100%`,
           scrub: 1,
-          markers: 1
+          // markers: 1
         }
       });
 
