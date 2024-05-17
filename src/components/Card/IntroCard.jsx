@@ -7,7 +7,7 @@ function IntroCard({img,title,desc}) {
                 <img src={img} alt="" className='w-full h-full object-fill' />
             </div>
             <p className='font-semibold text-xl'>{title}</p>
-            <p className='text-sm font-[Roboto] w-[99%] md:w-[70%] text-[#c0c4c6] text-center'>{desc}</p>
+            <p className='text-sm font-[Roboto] w-[94%] md:w-[70%] text-[#c0c4c6] text-center'>{desc}</p>
         </div>
     )
 }
