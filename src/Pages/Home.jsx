@@ -300,12 +300,12 @@ What sets Crypto Dust Lotto apart is its integration with the broader Nimbi ecos
             <p className='text-base xl:text-lg font-medium tracking-tighter md:w-[73%] lg:w-[70%] 3xl:w-[85%]'>In the DeFi industry, crypto dust refers to small amounts of cryptocurrency either left over from transactions, or valueless remaining assets.</p>
             <p className='text-base font-medium block md:w-[73%] lg:w-[70%] 3xl:w-[90%]'>In the dedicated Web3 Nimbi ecosystem game, Crypto Dust Runner, Crypto Dust represents a fundamental in-game resource. It's a symbolic representation of the small, seemingly insignificant particles that, when accumulated, can lead to significant power and change—much like how small contributions in blockchain and community efforts can lead to substantial impacts. The gameplay involves players controlling Nimbi to collect Crypto Dust throughout their journey up a vast mountain that ends, ultimately, in a challenging boss fight. This dust gathered along the way not only powers Nimbi but also serves as a currency within the game, convertible into Kazi tokens through in-game mechanics. </p>
             <div className="w-full text-left">
-              <p className="btn w-[12rem] text-base text-center">Launch APP</p>
+              <p className="btn w-[12rem] text-base text-center">Launch App</p>
             </div>
           </div>
         </div>
 
-        <div className="bg-[#1c2327] flex lg:flex-row gap-4 flex-col lg:items-center justify-center lg:gap-12 pt-[6rem] md:pt-[10rem] pb-[5rem] md:pb-[6rem]">
+        <div className="bg-[#1c2327] flex lg:flex-row gap-4 flex-col lg:items-center justify-center lg:gap-12 pt-[6rem] md:pt-[76px] pb-[5rem] md:pb-[6rem]">
           <div className="w-[24rem] xs:w-[32rem] lg:w-[36rem] relative">
             <img src={goldWolf} className='-translate-x-4 md:translate-x-0 w-full h-full object-cover z-20' alt="" />
             <img src={bigEllipse} className='absolute top-2 left-10 lg:left-auto lg:top-0 lg:-right-[19rem] w-[20rem] xs:w-[34.625rem] z-20' alt="" />

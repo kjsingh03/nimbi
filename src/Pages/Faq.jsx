@@ -24,7 +24,7 @@ function Faq() {
       <div className="flex flex-col gap-12 w-full xl:w-[80%] px-[2rem] md:px-[5rem] xl:px-[11rem] capitalize py-16 bg-[url('./assets/mountain.png')] bg-contain bg-left-bottom bg-no-repeat font-['Inter',sans-serif]">
 
         <div className="w-full border-b border-b-[#c4c0c8] py-6 font-['Roboto',sans-serif]">
-          <p className='uppercase text-3xl font-semibold text-left py-3'>frequently asked questions</p>
+          <p className='uppercase text-[40px] font-semibold text-left py-3'>frequently asked questions</p>
         </div>
 
         <div className="flex flex-col gap-3">

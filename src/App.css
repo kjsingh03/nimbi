@@ -239,8 +239,8 @@ svg {
   }
 
   .team {
-    background-position: 30rem 10rem, bottom left, -9rem 70rem;
-    background-size: auto, fill;
+    background-position: right 3rem, bottom left, -16rem 40rem;
+    background-size: auto, 160rem;
   }
 }
 
