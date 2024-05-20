@@ -234,8 +234,8 @@ svg {
   }
 
   .about {
-    background-position: right, bottom left;
-    background-size: auto, fill;
+    background-position: right  3rem, bottom left;
+    background-size: auto, 160rem;
   }
 
   .team {

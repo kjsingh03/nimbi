@@ -121,7 +121,7 @@ function Document() {
           </div>
         </div>
 
-        <div className="px-[3rem] md:px-[3rem] sm:w-[67%] md:w-[67%] pb-4 capitalize bg-[url('./assets/mountain.png')] bg-cover bg-right-bottom bg-no-repeat font-['Inter',sans-serif]">
+        <div className="px-[3rem] md:px-[3rem] sm:w-[67%] md:w-[67%] pb-4 capitalize bg-[url('./assets/mountain.png')] bg-[_160rem] bg-right-bottom bg-no-repeat font-['Inter',sans-serif]">
           <div className="flex flex-col gap-10">
             <div className="w-full border-b border-b-[#c4c0c8] py-6 font-['Roboto',sans-serif]">
               <p className='uppercase text-[32px] font-semibold text-left py-3'>{title}</p>
