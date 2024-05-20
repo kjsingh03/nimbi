@@ -8,7 +8,7 @@ function AnimationCard({ title, desc, phase, year, src, icon, list = ["community
                 <ul className='list-none z-40 text-sm flex flex-col relative font-["Inter"] gap-3 lg:w-[90%] font-medium px-12 xs:px-6 sm:px-6 md:px-0 md:mx-auto'>
                     {
                         list?.map((li, index) => (
-                            <li className='flex gap-3 items-center'><img className='w-4 h-4' src={src} alt="" />{li}</li>
+                            <li key={index} className='flex gap-3 items-center'><img className='w-4 h-4' src={src} alt="" />{li}</li>
                         ))
                     }
                     {

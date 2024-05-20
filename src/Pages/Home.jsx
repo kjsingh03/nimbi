@@ -264,7 +264,7 @@ function Home() {
         </div>
 
         <div className="bg-[url(./assets/wolfMask.png)] wolfMask bg-no-repeat xl:h-[954px] overflow-hidden">
-          <div className="flex mx-auto w-[90%] lg:w-[80%] 4xl:w-[1502px] justify-between 2xl:flex-row gap-6 3xl:gap-[0px] flex-col pt-12">
+          <div className="flex mx-auto w-[90%] lg:w-[80%] 4xl:w-[1502px] justify-between 2xl:flex-row gap-6 3xl:gap-[0px] flex-col pt-8">
             <div className="flex flex-col gap-8 w-full 2xl:w-[725px]">
               <div className="relative">
                 <div className="btn bg-[#5c666c] w-max font-semibold text-sm 3xl:text-lg py-[5px] px-[10px]">Supporting dapps</div>
@@ -286,20 +286,21 @@ What sets Crypto Dust Lotto apart is its integration with the broader Nimbi ecos
               <p className="text-2xl font-['Roboto_Condensed'] font-medium text-white 2xl:pb-0 pb-8">Introducing Crypto Lotto, the web 3 Dapp that puts all those centralized lotto's to shame</p>
             </div>
           </div>
-          <div className="xs:border-b -translate-x-[25%] relative pb-16 xs:pb-[7rem]">
+          <div className="xs:border-b -translate-x-[25%] pb-16 xs:pb-[7rem] xl:pb-[6.5rem] 3xl:pb-[7rem]">
           </div>
         </div>
 
-        <div className="relative h-[90rem] sm:h-[92rem] md:h-[70rem] lg:h-[74rem] xl:h-[70rem] 3xl:h-[75rem] xs:pt-16">
+        <div className="relative w-full h-[90rem] sm:h-[92rem] md:h-[70rem] lg:h-[74rem] xl:h-[70rem] 3xl:h-[1080px] 5xl:h-[95rem] xs:pt-16">
 
-          <div className="bg-[url(./assets/sec2.png)] border border-transparent relative w-full h-[35rem] xs:h-[50rem] sm:h-[50rem] md:h-full xl:bg-center bg-[-36rem_0rem] xs:bg-[-45rem_0rem] sm:bg-[-39rem_-0.5rem] md:bg-right bg-no-repeat bg-cover sm:pb-[4rem] md:pb-0">
+          <div className="bg-[url(./assets/sec2.png)]  relative w-full h-[35rem] xs:h-[50rem] sm:h-[50rem] md:h-full xl:bg-cover xl:bg-center bg-[-36rem_0rem] xs:bg-[-45rem_0rem] sm:bg-[-39rem_-0.5rem] md:bg-right bg-no-repeat bg-cover sm:pb-[4rem] md:pb-0">
           </div>
-          <div className="sm:h-[42rem] lg:h-[46rem] xl:h-[40rem] flex flex-col -translate-y-[3rem] xs:-translate-y-[5rem] sm:translate-y-0 sm:absolute bottom-0 xl:bottom-28 md:top-28 lg:top-[18rem] xl:top-[22rem] 3xl:top-[25rem] pl-8 pr-8 pt-12 pb-12 xs:pr-12 xs:pl-10 md:pr-0 md:pt-[rem] lg:pt-[0rem] 3xl:pl-[13rem] xl:pb-[8rem] xl:pl-[10rem] w-full md:w-[63%] lg:w-[60%] 3xl:w-[50%] gap-6 xl:gap-12 items-center md:items-start justify-around lg:justify-center text-[#151b1e] bg-white md:bg-transparent">
-            <p className="text-[3rem] sm:text-[4.5rem] 3xl:text-[4.5rem] font-bold uppercase leading-tight font-['Roboto_Condensed',sans-serif]">Web3 Crypto Dust Runner Game</p>
-            <p className='text-base xl:text-lg font-medium tracking-tighter md:w-[73%] lg:w-[75%] 3xl:w-full'>In the DeFi industry, crypto dust refers to small amounts of cryptocurrency either left over from transactions, or valueless remaining assets.</p>
-            <p className='text-base font-medium block md:w-[73%] lg:w-[75%] 3xl:w-full'>In the dedicated Web3 Nimbi ecosystem game, Crypto Dust Runner, Crypto Dust represents a fundamental in-game resource. It's a symbolic representation of the small, seemingly insignificant particles that, when accumulated, can lead to significant power and change—much like how small contributions in blockchain and community efforts can lead to substantial impacts. The gameplay involves players controlling Nimbi to collect Crypto Dust throughout their journey up a vast mountain that ends, ultimately, in a challenging boss fight. This dust gathered along the way not only powers Nimbi but also serves as a currency within the game, convertible into Kazi tokens through in-game mechanics. </p>
+
+          <div className="sm:h-[42rem] lg:h-[46rem] xl:h-[50rem] flex flex-col -translate-y-[3rem] xs:-translate-y-[5rem] sm:translate-y-0 sm:absolute bottom-0 xl:bottom-28 md:top-28 lg:top-[18rem] xl:top-[12rem] 3xl:top-[15rem] pl-8 pr-8 pt-12 pb-12 xs:pr-12 xs:pl-10 md:pr-0 md:pt-[rem] lg:pt-[0rem] 3xl:pl-[13rem] xl:pb-[8rem] xl:pl-[10rem] w-full md:w-[63%] lg:w-[60%] 3xl:w-[50%] gap-6 xl:gap-12 items-center md:items-start justify-around lg:justify-center text-[#151b1e] bg-white md:bg-transparent">
+            <p className="text-[3rem] sm:text-[4.5rem] 3xl:text-[4.5rem] font-bold uppercase leading-tight font-['Roboto_Condensed',sans-serif] xl:w-[80%] 3xl:w-full">Web3 Crypto Dust Runner Game</p>
+            <p className='text-base xl:text-lg font-medium tracking-tighter md:w-[73%] lg:w-[70%] 3xl:w-[85%]'>In the DeFi industry, crypto dust refers to small amounts of cryptocurrency either left over from transactions, or valueless remaining assets.</p>
+            <p className='text-base font-medium block md:w-[73%] lg:w-[70%] 3xl:w-[90%]'>In the dedicated Web3 Nimbi ecosystem game, Crypto Dust Runner, Crypto Dust represents a fundamental in-game resource. It's a symbolic representation of the small, seemingly insignificant particles that, when accumulated, can lead to significant power and change—much like how small contributions in blockchain and community efforts can lead to substantial impacts. The gameplay involves players controlling Nimbi to collect Crypto Dust throughout their journey up a vast mountain that ends, ultimately, in a challenging boss fight. This dust gathered along the way not only powers Nimbi but also serves as a currency within the game, convertible into Kazi tokens through in-game mechanics. </p>
             <div className="w-full text-left">
-              <p className="btn w-[12rem] text-center">Launch APP</p>
+              <p className="btn w-[12rem] text-base text-center">Launch APP</p>
             </div>
           </div>
         </div>
