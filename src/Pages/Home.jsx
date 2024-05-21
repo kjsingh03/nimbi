@@ -146,7 +146,7 @@ function Home() {
 
       <div className="z-0 capitalize pt-[4.3rem] xl:pt-[4.4rem] overflow-x-hidden " ref={main}>
 
-        <div className="relative mx-auto h-[864px] xl:h-[35vw] xl:w-[81%] 4xl:w-[1506px] 4xl:h-[694px] carousel">
+        <div className="relative mx-auto h-[670px] xs:h-[734px] xl:h-[35vw] xl:w-[81%] 4xl:w-[1506px] 4xl:h-[694px] carousel">
           <img src={mountainThumbnail} className='absolute bottom-0 -left-48 w-[55rem] ' alt="" />
           <Swiper
             style={{
@@ -173,34 +173,34 @@ function Home() {
             className="mySwiper relative h-full w-full"
           >
             <SwiperSlide>
-              <div className="flex xl:flex-row flex-col-reverse justify-end xl:justify-between gap-3 xl:gap-8 h-full">
+              <div className="flex xl:flex-row flex-col-reverse justify-end xl:justify-between gap-7 xl:gap-8 h-full">
                 <div className="w-[90%] mx-auto flex flex-col justify-center gap-2 xl:gap-6 xl:w-[50%]">
-                  <h1 className='text-[3.25rem] md:text-[5.5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>unite humanity with just your <span className='text-[#33bdeb]'>Crypto Dust</span></h1>
+                  <h1 className='text-[3.25rem] md:text-[5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>unite humanity with just your <span className='text-[#33bdeb]'>Crypto Dust</span></h1>
                   <p className='text-base md:text-xl font-["Roboto"]'>join Nimbi's wolfpack and make change together and have fun along the way</p>
                 </div>
-                <div className="h-[420px] xl:h-full xl:w-[50%]">
+                <div className="h-[210px] sm:h-[420px] xl:h-full xl:w-[50%]">
                   <img src={hero} className="w-full h-full object-cover" />
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="flex xl:flex-row flex-col-reverse justify-end xl:justify-between gap-3 xl:gap-8 h-full">
+              <div className="flex xl:flex-row flex-col-reverse justify-end xl:justify-between gap-7 xl:gap-8 h-full">
                 <div className="w-[90%] mx-auto flex flex-col justify-center gap-2 xl:gap-6 xl:w-[50%]">
-                  <h1 className='text-[3.25rem] md:text-[5.5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>Open-Source Decentralized  <span className='text-[#33bdeb]'>Lottery</span></h1>
+                  <h1 className='text-[3.25rem] md:text-[5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>Open-Source Decentralized  <span className='text-[#33bdeb]'>Lottery</span></h1>
                   <p className='text-base md:text-xl font-["Roboto"]'> Say goodbye to rigged games and hello to fairness and transparency! No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source!</p>
                 </div>
-                <div className="h-[420px] xl:h-full xl:w-[50%]">
+                <div className="h-[210px] sm:h-[420px] xl:h-full xl:w-[50%]">
                   <img src={hero1} className="w-full h-full object-cover" />
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="flex xl:flex-row flex-col-reverse justify-end xl:justify-between gap-3 xl:gap-8 h-full">
+              <div className="flex xl:flex-row flex-col-reverse justify-end xl:justify-between gap-7 xl:gap-8 h-full">
                 <div className="w-[90%] mx-auto flex flex-col justify-center gap-2 xl:gap-6 xl:w-[50%]">
-                  <h1 className='text-[3.25rem] md:text-[5.5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>Web3 Crypto Dust Runner <span className='text-[#33bdeb]'>Game</span></h1>
+                  <h1 className='text-[3.25rem] md:text-[5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>Web3 Crypto Dust Runner <span className='text-[#33bdeb]'>Game</span></h1>
                   <p className='text-base md:text-xl font-["Roboto"]'>In this epic quest, you'll join forces with Nimbi, the fearless white wolf, as he races through a treacherous frozen gulch, fueled by the magnificent power of crypto dust!His mission? To collect as much of this precious resource as possible and transform into a legendary force against those pesky corporate giants. </p>
                 </div>
-                <div className="h-[420px] xl:h-full xl:w-[50%]">
+                <div className="h-[210px] sm:h-[420px] xl:h-full xl:w-[50%]">
                   <img src={hero2} className="w-full h-full object-cover" />
                 </div>
               </div>
