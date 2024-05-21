@@ -1,5 +1,7 @@
-import logo from "./logo.png";
+import logo from "./logo.svg";
+import mlogo from "./mlogo.png";
 import logo1 from "./logo1.png";
+import logoMask from './logoMask.png'
 import svg1 from "./svg1.svg";
 import hero from "./hero.svg";
 import hero1 from "./hero1.svg";
@@ -83,7 +85,6 @@ import opera from './opera.svg'
 import safepal from './safepal.svg'
 import W from './W.svg'
 import border from './border.svg'
-import logoMask from './logoMask.png'
 import team1 from './team1.png'
 import team2 from './team2.png'
 import team3 from './team3.png'
@@ -94,6 +95,7 @@ import team7 from './team7.png'
 import team8 from './team8.png'
 
 export {
+  mlogo,
   team1,
   team2,
   team3,

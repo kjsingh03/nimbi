@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { logo, sound, animation, cross } from '../../assets'
+import { logo, sound, animation, cross, mlogo } from '../../assets'
 import '../../App.css'
 import { Link, useNavigate } from 'react-router-dom'
 import Lottie from 'lottie-react'
@@ -15,7 +15,6 @@ function Navbar() {
 
         setTimeout(() => {
             document.querySelector("nav").style.position = "static"
-
         }, 200)
 
     }
@@ -60,20 +59,18 @@ function Navbar() {
         }
     }, [path])
 
-    // const {View} = useLottie({animationData:animation,loop:true})
-
     return (
         <nav className='fixed w-full border-b border-b-[#c4c0c8] bg-[#242d32] z-50 '>
             <div className="nav flex items-center justify-between w-[90%] xlg:w-[80%] 4xl:w-[1504px] mx-auto z-40">
 
-                <button onClick={activateNavbar} id="navbar-toggler" className="block xlg:hidden text-xl py-[0.9rem] text-white"  >☰</button>
-
-                <div className="lg:w-[10%] py-0 xlg:py-4">
-                    <div onClick={() => {
-                         document.querySelectorAll("nav .active")?.forEach((tab) => {tab.classList.remove('active')}); document.querySelectorAll(`#home`).forEach(tab => tab?.classList.add('active')); navigate("/")
-                    }}>
-                        <div className="w-[5.65rem] h-[2rem]">
+                <div className="lg:w-[10%] py-0 xlg:py-4 flex items-center gap-2.5">
+                        <button onClick={activateNavbar} id="navbar-toggler" className="block xlg:hidden text-xl py-[0.9rem] text-white"  >☰</button>
+                    <div onClick={() => { document.querySelectorAll("nav .active")?.forEach((tab) => { tab.classList.remove('active') }); document.querySelectorAll(`#home`).forEach(tab => tab?.classList.add('active')); navigate("/")}}>
+                        <div className="hidden md:block w-[5.65rem] h-[2rem]">
                             <img src={logo} className="w-full h-full object-fill" alt="" />
+                        </div>
+                        <div className="block md:hidden w-8 h-8">
+                            <img src={mlogo} className="w-full h-full object-fill" alt="" />
                         </div>
                     </div>
                 </div>
@@ -84,8 +81,8 @@ function Navbar() {
                     <Link onClick={() => activeTab("documents")} id="documents" to="/documents" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] '>Documents</Link>
                     <Link onClick={() => activeTab("faq")} id="faq" to="/faq" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] '>FAQ</Link>
                 </ul>
-                <div className="hidden xlg:flex items-center gap-2 w-[36%] justify-end py-4">
-                    <div className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8 w-[8rem] text-center'>Collections</div>
+                <div className="flex items-center gap-2 xlg:w-[36%] justify-end py-4">
+                    <div className='btn1 hidden xlg:block bg-transparent rounded-sm border border-[#c4c0c8] px-8 w-[8rem] text-center'>Collections</div>
                     <div className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8 w-[8rem] text-center'>Presale</div>
                     <div className="w-[1.5rem]">
                         {<Lottie animationData={animation} loop={true} />}

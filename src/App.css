@@ -80,7 +80,7 @@ nav a.active {
   position: absolute;
   display: flex;
   justify-content: flex-start;
-  padding: 4.5rem .5rem;
+  padding: 3rem .5rem;
 }
 
 .swiper-slide {
@@ -259,6 +259,10 @@ svg {
     background-size: 45rem 77rem;
     background-position:  center top;
   }
+
+  .swiper-pagination {
+    padding: 2rem 2.5rem;
+  }
 }
 
 @media screen and (max-width:1164px) {
@@ -273,7 +277,7 @@ svg {
 @media screen and (max-width:1024px) {
 
   .swiper-pagination {
-    padding: 2rem 0.5rem;
+    padding: 2rem 2.5rem;
   }
 
   .phase {
@@ -297,7 +301,7 @@ svg {
 
 @media screen and (max-width:768px) {
   .swiper-pagination {
-    padding: 1.2rem 0.5rem;
+    padding: 1.2rem 2.5rem;
   }
 
   .phase {
@@ -316,14 +320,14 @@ svg {
 
 @media screen and (max-width:640px) {
   .swiper-pagination {
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 2.5rem;
   }
 
 }
 
 @media screen and (max-width:475px) {
   .swiper-pagination {
-    padding: 0.25rem 0.5rem;
+    padding: 1.25rem 2.5rem;
   }
 
   .container {

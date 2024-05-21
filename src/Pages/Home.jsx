@@ -144,9 +144,9 @@ function Home() {
 
       <Navbar />
 
-      <div className="z-0 capitalize pt-[3.6rem] xl:pt-[4.4rem] overflow-x-hidden " ref={main}>
+      <div className="z-0 capitalize pt-[4.3rem] xl:pt-[4.4rem] overflow-x-hidden " ref={main}>
 
-        <div className="relative w-[90%] mx-auto h-[35vw] md:w-[81%] 4xl:w-[1506px] 4xl:h-[694px] carousel">
+        <div className="relative mx-auto h-[864px] xl:h-[35vw] xl:w-[81%] 4xl:w-[1506px] 4xl:h-[694px] carousel">
           <img src={mountainThumbnail} className='absolute bottom-0 -left-48 w-[55rem] ' alt="" />
           <Swiper
             style={{
@@ -173,13 +173,37 @@ function Home() {
             className="mySwiper relative h-full w-full"
           >
             <SwiperSlide>
-              <img src={hero} className="w-full h-full object-cover" />
+              <div className="flex xl:flex-row flex-col-reverse justify-end xl:justify-between gap-3 xl:gap-8 h-full">
+                <div className="w-[90%] mx-auto flex flex-col justify-center gap-2 xl:gap-6 xl:w-[50%]">
+                  <h1 className='text-[3.25rem] md:text-[5.5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>unite humanity with just your <span className='text-[#33bdeb]'>Crypto Dust</span></h1>
+                  <p className='text-base md:text-xl font-["Roboto"]'>join Nimbi's wolfpack and make change together and have fun along the way</p>
+                </div>
+                <div className="h-[420px] xl:h-full xl:w-[50%]">
+                  <img src={hero} className="w-full h-full object-cover" />
+                </div>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={hero1} className="w-full h-full object-cover" />
+              <div className="flex xl:flex-row flex-col-reverse justify-end xl:justify-between gap-3 xl:gap-8 h-full">
+                <div className="w-[90%] mx-auto flex flex-col justify-center gap-2 xl:gap-6 xl:w-[50%]">
+                  <h1 className='text-[3.25rem] md:text-[5.5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>Open-Source Decentralized  <span className='text-[#33bdeb]'>Lottery</span></h1>
+                  <p className='text-base md:text-xl font-["Roboto"]'> Say goodbye to rigged games and hello to fairness and transparency! No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source!</p>
+                </div>
+                <div className="h-[420px] xl:h-full xl:w-[50%]">
+                  <img src={hero1} className="w-full h-full object-cover" />
+                </div>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img src={hero2} className="w-full h-full object-cover" />
+              <div className="flex xl:flex-row flex-col-reverse justify-end xl:justify-between gap-3 xl:gap-8 h-full">
+                <div className="w-[90%] mx-auto flex flex-col justify-center gap-2 xl:gap-6 xl:w-[50%]">
+                  <h1 className='text-[3.25rem] md:text-[5.5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>Web3 Crypto Dust Runner <span className='text-[#33bdeb]'>Game</span></h1>
+                  <p className='text-base md:text-xl font-["Roboto"]'>In this epic quest, you'll join forces with Nimbi, the fearless white wolf, as he races through a treacherous frozen gulch, fueled by the magnificent power of crypto dust!His mission? To collect as much of this precious resource as possible and transform into a legendary force against those pesky corporate giants. </p>
+                </div>
+                <div className="h-[420px] xl:h-full xl:w-[50%]">
+                  <img src={hero2} className="w-full h-full object-cover" />
+                </div>
+              </div>
             </SwiperSlide>
 
           </Swiper>
@@ -273,14 +297,14 @@ function Home() {
               <p className="text-[#a1a7aa] text-[3rem] md:text-[4.5rem] font-['Roboto_Condensed'] leading-[5rem] 2xl:leading-[5.5rem] tracking-[0.25px] font-bold uppercase">NIMBI The Leader of the Pack</p>
             </div>
             <p className='md:w-[90% 2xl:w-[45%] font-["Roboto"] leading-6 text-base'>Nimbi, a character with dual existences. In one he is a central figure in the associated Web3 video game Crypto Dust Runner and an artistic representation in the NFT Nimbi Art Collection. The ERC-404 Nimbi Token also bears his name, enhancing his integral role within the ecosystem. In this capacity Nimbi is on a quest to gather members for his Wolfpack, leading them on adventures across the virtual landscape.
-In the other, Nimbi is Mr. Nimbus—a two-year-old White Wolf rescued as a puppy from a reservation. Known as a Res-Wolf Dog, Nimbi's early life on the reservation introduced him to the harsh realities and the concept of "Crypto Dust," a metaphor for the scraps and remnants he survived on. Now thriving in the Rocky Mountains, he embodies resilience and leadership, characteristics that translate into his digital persona where he guides players to the apex of mountains and beyond in Crypto Dust Runner.</p>
+              In the other, Nimbi is Mr. Nimbus—a two-year-old White Wolf rescued as a puppy from a reservation. Known as a Res-Wolf Dog, Nimbi's early life on the reservation introduced him to the harsh realities and the concept of "Crypto Dust," a metaphor for the scraps and remnants he survived on. Now thriving in the Rocky Mountains, he embodies resilience and leadership, characteristics that translate into his digital persona where he guides players to the apex of mountains and beyond in Crypto Dust Runner.</p>
           </div>
           <div className="border-b border-[#767f84] my-16 md:my-[68px] 3xl:my-[100px]">
           </div>
           <div className="flex 2xl:flex-row flex-col-reverse gap-4 2xl:gap-[77px] mx-auto w-[90%] lg:w-[80%] 4xl:w-[1502px] 2xl:text-left items-center justify-between">
             <p className='md:w-[90% 2xl:w-[45%] font-["Roboto"] leading-6 text-base'>As the name suggests, Crypto Dust Lotto introduces a new approach to traditional lotteries. Players can purchase lottery tickets with Kazi Tokens, promoting accessibility and making it easy for borderless participation. Players are protected by the transparent and immutable smart contracts that govern the lottery process, ensuring fair and tamper-proof draws.
 
-What sets Crypto Dust Lotto apart is its integration with the broader Nimbi ecosystem, allowing winners to (beyond prizes) level up and become part of the Nimbi VIP program, which has its own special VIP perks. </p>
+              What sets Crypto Dust Lotto apart is its integration with the broader Nimbi ecosystem, allowing winners to (beyond prizes) level up and become part of the Nimbi VIP program, which has its own special VIP perks. </p>
             <div className="2xl:w-[45%] flex flex-col gap-6 md:gap-0">
               <p className="text-[#a1a7aa] text-[3rem] md:text-[4.5rem] font-['Roboto_Condensed'] leading-[5rem] 2xl:leading-[5.5rem] tracking-[0.25px] font-bold uppercase pb-4">Open-Source Decentralized Lottery</p>
               <p className="text-2xl font-['Roboto_Condensed'] font-medium text-white 2xl:pb-0 pb-8">Introducing Crypto Lotto, the web 3 Dapp that puts all those centralized lotto's to shame</p>
