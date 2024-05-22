@@ -1,5 +1,5 @@
 import React from 'react'
-import { rightWolf } from '../assets'
+import { leftWolf, rightWolf } from '../assets'
 import Footer from '../components/Footer/Footer'
 import '../App.css'
 
@@ -34,7 +34,7 @@ function About() {
 
           <div className="flex justify-center gap-4 lg:gap-8 items-center flex-col lg:flex-row ">
             <div className="rounded-lg overflow-hidden xs:w-[70%] md:w-[50%] mx-auto">
-              <img src={rightWolf} alt="" className='w-full h-full object-cover' />
+              <img src={leftWolf} alt="" className='w-full h-full object-cover' />
             </div>
             <div className="flex flex-col gap-4 lg:gap-8 py-6 lg:w-[50%] text-center lg:text-start">
               <p className='text-[40px] font-semibold'>KAZI</p>
