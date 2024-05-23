@@ -6,8 +6,8 @@ function Footer({ path = "/" }) {
     <div className="capitalize text-xs flex flex-col gap-4 bg-[#1c2327] px-[2rem] lg:px-[4rem] xl:px-[8rem] py-8 border-t border-[#767f84]">
       {
         path === "/" &&
-        <div className="flex lg:flex-row flex-col lg:gap-0 gap-4 items-center justify-between w-full 3xl:w-[90%] mx-auto">
-          <div className=" flex flex-col lg:items-start items-center text-center lg:text-left w-full gap-4 sm:gap-6 lg:w-[40%] xl:w-[30%]">
+        <div className="flex xl:flex-row flex-col xl:gap-0 gap-4 items-center justify-between w-full 3xl:w-[90%] mx-auto">
+          <div className=" flex flex-col xl:items-start items-center text-center xl:text-left w-full gap-4 sm:gap-6 xl:w-[40%] ">
             <div className="flex flex-col gap-2">
               <p className=" font-['Inter'] text-sm">Register here</p>
               <div className="flex sm:flex-row flex-col items-center  gap-2 sm:gap-4 w-full">
