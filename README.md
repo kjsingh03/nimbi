@@ -1,1 +1,1 @@
-Live at https://www.nimbi.vercel.app
+Live at https://nimbi.vercel.app
