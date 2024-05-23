@@ -23,24 +23,26 @@ nav a.active {
 }
 
 .btn {
-  color: white;
+  width: max-content;
+  text-align: center;
   background-color: #00ACE6;
+  color: white;
   padding: 0.5rem 1rem;
   border-radius: 0.1rem;
   font-size: 12px;
   cursor: pointer;
   border: 1px solid transparent;
-  width: max-content;
 }
 
 .btn1 {
   width: max-content;
+  text-align: center;
   background-color: transparent;
-  border-radius: 0.25rem;
-  border: 1px solid #c4c0c8;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.1rem;
   font-size: 12px;
   cursor: pointer;
+  border: 1px solid #c4c0c8;
 }
 
 .btn1:hover {
@@ -109,13 +111,6 @@ nav a.active {
 .wrapper {
   overflow: hidden;
   position: relative;
-}
-
-svg {
-  /* position: absolute; */
-  /* top: 14rem;
-  left: 13rem; */
-  /* width: 150rem; */
 }
 
 .container {
@@ -274,6 +269,7 @@ svg {
     transform: translateX(0);
   }
 }
+
 @media screen and (max-width:1024px) {
 
   .swiper-pagination {
@@ -322,7 +318,6 @@ svg {
   .swiper-pagination {
     padding: 0.5rem 2.5rem;
   }
-
 }
 
 @media screen and (max-width:475px) {
@@ -355,3 +350,19 @@ svg {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #1c2327;
 }
+
+.dropdown{
+  position: relative;
+}
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  margin:1rem 0;
+  right: 0%;
+  z-index: 500;
+}
+
+/* .dropdown:hover .dropdown-content{
+  display: flex;
+} */

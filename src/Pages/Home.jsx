@@ -31,7 +31,7 @@ function Home() {
     else if (width > 768) { xPercent = -100 * (sections.length - 2); sectionStart = 12.5 }
 
     if (width > 1280) {
-      gsap.to('.collectionLeft', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: width > 1536 ? "bottom 83%" : "bottom 98%", end: "top -300%", scrub: true, } })
+      gsap.to('.collectionLeft', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: width > 1536 ? "bottom 83%" : "bottom 110%", end: "top -300%", scrub: true, } })
       gsap.to('.collectionRight', { x: 1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: width > 1536 ? "bottom 83%" : "bottom 98%", end: "top -150%", scrub: true } })
       gsap.to('.collectiontop', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: width > 1536 ? "bottom 83%" : "bottom 98%", end: "top -300%", scrub: true } })
     }
@@ -47,7 +47,7 @@ function Home() {
           pin: true,
           scrub: 1,
           end: "+=800",
-          // markers: true,
+          markers: true,
         }
       });
 
@@ -86,7 +86,7 @@ function Home() {
         scrollTrigger: {
           trigger: ".roadmap-container",
           start: "top 0%",
-          end: width < 1720 ? "bottom -10%" : "bottom 25%",
+          end: width < 1720 ? "bottom 15%" : "bottom 25%",
           scrub: 1,
           // markers:1
         }
@@ -98,9 +98,10 @@ function Home() {
         duration: 4.5,
         scrollTrigger: {
           trigger: '.roadmap-container',
-          start: `top 60%`,
+          start: `top ${width>1720?'60%':'90%'}`,
           end: `top -80%`,
-          scrub: 1
+          scrub: 1,
+          markers:1
         }
       });
 
@@ -115,7 +116,7 @@ function Home() {
             delay: index * 1 / 32,
             scrollTrigger: {
               trigger: section,
-              start: `top ${60}%`,
+              start: `top ${45}%`,
               // markers: 1
             }
           });
@@ -147,7 +148,7 @@ function Home() {
       <div className="z-0 capitalize pt-[4.3rem] xl:pt-[4.4rem] overflow-x-hidden " ref={main}>
 
         <div className="relative mx-auto h-[670px] xs:h-[734px] xl:h-[35vw] xl:w-[81%] 4xl:w-[1506px] 4xl:h-[694px] carousel">
-          <img src={mountainThumbnail} className='absolute bottom-0 -left-48 w-[55rem] ' alt="" />
+          <img src={mountainThumbnail} className='absolute bottom-0 -left-[2rem] w-[35rem] ' alt="" />
           <Swiper
             style={{
               "--swiper-navigation-color": "#000",
@@ -175,8 +176,8 @@ function Home() {
             <SwiperSlide>
               <div className="flex xl:flex-row flex-col-reverse justify-end xl:justify-between gap-7 xl:gap-8 h-full">
                 <div className="w-[90%] mx-auto flex flex-col justify-center gap-2 xl:gap-6 xl:w-[50%]">
-                  <h1 className='text-[3.25rem] md:text-[5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>unite humanity with just your <span className='text-[#33bdeb]'>Crypto Dust</span></h1>
-                  <p className='text-base md:text-xl font-["Roboto"]'>join Nimbi's wolfpack and make change together and have fun along the way</p>
+                  <h1 className='text-[3rem] md:text-[5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>unite humanity with just your <span className='text-[#33bdeb]'>Crypto Dust</span></h1>
+                  <p className='text-base font-["Roboto"]'>join Nimbi's wolfpack and make change together and have fun along the way</p>
                 </div>
                 <div className="h-[210px] sm:h-[420px] xl:h-full xl:w-[50%]">
                   <img src={hero} className="w-full h-full object-cover" />
@@ -186,8 +187,8 @@ function Home() {
             <SwiperSlide>
               <div className="flex xl:flex-row flex-col-reverse justify-end xl:justify-between gap-7 xl:gap-8 h-full">
                 <div className="w-[90%] mx-auto flex flex-col justify-center gap-2 xl:gap-6 xl:w-[50%]">
-                  <h1 className='text-[3.25rem] md:text-[5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>Open-Source Decentralized  <span className='text-[#33bdeb]'>Lottery</span></h1>
-                  <p className='text-base md:text-xl font-["Roboto"]'> Say goodbye to rigged games and hello to fairness and transparency! No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source!</p>
+                  <h1 className='text-[3rem] md:text-[5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>Open-Source Decentralized  <span className='text-[#33bdeb]'>Lottery</span></h1>
+                  <p className='text-base font-["Roboto"]'> Say goodbye to rigged games and hello to fairness and transparency! No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source!</p>
                 </div>
                 <div className="h-[210px] sm:h-[420px] xl:h-full xl:w-[50%]">
                   <img src={hero1} className="w-full h-full object-cover" />
@@ -197,8 +198,8 @@ function Home() {
             <SwiperSlide>
               <div className="flex xl:flex-row flex-col-reverse justify-end xl:justify-between gap-7 xl:gap-8 h-full">
                 <div className="w-[90%] mx-auto flex flex-col justify-center gap-2 xl:gap-6 xl:w-[50%]">
-                  <h1 className='text-[3.25rem] md:text-[5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>Web3 Crypto Dust Runner <span className='text-[#33bdeb]'>Game</span></h1>
-                  <p className='text-base md:text-xl font-["Roboto"]'>In this epic quest, you'll join forces with Nimbi, the fearless white wolf, as he races through a treacherous frozen gulch, fueled by the magnificent power of crypto dust!His mission? To collect as much of this precious resource as possible and transform into a legendary force against those pesky corporate giants. </p>
+                  <h1 className='text-[3rem] md:text-[5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>Web3 Crypto Dust Runner <span className='text-[#33bdeb]'>Game</span></h1>
+                  <p className='text-base font-["Roboto"]'>In this epic quest, you'll join forces with Nimbi, the fearless white wolf, as he races through a treacherous frozen gulch, fueled by the magnificent power of crypto dust!His mission? To collect as much of this precious resource as possible and transform into a legendary force against those pesky corporate giants. </p>
                 </div>
                 <div className="h-[210px] sm:h-[420px] xl:h-full xl:w-[50%]">
                   <img src={hero2} className="w-full h-full object-cover" />
@@ -244,7 +245,7 @@ function Home() {
           </div>
 
           <div className="roadmap-container -z-50 bg-[url(./assets/bigEllipse.png)] sm:bg-[_33rem_33rem] bg-[50rem_1rem] sm:bg-[152vw_6rem] xl:bg-[72vw_6rem] 3xl:bg-[77vw_6rem] bg-no-repeat flex flex-col sm:gap-0 mt-16 pt-[6rem] lg:pt-0 xl:mt-[5rem]">
-            <div className="lg:block hidden border-t -translate-x-[55%] relative -z-50 mt-[2rem] pb-[6.5rem] 3xl:pb-[7rem]">
+            <div className="lg:block hidden border-t -translate-x-[55%] relative -z-50 mt-[2rem] pb-[5.5rem] 3xl:pb-[7rem]">
               <img src={whaleLeft} className='whaleLeft absolute top-[303rem] lg:-top-[35.5rem] -right-[70rem] lg:-right-[53rem] 3xl:-right-[65rem] -z-50' alt="" />
             </div>
 
@@ -262,11 +263,11 @@ function Home() {
               </div>
             </div>
 
-            <div className="wrapper">
+            <div className="wrapper 3xl:mt-16">
 
               <section className='md:static relative w-screen md:h-0'>
                 <div className="w-[100rem] md:w-[250rem] relative">
-                  <img src={mountain} className='mountain absolute opacity-60 h-[45rem] md:h-[75rem] -top-[33rem] xs:-top-[30.5rem] md:-top-[54.75rem] 3xl:-top-[54.75rem] w-[150rem] 3xl:w-[205rem] -left-[30.75rem] xs:-left-[21.5rem] sm:-left-[17rem] md:left-[0rem] -z-50' alt="" />
+                  <img src={mountain} className='mountain absolute opacity-100 h-[45rem] md:h-[18rem] 3xl:h-[19rem] -top-[13rem] xs:-top-[12.5rem] md:top-[2.15rem] 3xl:top-[1.25rem] w-[175rem] 3xl:w-[205rem] -left-[25.5rem] xs:-left-[21.5rem] sm:-left-[12.5rem] md:left-[0rem] -z-30' alt="" />
                 </div>
               </section>
 
@@ -395,12 +396,12 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-5 justify-between w-[90%] 3xl:w-[50%] xs:h-[312px] md:px-0 items-center text-center font-normal text-[#f8f8f8] font-['Roboto',sans-serif]">
+          <div className="flex flex-col gap-5 pb-12 md:pb-0 justify-between w-[90%] 3xl:w-[50%] xs:h-[312px] md:px-0 items-center text-center font-normal text-[#f8f8f8] font-['Roboto',sans-serif]">
             <p className="text-[3rem] xs:text-[2.5rem] leading-tight font-semibold uppercase font-['Roboto_Condensed',sans-serif]">Whitepaper </p>
             <p className='text-base'>Explore the Nimbi whitepaper and get an in-depth breakdown of the unique benefits, innovative features, and overall vision of the NIMBI ecosystem and its native token. This clear, concise, and expertly crafted informational report will help you understand exactly what sets NIMBI apart from other crypto projects.<br /><br />Dive into our educational white paper and find out why taking this journey with us is an absolute no-brainer!</p>
             <div className="btn border border-[#00ace6] font-['Inter'] text-base bg-transparent text-[#00ace6] hover:text-[#c4c0c8] w-[219px] h-11 text-center">Access the whitepaper</div>
           </div>
-          <div className="w-full flex justify-end" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>
+          <div className="w-full justify-end hidden md:flex" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>
             <img src={icon} className='absolute right-2 md:right-24 bottom-10 md:bottom-12 w-11 h-11 bg-[#43545e] px-3 -rotate-90 py-2.5 cursor-pointer' alt="" />
           </div>
         </div>

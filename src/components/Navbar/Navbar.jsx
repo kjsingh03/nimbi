@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import Lottie from 'lottie-react'
 
 
-function Navbar() {
+export default function Navbar() {
 
     const navigate = useNavigate()
 
@@ -37,35 +37,42 @@ function Navbar() {
 
     useEffect(() => {
         if (path) {
-            const activeTabs = document.querySelectorAll("nav active")
-
-            activeTabs.forEach(tab => {
+            document.querySelectorAll("nav active").forEach(tab => {
                 tab.classList.remove('active')
             })
-
-            const tabs = document.querySelectorAll(`#${path}`)
-
-            tabs.forEach(tab => {
+            document.querySelectorAll(`#${path}`).forEach(tab => {
                 tab.classList.add('active')
             })
         }
         else {
-            const tabs = document.querySelectorAll(`nav #home`)
-
-            tabs.forEach(tab => {
+            document.querySelectorAll(`nav #home`).forEach(tab => {
                 tab.classList.add('active')
             })
-
         }
     }, [path])
+
+    const handleDropdown = (id) => {
+        const screen = document.querySelector('.screen')
+        const dropdown = document.querySelector(`#${id}`)
+        
+        screen.style.display = 'block'
+        dropdown.style.display = 'block'
+        
+        screen.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target)) {
+                screen.style.display = 'none'
+                dropdown.style.display = 'none'
+            }
+        })
+    }
 
     return (
         <nav className='fixed w-full border-b border-b-[#c4c0c8] bg-[#242d32] z-50 '>
             <div className="nav flex items-center justify-between w-[90%] xlg:w-[80%] 4xl:w-[1504px] mx-auto z-40">
 
                 <div className="lg:w-[10%] py-0 xlg:py-4 flex items-center gap-2.5">
-                        <button onClick={activateNavbar} id="navbar-toggler" className="block xlg:hidden text-xl py-[0.9rem] text-white"  >☰</button>
-                    <div onClick={() => { document.querySelectorAll("nav .active")?.forEach((tab) => { tab.classList.remove('active') }); document.querySelectorAll(`#home`).forEach(tab => tab?.classList.add('active')); navigate("/")}}>
+                    <button onClick={activateNavbar} id="navbar-toggler" className="block xlg:hidden text-xl py-[0.9rem] text-white"  >☰</button>
+                    <div onClick={() => { document.querySelectorAll("nav .active")?.forEach((tab) => { tab.classList.remove('active') }); document.querySelectorAll(`#home`).forEach(tab => tab?.classList.add('active')); navigate("/") }}>
                         <div className="hidden md:block w-[5.65rem] h-[2rem]">
                             <img src={logo} className="w-full h-full object-fill" alt="" />
                         </div>
@@ -74,16 +81,33 @@ function Navbar() {
                         </div>
                     </div>
                 </div>
-                <ul className="hidden xlg:flex items-center justify-end gap-2 text-sm list-none w-[54%] h-full">
+                <ul className="hidden xl:flex items-center justify-center gap-2 text-sm list-none w-[44%] h-full">
                     <Link onClick={() => activeTab("home")} id="home" to="/" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee]'>Home</Link>
                     <Link onClick={() => activeTab("about")} id="about" to="/about" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] '>About</Link>
                     <Link onClick={() => activeTab("team")} id="team" to="/team" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] '>Our Team</Link>
                     <Link onClick={() => activeTab("documents")} id="documents" to="/documents" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] '>Documents</Link>
                     <Link onClick={() => activeTab("faq")} id="faq" to="/faq" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] '>FAQ</Link>
                 </ul>
-                <div className="flex items-center gap-2 xlg:w-[36%] justify-end py-4">
-                    <div className='btn1 hidden xlg:block bg-transparent rounded-sm border border-[#c4c0c8] px-8 w-[8rem] text-center'>Collections</div>
-                    <div className='btn1 bg-transparent rounded-sm border border-[#c4c0c8] px-8 w-[8rem] text-center'>Presale</div>
+                <div className="flex items-center gap-2 xlg:w-[40%] justify-end py-4">
+                    <div className='w-[8.5rem] btn1 text-sm hidden xlg:block'>Collections</div>
+                    <div className='w-[8.5rem] btn1 text-sm '>Presale</div>
+                    <div className="dropdown">
+                        <div onClick={()=>handleDropdown('launch')} className='dropdown-btn w-[8.5rem] btn hidden text-sm xlg:block'>Launch Dapps</div>
+                        <div className="dropdown-content" id="launch">
+                            <div className="flex flex-col gap-3 w-[284px] bg-[#242d32] border border-[#5c666c] p-3.5 rounded-[4px]">
+                                <p className='font-bold text-xs uppercase'>nimbi wolfpack</p>
+                                <button className='btn w-full text-base text-center rounded-sm' onClick={e=>e.preventDefault()}>
+                                    <p className='font-["Inter",sans-serif] font-medium text-sm'>Crypto Dust Converter</p>
+                                </button>
+                                <button className='btn w-full text-base text-center rounded-sm' onClick={e=>e.preventDefault()}>
+                                    <p className='font-["Inter",sans-serif] font-medium text-sm'>Nimbi lottery</p>
+                                </button>
+                                <button className='btn w-full text-base text-center rounded-sm' onClick={e=>e.preventDefault()}>
+                                    <p className='font-["Inter",sans-serif] font-medium text-sm'>Nimbi Runner game</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                     <div className="w-[1.5rem]">
                         {<Lottie animationData={animation} loop={true} />}
                     </div>
@@ -110,4 +134,3 @@ function Navbar() {
     )
 }
 
-export default Navbar

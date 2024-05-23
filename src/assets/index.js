@@ -33,7 +33,7 @@ import vector from "./vector.svg";
 import tick from "./tick.png";
 import mask from "./mask.svg";
 import mask1 from "./mask1.svg";
-import mountain from "./mountain.png";
+import mountain from "./mountain.svg";
 import mountainCover from "./mountainCover.svg";
 import mountainThumbnail from './mountainThumbnail.svg'
 import round from "./round.png";

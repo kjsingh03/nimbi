@@ -8,6 +8,8 @@ function App() {
   return (
     <>
       <Navbar/>
+      <div className="screen hidden z-[49] w-screen h-screen fixed top-0 left-0">
+      </div>
       <Outlet />
     </>
   )
