@@ -55,12 +55,13 @@ nav a.active {
   border: 1px solid #c4c0c8;
 }
 
-.navbar.active {
-  transform: translateX(0);
+.navbar {
+  transform: translateX(-100%);
+  transition: all ease 0.3s;
 }
 
-.navbar.active~.black {
-  transform: translateX(0)
+.navbar.active {
+  transform: translateX(0);
 }
 
 .swiper-button-next::after,
@@ -358,11 +359,12 @@ nav a.active {
 .dropdown-content{
   display: none;
   position: absolute;
-  margin:1rem 0;
   right: 0%;
   z-index: 500;
+  background-color: transparent;
+  padding: 1rem 0;
 }
 
-/* .dropdown:hover .dropdown-content{
+.dropdown:hover .dropdown-content{
   display: flex;
-} */
+}

@@ -15,8 +15,7 @@ export default function Navbar() {
 
         setTimeout(() => {
             document.querySelector("nav").style.position = "static"
-        }, 200)
-
+        }, 215)
     }
 
     const activeTab = (id) => {
@@ -51,28 +50,28 @@ export default function Navbar() {
         }
     }, [path])
 
-    const handleDropdown = (id) => {
-        const screen = document.querySelector('.screen')
-        const dropdown = document.querySelector(`#${id}`)
-        
-        screen.style.display = 'block'
-        dropdown.style.display = 'block'
-        
-        screen.addEventListener('click', (e) => {
-            if (!dropdown.contains(e.target)) {
-                screen.style.display = 'none'
-                dropdown.style.display = 'none'
-            }
-        })
-    }
+    // const handleDropdown = (id) => {
+    //     const screen = document.querySelector('.screen')
+    //     const dropdown = document.querySelector(`#${id}`)
+
+    //     screen.style.display = 'block'
+    //     dropdown.style.display = 'block'
+
+    //     screen.addEventListener('click', (e) => {
+    //         if (!dropdown.contains(e.target)) {
+    //             screen.style.display = 'none'
+    //             dropdown.style.display = 'none'
+    //         }
+    //     })
+    // }
 
     return (
         <nav className='fixed w-full border-b border-b-[#c4c0c8] bg-[#242d32] z-50 '>
             <div className="nav flex items-center justify-between w-[90%] xlg:w-[80%] 4xl:w-[1504px] mx-auto z-40">
 
-                <div className="lg:w-[10%] py-0 xlg:py-4 flex items-center gap-2.5">
-                    <button onClick={activateNavbar} id="navbar-toggler" className="block xlg:hidden text-xl py-[0.9rem] text-white"  >☰</button>
-                    <div onClick={() => { document.querySelectorAll("nav .active")?.forEach((tab) => { tab.classList.remove('active') }); document.querySelectorAll(`#home`).forEach(tab => tab?.classList.add('active')); navigate("/") }}>
+                <div className="lg:w-[10%] py-0 xl:py-4 flex items-center gap-2.5">
+                    <button onClick={activateNavbar} id="navbar-toggler" className="block xl:hidden text-xl py-[0.9rem] text-white"  >☰</button>
+                    <div onClick={() => { document.querySelector("nav .active").classList.remove('active') ; document.querySelector(`#home`).classList.add('active'); navigate("/") }}>
                         <div className="hidden md:block w-[5.65rem] h-[2rem]">
                             <img src={logo} className="w-full h-full object-fill" alt="" />
                         </div>
@@ -81,7 +80,15 @@ export default function Navbar() {
                         </div>
                     </div>
                 </div>
-                <ul className="hidden xl:flex items-center justify-center gap-2 text-sm list-none w-[44%] h-full">
+                <ul className="navbar active bg-[url(./assets/mountainThumbnail.svg)] bg-bottom bg-contain sm:bg-[_30rem_30rem] sm:bg-[20vw_17rem] lg:bg-[30vw_17rem] bg-no-repeat fixed h-screen w-screen top-0 left-0 z-[100] flex flex-col gap-3 justify-center xl:static xl:flex-row bg-[#242d32] xl:bg-transparent items-center xl:justify-end xl:gap-2 text-sm list-none xl:w-[44%] xl:h-full">
+                    <div className="w-[80%] mx-auto flex justify-end xl:hidden">
+                        <p className='text-right' onClick={() => { document.querySelector('.navbar').classList.remove('active'); document.querySelector('nav').style.position = "fixed" }}>
+                            <img src={cross} className='w-8 h-8' alt="" />
+                        </p>
+                    </div>
+                    <div className="w-[5rem] h-[1.9rem] my-2 xl:hidden">
+                        <img src={logo} className="w-full h-full object-fill" alt="" />
+                    </div>
                     <Link onClick={() => activeTab("home")} id="home" to="/" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee]'>Home</Link>
                     <Link onClick={() => activeTab("about")} id="about" to="/about" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] '>About</Link>
                     <Link onClick={() => activeTab("team")} id="team" to="/team" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] '>Our Team</Link>
@@ -89,20 +96,20 @@ export default function Navbar() {
                     <Link onClick={() => activeTab("faq")} id="faq" to="/faq" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] '>FAQ</Link>
                 </ul>
                 <div className="flex items-center gap-2 xlg:w-[40%] justify-end py-4">
-                    <div className='w-[8.5rem] btn1 text-sm hidden xlg:block'>Collections</div>
-                    <div className='w-[8.5rem] btn1 text-sm '>Presale</div>
+                    <div className='w-[7.5rem] px-2 btn1 text-sm hidden xlg:block'>Collections</div>
+                    <div className='w-[7.5rem] px-2 btn1 text-sm '>Presale</div>
                     <div className="dropdown">
-                        <div onClick={()=>handleDropdown('launch')} className='dropdown-btn w-[8.5rem] btn hidden text-sm xlg:block'>Launch Dapps</div>
-                        <div className="dropdown-content" id="launch">
+                        <div className='dropdown-btn w-[7.5rem] px-2 btn hidden text-sm xlg:block'>Launch Dapps</div>
+                        <div className="dropdown-content">
                             <div className="flex flex-col gap-3 w-[284px] bg-[#242d32] border border-[#5c666c] p-3.5 rounded-[4px]">
                                 <p className='font-bold text-xs uppercase'>nimbi wolfpack</p>
-                                <button className='btn w-full text-base text-center rounded-sm' onClick={e=>e.preventDefault()}>
+                                <button className='btn w-full text-base text-center rounded-sm' onClick={e => e.preventDefault()}>
                                     <p className='font-["Inter",sans-serif] font-medium text-sm'>Crypto Dust Converter</p>
                                 </button>
-                                <button className='btn w-full text-base text-center rounded-sm' onClick={e=>e.preventDefault()}>
+                                <button className='btn w-full text-base text-center rounded-sm' onClick={e => e.preventDefault()}>
                                     <p className='font-["Inter",sans-serif] font-medium text-sm'>Nimbi lottery</p>
                                 </button>
-                                <button className='btn w-full text-base text-center rounded-sm' onClick={e=>e.preventDefault()}>
+                                <button className='btn w-full text-base text-center rounded-sm' onClick={e => e.preventDefault()}>
                                     <p className='font-["Inter",sans-serif] font-medium text-sm'>Nimbi Runner game</p>
                                 </button>
                             </div>
@@ -112,23 +119,6 @@ export default function Navbar() {
                         {<Lottie animationData={animation} loop={true} />}
                     </div>
                 </div>
-            </div>
-            <div className="flex overflow-hidden z-[100]">
-                <ul className="bg-[url(./assets/mountain.png)] bg-no-repeat bg-[bottom] bg-[_160rem_50rem] navbar z-[100] flex xlg:hidden flex-col items-center gap-3 transition-all duration-200 ease-in px-8 py-10 lg:shadow-none shadow-xl fixed left-0 top-0 bg-[#242d32] text-center w-screen h-screen" id="navbar">
-                    <div className="w-full flex justify-end">
-                        <p className='text-right' onClick={() => { document.querySelector('.navbar').classList.remove('active'); document.querySelector('nav').style.position = "fixed" }}>
-                            <img src={cross} className='w-8 h-8' alt="" />
-                        </p>
-                    </div>
-                    <div className="w-[5rem] h-[1.9rem] my-2">
-                        <img src={logo} className="w-full h-full object-fill" alt="" />
-                    </div>
-                    <Link onClick={() => activeTab("home")} id="home" to="/" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] w-[80%]'>Home</Link>
-                    <Link onClick={() => activeTab("about")} id="about" to="/about" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] w-[80%]'>About</Link>
-                    <Link onClick={() => activeTab("team")} id="team" to="/team" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] w-[80%]'>Our Team</Link>
-                    <Link onClick={() => activeTab("documents")} id="documents" to="/documents" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] w-[80%]'>Documents</Link>
-                    <Link onClick={() => activeTab("faq")} id="faq" to="/faq" className='py-5 px-4 cursor-pointer hover:text-[#54c7ee] w-[80%]'>FAQ</Link>
-                </ul>
             </div>
         </nav>
     )

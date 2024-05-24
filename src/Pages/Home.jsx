@@ -47,7 +47,7 @@ function Home() {
           pin: true,
           scrub: 1,
           end: "+=800",
-          markers: true,
+          // markers: true,
         }
       });
 
@@ -101,7 +101,7 @@ function Home() {
           start: `top ${width > 1720 ? '60%' : '90%'}`,
           end: `top -80%`,
           scrub: 1,
-          markers: 1
+          // markers: 1
         }
       });
 
@@ -148,7 +148,7 @@ function Home() {
       <div className="z-0 capitalize pt-[4.3rem] xl:pt-[4.4rem] overflow-x-hidden " ref={main}>
 
         <div className="relative mx-auto h-[670px] xs:h-[734px] xl:h-[35vw] xl:w-[81%] 4xl:w-[1506px] 4xl:h-[694px] carousel">
-          <img src={mountainThumbnail} className='absolute bottom-0 -left-[2rem] w-[35rem] ' alt="" />
+          <img src={mountainThumbnail} className='absolute bottom-0 -left-[5rem] w-[44.5rem] ' alt="" />
           <Swiper
             style={{
               "--swiper-navigation-color": "#000",
@@ -218,18 +218,18 @@ function Home() {
 
         <div className="overflow-x-hidden z-20">
 
-          <div className="w-[90%] lg:w-[80%] 4xl:w-[1506px] mx-auto pt-[5rem] xl:pt-[9rem] h-[138rem] xs:h-[84rem] md:h-[70rem] xl:h-[49rem] 3xl:h-[53rem] z-0">
+          <div className="w-[90%] lg:w-[80%] 4xl:w-[1506px] mx-auto pt-[5rem] xl:pt-[9rem] h-[151rem] xxs:h-[141rem] xs:h-[88rem] sm:h-[81rem] md:h-[70rem] xl:h-[49rem] 3xl:h-[53rem] z-0">
             <div className="collectiontop relative mb-8 3xl:mb-6">
               <div className="btn bg-[#5c666c] w-max font-semibold py-[5px] px-[10px] z-10 text-sm 3xl:text-lg"><p>Collection</p></div>
               <img src={ellipse} className='absolute -top-6 3xl:-top-8 left-[3.5rem] w-[4.875rem] 3xl:w-[6.375rem] -z-0' alt="" />
             </div>
 
             <div className="flex xl:flex-row flex-col justify-between relative gap-10 xl:gap-0">
-              <div className="collectionLeft flex flex-col justify-end w-full xl:w-[45%] 4xl:w-[580px] 4xl:h-[648px]">
+              <div className="collectionLeft flex flex-col h-[680px] xxs:h-auto justify-end w-full xl:w-[45%] 4xl:w-[580px] 4xl:h-[648px]">
                 <div className="flex flex-col gap-[38px] ">
                   <div className="text-[3.25rem] md:text-[4.2rem] 2xl:text-[5rem] 3xl:text-[5rem] font-['Roboto_Condensed'] leading-tight 3xl:leading-[6.5rem] tracking-[0.25px] font-bold uppercase text-[#5c666c]">Discover Our Exclusive NFT Collection</div>
                   <p className="text-2xl font-medium font-['Roboto_Condensed',sans-serif]">Discover Our Exclusive NFT Collection.</p>
-                  <p className='text-sm w-[70%]'>Explore our curated selection of digital artworks, each a unique masterpiece created by talented artists from around the world. From stunning visual designs to thought-provoking concepts, our NFTs offer a glimpse into the vibrant world of digital art.</p>
+                  <p className='text-sm md:w-[70%]'>Explore our curated selection of digital artworks, each a unique masterpiece created by talented artists from around the world. From stunning visual designs to thought-provoking concepts, our NFTs offer a glimpse into the vibrant world of digital art.</p>
                   <p className='btn w-[16rem] text-sm text-center'>Explore the Collection</p>
                 </div>
               </div>
@@ -255,7 +255,7 @@ function Home() {
                 <img src={ellipse} className='absolute -top-6 3xl:-top-8 left-[3.5rem] w-[4.875rem] 3xl:w-[6.375rem] -z-0' alt="" />
               </div>
 
-              <p className='text-xs md:text-sm 3xl:text-lg xs:w-[70%] pt-6 sm:pt-2'>We follow these roadmap for launching the Nimbi ecosystem. We may experience certain setbacks while developing the whole Nimbi ecosystem, but our team has a right attitude to stick to the course, no matter what!
+              <p className='text-xs md:text-sm 3xl:text-lg md:w-[70%] pt-6 sm:pt-2'>We follow these roadmap for launching the Nimbi ecosystem. We may experience certain setbacks while developing the whole Nimbi ecosystem, but our team has a right attitude to stick to the course, no matter what!
               </p>
 
               <div className="relative">
@@ -272,11 +272,11 @@ function Home() {
               </section>
 
               <div className="container scrollx overflow-hidden md:overflow-visible pt-[6rem] mt-[8rem] xs:mt-[12rem] md:mt-0 md:pt-0">
-                <AnimationCard title="Pre-Sale Phase" desc="2023 Q1" phase="1" src={tick} icon={round} year="2023" list={["Launch Website", "Market Strategy Planning", "White Paper creation", "Market research", "feasability analysis", "competitor analysis", "tokenomics development", "smart contract development", "secure initial funding"]} />
-                <AnimationCard title="Pre-Sale Phase" desc="2024 Q1" phase="2" src={vector} icon={indicator} year="2024" />
-                <AnimationCard title="Pre-Sale Phase" desc="2024 Q2" phase="3" src={vector} icon={indicator} year="2024" />
-                <AnimationCard title="Pre-Sale Phase" desc="2024 Q3" phase="4" src={vector} icon={indicator} year="2025" />
-                <AnimationCard title="Pre-Sale Phase" desc="2024 Q3" phase="5" src={vector} icon={indicator} year="2026" />
+                <AnimationCard title="Pre-Sale Phase" desc="2023 Q1" phase="1" status='completed' src={tick} icon={round} year="2023" list={["Launch Website", "Market Strategy Planning", "White Paper creation", "Market research", "feasability analysis", "competitor analysis", "tokenomics development", "smart contract development", "secure initial funding"]} />
+                <AnimationCard title="Pre-Sale Phase" desc="2024 Q1" phase="2" status='incompleted' src={tick} icon={indicator} year="2024" />
+                <AnimationCard title="Pre-Sale Phase" desc="2024 Q2" phase="3" status='incompleted' src={vector} icon={indicator} year="2024" />
+                <AnimationCard title="Pre-Sale Phase" desc="2024 Q3" phase="4" status='incompleted' src={vector} icon={indicator} year="2025" />
+                <AnimationCard title="Pre-Sale Phase" desc="2024 Q3" phase="5" status='incompleted' src={vector} icon={indicator} year="2026" />
               </div>
             </div>
           </div>
@@ -347,7 +347,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="bg-[url(./assets/whaleRight.png)] w-full h-[77rem] sm:h-[85rem] lg:h-[77.9rem] lg:pt-[11rem] bg-[-18rem_14rem] lg:bg-[-5rem_-3rem] 3xl:bg-[0rem_-2rem] bg-[_100rem_80rem] lg:bg-[_100rem_95rem] 3xl:bg-[_120rem_85rem] bg-no-repeat flex flex-col items-center gap-10 xs:gap-[90px] justify-end relative">
+        <div className="bg-[url(./assets/whaleRight.png)] w-full h-[77rem] sm:h-[88rem] lg:h-[77.9rem] lg:pt-[11rem] bg-[-18rem_14rem] lg:bg-[-5rem_-3rem] 3xl:bg-[0rem_-2rem] bg-[_100rem_80rem] lg:bg-[_100rem_95rem] 3xl:bg-[_120rem_85rem] bg-no-repeat flex flex-col items-center gap-10 xs:gap-[90px] justify-end relative">
           <div className="flex items-center justify-center bg-[#1c2327] w-full">
             <div className="bg-[#1c2327] w-full flex lg:flex-row gap-6 lg:gap-4 flex-col items-center px-5 xs:px-10 lg:px-[3.25rem] xl:px-[12rem] py-10 xs:py-[7rem] lg:h-[411px] xs:h-[757px] 2xl:px-[18rem] 3xl:px-[24rem] justify-between lg:py-16">
               <img src={logoMask} className='absolute w-32 h-32 xs:w-48 xs:h-48 lg:w-[340px] lg:h-[340px] top-64 xs:top-32 left-60 lg:top-[23.75rem] lg:left-[20rem] object-cover opacity-25 -translate-x-44' alt="" />
@@ -399,7 +399,7 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-5 pb-12 md:pb-0 justify-between w-[90%] 3xl:w-[50%] xs:h-[312px] md:px-0 items-center text-center font-normal text-[#f8f8f8] font-['Roboto',sans-serif]">
+          <div className="flex flex-col gap-5 pb-16 md:pb-0 justify-between w-[90%] 3xl:w-[50%] xs:h-[362px] md:px-0 items-center text-center font-normal text-[#f8f8f8] font-['Roboto',sans-serif]">
             <p className="text-[3rem] xs:text-[2.5rem] leading-tight font-semibold uppercase font-['Roboto_Condensed',sans-serif]">Whitepaper </p>
             <p className='text-base'>Explore the Nimbi whitepaper and get an in-depth breakdown of the unique benefits, innovative features, and overall vision of the NIMBI ecosystem and its native token. This clear, concise, and expertly crafted informational report will help you understand exactly what sets NIMBI apart from other crypto projects.<br /><br />Dive into our educational white paper and find out why taking this journey with us is an absolute no-brainer!</p>
             <div className="btn border border-[#00ace6] font-['Inter'] text-base bg-transparent text-[#00ace6] hover:text-[#c4c0c8] w-[219px] h-11 text-center">Access the whitepaper</div>
