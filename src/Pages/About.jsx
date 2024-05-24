@@ -43,6 +43,12 @@ function About() {
             </div>
           </div>
 
+          <div className="flex flex-col items-center justify-center gap-6 lg:w-[75%] text-center">
+            <p className='text-[40px] font-semibold'>Mission</p>
+            <p className='text-[24px] font-medium tracking-tight'>Nimbi's mission to unite humanity.</p>
+            <p className='text-[16px] font-["Roboto"] text-[#ebeced] text-center'>The point of this web3 nimbi project is to neutralize the market share of the current establishments(ie Google, Facebook, Microsoft, Amazon, etc) that are gaining power and market dominance. Large corporations are starting to take over in all sectors. Central authorities all over the world are influenced by large corporations with deep pockets. The voice of us(the people) has been taken away and influenced monetarily to favor them and make them more money. They only have one thing in mind(making money with no regard). We are going to collect our Crypto Dust together and stand tall to be heard and make the change we want as humanity. We will unite all of humanity to make this change together and live a Happy life we all want. We will have fun along the way and connect with friends all over the world. Join Nimbi's Wolfpack where he and Kazi have made this a top priority.</p>
+          </div>
+
         </div>
 
 
