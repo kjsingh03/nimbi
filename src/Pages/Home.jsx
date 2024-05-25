@@ -31,9 +31,9 @@ function Home() {
     else if (width > 768) { xPercent = -100 * (sections.length - 2); sectionStart = 12.5 }
 
     if (width > 1280) {
-      gsap.to('.collectionLeft', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: width > 1536 ? "bottom 83%" : "bottom 110%", end: "top -300%", scrub: true, } })
-      gsap.to('.collectionRight', { x: 1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: width > 1536 ? "bottom 83%" : "bottom 98%", end: "top -150%", scrub: true } })
-      gsap.to('.collectiontop', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: width > 1536 ? "bottom 83%" : "bottom 98%", end: "top -300%", scrub: true } })
+      gsap.to('.collectionLeft', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: width >= 1720 ? "bottom 91%" : "bottom 91%", end: "top -300%", scrub: true, } })
+      gsap.to('.collectionRight', { x: 1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: width >= 1720 ? "bottom 91%" : "bottom 83%", end: "top -150%", scrub: true } })
+      gsap.to('.collectiontop', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: width >= 1720 ? "bottom 91%" : "bottom 83%", end: "top -300%", scrub: true } })
     }
 
     if (width > 768) {
@@ -175,33 +175,33 @@ function Home() {
           >
             <SwiperSlide>
               <div className="flex xl:flex-row flex-col-reverse justify-end xl:justify-between gap-7 xl:gap-8 h-full">
-                <div className="w-[90%] mx-auto flex flex-col justify-center gap-2 xl:gap-6 xl:w-[50%]">
-                  <h1 className='text-[3rem] md:text-[5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>unite humanity with just your <span className='text-[#33bdeb]'>Crypto Dust</span></h1>
+                <div className="w-[90%] mx-auto flex flex-col justify-center gap-2 xl:gap-6 xl:w-[44.75%]">
+                  <h1 className='text-[3rem] md:text-[4.5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] 3xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>unite humanity with just your <span className='text-[#33bdeb]'>Crypto Dust</span></h1>
                   <p className='text-base font-["Roboto"]'>join Nimbi's wolfpack and make change together and have fun along the way</p>
                 </div>
-                <div className="h-[210px] sm:h-[420px] xl:h-full xl:w-[50%]">
+                <div className="h-[210px] sm:h-[420px] xl:h-full xl:w-[55.25%]">
                   <img src={hero} className="w-full h-full object-cover" />
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="flex xl:flex-row flex-col-reverse justify-end xl:justify-between gap-7 xl:gap-8 h-full">
-                <div className="w-[90%] mx-auto flex flex-col justify-center gap-2 xl:gap-6 xl:w-[50%]">
-                  <h1 className='text-[3rem] md:text-[5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>Open-Source Decentralized  <span className='text-[#33bdeb]'>Lottery</span></h1>
+                <div className="w-[90%] mx-auto flex flex-col justify-center gap-2 xl:gap-6 xl:w-[44.75%]">
+                  <h1 className='text-[3rem] md:text-[4.5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] 3xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>Open-Source Decentralized  <span className='text-[#33bdeb]'>Lottery</span></h1>
                   <p className='text-base font-["Roboto"]'> Say goodbye to rigged games and hello to fairness and transparency! No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source!</p>
                 </div>
-                <div className="h-[210px] sm:h-[420px] xl:h-full xl:w-[50%]">
+                <div className="h-[210px] sm:h-[420px] xl:h-full xl:w-[55.25%]">
                   <img src={hero1} className="w-full h-full object-cover" />
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="flex xl:flex-row flex-col-reverse justify-end xl:justify-between gap-7 xl:gap-8 h-full">
-                <div className="w-[90%] mx-auto flex flex-col justify-center gap-2 xl:gap-6 xl:w-[50%]">
-                  <h1 className='text-[3rem] md:text-[5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>Web3 Crypto Dust Runner <span className='text-[#33bdeb]'>Game</span></h1>
+                <div className="w-[90%] mx-auto flex flex-col justify-center gap-2 xl:gap-6 xl:w-[44.75%]">
+                  <h1 className='text-[3rem] md:text-[4.5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] 3xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>Web3 Crypto Dust Runner <span className='text-[#33bdeb]'>Game</span></h1>
                   <p className='text-base font-["Roboto"]'>In this epic quest, you'll join forces with Nimbi, the fearless white wolf, as he races through a treacherous frozen gulch, fueled by the magnificent power of crypto dust!His mission? To collect as much of this precious resource as possible and transform into a legendary force against those pesky corporate giants. </p>
                 </div>
-                <div className="h-[210px] sm:h-[420px] xl:h-full xl:w-[50%]">
+                <div className="h-[210px] sm:h-[420px] xl:h-full xl:w-[55.25%]">
                   <img src={hero2} className="w-full h-full object-cover" />
                 </div>
               </div>
@@ -317,7 +317,7 @@ function Home() {
 
         <div className="h-[94rem] xs:h-[75rem] sm:h-[94rem] relative md:h-auto">
 
-          <div className="flex flex-col justify-center bg-[url(./assets/sec2.png)] w-[full] bg-transparent h-[40rem] sm:h-[60rem] lg:h-[80vw] 3xl:h-[53.35vw] xl:bg-contain xl:bg-center bg-right bg-no-repeat bg-cover sm:pb-[4rem] md:pb-0 xs:mt-[6rem]">
+          <div className="flex flex-col justify-center bg-[url(./assets/sec3.png)] w-[full] bg-transparent h-[40rem] sm:h-[60rem] lg:h-[80vw]  2xl:h-[53.25vw] 2xl:bg-contain xl:bg-center bg-right bg-no-repeat bg-cover sm:pb-[4rem] md:pb-0 xs:mt-[6rem]">
             <div className="w-full md:w-[80%] mx-auto ">
               <div className="h-[60rem] xs:h-[45rem] sm:h-auto absolute md:static bg-white md:bg-transparent bottom-0 py-12 px-4 sm:px-10 md:px-0 flex flex-col md:w-[75%] xl:w-[65%] 3xl:w-[50%] gap-6 xl:gap-12 items-center md:items-start justify-around lg:justify-center text-[#151b1e]">
                 <p className="text-[3rem] sm:text-[4.5rem] 3xl:text-[4.5rem] font-bold uppercase leading-tight font-['Roboto_Condensed',sans-serif] xl:w-[80%] 3xl:w-full">Web3 Crypto Dust Runner Game</p>
@@ -331,8 +331,6 @@ function Home() {
           </div>
 
         </div>
-
-
 
         <div className="bg-[#1c2327] flex lg:flex-row gap-4 flex-col lg:items-center justify-evenly xl:justify-center xl:gap-12 pt-[10rem] sm:pt-[76px] pb-[5rem] md:pb-[6rem]">
           <div className="w-[24rem] xs:w-[28rem] xl:w-[36rem] relative">
@@ -350,7 +348,7 @@ function Home() {
         <div className="bg-[url(./assets/whaleRight.png)] w-full h-[77rem] sm:h-[88rem] lg:h-[77.9rem] lg:pt-[11rem] bg-[-18rem_14rem] lg:bg-[-5rem_-3rem] 3xl:bg-[0rem_-2rem] bg-[_100rem_80rem] lg:bg-[_100rem_95rem] 3xl:bg-[_120rem_85rem] bg-no-repeat flex flex-col items-center gap-10 xs:gap-[90px] justify-end relative">
           <div className="flex items-center justify-center bg-[#1c2327] w-full">
             <div className="bg-[#1c2327] w-full flex lg:flex-row gap-6 lg:gap-4 flex-col items-center px-5 xs:px-10 lg:px-[3.25rem] xl:px-[12rem] py-10 xs:py-[7rem] lg:h-[411px] xs:h-[757px] 2xl:px-[18rem] 3xl:px-[24rem] justify-between lg:py-16">
-              <img src={logoMask} className='absolute w-32 h-32 xs:w-48 xs:h-48 lg:w-[340px] lg:h-[340px] top-64 xs:top-32 left-60 lg:top-[23.75rem] lg:left-[20rem] object-cover opacity-25 -translate-x-44' alt="" />
+              <img src={logoMask} className='absolute w-32 h-32 xs:w-48 xs:h-48 lg:w-[340px] lg:h-[340px] top-64 xs:top-32 left-60 lg:top-[21rem] lg:left-[20rem] object-cover opacity-25 -translate-x-44' alt="" />
               <div className="flex flex-col gap-6 lg:w-[50%] text-left w-full 3xl:w-[561px]">
                 <p className="text-[3.125rem] leading-tight font-semibold font-['Roboto_Condensed',sans-serif]">Join our community </p>
                 <p className='text-sm'>Join us as we celebrate the launch of our project by offering exclusive rewards to our early supporters. By participating in our ecosystem, you'll have the opportunity to receive free token airdrops and access to exciting perks. Don't miss out on this chance to be part of our growing community!</p>

@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom'
 
 function App() {
 
-  useEffect(() => setTimeout(() => window.onresize = () => location.reload(), 500), [])
+  useEffect(() => setTimeout(() => window.onresize = () => width > 768 ? location.reload() : '', 500), [])
 
   return (
     <>
