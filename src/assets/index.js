@@ -93,8 +93,10 @@ import team5 from './team5.png'
 import team6 from './team6.png'
 import team7 from './team7.png'
 import team8 from './team8.png'
+import whitepaper from './whitepaper.pdf'
 
 export {
+  whitepaper,
   mlogo,
   team1,
   team2,
