@@ -15,6 +15,7 @@ import author4 from "./author4.png";
 import author5 from "./author5.png";
 import sec1 from "./sec1.png";
 import sec2 from "./sec2.png";
+import sec3Bottom from "./sec3-bottom.png";
 import ellipse from "./ellipse.png";
 import goldWolf from "./goldWolf.svg";
 import bigEllipse from "./bigEllipse.png";
@@ -97,6 +98,7 @@ import msec1 from './msec1.svg'
 import whitepaper from './whitepaper.pdf'
 
 export {
+  sec3Bottom,
   msec1,
   whitepaper,
   mlogo,

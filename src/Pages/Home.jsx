@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import '../App.css'
 import { AnimationCard, IntroCard, NFTCard, Navbar } from '../components'
-import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, vector, tick, mask, mountain, indicator, round, animation, whaleLeft, roadmap, hero1, hero2, mountainThumbnail, logoMask, mountainCover, whitepaper } from '../assets'
+import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, vector, tick, mask, mountain, indicator, round, animation, whaleLeft, roadmap, hero1, hero2, mountainThumbnail, logoMask, mountainCover, whitepaper, sec3Bottom } from '../assets'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -314,13 +314,13 @@ function Home() {
           </div>
         </div>
 
-        <div className="h-[94rem] xxs:h-[112rem] xs:h-[94rem] sm:h-[106rem] relative md:h-auto">
+        <div className="h-[105rem] xxs:h-[92rem] xs:h-[100rem] sm:h-[108rem] relative md:h-auto">
 
-          <div className="flex flex-col justify-end md:justify-center bg-[url(./assets/msec3.png)] xxs:bg-[url(./assets/tsec3.png)] md:bg-[url(./assets/sec3.png)] w-[full] bg-transparent h-full lg:h-[80vw] 2xl:h-[53.25vw] 2xl:bg-contain xl:bg-center bg-right bg-no-repeat bg-cover sm:pb-[4rem] md:pb-0 xs:mt-[6rem]">
+          <div className="flex flex-col justify-end md:justify-center bg-[url(./assets/msec3.png)] xs:bg-[url(./assets/tsec3.png)] md:bg-[url(./assets/sec3.png)] w-[full] bg-transparent h-full lg:h-[80vw] 2xl:h-[53.25vw] xl:bg-center bg-top xs:bg-right bg-no-repeat bg-cover 2xl:bg-contain sm:pb-[4rem] md:pb-0 xs:mt-[6rem]">
             <div className="w-full md:w-[80%] mx-auto ">
-              <div className="py-[6rem] md:py-12 px-5 xxs:px-8 sm:px-10 md:px-0 flex flex-col md:w-[75%] xl:w-[65%] 3xl:w-[50%] gap-6 xl:gap-12 items-center md:items-start justify-around lg:justify-center text-[#151b1e]">
+              <div className="pb-[6rem] xxs:pb-[5rem] xs:pb-[7rem] sm:pb-[4.5rem] md:py-12 px-4 xxs:px-4 sm:px-10 md:px-0 flex flex-col md:w-[75%] xl:w-[65%] 3xl:w-[50%] gap-6 xl:gap-12 items-center md:items-start justify-around lg:justify-center text-[#151b1e]">
                 <p className="text-[3rem] sm:text-[4.5rem] 3xl:text-[4.5rem] font-bold uppercase leading-tight font-['Roboto_Condensed',sans-serif] xl:w-[80%] 3xl:w-full">Web3 Crypto Dust Runner Game</p>
-                <p className='text-base xl:text-lg font-medium tracking-tighter w-full xl:w-[70%] 3xl:w-[85%]'>In the DeFi industry, crypto dust refers to small amounts of cryptocurrency either left over from transactions, or valueless remaining assets.</p>
+                <p className='text-2xl font-semibold tracking-tighter w-full xl:w-[70%] 3xl:w-[85%]'>In the DeFi industry, crypto dust refers to small amounts of cryptocurrency either left over from transactions, or valueless remaining assets.</p>
                 <p className='text-base font-medium block w-full xl:w-[70%] 3xl:w-[90%]'>In the dedicated Web3 Nimbi ecosystem game, Crypto Dust Runner, Crypto Dust represents a fundamental in-game resource. It's a symbolic representation of the small, seemingly insignificant particles that, when accumulated, can lead to significant power and change—much like how small contributions in blockchain and community efforts can lead to substantial impacts. The gameplay involves players controlling Nimbi to collect Crypto Dust throughout their journey up a vast mountain that ends, ultimately, in a challenging boss fight. This dust gathered along the way not only powers Nimbi but also serves as a currency within the game, convertible into Kazi tokens through in-game mechanics. </p>
                 <div className="w-full text-left">
                   <p className="btn w-[12rem] text-base text-center">Launch App</p>
@@ -328,6 +328,7 @@ function Home() {
               </div>
             </div>
           </div>
+          <img src={sec3Bottom} className='w-full absolute bottom-0 xs:hidden' alt="" />
 
         </div>
 
