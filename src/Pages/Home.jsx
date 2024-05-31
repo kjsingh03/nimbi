@@ -294,7 +294,7 @@ function Home() {
                 <div className="btn bg-[#5c666c] w-max font-semibold text-sm 3xl:text-lg py-[5px] px-[10px]">Supporting dapps</div>
                 <img src={ellipse} className='absolute -top-8 left-[6rem] 3xl:left-[8rem] w-[6.375rem]' alt="" />
               </div>
-              <p className="text-[#a1a7aa] text-[2.5rem] xxs:text-5xl md:text-[4.5rem] font-['Roboto_Condensed'] leading-[3rem] xxs:leading-[5rem] 2xl:leading-[5.5rem] tracking-[0.25px] font-bold uppercase">NIMBI The Leader of the Pack</p>
+              <p className="text-[#a1a7aa] text-[2.5rem] xxs:text-5xl md:text-[4.5rem] font-['Roboto_Condensed'] leading-[3rem] xxs:leading-[3.5rem] md:leading-[5rem] 2xl:leading-[5.5rem] tracking-[0.25px] font-bold uppercase pt-6 2xl:pt-0">NIMBI The Leader of the Pack</p>
             </div>
             <p className='md:w-[90% 2xl:w-[45%] font-["Roboto"] leading-6 text-base'>Nimbi, a character with dual existences. In one he is a central figure in the associated Web3 video game Crypto Dust Runner and an artistic representation in the NFT Nimbi Art Collection. The ERC-404 Nimbi Token also bears his name, enhancing his integral role within the ecosystem. In this capacity Nimbi is on a quest to gather members for his Wolfpack, leading them on adventures across the virtual landscape.
               In the other, Nimbi is Mr. Nimbus—a two-year-old White Wolf rescued as a puppy from a reservation. Known as a Res-Wolf Dog, Nimbi's early life on the reservation introduced him to the harsh realities and the concept of "Crypto Dust," a metaphor for the scraps and remnants he survived on. Now thriving in the Rocky Mountains, he embodies resilience and leadership, characteristics that translate into his digital persona where he guides players to the apex of mountains and beyond in Crypto Dust Runner.</p>
@@ -306,7 +306,7 @@ function Home() {
 
               What sets Crypto Dust Lotto apart is its integration with the broader Nimbi ecosystem, allowing winners to (beyond prizes) level up and become part of the Nimbi VIP program, which has its own special VIP perks. </p>
             <div className="2xl:w-[45%] flex flex-col gap-6 md:gap-0">
-              <p className="text-[#a1a7aa] text-[2.5rem] xxs:text-5xl md:text-[4.5rem] font-['Roboto_Condensed'] leading-[3rem] xxs:leading-[5rem] 2xl:leading-[5.5rem] tracking-[0.25px] font-bold uppercase pb-4">Open-Source Decentralized Lottery</p>
+              <p className="text-[#a1a7aa] text-[2.5rem] xxs:text-5xl md:text-[4.5rem] font-['Roboto_Condensed'] leading-[3rem] xxs:leading-[3.5rem] md:leading-[5rem] 2xl:leading-[5.5rem] tracking-[0.25px] font-bold uppercase pb-4">Open-Source Decentralized Lottery</p>
               <p className="text-2xl font-['Roboto_Condensed'] font-medium text-white 2xl:pb-0 pb-8">Introducing Crypto Lotto, the web 3 Dapp that puts all those centralized lotto's to shame</p>
             </div>
           </div>
@@ -314,11 +314,11 @@ function Home() {
           </div>
         </div>
 
-        <div className="h-[94rem] xs:h-[75rem] sm:h-[94rem] relative md:h-auto">
+        <div className="h-[94rem] xxs:h-[112rem] xs:h-[94rem] sm:h-[106rem] relative md:h-auto">
 
-          <div className="flex flex-col justify-center bg-[url(./assets/sec3.png)] w-[full] bg-transparent h-[40rem] sm:h-[60rem] lg:h-[80vw]  2xl:h-[53.25vw] 2xl:bg-contain xl:bg-center bg-right bg-no-repeat bg-cover sm:pb-[4rem] md:pb-0 xs:mt-[6rem]">
+          <div className="flex flex-col justify-end md:justify-center bg-[url(./assets/msec3.png)] xxs:bg-[url(./assets/tsec3.png)] md:bg-[url(./assets/sec3.png)] w-[full] bg-transparent h-full lg:h-[80vw] 2xl:h-[53.25vw] 2xl:bg-contain xl:bg-center bg-right bg-no-repeat bg-cover sm:pb-[4rem] md:pb-0 xs:mt-[6rem]">
             <div className="w-full md:w-[80%] mx-auto ">
-              <div className="h-[60rem] xs:h-[45rem] sm:h-auto absolute md:static bg-white md:bg-transparent bottom-0 py-12 px-4 sm:px-10 md:px-0 flex flex-col md:w-[75%] xl:w-[65%] 3xl:w-[50%] gap-6 xl:gap-12 items-center md:items-start justify-around lg:justify-center text-[#151b1e]">
+              <div className="py-[6rem] md:py-12 px-5 xxs:px-8 sm:px-10 md:px-0 flex flex-col md:w-[75%] xl:w-[65%] 3xl:w-[50%] gap-6 xl:gap-12 items-center md:items-start justify-around lg:justify-center text-[#151b1e]">
                 <p className="text-[3rem] sm:text-[4.5rem] 3xl:text-[4.5rem] font-bold uppercase leading-tight font-['Roboto_Condensed',sans-serif] xl:w-[80%] 3xl:w-full">Web3 Crypto Dust Runner Game</p>
                 <p className='text-base xl:text-lg font-medium tracking-tighter w-full xl:w-[70%] 3xl:w-[85%]'>In the DeFi industry, crypto dust refers to small amounts of cryptocurrency either left over from transactions, or valueless remaining assets.</p>
                 <p className='text-base font-medium block w-full xl:w-[70%] 3xl:w-[90%]'>In the dedicated Web3 Nimbi ecosystem game, Crypto Dust Runner, Crypto Dust represents a fundamental in-game resource. It's a symbolic representation of the small, seemingly insignificant particles that, when accumulated, can lead to significant power and change—much like how small contributions in blockchain and community efforts can lead to substantial impacts. The gameplay involves players controlling Nimbi to collect Crypto Dust throughout their journey up a vast mountain that ends, ultimately, in a challenging boss fight. This dust gathered along the way not only powers Nimbi but also serves as a currency within the game, convertible into Kazi tokens through in-game mechanics. </p>
@@ -331,14 +331,14 @@ function Home() {
 
         </div>
 
-        <div className="bg-[#1c2327] flex lg:flex-row gap-4 flex-col lg:items-center justify-evenly xl:justify-center xl:gap-12 pt-[10rem] sm:pt-[76px] pb-[5rem] md:pb-[6rem]">
-          <div className="w-[24rem] xs:w-[28rem] xl:w-[36rem] relative">
+        <div className="bg-[#1c2327] flex lg:flex-row gap-4 flex-col lg:items-center justify-evenly xl:justify-center xl:gap-12 pt-[6rem] sm:pt-[76px] pb-[5rem] md:pb-[6rem]">
+          <div className="w-[22rem] xs:w-[28rem] xl:w-[36rem] relative">
             <img src={goldWolf} className='-translate-x-4 md:translate-x-0 w-full h-full object-cover z-20' alt="" />
             <img src={bigEllipse} className='absolute top-2 left-10 lg:left-auto lg:top-0 lg:-right-[19rem] w-[20rem] xs:w-[34.625rem] z-20' alt="" />
           </div>
-          <div className="flex flex-col w-[90%] mx-auto lg:mx-0 lg:text-start lg:w-[40%] gap-6 justify-between md:justify-center md:pb-10 xs:h-[447px] md:h-auto text-[#a1a7aa]">
+          <div className="flex flex-col w-[90%] mx-auto lg:mx-0 lg:text-start lg:w-[40%] gap-6 justify-between md:justify-center md:pb-10 xs:h-[477px] md:h-auto text-[#a1a7aa]">
             <p className="text-[3rem] xs:text-[3.625rem] 2xl:text-[5rem] leading-tight 2xl:leading-[6.5rem] tracking-[0.25px] font-bold uppercase font-['Roboto_Condensed',sans-serif]">KAZI token </p>
-            <p className='text-sm sm:text-2xl font-medium font-["Roboto_Condensed",sans-serif] text-white'>The Mediator and Peacemaker</p>
+            <p className='text-2xl font-medium font-["Roboto_Condensed",sans-serif] text-white'>The Mediator and Peacemaker</p>
             <p className='text-base font-["Roboto",sans-serif]'>Kazi brings a different energy to the project. A six-year-old Aussie Husky, also a rescue, Kazi brings his experiences from the sweltering South to the cooler climates of the Rocky Mountains. His natural inclination to mediate and maintain peace, demonstrated by his behavior of breaking up fights at dog parks, is mirrored in the digital world. In Crypto Dust Runner, Kazi's role transcends mere play. He is envisioned as a mediator within the game's community, potentially influencing gameplay dynamics where cooperation among players is crucial. His presence in the game and the ecosystem symbolizes the project's commitment to fostering a cooperative and harmonious community, reflecting his peacemaking nature</p>
             <div className="btn text-center text-base w-[11.125rem] h-[44px] z-30">buy kazi</div>
           </div>
@@ -353,7 +353,7 @@ function Home() {
                 <p className='text-sm'>Join us as we celebrate the launch of our project by offering exclusive rewards to our early supporters. By participating in our ecosystem, you'll have the opportunity to receive free token airdrops and access to exciting perks. Don't miss out on this chance to be part of our growing community!</p>
               </div>
               <div className="w-full xs:w-full lg:w-[40%] flex flex-col gap-4 3xl:w-[513px]">
-                <div className="flex items-center justify-between gap-4 cursor-pointer bg-[#242d32] rounded-md px-4 py-2">
+                <div className="flex items-center justify-between gap-4 cursor-pointer hover:bg-[#242d32] rounded-md px-4 py-2">
                   <div className="flex items-center justify-between gap-4 ">
                     <img src={discord} alt="" className='w-10' />
                     <div className="">
@@ -403,8 +403,8 @@ function Home() {
               <div className="btn border border-[#00ace6] font-['Inter'] text-base bg-transparent text-[#00ace6] hover:text-[#c4c0c8] w-[219px] h-11 text-center">Access the whitepaper</div>
             </a>
           </div>
-          <div className="w-full justify-end hidden md:flex" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>
-            <img src={icon} className='absolute right-2 md:right-24 bottom-10 md:bottom-12 w-11 h-11 bg-[#43545e] px-3 -rotate-90 py-2.5 cursor-pointer' alt="" />
+          <div className="w-full justify-end flex" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>
+            <img src={icon} className='absolute right-12 md:right-24 -bottom-[25.25rem] sm:bottom-12 w-11 h-11 bg-[#43545e] px-3 -rotate-90 py-2.5 cursor-pointer' alt="" />
           </div>
         </div>
 

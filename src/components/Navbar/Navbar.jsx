@@ -15,7 +15,7 @@ export default function Navbar() {
 
         setTimeout(() => {
             document.querySelector("nav").style.position = "static"
-        }, 215)
+        }, 225)
     }
 
     const activeTab = (id) => {
@@ -80,7 +80,7 @@ export default function Navbar() {
                         </div>
                     </div>
                 </div>
-                <ul className="navbar bg-[url(./assets/mountainThumbnail.svg)] xl:bg-none bg-bottom bg-contain bg-no-repeat fixed h-screen w-screen top-0 left-0 z-[100] flex flex-col gap-3 justify-center xl:relative xl:translate-x-0 xl:flex-row bg-[#242d32] xl:bg-transparent items-center xl:justify-end xl:gap-2 text-sm list-none xl:w-[44%] xl:h-full">
+                <ul className="navbar bg-[url(./assets/mountainThumbnail.svg)] xl:bg-none bg-bottom bg-contain bg-no-repeat fixed h-screen w-screen top-0 left-0 z-[1000] flex flex-col gap-3 justify-center xl:relative xl:translate-x-0 xl:flex-row bg-[#242d32] xl:bg-transparent items-center xl:justify-end xl:gap-2 text-sm list-none xl:w-[44%] xl:h-full">
                     <div className="w-[80%] mx-auto flex justify-end xl:hidden">
                         <p className='text-right' onClick={() => { document.querySelector('.navbar').classList.remove('active'); document.querySelector('nav').style.position = "fixed" }}>
                             <img src={cross} className='w-8 h-8' alt="" />

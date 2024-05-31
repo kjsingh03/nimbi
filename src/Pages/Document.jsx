@@ -71,6 +71,8 @@ function Document() {
   }
 
   return (
+    <>
+    
     <div className='w-[90%] xlg:w-[80%] 4xl:w-[1506px] mx-auto'>
 
       <div className='flex capitalize pt-16 md:flex-row flex-col'>
@@ -178,8 +180,10 @@ function Document() {
           </div>
         </div>
       </div>
-      <Footer path='/documents' />
+
     </div>
+    <Footer path='/documents' />
+    </>
   )
 }
 
