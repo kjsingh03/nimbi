@@ -93,9 +93,11 @@ import team5 from './team5.png'
 import team6 from './team6.png'
 import team7 from './team7.png'
 import team8 from './team8.png'
+import msec1 from './msec1.svg'
 import whitepaper from './whitepaper.pdf'
 
 export {
+  msec1,
   whitepaper,
   mlogo,
   team1,

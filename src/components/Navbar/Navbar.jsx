@@ -66,7 +66,7 @@ export default function Navbar() {
     // }
 
     return (
-        <nav className='fixed w-full border-b border-b-[#c4c0c8] bg-[#242d32] z-50 '>
+        <nav className='fixed w-full border-b border-b-[#c4c0c8] bg-[#242d32] z-[500] '>
             <div className="nav flex items-center justify-between w-[90%] xlg:w-[80%] 4xl:w-[1504px] mx-auto z-40">
 
                 <div className="lg:w-[10%] py-0 xl:py-4 flex items-center gap-2.5">
@@ -89,11 +89,11 @@ export default function Navbar() {
                     <div className="w-[5rem] h-[1.9rem] my-2 xl:hidden">
                         <img src={logo} className="w-full h-full object-fill" alt="" />
                     </div>
-                    <Link onClick={() => activeTab("home")} id="home" to="/" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee]'>Home</Link>
-                    <Link onClick={() => activeTab("about")} id="about" to="/about" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] '>About</Link>
-                    <Link onClick={() => activeTab("team")} id="team" to="/team" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] '>Our Team</Link>
-                    <Link onClick={() => activeTab("documents")} id="documents" to="/documents" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] '>Documents</Link>
-                    <Link onClick={() => activeTab("faq")} id="faq" to="/faq" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] '>FAQ</Link>
+                    <Link onClick={() => activeTab("home")} id="home" to="/" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] w-[17.125rem] text-center xl:w-max'>Home</Link>
+                    <Link onClick={() => activeTab("about")} id="about" to="/about" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] w-[17.125rem] text-center xl:w-max '>About</Link>
+                    <Link onClick={() => activeTab("team")} id="team" to="/team" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] w-[17.125rem] text-center xl:w-max '>Our Team</Link>
+                    <Link onClick={() => activeTab("documents")} id="documents" to="/documents" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] w-[17.125rem] text-center xl:w-max '>Documents</Link>
+                    <Link onClick={() => activeTab("faq")} id="faq" to="/faq" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] w-[17.125rem] text-center xl:w-max '>FAQ</Link>
                 </ul>
                 <div className="flex items-center gap-2 xlg:w-[40%] justify-end py-4">
                     <div className='w-[7.5rem] px-2 btn1 text-sm hidden xlg:block'>Collections</div>

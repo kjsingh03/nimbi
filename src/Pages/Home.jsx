@@ -272,11 +272,11 @@ function Home() {
               </section>
 
               <div className="container scrollx overflow-hidden md:overflow-visible pt-[6rem] mt-[8rem] xs:mt-[12rem] md:mt-0 md:pt-0">
-                <AnimationCard title="Pre-Sale Phase" desc="2023 Q1" phase="1" status='completed' src={tick} icon={round} year="2023" list={["Launch Website", "Market Strategy Planning", "White Paper creation", "Market research", "feasability analysis", "competitor analysis", "tokenomics development", "smart contract development", "secure initial funding"]} />
-                <AnimationCard title="Pre-Sale Phase" desc="2024 Q1" phase="2" status='incompleted' src={tick} icon={indicator} year="2024" />
-                <AnimationCard title="Pre-Sale Phase" desc="2024 Q2" phase="3" status='incompleted' src={vector} icon={indicator} year="2024" />
-                <AnimationCard title="Pre-Sale Phase" desc="2024 Q3" phase="4" status='incompleted' src={vector} icon={indicator} year="2025" />
-                <AnimationCard title="Pre-Sale Phase" desc="2024 Q3" phase="5" status='incompleted' src={vector} icon={indicator} year="2026" />
+                <AnimationCard zIndex={60} title="Pre-Sale Phase" desc="2023 Q1" phase="1" status='completed' src={tick} icon={round} year="2023" list={["Launch Website", "Market Strategy Planning", "White Paper creation", "Market research", "feasability analysis", "competitor analysis", "tokenomics development", "smart contract development", "secure initial funding"]} />
+                <AnimationCard zIndex={90} title="Pre-Sale Phase" desc="2024 Q1" phase="2" status='incompleted' src={tick} icon={indicator} year="2024" />
+                <AnimationCard zIndex={80} title="Pre-Sale Phase" desc="2024 Q2" phase="3" status='incompleted' src={vector} icon={indicator} year="2024" />
+                <AnimationCard zIndex={70} title="Pre-Sale Phase" desc="2024 Q3" phase="4" status='incompleted' src={vector} icon={indicator} year="2025" />
+                <AnimationCard zIndex={60} title="Pre-Sale Phase" desc="2024 Q3" phase="5" status='incompleted' src={vector} icon={indicator} year="2026" />
               </div>
             </div>
           </div>
@@ -284,8 +284,7 @@ function Home() {
         </div>
 
 
-        <div className="py-12">
-          <img src={sec1} alt="" className='w-full' />
+        <div className="my-12 lg:mb-16 xl:mb-12  bg-[url(./assets/msec1.svg)] sm:bg-[url(./assets/sec1.png)] w-full bg-contain md:bg-contain bg-no-repeat h-[23rem] xxs:h-[100vw] sm:h-[38vw] ">
         </div>
 
         <div className="bg-[url(./assets/wolfMask.png)] wolfMask bg-no-repeat xl:h-[954px] overflow-hidden">
@@ -295,7 +294,7 @@ function Home() {
                 <div className="btn bg-[#5c666c] w-max font-semibold text-sm 3xl:text-lg py-[5px] px-[10px]">Supporting dapps</div>
                 <img src={ellipse} className='absolute -top-8 left-[6rem] 3xl:left-[8rem] w-[6.375rem]' alt="" />
               </div>
-              <p className="text-[#a1a7aa] text-[3rem] md:text-[4.5rem] font-['Roboto_Condensed'] leading-[5rem] 2xl:leading-[5.5rem] tracking-[0.25px] font-bold uppercase">NIMBI The Leader of the Pack</p>
+              <p className="text-[#a1a7aa] text-[2.5rem] xxs:text-5xl md:text-[4.5rem] font-['Roboto_Condensed'] leading-[3rem] xxs:leading-[5rem] 2xl:leading-[5.5rem] tracking-[0.25px] font-bold uppercase">NIMBI The Leader of the Pack</p>
             </div>
             <p className='md:w-[90% 2xl:w-[45%] font-["Roboto"] leading-6 text-base'>Nimbi, a character with dual existences. In one he is a central figure in the associated Web3 video game Crypto Dust Runner and an artistic representation in the NFT Nimbi Art Collection. The ERC-404 Nimbi Token also bears his name, enhancing his integral role within the ecosystem. In this capacity Nimbi is on a quest to gather members for his Wolfpack, leading them on adventures across the virtual landscape.
               In the other, Nimbi is Mr. Nimbus—a two-year-old White Wolf rescued as a puppy from a reservation. Known as a Res-Wolf Dog, Nimbi's early life on the reservation introduced him to the harsh realities and the concept of "Crypto Dust," a metaphor for the scraps and remnants he survived on. Now thriving in the Rocky Mountains, he embodies resilience and leadership, characteristics that translate into his digital persona where he guides players to the apex of mountains and beyond in Crypto Dust Runner.</p>
@@ -307,7 +306,7 @@ function Home() {
 
               What sets Crypto Dust Lotto apart is its integration with the broader Nimbi ecosystem, allowing winners to (beyond prizes) level up and become part of the Nimbi VIP program, which has its own special VIP perks. </p>
             <div className="2xl:w-[45%] flex flex-col gap-6 md:gap-0">
-              <p className="text-[#a1a7aa] text-[3rem] md:text-[4.5rem] font-['Roboto_Condensed'] leading-[5rem] 2xl:leading-[5.5rem] tracking-[0.25px] font-bold uppercase pb-4">Open-Source Decentralized Lottery</p>
+              <p className="text-[#a1a7aa] text-[2.5rem] xxs:text-5xl md:text-[4.5rem] font-['Roboto_Condensed'] leading-[3rem] xxs:leading-[5rem] 2xl:leading-[5.5rem] tracking-[0.25px] font-bold uppercase pb-4">Open-Source Decentralized Lottery</p>
               <p className="text-2xl font-['Roboto_Condensed'] font-medium text-white 2xl:pb-0 pb-8">Introducing Crypto Lotto, the web 3 Dapp that puts all those centralized lotto's to shame</p>
             </div>
           </div>
@@ -347,8 +346,8 @@ function Home() {
 
         <div className="bg-[url(./assets/whaleRight.png)] w-full h-[77rem] sm:h-[88rem] lg:h-[77.9rem] lg:pt-[11rem] bg-[-18rem_14rem] lg:bg-[-5rem_-3rem] 3xl:bg-[0rem_-2rem] bg-[_100rem_80rem] lg:bg-[_100rem_95rem] 3xl:bg-[_120rem_85rem] bg-no-repeat flex flex-col items-center gap-10 xs:gap-[90px] justify-end relative">
           <div className="flex items-center justify-center bg-[#1c2327] w-full">
-            <div className="bg-[#1c2327] w-full flex lg:flex-row gap-6 lg:gap-4 flex-col items-center px-5 xs:px-10 lg:px-[3.25rem] xl:px-[12rem] py-10 xs:py-[7rem] lg:h-[411px] xs:h-[757px] 2xl:px-[18rem] 3xl:px-[24rem] justify-between lg:py-16">
-              <img src={logoMask} className='absolute w-32 h-32 xs:w-48 xs:h-48 lg:w-[340px] lg:h-[340px] top-64 xs:top-32 left-60 lg:top-[21rem] lg:left-[20rem] object-cover opacity-25 -translate-x-44' alt="" />
+            <div className="bg-[#1c2327] w-full flex lg:flex-row gap-6 lg:gap-4 flex-col items-center px-5 xs:px-10 lg:px-[3.25rem] xl:px-[12rem] py-10 xs:py-[7rem] lg:h-[411px] xs:h-[757px] 2xl:px-[18rem] 3xl:px-[24rem] justify-between lg:py-16 relative">
+              <img src={logoMask} className='absolute w-32 h-32 xs:w-48 xs:h-48 lg:w-[340px] lg:h-[340px] top-6 left-52 xs:left-52 lg:top-6 lg:left-[20rem] object-cover opacity-25 -translate-x-44' alt="" />
               <div className="flex flex-col gap-6 lg:w-[50%] text-left w-full 3xl:w-[561px]">
                 <p className="text-[3.125rem] leading-tight font-semibold font-['Roboto_Condensed',sans-serif]">Join our community </p>
                 <p className='text-sm'>Join us as we celebrate the launch of our project by offering exclusive rewards to our early supporters. By participating in our ecosystem, you'll have the opportunity to receive free token airdrops and access to exciting perks. Don't miss out on this chance to be part of our growing community!</p>
@@ -400,8 +399,8 @@ function Home() {
           <div className="flex flex-col gap-5 pb-16 md:pb-0 justify-between w-[90%] 3xl:w-[50%] xs:h-[362px] md:px-0 items-center text-center font-normal text-[#f8f8f8] font-['Roboto',sans-serif]">
             <p className="text-[3rem] xs:text-[2.5rem] leading-tight font-semibold uppercase font-['Roboto_Condensed',sans-serif]">Whitepaper </p>
             <p className='text-base'>Explore the Nimbi whitepaper and get an in-depth breakdown of the unique benefits, innovative features, and overall vision of the NIMBI ecosystem and its native token. This clear, concise, and expertly crafted informational report will help you understand exactly what sets NIMBI apart from other crypto projects.<br /><br />Dive into our educational white paper and find out why taking this journey with us is an absolute no-brainer!</p>
-            <a href={whitepaper} download="whitepaper" target='_blank'>
-            <div className="btn border border-[#00ace6] font-['Inter'] text-base bg-transparent text-[#00ace6] hover:text-[#c4c0c8] w-[219px] h-11 text-center">Access the whitepaper</div>
+            <a href={whitepaper} target='_blank'>
+              <div className="btn border border-[#00ace6] font-['Inter'] text-base bg-transparent text-[#00ace6] hover:text-[#c4c0c8] w-[219px] h-11 text-center">Access the whitepaper</div>
             </a>
           </div>
           <div className="w-full justify-end hidden md:flex" onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>

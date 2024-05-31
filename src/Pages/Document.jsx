@@ -27,7 +27,7 @@ function Document() {
 
     if (!id) {
       document.querySelectorAll('.document.active').forEach(doc => doc.classList.remove('active'))
-      
+
       document.querySelectorAll('.docTitle').forEach((doc, index) => {
         doc.childNodes[0]?.classList.remove('active')
       })
@@ -37,9 +37,9 @@ function Document() {
     }
     else {
       setTitle(data.filter(obj => obj.id === id)[0]?.title)
-      
+
       document.querySelectorAll('.document.active').forEach(doc => doc.classList.remove('active'))
-      
+
       document.querySelectorAll('.docTitle').forEach((doc, index) => {
         doc.childNodes[0]?.classList.remove('active')
       })
@@ -71,57 +71,59 @@ function Document() {
   }
 
   return (
-    <div className=''>
+    <div className='w-[90%] xlg:w-[80%] 4xl:w-[1506px] mx-auto'>
 
-      <div className='flex capitalize pt-16 sm:flex-row flex-col'>
+      <div className='flex capitalize pt-16 md:flex-row flex-col'>
 
-        <div className="sm:w-[33%] flex flex-col gap-4 items-center sm:items-end sm:min-h-screen border-r border-r-[#c4c0c8] py-6">
-          <div className="w-[90%] xl:w-[75%] flex flex-col gap-2 px-2">
-            <p className='uppercase text-left font-semibold'>overview</p>
-            <div className="flex flex-col gap-2 docTitle">
-              <div onClick={() => activeTab('launchTab')} className={`launchTab docHead flex items-center justify-between bg-transparent rounded-lg py-2 px-4 cursor-pointer`}>
-                <p className=''>launchpad</p>
-                <img src={icon} className='w-3 h-3 rotate-90' alt="" />
+        <div className="py-6 flex md:justify-end">
+          <div className="w-full md:w-[310px] flex flex-col gap-4 md:items-end md:min-h-screen md:border-r border-r-[#c4c0c8] pr-2">
+            <div className="flex flex-col gap-2">
+              <p className='uppercase text-left font-semibold'>overview</p>
+              <div className="flex flex-col gap-2 docTitle">
+                <div onClick={() => activeTab('launchTab')} className={`launchTab docHead flex items-center justify-between bg-transparent rounded-lg py-2 px-4 cursor-pointer`}>
+                  <p className=''>launchpad</p>
+                  <img src={icon} className='w-3 h-3 rotate-90' alt="" />
+                </div>
+                <ul className='docContent active pl-8 text-sm flex flex-col gap-1'>
+                  <Link to="/documents/current-state" id="current-state" className='document'>The current state of project launches on solana</Link>
+                  <Link to="/documents/launchpad" id="launchpad" className='document '>nimbi launchpad</Link>
+                  <Link to="/documents/user-flow" id="user-flow" className='document'>user flow for solster launchpad</Link>
+                </ul>
               </div>
-              <ul className='docContent active pl-8 text-sm flex flex-col gap-1'>
-                <Link to="/documents/current-state" id="current-state" className='document'>The current state of project launches on solana</Link>
-                <Link to="/documents/launchpad" id="launchpad" className='document '>nimbi launchpad</Link>
-                <Link to="/documents/user-flow" id="user-flow" className='document'>user flow for solster launchpad</Link>
-              </ul>
             </div>
-          </div>
-          <div className="w-[90%] xl:w-[75%] flex flex-col gap-2 px-2 bg-[#242d32]">
-            <p className='uppercase text-left font-semibold'>tokenomics</p>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 bg-[#242d32]">
+              <p className='uppercase text-left font-semibold'>tokenomics</p>
+              <div className="flex flex-col gap-2">
 
-              <ul className='docContent active pl-8 text-sm flex flex-col gap-1'>
-                <Link to="/documents/economics" id="economics" className='document'>token economics</Link>
-                <Link to="/documents/burn" id="burn" className='document'>token burn</Link>
-              </ul>
+                <ul className='docContent active pl-8 text-sm flex flex-col gap-1'>
+                  <Link to="/documents/economics" id="economics" className='document'>token economics</Link>
+                  <Link to="/documents/burn" id="burn" className='document'>token burn</Link>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div className="w-[90%] xl:w-[75%] flex flex-col gap-2 px-2 bg-[#242d32]">
-            <p className='uppercase text-left font-semibold'>roadmap</p>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 bg-[#242d32]">
+              <p className='uppercase text-left font-semibold'>roadmap</p>
+              <div className="flex flex-col gap-2">
 
-              <ul className='docContent active pl-8 text-sm flex flex-col gap-1'>
-                <Link to="/documents/road" id="road" className='document'>road to nimbi success</Link>
-                <Link to="/documents/chapter" id="chapter" className='document'>chapter name</Link>
-              </ul>
+                <ul className='docContent active pl-8 text-sm flex flex-col gap-1'>
+                  <Link to="/documents/road" id="road" className='document'>road to nimbi success</Link>
+                  <Link to="/documents/chapter" id="chapter" className='document'>chapter name</Link>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div className="w-[90%] xl:w-[75%] flex flex-col gap-2 px-2 bg-[#242d32]">
-            <p className='uppercase text-left font-semibold'>testnet launch</p>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 bg-[#242d32]">
+              <p className='uppercase text-left font-semibold'>testnet launch</p>
+              <div className="flex flex-col gap-2">
 
-              <ul className='docContent active pl-8 text-sm flex flex-col gap-1'>
-                <Link to="/documents/testnet" id="testnet" className='document'>how to receive testnet tokens</Link>
-              </ul>
+                <ul className='docContent active pl-8 text-sm flex flex-col gap-1'>
+                  <Link to="/documents/testnet" id="testnet" className='document'>how to receive testnet tokens</Link>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="px-[3rem] md:px-[3rem] sm:w-[67%] md:w-[67%] pb-4 capitalize bg-[url('./assets/mountain.png')] bg-[_160rem] bg-right-bottom bg-no-repeat font-['Inter',sans-serif]">
+        <div className="md:pl-[2.75rem] xl:pr-[2.75rem] md:w-[67%] xl:w-[1084px] pb-4 capitalize bg-[url('./assets/mountain.png')] bg-[_160rem] bg-right-bottom bg-no-repeat font-['Inter',sans-serif]">
           <div className="flex flex-col gap-10">
             <div className="w-full border-b border-b-[#c4c0c8] py-6 font-['Roboto',sans-serif]">
               <p className='uppercase text-[32px] font-semibold text-left py-3'>{title}</p>
@@ -158,14 +160,14 @@ function Document() {
             </div>
 
             <div className="flex flex-col lg:flex-row items-center gap-2">
-              <div onClick={() => { if(index!==0) { setTimeout(navigate(`/documents/${data[index === 0 ? data.length - 1 : index - 1].id}`),10); setIndex(index === 0 ? data.length - 1 : index - 1) }}} className={`flex items-center gap-1 lg:gap-3 border border-[#334047] bg-transparent hover:bg-[#28343b66] cursor-pointer py-3 px-4 rounded-lg w-full ${index!==0?'active:text-[#00ace6]':''}`}>
+              <div onClick={() => { if (index !== 0) { setTimeout(navigate(`/documents/${data[index === 0 ? data.length - 1 : index - 1].id}`), 10); setIndex(index === 0 ? data.length - 1 : index - 1) } }} className={`flex items-center gap-1 lg:gap-3 border border-[#334047] bg-transparent hover:bg-[#28343b66] cursor-pointer py-3 px-4 rounded-lg w-full ${index !== 0 ? 'active:text-[#00ace6]' : ''}`}>
                 <img src={leftArrow} alt="" className='w-4 h-3' />
                 <div className="flex flex-col gap-2">
                   <p className='text-sm'>Previous</p>
                   <p className='text-sm lg:text-sm font-semibold text-white'>{data[index === 0 ? data.length - 1 : index - 1].title}</p>
                 </div>
               </div>
-              <div onClick={() => { if(index!==data.length-1) { setTimeout(navigate(`/documents/${data[index === data.length - 1 ? 0 : index + 1]?.id}`),10); setIndex(index === data.length - 1 ? 0 : index + 1) }}} className={`flex items-center justify-end gap-1 lg:gap-3 border border-[#334047] bg-transparent hover:bg-[#28343b66] cursor-pointer py-3 px-4 rounded-lg w-full ${index!==data.length-1?'active:text-[#00ace6]':''}`}>
+              <div onClick={() => { if (index !== data.length - 1) { setTimeout(navigate(`/documents/${data[index === data.length - 1 ? 0 : index + 1]?.id}`), 10); setIndex(index === data.length - 1 ? 0 : index + 1) } }} className={`flex items-center justify-end gap-1 lg:gap-3 border border-[#334047] bg-transparent hover:bg-[#28343b66] cursor-pointer py-3 px-4 rounded-lg w-full ${index !== data.length - 1 ? 'active:text-[#00ace6]' : ''}`}>
                 <div className="flex flex-col gap-2 text-right  ">
                   <p className='text-sm'>Next</p>
                   <p className='text-sm lg:text-sm font-semibold text-white'>{data[index === data.length - 1 ? 0 : index + 1].title}</p>
