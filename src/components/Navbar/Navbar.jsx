@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { logo, sound, animation, cross, mlogo } from '../../assets'
+import { logo, sound, animation, cross, mlogo, whitepaper } from '../../assets'
 import '../../App.css'
 import { Link, useNavigate } from 'react-router-dom'
 import Lottie from 'lottie-react'
@@ -71,7 +71,7 @@ export default function Navbar() {
 
                 <div className="lg:w-[10%] py-0 xl:py-4 flex items-center gap-2.5">
                     <button onClick={activateNavbar} id="navbar-toggler" className="block xl:hidden text-xl py-[0.9rem] text-white"  >☰</button>
-                    <div onClick={() => { document.querySelector("nav .active").classList.remove('active') ; document.querySelector(`#home`).classList.add('active'); navigate("/") }}>
+                    <div onClick={() => { document.querySelector("nav .active").classList.remove('active'); document.querySelector(`#home`).classList.add('active'); navigate("/") }}>
                         <div className="hidden md:block w-[5.65rem] h-[2rem]">
                             <img src={logo} className="w-full h-full object-fill" alt="" />
                         </div>
@@ -92,7 +92,8 @@ export default function Navbar() {
                     <Link onClick={() => activeTab("home")} id="home" to="/" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] w-[17.125rem] text-center xl:w-max'>Home</Link>
                     <Link onClick={() => activeTab("about")} id="about" to="/about" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] w-[17.125rem] text-center xl:w-max '>About</Link>
                     <Link onClick={() => activeTab("team")} id="team" to="/team" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] w-[17.125rem] text-center xl:w-max '>Our Team</Link>
-                    <Link onClick={() => activeTab("documents")} id="documents" to="/documents" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] w-[17.125rem] text-center xl:w-max '>Documents</Link>
+                    {/* <Link onClick={() => activeTab("documents")} id="documents" to="/documents" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] w-[17.125rem] text-center xl:w-max '>Documents</Link> */}
+                    <a href={whitepaper} target='_blank' className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] w-[17.125rem] text-center xl:w-max'>Whitepaper</a>
                     <Link onClick={() => activeTab("faq")} id="faq" to="/faq" className='py-6 px-4 cursor-pointer hover:text-[#54c7ee] w-[17.125rem] text-center xl:w-max '>FAQ</Link>
                 </ul>
                 <div className="flex items-center gap-2 xlg:w-[40%] justify-end py-4">
