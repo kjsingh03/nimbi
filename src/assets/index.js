@@ -96,8 +96,18 @@ import team7 from './team7.png'
 import team8 from './team8.png'
 import msec1 from './msec1.svg'
 import whitepaper from './whitepaper.pdf'
+import introCard1 from './introCard1.jpg'
+import introCard2 from './introCard2.jpg'
+import introCard3 from './introCard3.jpg'
+import youtube from './youtube.png'
+import instagram from './instagram.png'
 
 export {
+  youtube,
+  instagram,
+  introCard1, 
+  introCard2, 
+    introCard3,
   sec3Bottom,
   msec1,
   whitepaper,

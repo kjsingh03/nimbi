@@ -76,7 +76,7 @@ function Team() {
               <TeamCard handleClick={handleClick} id="teamCard4" img={team4} position="Smart contract dev and auditor" title="Mujahid Ali" desc="Ali writes and audits smart contracts, ensuring security and reliability through rigorous testing." />
               <TeamCard handleClick={handleClick} id="teamCard5" img={team5} position="Blockchain / Full-Stack Developer" title="Tony Gonzales" desc="Tony builds and maintains blockchain infrastructure and user-facing applications, ensuring efficiency and security." />
               <TeamCard handleClick={handleClick} id="teamCard6" img={team6} position="UI/UX designer " title="Hovhannes Yeganyan" desc="Hovo designs intuitive and visually appealing user interfaces to enhance user satisfaction and engagement." />
-              <TeamCard handleClick={handleClick} id="teamCard7" img={team7} position="web3 game developER" title="Brian" desc="Brian creates engaging Web3 games, integrating blockchain technology for innovative and secure gaming experiences." />
+              <TeamCard handleClick={handleClick} id="teamCard7" img={team7} position="web3 game developER" title="Brian Tyner" desc="Brian creates engaging Web3 games, integrating blockchain technology for innovative and secure gaming experiences." />
               <TeamCard handleClick={handleClick} id="teamCard8" img={team8} position="UX Writer/Content Strategist" title="Dean Eskich" desc="Dean crafts clear, user-friendly content and guides, ensuring a cohesive and seamless user experience." />
             </div>
 

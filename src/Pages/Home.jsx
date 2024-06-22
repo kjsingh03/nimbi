@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import '../App.css'
-import { AnimationCard, IntroCard, NFTCard, Navbar } from '../components'
-import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, vector, tick, mask, mountain, indicator, round, animation, whaleLeft, roadmap, hero1, hero2, mountainThumbnail, logoMask, mountainCover, whitepaper, sec3Bottom } from '../assets'
+import { AnimationCard, CommunityCard, IntroCard, NFTCard, Navbar } from '../components'
+import { hero, svg1, svg2, svg3, author1, author2, author3, author4, author5, sec1, ellipse, goldWolf, bigEllipse, discord, icon, telegram, x, github, vector, tick, mask, mountain, indicator, round, animation, whaleLeft, roadmap, hero1, hero2, mountainThumbnail, logoMask, mountainCover, whitepaper, sec3Bottom, introCard1, introCard2, introCard3, instagram, youtube } from '../assets'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -211,9 +211,9 @@ function Home() {
         </div>
 
         <div className="flex md:flex-row flex-col items-center justify-center border-t border-b border-[#767f84] bg-[#1c2327]">
-          <IntroCard img={svg1} title="Buy-Back System" desc="Nimbi uses a smart contract to purchase $NIMBI tokens from public exchanges on a daily basis. These purchases are financed through a portion of the revenue. During this buying process the $NIMBI price goes automatically up." />
-          <IntroCard img={svg2} title="Automatic Token Burn" desc="The smart contract automatically burns half of the purchased $NIMBI tokens each day. This process reduces the circulating $NIMBI supply, which makes the remaining tokens more valuable." />
-          <IntroCard img={svg3} title="Daily Profits" desc="The other half of the tokens obtained through the buyback process will be automatically transferred to the Nimbi Staking Pool. This staking pool then distributes rewards daily to $NIMBI holders based on the number of tokens they hold, generating daily profits for them." />
+          <IntroCard img={introCard1} />
+          <IntroCard img={introCard2} />
+          <IntroCard img={introCard3} />
         </div>
 
         <div className="overflow-x-hidden z-20">
@@ -272,11 +272,11 @@ function Home() {
               </section>
 
               <div className="container scrollx overflow-hidden md:overflow-visible pt-[6rem] mt-[8rem] xs:mt-[12rem] md:mt-0 md:pt-0">
-                <AnimationCard zIndex={60} title="Pre-Sale Phase" desc="2023 Q1" phase="1" status='completed' src={tick} icon={round} year="2023" list={["Launch Website", "Market Strategy Planning", "White Paper creation", "Market research", "feasability analysis", "competitor analysis", "tokenomics development", "smart contract development", "secure initial funding"]} />
-                <AnimationCard zIndex={90} title="Pre-Sale Phase" desc="2024 Q1" phase="2" status='incompleted' src={tick} icon={indicator} year="2024" />
-                <AnimationCard zIndex={80} title="Pre-Sale Phase" desc="2024 Q2" phase="3" status='incompleted' src={vector} icon={indicator} year="2024" />
-                <AnimationCard zIndex={70} title="Pre-Sale Phase" desc="2024 Q3" phase="4" status='incompleted' src={vector} icon={indicator} year="2025" />
-                <AnimationCard zIndex={60} title="Pre-Sale Phase" desc="2024 Q3" phase="5" status='incompleted' src={vector} icon={indicator} year="2026" />
+                <AnimationCard zIndex={60} title="Pre-Sale Phase" desc="2023 Q1" phase="1" status='completed' src={tick} icon={round} year="2023" list={["Idea Concept", "WhitePaper Creation", "Marketing Strategy Planning", "Start Development Web3 Video Game", "Kazi Smart Contract Development", "Nimbi Smart Contract Development", "Social Media Partnerships", "tokenomics development", "securing initial funding"]} />
+                <AnimationCard zIndex={90} title="Pre-Sale Phase" desc="2024 Q1" phase="2" status='incompleted' src={tick} icon={indicator} year="2024" list={["Community Building", "Partnerships and Collaborations", "Beta Lunch Web3 Video Game", "Create 10,000 NFT 3D Art Collection for erc-404", "Completing Private Sale", "Airdrop", "Crypto Dust Converter", "Main Web-page Development", "Pre-Sale start"]}  />
+                <AnimationCard zIndex={80} title="Pre-Sale Phase" desc="2024 Q2" phase="3" status='incompleted' src={vector} icon={indicator} year="2024" list={["Kazi Mediation", "Crypto Dust Lotto", "Nimbi VIP Wolfpack", "test smart contract and deploy dapps", "launch beta version for CDR", "start v2 of Crypto Dust Runner", "--------------------", "--------------------", "--------------------"]}  />
+                <AnimationCard zIndex={70} title="Pre-Sale Phase" desc="2024 Q3" phase="4" status='incompleted' src={vector} icon={indicator} year="2025"   />
+                <AnimationCard zIndex={60} title="Pre-Sale Phase" desc="2024 Q3" phase="5" status='incompleted' src={vector} icon={indicator} year="2026"   />
               </div>
             </div>
           </div>
@@ -354,46 +354,11 @@ function Home() {
                 <p className='text-sm'>Join us as we celebrate the launch of our project by offering exclusive rewards to our early supporters. By participating in our ecosystem, you'll have the opportunity to receive free token airdrops and access to exciting perks. Don't miss out on this chance to be part of our growing community!</p>
               </div>
               <div className="w-full xs:w-full lg:w-[40%] flex flex-col gap-4 3xl:w-[513px]">
-                <div className="flex items-center justify-between gap-4 cursor-pointer hover:bg-[#242d32] rounded-md px-4 py-2">
-                  <div className="flex items-center justify-between gap-4 ">
-                    <img src={discord} alt="" className='w-10' />
-                    <div className="">
-                      <p className='font-semibold text-sm'>Discord</p>
-                      <p className='text-xs'>Get Involved</p>
-                    </div>
-                  </div>
-                  <img src={icon} alt="" />
-                </div>
-                <div className="flex items-center justify-between gap-4 cursor-pointer hover:bg-[#242d32] rounded-md px-4 py-2">
-                  <div className="flex items-center justify-between gap-4 ">
-                    <img src={telegram} alt="" className='w-10' />
-                    <div className="">
-                      <p className='font-semibold text-sm'>telegram</p>
-                      <p className='text-xs'>join discussion</p>
-                    </div>
-                  </div>
-                  <img src={icon} alt="" />
-                </div>
-                <div className="flex items-center justify-between gap-4 cursor-pointer hover:bg-[#242d32] rounded-md px-4 py-2">
-                  <div className="flex items-center justify-between gap-4 ">
-                    <img src={x} alt="" className='w-10' />
-                    <div className="">
-                      <p className='font-semibold text-sm'>x</p>
-                      <p className='text-xs'>read the latest</p>
-                    </div>
-                  </div>
-                  <img src={icon} alt="" />
-                </div>
-                <div className="flex items-center justify-between gap-4 cursor-pointer hover:bg-[#242d32] rounded-md px-4 py-2">
-                  <div className="flex items-center justify-between gap-4 ">
-                    <img src={github} alt="" className='w-10' />
-                    <div className="">
-                      <p className='font-semibold text-sm'>github</p>
-                      <p className='text-xs'>build with us</p>
-                    </div>
-                  </div>
-                  <img src={icon} alt="" />
-                </div>
+                <CommunityCard link="https://discord.gg/ZP4Jpr2N" img={discord} title="Discord" des="Get Involved" />
+                <CommunityCard link="https://t.me/+kCsGgSJcJOM0Nzgx" img={telegram} title="telegram" des="join discussion" />
+                <CommunityCard link="https://www.instagram.com/nimbiwolfpack?igsh=MWZheTZ1amxvdm43Mw==" img={instagram} title="instagram" des="join discussion" />
+                <CommunityCard link="" img={x} title="x" des="read the latest" />
+                <CommunityCard link="https://youtube.com/@nimbitoken?si=cA47JatIiablPCp5" img={youtube} title="youtube" des="check Out our latest videos" />
               </div>
             </div>
           </div>
