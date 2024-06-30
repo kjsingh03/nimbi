@@ -29,10 +29,10 @@ function Footer({ path = "/" }) {
         <div className="flex flex-col-reverse sm:flex-row items-center gap-4">
           <p className='text-[#a1a7aa] font-["Roboto"]'>our community</p>
           <ul className="list-none flex gap-2 items-center">
-            <li><a target='_blank' to="https://t.me/nimbitokenvip"><img src={telegramIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></a></li>
-            <li><a target='_blank' to="https://discord.gg/ZP4Jpr2N"><img src={discordIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></a></li>
-            <li><a target='_blank' to=""><img src={twitterIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></a></li>
-            <li><a target='_blank' to=""><img src={xIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></a></li>
+            <li><a target='_blank' href="https://t.me/nimbitokenvip"><img src={telegramIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></a></li>
+            <li><a target='_blank' href="https://discord.gg/ZP4Jpr2N"><img src={discordIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></a></li>
+            <li><a target='_blank' href=""><img src={twitterIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></a></li>
+            <li><a target='_blank' href=""><img src={xIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></a></li>
           </ul>
         </div>
         <p className='normal-case font-["Roboto"]'>Copyright &copy; 2024 NIMBI.COM | All rights reserved</p>
