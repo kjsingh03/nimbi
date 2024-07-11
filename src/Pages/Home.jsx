@@ -147,7 +147,7 @@ function Home() {
 
       <div className="z-0 capitalize pt-[4.3rem] xl:pt-[4.4rem] overflow-x-hidden " ref={main}>
 
-        <div className="relative mx-auto h-[670px] xs:h-[734px] xl:h-[35vw] xl:w-[81%] 4xl:w-[1506px] 4xl:h-[694px] carousel">
+        <div className="relative mx-auto h-[670px] sm:h-[734px] xl:h-[45vw] 2xl:h-[35vw] xl:w-[81%] 4xl:w-[1506px] 4xl:h-[694px] carousel">
           <img src={mountainThumbnail} className='absolute bottom-0 -left-[5rem] w-[44.5rem] ' alt="" />
           <Swiper
             style={{
@@ -179,7 +179,7 @@ function Home() {
                   <h1 className='text-[3rem] md:text-[4.5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] 3xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>unite humanity with just your <span className='text-[#33bdeb]'>Crypto Dust</span></h1>
                   <p className='text-base font-["Roboto"]'>join Nimbi's wolfpack and make change together and have fun along the way</p>
                 </div>
-                <div className="h-[210px] sm:h-[420px] xl:h-full xl:w-[55.25%]">
+                <div className="h-[210px] xxs:h-[250px] xs:h-[325px] sm:h-[420px] md:h-[480px] xl:h-full xl:w-[55.25%]">
                   <img src={hero} className="w-full h-full object-cover" />
                 </div>
               </div>
@@ -187,10 +187,10 @@ function Home() {
             <SwiperSlide>
               <div className="flex xl:flex-row flex-col-reverse justify-end xl:justify-between gap-7 xl:gap-8 h-full">
                 <div className="w-[90%] mx-auto flex flex-col justify-center gap-2 xl:gap-6 xl:w-[44.75%]">
-                  <h1 className='text-[3rem] md:text-[4.5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] 3xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>Open-Source Decentralized  <span className='text-[#33bdeb]'>Lottery</span></h1>
+                  <h1 className='text-[3rem] xl:text-[4.5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] 3xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>Open-Source Decentralized  <span className='text-[#33bdeb]'>Lottery</span></h1>
                   <p className='text-base font-["Roboto"]'> Say goodbye to rigged games and hello to fairness and transparency! No more wondering if the odds are stacked against you, because with Crypto Lotto, everything is open source!</p>
                 </div>
-                <div className="h-[210px] sm:h-[420px] xl:h-full xl:w-[55.25%]">
+                <div className="h-[210px] xxs:h-[250px] xs:h-[325px] sm:h-[420px] md:h-[480px] xl:h-full xl:w-[55.25%]">
                   <img src={hero1} className="w-full h-full object-cover" />
                 </div>
               </div>
@@ -198,10 +198,10 @@ function Home() {
             <SwiperSlide>
               <div className="flex xl:flex-row flex-col-reverse justify-end xl:justify-between gap-7 xl:gap-8 h-full">
                 <div className="w-[90%] mx-auto flex flex-col justify-center gap-2 xl:gap-6 xl:w-[44.75%]">
-                  <h1 className='text-[3rem] md:text-[4.5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] 3xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>Web3 Crypto Dust Runner <span className='text-[#33bdeb]'>Game</span></h1>
+                  <h1 className='text-[3rem] xl:text-[4.5rem] 3xl:text-[5rem] font-["Roboto_Condensed"] leading-[60px] md:leading-[72px] 3xl:leading-[93px] tracking-[0.25px] font-bold uppercase '>Web3 Crypto Dust Runner <span className='text-[#33bdeb]'>Game</span></h1>
                   <p className='text-base font-["Roboto"]'>In this epic quest, you'll join forces with Nimbi, the fearless white wolf, as he races through a treacherous frozen gulch, fueled by the magnificent power of crypto dust!His mission? To collect as much of this precious resource as possible and transform into a legendary force against those pesky corporate giants. </p>
                 </div>
-                <div className="h-[210px] sm:h-[420px] xl:h-full xl:w-[55.25%]">
+                <div className="h-[210px] xxs:h-[250px] xs:h-[325px] sm:h-[420px] md:h-[480px] xl:h-full xl:w-[55.25%]">
                   <img src={hero2} className="w-full h-full object-cover" />
                 </div>
               </div>
@@ -274,7 +274,7 @@ function Home() {
               <div className="container scrollx overflow-hidden md:overflow-visible pt-[6rem] mt-[8rem] xs:mt-[12rem] md:mt-0 md:pt-0">
                 <AnimationCard zIndex={60} title="Pre-Sale Phase" desc="2023 Q1" phase="1" status='completed' src={tick} icon={round} year="2023" list={["Idea Concept", "WhitePaper Creation", "Marketing Strategy Planning", "Start Development Web3 Video Game", "Kazi Smart Contract Development", "Nimbi Smart Contract Development", "Social Media Partnerships", "tokenomics development", "securing initial funding"]} />
                 <AnimationCard zIndex={90} title="Pre-Sale Phase" desc="2024 Q1" phase="2" status='incompleted' src={tick} icon={indicator} year="2024" list={["Community Building", "Partnerships and Collaborations", "Beta Lunch Web3 Video Game", "Create 10,000 NFT 3D Art Collection for erc-404", "Completing Private Sale", "Airdrop", "Crypto Dust Converter", "Main Web-page Development", "Pre-Sale start"]}  />
-                <AnimationCard zIndex={80} title="Pre-Sale Phase" desc="2024 Q2" phase="3" status='incompleted' src={vector} icon={indicator} year="2024" list={["Kazi Mediation", "Crypto Dust Lotto", "Nimbi VIP Wolfpack", "test smart contract and deploy dapps", "launch beta version for CDR", "start v2 of Crypto Dust Runner", "--------------------", "--------------------", "--------------------"]}  />
+                <AnimationCard zIndex={80} title="Pre-Sale Phase" desc="2024 Q2" phase="3" status='incompleted' src={vector} icon={indicator} year="2024" list={["Kazi Mediation", "Crypto Dust Lotto", "Nimbi VIP Wolfpack", "test smart contract and deploy dapps", "launch beta version for CDR", "start v2 of Crypto Dust Runner"]}  />
                 <AnimationCard zIndex={70} title="Pre-Sale Phase" desc="2024 Q3" phase="4" status='incompleted' src={vector} icon={indicator} year="2025"   />
                 <AnimationCard zIndex={60} title="Pre-Sale Phase" desc="2024 Q3" phase="5" status='incompleted' src={vector} icon={indicator} year="2026"   />
               </div>
@@ -294,7 +294,7 @@ function Home() {
                 <div className="btn bg-[#5c666c] w-max font-semibold text-sm 3xl:text-lg py-[5px] px-[10px]">Supporting dapps</div>
                 <img src={ellipse} className='absolute -top-8 left-[6rem] 3xl:left-[8rem] w-[6.375rem]' alt="" />
               </div>
-              <p className="text-[#a1a7aa] text-[2.5rem] xxs:text-5xl md:text-[4.5rem] font-['Roboto_Condensed'] leading-[3rem] xxs:leading-[3.5rem] md:leading-[5rem] 2xl:leading-[5.5rem] tracking-[0.25px] font-bold uppercase pt-6 2xl:pt-0">NIMBI The Leader of the Pack</p>
+              <p className="text-[#a1a7aa] text-[2.5rem] xxs:text-5xl xl:text-[4.5rem] font-['Roboto_Condensed'] leading-[3rem] xxs:leading-[3.5rem] md:leading-[5rem] 2xl:leading-[5.5rem] tracking-[0.25px] font-bold uppercase pt-6 2xl:pt-0">NIMBI The Leader of the Pack</p>
             </div>
             <p className='md:w-[90% 2xl:w-[45%] font-["Roboto"] leading-6 text-base'>Nimbi, a character with dual existences. In one he is a central figure in the associated Web3 video game Crypto Dust Runner and an artistic representation in the NFT Nimbi Art Collection. The ERC-404 Nimbi Token also bears his name, enhancing his integral role within the ecosystem. In this capacity Nimbi is on a quest to gather members for his Wolfpack, leading them on adventures across the virtual landscape.
               In the other, Nimbi is Mr. Nimbus—a two-year-old White Wolf rescued as a puppy from a reservation. Known as a Res-Wolf Dog, Nimbi's early life on the reservation introduced him to the harsh realities and the concept of "Crypto Dust," a metaphor for the scraps and remnants he survived on. Now thriving in the Rocky Mountains, he embodies resilience and leadership, characteristics that translate into his digital persona where he guides players to the apex of mountains and beyond in Crypto Dust Runner.</p>
@@ -320,7 +320,7 @@ function Home() {
             <div className="w-full md:w-[80%] mx-auto ">
               <div className="pb-[6rem] xxs:pb-[5rem] xs:pb-[7rem] sm:pb-[4.5rem] md:py-12 px-4 xxs:px-4 sm:px-10 md:px-0 flex flex-col md:w-[75%] xl:w-[65%] 3xl:w-[50%] gap-6 xl:gap-12 items-center md:items-start justify-around lg:justify-center text-[#151b1e]">
                 <p className="text-[3rem] sm:text-[4.5rem] 3xl:text-[4.5rem] font-bold uppercase leading-tight font-['Roboto_Condensed',sans-serif] xl:w-[80%] 3xl:w-full">Web3 Crypto Dust Runner Game</p>
-                <p className='text-2xl font-semibold tracking-tighter w-full xl:w-[70%] 3xl:w-[85%]'>In the DeFi industry, crypto dust refers to small amounts of cryptocurrency either left over from transactions, or valueless remaining assets.</p>
+                <p className='text-2xl font-semibold tracking-tighter w-full xl:w-[60%] 2xl:w-[70%] 3xl:w-[85%]'>In the DeFi industry, crypto dust refers to small amounts of cryptocurrency either left over from transactions, or valueless remaining assets.</p>
                 <p className='text-base font-medium block w-full xl:w-[70%] 3xl:w-[90%]'>In the dedicated Web3 Nimbi ecosystem game, Crypto Dust Runner, Crypto Dust represents a fundamental in-game resource. It's a symbolic representation of the small, seemingly insignificant particles that, when accumulated, can lead to significant power and change—much like how small contributions in blockchain and community efforts can lead to substantial impacts. The gameplay involves players controlling Nimbi to collect Crypto Dust throughout their journey up a vast mountain that ends, ultimately, in a challenging boss fight. This dust gathered along the way not only powers Nimbi but also serves as a currency within the game, convertible into Kazi tokens through in-game mechanics. </p>
                 <div className="w-full text-left">
                   <p className="btn w-[12rem] text-base text-center">Launch App</p>
