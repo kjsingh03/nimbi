@@ -26,10 +26,11 @@ import telegram from "./telegram.png";
 import x from "./x.png";
 import github from "./github.png";
 import icon from "./Icon.svg";
-import twitterIcon from "./twitterIcon.png";
-import xIcon from "./xIcon.png";
-import discordIcon from "./discordIcon.png";
-import telegramIcon from "./telegramIcon.png";
+import telegramIcon from "./telegramIcon.svg";
+import discordIcon from "./discordIcon.svg";
+import xIcon from "./xIcon.svg";
+import instagramIcon from "./instagramIcon.svg";
+import youtubeIcon from "./youtubeIcon.svg";
 import vector from "./vector.svg";
 import tick from "./tick.png";
 import mask from "./mask.svg";
@@ -202,8 +203,9 @@ export {
   github,
   icon,
   telegramIcon,
-  twitterIcon,
+  youtubeIcon,
   xIcon,
+  instagramIcon,
   discordIcon,
   vector,
 };

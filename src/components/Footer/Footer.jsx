@@ -1,5 +1,5 @@
 import React from 'react'
-import { discordIcon, telegramIcon, twitterIcon, xIcon } from '../../assets'
+import { discordIcon, instagramIcon, telegramIcon, xIcon, youtubeIcon } from '../../assets'
 
 function Footer({ path = "/" }) {
   return (
@@ -26,13 +26,14 @@ function Footer({ path = "/" }) {
         </div>
       }
       <div className={`flex items-center sm:flex-row gap-4 flex-col  justify-between ${path === "/" ? 'pt-4 border-t border-[#767f84]' : ""}  w-full 3xl:w-[90%] mx-auto`}>
-        <div className="flex flex-col-reverse sm:flex-row items-center gap-4">
+        <div className="flex flex-col-reverse sm:flex-row items-center gap-[13px]">
           <p className='text-[#a1a7aa] font-["Roboto"]'>our community</p>
           <ul className="list-none flex gap-2 items-center">
-            <li><a target='_blank' href="https://t.me/nimbitokenvip"><img src={telegramIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></a></li>
-            <li><a target='_blank' href="https://discord.gg/ZP4Jpr2N"><img src={discordIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></a></li>
-            <li><a target='_blank' href=""><img src={twitterIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></a></li>
-            <li><a target='_blank' href=""><img src={xIcon} className='w-5 rounded-sm cursor-pointer' alt="" /></a></li>
+            <li className='w-6 h-6 pt-[3px] px-[2px]'><a target='_blank' href="https://discord.gg/ZP4Jpr2N"><img src={discordIcon} className='w-full h-full object-contain' alt="" /></a></li>
+            <li className='w-6 h-6 py-[5.5px] px-1'><a target='_blank' href="https://t.me/nimbitokenvip"><img src={telegramIcon} className='w-full h-full object-contain' alt="" /></a></li>
+            <li className='w-6 h-6 py-1 px-1'><a target='_blank' href="https://www.instagram.com/nimbiwolfpack?igsh=MWZheTZ1amxvdm43Mw%3D%3D"><img src={instagramIcon} className='w-full h-full object-contain' alt="" /></a></li>
+            <li className='w-6 h-6 py-0.5 px-0.5'><a target='_blank' href=""><img src={xIcon} className='w-full h-full object-contain' alt="" /></a></li>
+            <li className='w-6 h-6 py-1 px-[1px]'><a target='_blank' href="https://www.youtube.com/@nimbitoken"><img src={youtubeIcon} className='w-full h-full object-contain' alt="" /></a></li>
           </ul>
         </div>
         <p className='normal-case font-["Roboto"]'>Copyright &copy; 2024 NIMBI.COM | All rights reserved</p>
