@@ -72,12 +72,12 @@ export default function Navbar() {
                 <div className="lg:w-[10%] py-0 xl:py-4 flex items-center gap-2.5">
                     <button onClick={activateNavbar} id="navbar-toggler" className="block xl:hidden text-xl py-[0.9rem] text-white"  >☰</button>
                     <div onClick={() => { document.querySelector("nav .active").classList.remove('active'); document.querySelector(`#home`).classList.add('active'); navigate("/") }}>
-                        <div className="hidden md:block w-[5.65rem] h-[2rem]">
+                        <div className="w-[43.38px] h-[2.5rem]">
                             <img src={logo} className="w-full h-full object-fill" alt="" />
                         </div>
-                        <div className="block md:hidden w-8 h-8">
+                        {/* <div className="block md:hidden w-8 h-8">
                             <img src={mlogo} className="w-full h-full object-fill" alt="" />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <ul className="navbar bg-[url(./assets/mountainThumbnail.svg)] xl:bg-none bg-bottom bg-contain bg-no-repeat fixed h-screen w-screen top-0 left-0 z-[1000] flex flex-col gap-3 justify-center xl:relative xl:translate-x-0 xl:flex-row bg-[#242d32] xl:bg-transparent items-center xl:justify-end xl:gap-2 text-sm list-none xl:w-[44%] xl:h-full">

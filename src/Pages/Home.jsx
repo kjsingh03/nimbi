@@ -31,9 +31,9 @@ function Home() {
     else if (width > 768) { xPercent = -100 * (sections.length - 2); sectionStart = 12.5 }
 
     if (width > 1280) {
-      gsap.to('.collectionLeft', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: width >= 1720 ? "bottom 91%" : "bottom 99.5%", end: "top -300%", scrub: true, } })
-      gsap.to('.collectionRight', { x: 1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: width >= 1720 ? "bottom 91%" : "bottom 87%", end: "top -150%", scrub: true } })
-      gsap.to('.collectiontop', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: width >= 1720 ? "bottom 91%" : "bottom 87.5%", end: "top -300%", scrub: true } })
+      gsap.to('.collectionLeft', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionLeft', start: width >= 1720 ? "bottom 82%" : "bottom 99.5%", end: "top -300%", scrub: true} })
+      gsap.to('.collectionRight', { x: 1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: width >= 1720 ? "bottom 82%" : "bottom 87%", end: "top -150%", scrub: true } })
+      gsap.to('.collectiontop', { x: -1500, duration: 2, scrollTrigger: { trigger: '.collectionRight', start: width >= 1720 ? "bottom 82%" : "bottom 87.5%", end: "top -300%", scrub: true } })
     }
 
     if (width > 768) {
@@ -211,9 +211,9 @@ function Home() {
         </div>
 
         <div className="flex md:flex-row flex-col items-center justify-center border-t border-b border-[#767f84] bg-[#1c2327]">
-          <IntroCard img={introCard1} />
-          <IntroCard img={introCard2} />
-          <IntroCard img={introCard3} />
+          <IntroCard title="Play" desc="Earn crypto dust playing games online with other Wolfpack members. Unlock daily rewards and compete for the top leaderboard spots to win bonus rewards. " img={svg1} />
+          <IntroCard title="Collect" desc="Build your personal wolfpack with a unique NFT art collection featuring man’s best friend. Gain exclusive assets to upgrade your in-game experience." img={svg2} />
+          <IntroCard title="Profit" desc="What separates $NIMBI and $KAZI from memecoins? A dual-token system with robust fundamentals. With many ways to earn dust and convert them into tokens with real utility in the Nimbi ecosystem, NIMBI and KAZI grow together." img={svg3} />
         </div>
 
         <div className="overflow-x-hidden z-20">
