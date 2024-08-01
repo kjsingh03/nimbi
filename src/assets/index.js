@@ -2,12 +2,9 @@ import logo from "./logo.svg";
 import mlogo from "./mlogo.png";
 import logo1 from "./logo1.png";
 import logoMask from './logoMask.png'
-import svg1 from "./svg1.svg";
 import hero from "./hero.svg";
 import hero1 from "./hero1.svg";
 import hero2 from "./hero2.svg";
-import svg2 from "./svg2.svg";
-import svg3 from "./svg3.svg";
 import author1 from "./author1.png";
 import author2 from "./author2.png";
 import author3 from "./author3.png";
@@ -37,7 +34,6 @@ import mask from "./mask.svg";
 import mask1 from "./mask1.svg";
 import mountain from "./mountain.svg";
 import mountainCover from "./mountainCover.svg";
-import mountainThumbnail from './mountainThumbnail.svg'
 import round from "./round.png";
 import indicator from "./Indicator.png";
 import rightWolf from "./rightWolf.png";
@@ -95,20 +91,44 @@ import team5 from './team5.png'
 import team6 from './team6.png'
 import team7 from './team7.png'
 import team8 from './team8.png'
-import msec1 from './msec1.svg'
+import msec1 from './msec1.png'
 import whitepaper from './whitepaper.pdf'
 import introCard1 from './introCard1.jpg'
 import introCard2 from './introCard2.jpg'
 import introCard3 from './introCard3.jpg'
 import youtube from './youtube.png'
 import instagram from './instagram.png'
+import play from './play.png'
+import collect from './collect.png'
+import profit from './profit.png'
+import nimbi_hero from './nimbi_hero.svg'
+import mountain_back from './mountain-back.png'
+import black_dog from './black-dog.png'
+import our from './our.png'
+import ethos from './ethos.png'
+import eth_white from './eth-white.svg'
+import eth_black from './eth-black.svg'
+import ecosystem from './ecosystem.png'
+import mobile1 from './mobile1.png'
+import mobile2 from './mobile2.png'
+import hero_mountain from './hero-mountain.png'
+import dualtoken from './dualtoken.png'
+import dolphin from './dolphin.png'
+import dog_shade from './dog_shade.png'
+import circle_graph from './circle_graph.png'
+import tokenDolphin from './tokenDolphin.png'
+import fox from './fox.png'
+import chain from './chain.png'
+import bluePen from './bluePen.png'
+import foxHead from './foxHead.png'
+import puppy from './puppy.svg'
 
 export {
   youtube,
   instagram,
-  introCard1, 
-  introCard2, 
-    introCard3,
+  introCard1,
+  introCard2,
+  introCard3,
   sec3Bottom,
   msec1,
   whitepaper,
@@ -123,8 +143,8 @@ export {
   team8,
   mountainCover,
   logoMask,
-  mountainThumbnail,
   border,
+  dualtoken,
   W,
   wallet98,
   binance,
@@ -176,9 +196,6 @@ export {
   rightWolf,
   logo1,
   hero,
-  svg1,
-  svg2,
-  svg3,
   round,
   indicator,
   author1,
@@ -208,4 +225,7 @@ export {
   instagramIcon,
   discordIcon,
   vector,
+  nimbi_hero,
+  play, collect, profit, mountain_back, black_dog, our, ethos, eth_black, eth_white, ecosystem, mobile1, mobile2, hero_mountain, dolphin, dog_shade, circle_graph, tokenDolphin, fox, chain, puppy, bluePen
+  , foxHead
 };
